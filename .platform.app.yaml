@@ -8,8 +8,8 @@ runtime:
         - redis
 relationships:
     rediscache: 'cache:redis'
-    master: 'db:master'
     anderson: 'db:anderson'
+    elementary: 'db:elementary'
 disk: 2048
 mounts:
     /web/files:
@@ -35,7 +35,7 @@ build:
 hooks:
     build: |
         set -e
-        
+
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
@@ -43,7 +43,7 @@ hooks:
         drush -y cache-rebuild
         drush -y updatedb
         drush -y config-import
-        
+
 web:
     locations:
         /:

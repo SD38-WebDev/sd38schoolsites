@@ -3,16 +3,16 @@ db:
     disk: 2048
     configuration:
         schemas:
-            - master
             - anderson
+            - elementary
         endpoints:
-            master:
-                default_schema: master
-                privileges:
-                    master: admin
             anderson:
                 default_schema: anderson
                 privileges:
                     anderson: admin
+            elementary:
+                default_schema: elementary
+                privileges:
+                    elementary: admin
 cache:
     type: 'redis:6.0'
