@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bootstrap Barrio Subtheme.
+
+rsd_sites_barrio.settings:
+  type: theme_settings
+  label: 'Richmond School District school site settings'
