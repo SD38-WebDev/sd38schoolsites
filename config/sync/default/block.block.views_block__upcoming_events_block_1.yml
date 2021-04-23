@@ -1,0 +1,35 @@
+uuid: 94e08467-9e81-4adc-b590-b1d533a4a355
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.upcoming_events
+  module:
+    - context
+    - views
+  theme:
+    - rsd_sites_barrio
+id: views_block__upcoming_events_block_1
+theme: rsd_sites_barrio
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:upcoming_events-block_1'
+settings:
+  id: 'views_block:upcoming_events-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

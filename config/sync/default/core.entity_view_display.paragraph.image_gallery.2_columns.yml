@@ -1,0 +1,21 @@
+uuid: 8a0c182b-d49a-4d2b-bd0f-12a801c47756
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.2_columns
+    - field.field.paragraph.image_gallery.field_images
+    - field.field.paragraph.image_gallery.field_section_content
+    - field.field.paragraph.image_gallery.field_section_title
+    - field.field.paragraph.image_gallery.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_gallery
+id: paragraph.image_gallery.2_columns
+targetEntityType: paragraph
+bundle: image_gallery
+mode: 2_columns
+content: {  }
+hidden:
+  field_images: true
+  field_section_content: true
+  field_section_title: true
+  paragraph_view_mode: true

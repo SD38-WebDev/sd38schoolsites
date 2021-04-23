@@ -5,7 +5,10 @@ dependencies:
   config:
     - field.storage.node.field_content_section
     - node.type.page
+    - paragraphs.paragraphs_type.basic_text_section
     - paragraphs.paragraphs_type.bp_accordion
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.tile_links_section
   module:
     - entity_reference_revisions
 id: node.page.field_content_section
@@ -24,7 +27,16 @@ settings:
     negate: 0
     target_bundles:
       bp_accordion: bp_accordion
+      basic_text_section: basic_text_section
+      image_gallery: image_gallery
+      tile_links_section: tile_links_section
     target_bundles_drag_drop:
+      article_feed:
+        weight: 22
+        enabled: false
+      basic_text_section:
+        enabled: true
+        weight: 23
       bp_accordion:
         enabled: true
         weight: 16
@@ -70,4 +82,16 @@ settings:
       bp_view:
         weight: 30
         enabled: false
+      embedded_video:
+        weight: 39
+        enabled: false
+      image_gallery:
+        enabled: true
+        weight: 40
+      tile_link:
+        weight: 41
+        enabled: false
+      tile_links_section:
+        enabled: true
+        weight: 42
 field_type: entity_reference_revisions

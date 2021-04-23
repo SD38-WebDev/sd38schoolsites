@@ -1,8 +1,9 @@
-uuid: d5f0895d-4e8b-4221-bfd0-f4b5f3209ba9
+uuid: 97570206-2bd6-4dd8-9f5d-73fdbc0ff660
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_content_section
     - field.field.node.page.field_sidebar_content
@@ -54,32 +55,17 @@ third_party_settings:
             add_region_classes: 0
             attributes: class|col-12
     regions:
-      left:
-        - node_title
+      top:
+        - field_sidebars
+        - links
         - body
-        - field_content_section
-      right:
         - field_sidebar_content
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
-        settings:
-          wrapper: h1
-          class: ''
-          link: false
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-id: node.page.default
+        - field_site_section
+        - field_content_section
+id: node.page.teaser
 targetEntityType: node
 bundle: page
-mode: default
+mode: teaser
 content:
   body:
     weight: 1
@@ -87,8 +73,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: left
+    region: top
   field_content_section:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: top
+  field_sidebar_content:
     type: entity_reference_revisions_entity_view
     weight: 2
     label: hidden
@@ -96,17 +91,28 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: left
-  field_sidebar_content:
-    type: entity_reference_revisions_entity_view
-    weight: 3
-    label: hidden
+    region: top
+  field_sidebars:
+    type: boolean
+    weight: 0
+    region: top
+    label: above
     settings:
-      view_mode: default
-      link: ''
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    region: right
-hidden:
-  field_sidebars: true
-  field_site_section: true
-  links: true
+  field_site_section:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: top
+  links:
+    weight: 0
+    region: top
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

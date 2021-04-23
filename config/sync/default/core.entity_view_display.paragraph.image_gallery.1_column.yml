@@ -1,0 +1,21 @@
+uuid: 95f41181-685b-43ba-99f6-433e102baeaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.1_column
+    - field.field.paragraph.image_gallery.field_images
+    - field.field.paragraph.image_gallery.field_section_content
+    - field.field.paragraph.image_gallery.field_section_title
+    - field.field.paragraph.image_gallery.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_gallery
+id: paragraph.image_gallery.1_column
+targetEntityType: paragraph
+bundle: image_gallery
+mode: 1_column
+content: {  }
+hidden:
+  field_images: true
+  field_section_content: true
+  field_section_title: true
+  paragraph_view_mode: true

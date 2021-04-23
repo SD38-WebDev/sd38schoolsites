@@ -1,0 +1,39 @@
+uuid: 580df6f8-0c5b-4148-a024-fa31f2eb8440
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+name: hide_sidebars
+label: 'Hide Sidebars'
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      calendar_event: calendar_event
+      page: page
+      staff_page: staff_page
+    negate: false
+    uuid: 073f9f8a-4507-4061-ae1f-fc64a55e2a03
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  regions:
+    id: regions
+    regions:
+      classy: {  }
+      seven: {  }
+      stable: {  }
+      stark: {  }
+      bootstrap_barrio: {  }
+      rsd_sites_barrio:
+        - sidebar_first
+        - sidebar_second
+    saved: false
+    uuid: d883f907-3c51-4f18-90ef-c164fb3ae930
+weight: 0

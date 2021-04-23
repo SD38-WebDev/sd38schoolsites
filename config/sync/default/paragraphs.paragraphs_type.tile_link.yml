@@ -1,0 +1,10 @@
+uuid: 40f181f0-4408-44a7-b309-e8b82506864a
+langcode: en
+status: true
+dependencies: {  }
+id: tile_link
+label: 'Tile Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

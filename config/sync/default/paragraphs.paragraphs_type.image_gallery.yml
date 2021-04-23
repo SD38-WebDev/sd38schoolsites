@@ -1,0 +1,15 @@
+uuid: 98acf8b5-47a8-415a-9534-8cc4bab3c8f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: true
+id: image_gallery
+label: 'Image Gallery'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
