@@ -1,0 +1,20 @@
+uuid: fe7611b1-8e8b-4efa-bc51-6814dd878759
+langcode: en
+status: true
+dependencies:
+  theme:
+    - rsd_sites_barrio
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: rsd_sites_barrio_local_actions
+theme: rsd_sites_barrio
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

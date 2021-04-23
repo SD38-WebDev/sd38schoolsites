@@ -3,13 +3,193 @@ db:
     disk: 2048
     configuration:
         schemas:
+            - blundell
+            - bridge
+            - brighouse
+            - byng
+            - cook
+            - debeck
+            - diefenbaker
+            - dixon
+            - errington
+            - ferris
+            - gardencity
+            - currie
+            - gilmore
+            - grauer
+            - hamilton
+            - homma
+            - kidd
+            - kingswood
+            - lee
+            - maplelane
+            - mckay
+            - mckinney
+            - mcneely
+            - mitchell
+            - quilchena
+            - spulukwuks
+            - steves
+            - tait
+            - talmey
+            - thompson
+            - tomsett
+            - westwind
+            - whiteside
+            - woodward
+            - wowk
             - anderson
+            - blair
             - elementary
         endpoints:
+            blundell:
+                default_schema: blundell
+                privileges:
+                    blundell: admin
+            bridge:
+                default_schema: bridge
+                privileges:
+                    bridge: admin
+            brighouse:
+                default_schema: brighouse
+                privileges:
+                    brighouse: admin
+            byng:
+                default_schema: byng
+                privileges:
+                    byng: admin
+            cook:
+                default_schema: cook
+                privileges:
+                    cook: admin
+            debeck:
+                default_schema: debeck
+                privileges:
+                    debeck: admin
+            diefenbaker:
+                default_schema: diefenbaker
+                privileges:
+                    diefenbaker: admin
+            dixon:
+                default_schema: dixon
+                privileges:
+                    dixon: admin
+            errington:
+                default_schema: errington
+                privileges:
+                    errington: admin
+            ferris:
+                default_schema: ferris
+                privileges:
+                    ferris: admin
+            gardencity:
+                default_schema: gardencity
+                privileges:
+                    gardencity: admin
+            currie:
+                default_schema: currie
+                privileges:
+                    currie: admin
+            gilmore:
+                default_schema: gilmore
+                privileges:
+                    gilmore: admin
+            grauer:
+                default_schema: grauer
+                privileges:
+                    grauer: admin
+            hamilton:
+                default_schema: hamilton
+                privileges:
+                    hamilton: admin
+            homma:
+                default_schema: homma
+                privileges:
+                    homma: admin
+            kidd:
+                default_schema: kidd
+                privileges:
+                    kidd: admin
+            kingswood:
+                default_schema: kingswood
+                privileges:
+                    kingswood: admin
+            lee:
+                default_schema: lee
+                privileges:
+                    lee: admin
+            maplelane:
+                default_schema: maplelane
+                privileges:
+                    maplelane: admin
+            mckay:
+                default_schema: mckay
+                privileges:
+                    mckay: admin
+            mckinney:
+                default_schema: mckinney
+                privileges:
+                    mckinney: admin
+            mcneely:
+                default_schema: mcneely
+                privileges:
+                    mcneely: admin
+            mitchell:
+                default_schema: mitchell
+                privileges:
+                    mitchell: admin
+            quilchena:
+                default_schema: quilchena
+                privileges:
+                    quilchena: admin
+            spulukwuks:
+                default_schema: spulukwuks
+                privileges:
+                    spulukwuks: admin
+            steves:
+                default_schema: steves
+                privileges:
+                    steves: admin
+            tait:
+                default_schema: tait
+                privileges:
+                    tait: admin
+            talmey:
+                default_schema: talmey
+                privileges:
+                    talmey: admin
+            thompson:
+                default_schema: thompson
+                privileges:
+                    thompson: admin
+            tomsett:
+                default_schema: tomsett
+                privileges:
+                    tomsett: admin
+            westwind:
+                default_schema: westwind
+                privileges:
+                    westwind: admin
+            whiteside:
+                default_schema: whiteside
+                privileges:
+                    whiteside: admin
+            woodward:
+                default_schema: woodward
+                privileges:
+                    woodward: admin
+            wowk:
+                default_schema: wowk
+                privileges:
+                    wowk: admin
             anderson:
                 default_schema: anderson
                 privileges:
                     anderson: admin
+            blair:
+                default_schema: blair
+                privileges:
+                    blair: admin
             elementary:
                 default_schema: elementary
                 privileges:

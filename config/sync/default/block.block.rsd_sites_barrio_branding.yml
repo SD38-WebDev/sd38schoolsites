@@ -1,0 +1,25 @@
+uuid: a641dce4-de61-400c-9045-a088c16b2fdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rsd_sites_barrio
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: rsd_sites_barrio_branding
+theme: rsd_sites_barrio
+region: top_header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

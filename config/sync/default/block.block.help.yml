@@ -1,0 +1,31 @@
+uuid: 7f895299-3a3d-4470-b769-72a10b3b847d
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - help
+  theme:
+    - rsd_sites_barrio
+id: help
+theme: rsd_sites_barrio
+region: content
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

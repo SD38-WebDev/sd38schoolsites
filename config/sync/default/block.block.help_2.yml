@@ -1,0 +1,31 @@
+uuid: e5cbe709-bd39-492b-805b-f2817d57c30e
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - help
+  theme:
+    - seven
+id: help_2
+theme: seven
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

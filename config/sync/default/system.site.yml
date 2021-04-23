@@ -1,0 +1,14 @@
+uuid: 7bde9472-2310-4a04-ac8e-d050059ebca0
+name: 'Elementary Home'
+mail: webdev@sd38.bc.ca
+slogan: 'Development Site'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

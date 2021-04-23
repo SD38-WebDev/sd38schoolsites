@@ -8,7 +8,43 @@ runtime:
         - redis
 relationships:
     rediscache: 'cache:redis'
+    blundell: 'db:blundell'
+    bridge: 'db:bridge'
+    brighouse: 'db:brighouse'
+    byng: 'db:byng'
+    cook: 'db:cook'
+    debeck: 'db:debeck'
+    diefenbaker: 'db:diefenbaker'
+    dixon: 'db:dixon'
+    errington: 'db:errington'
+    ferris: 'db:ferris'
+    gardencity: 'db:gardencity'
+    currie: 'db:currie'
+    gilmore: 'db:gilmore'
+    grauer: 'db:grauer'
+    hamilton: 'db:hamilton'
+    homma: 'db:homma'
+    kidd: 'db:kidd'
+    kingswood: 'db:kingswood'
+    lee: 'db:lee'
+    maplelane: 'db:maplelane'
+    mckay: 'db:mckay'
+    mckinney: 'db:mckinney'
+    mcneely: 'db:mcneely'
+    mitchell: 'db:mitchell'
+    quilchena: 'db:quilchena'
+    spulukwuks: 'db:spulukwuks'
+    steves: 'db:steves'
+    tait: 'db:tait'
+    talmey: 'db:talmey'
+    thompson: 'db:thompson'
+    tomsett: 'db:tomsett'
+    westwind: 'db:westwind'
+    whiteside: 'db:whiteside'
+    woodward: 'db:woodward'
+    wowk: 'db:wowk'
     anderson: 'db:anderson'
+    blair: 'db:blair'
     elementary: 'db:elementary'
 disk: 2048
 mounts:
@@ -35,7 +71,7 @@ build:
 hooks:
     build: |
         set -e
-
+        
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
@@ -43,7 +79,7 @@ hooks:
         drush -y cache-rebuild
         drush -y updatedb
         drush -y config-import
-
+        
 web:
     locations:
         /:

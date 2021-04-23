@@ -1,0 +1,31 @@
+uuid: d715b6b4-73c9-4bb9-9be0-39e6e1f9b244
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - system
+  theme:
+    - rsd_sites_barrio
+id: breadcrumbs
+theme: rsd_sites_barrio
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

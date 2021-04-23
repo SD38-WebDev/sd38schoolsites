@@ -1,0 +1,12 @@
+uuid: 681aeb8b-fbc6-4b6a-b84a-f02fb9e15832
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UeuwDpM-xwx0UDiaAwdXa1TFE-Cc9-8WaAAcvzjAe3U
+id: bp_tabs
+label: Tabs
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }
