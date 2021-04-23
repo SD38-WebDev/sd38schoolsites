@@ -1,0 +1,8 @@
+uuid: 696e1093-a475-4d70-b889-6d9963b8b5ba
+langcode: en
+status: true
+dependencies: {  }
+name: 'Staff Positions'
+vid: staff_positions
+description: ''
+weight: 0

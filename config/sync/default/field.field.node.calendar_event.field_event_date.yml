@@ -1,0 +1,31 @@
+uuid: 9b6b24a6-97d2-4059-99de-68452e5742e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_date
+    - node.type.calendar_event
+  module:
+    - smart_date
+    - smart_date_recur
+third_party_settings:
+  smart_date_recur:
+    allow_recurring: true
+    month_limit: 12
+id: node.calendar_event.field_event_date
+field_name: field_event_date
+entity_type: node
+bundle: calendar_event
+label: 'Event Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: next_hour
+    default_date: ''
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_duration: 60
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

@@ -1,0 +1,22 @@
+uuid: 323ed0c1-971d-4212-aa1b-dd2873237910
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.header_image.field_header_image
+    - node.type.header_image
+  module:
+    - user
+id: node.header_image.teaser
+targetEntityType: node
+bundle: header_image
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_header_image: true

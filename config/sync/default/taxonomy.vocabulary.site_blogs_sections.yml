@@ -1,0 +1,8 @@
+uuid: de8a5b7e-34fe-4806-a4ac-1c0b38169f93
+langcode: en
+status: true
+dependencies: {  }
+name: 'Site Blogs/Sections'
+vid: site_blogs_sections
+description: ''
+weight: 0

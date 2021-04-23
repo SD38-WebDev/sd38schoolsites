@@ -1,0 +1,39 @@
+uuid: e0e00821-4374-4132-b19a-0b9878cb9ea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_page.body
+    - field.field.node.staff_page.field_staff_members
+    - node.type.staff_page
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.staff_page.default
+targetEntityType: node
+bundle: staff_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_staff_members:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

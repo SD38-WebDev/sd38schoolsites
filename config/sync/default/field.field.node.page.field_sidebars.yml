@@ -1,0 +1,23 @@
+uuid: f88da02e-c366-436d-a727-a4438d131a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebars
+    - node.type.page
+id: node.page.field_sidebars
+field_name: field_sidebars
+entity_type: node
+bundle: page
+label: 'Display Website Sidebars'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

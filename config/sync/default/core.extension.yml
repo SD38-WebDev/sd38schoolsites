@@ -66,6 +66,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   node: 0
+  onlyone: 0
   options: 0
   page_cache: 0
   paragraph_view_mode: 0

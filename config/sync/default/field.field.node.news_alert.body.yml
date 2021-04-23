@@ -1,0 +1,23 @@
+uuid: 410490b1-a4e6-49f8-83e0-72927ca7a01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.news_alert
+  module:
+    - text
+id: node.news_alert.body
+field_name: body
+entity_type: node
+bundle: news_alert
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

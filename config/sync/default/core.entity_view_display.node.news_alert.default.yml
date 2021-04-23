@@ -1,0 +1,28 @@
+uuid: 30d61d69-8332-4d54-961e-26d3aa797dbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_alert.body
+    - node.type.news_alert
+  module:
+    - text
+    - user
+id: node.news_alert.default
+targetEntityType: node
+bundle: news_alert
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

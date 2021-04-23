@@ -1,0 +1,52 @@
+uuid: 34f97090-4229-40ac-ad69-5bfc75a5bbdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.calendar_event.body
+    - field.field.node.calendar_event.field_event_date
+    - field.field.node.calendar_event.field_feature_image
+    - node.type.calendar_event
+  module:
+    - smart_date
+    - text
+    - user
+id: node.calendar_event.default
+targetEntityType: node
+bundle: calendar_event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    weight: 102
+    label: above
+    settings:
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: smartdate_default
+    region: content
+  field_feature_image:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
