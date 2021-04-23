@@ -1,0 +1,35 @@
+uuid: a9aea403-baa5-402e-adc2-e095e31aab51
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.header_image
+  module:
+    - context
+    - views
+  theme:
+    - rsd_sites_barrio
+id: views_block__header_image_block_1
+theme: rsd_sites_barrio
+region: top_header
+weight: 0
+provider: null
+plugin: 'views_block:header_image-block_1'
+settings:
+  id: 'views_block:header_image-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

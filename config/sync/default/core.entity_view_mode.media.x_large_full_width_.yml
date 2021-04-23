@@ -1,0 +1,10 @@
+uuid: ceda1ab4-aeba-4695-a708-193b391a90cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.x_large_full_width_
+label: 'X-Large (Full Width)'
+targetEntityType: media
+cache: true

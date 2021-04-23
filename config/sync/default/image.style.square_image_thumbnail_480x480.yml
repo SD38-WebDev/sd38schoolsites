@@ -1,0 +1,15 @@
+uuid: 9b2b4a1e-a8e8-4b40-9c35-c18b161d35f0
+langcode: en
+status: true
+dependencies: {  }
+name: square_image_thumbnail_480x480
+label: 'Square Image Thumbnail (480x480)'
+effects:
+  f60b484e-5adc-4d8a-9001-baca0cfa9fc9:
+    uuid: f60b484e-5adc-4d8a-9001-baca0cfa9fc9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      anchor: center-center

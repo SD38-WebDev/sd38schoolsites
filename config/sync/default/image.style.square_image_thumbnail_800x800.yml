@@ -1,0 +1,15 @@
+uuid: 609946e0-2284-449c-9c31-22e395295631
+langcode: en
+status: true
+dependencies: {  }
+name: square_image_thumbnail_800x800
+label: 'Square Image Thumbnail (800x800)'
+effects:
+  46fc6d41-9dc4-4578-a625-56acb8f6f903:
+    uuid: 46fc6d41-9dc4-4578-a625-56acb8f6f903
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      anchor: center-center

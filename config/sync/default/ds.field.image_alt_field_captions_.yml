@@ -1,0 +1,11 @@
+id: image_alt_field_captions_
+label: 'Image ALT Field (Captions)'
+ui_limit: ''
+properties:
+  content:
+    value: '[paragraph:field_section_image:alt]'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  paragraph: paragraph

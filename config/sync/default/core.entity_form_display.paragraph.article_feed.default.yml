@@ -1,0 +1,34 @@
+uuid: 9de9a14d-8dba-4bc7-abbd-2b43c1d6aa5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_feed.field_section_title
+    - field.field.paragraph.article_feed.field_site_section
+    - paragraphs.paragraphs_type.article_feed
+id: paragraph.article_feed.default
+targetEntityType: paragraph
+bundle: article_feed
+mode: default
+content:
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_site_section:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

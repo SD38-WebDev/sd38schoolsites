@@ -1,0 +1,18 @@
+uuid: 7f418503-772c-4e40-936d-cb40eacc59d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_add_background_colour
+field_name: field_add_background_colour
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

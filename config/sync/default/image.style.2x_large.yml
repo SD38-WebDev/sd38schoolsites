@@ -1,0 +1,15 @@
+uuid: 9b48c02a-b5fd-454e-b1b8-2cc76f848c28
+langcode: en
+status: true
+dependencies: {  }
+name: 2x_large
+label: '2X-Large (1200×1200)'
+effects:
+  4bb59258-27ab-417f-9aa4-58e47f7cc675:
+    uuid: 4bb59258-27ab-417f-9aa4-58e47f7cc675
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: 1200
+      upscale: true

@@ -1,10 +1,10 @@
-uuid: 9da1adce-17e5-4a88-93ab-2baff93198cd
+uuid: ef872090-4b2f-4d53-84e1-0f37d5825da8
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.teaser
-label: Teaser
+id: node.vertical_teaser
+label: 'Vertical Teaser'
 targetEntityType: node
 cache: true

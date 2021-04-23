@@ -1,0 +1,15 @@
+uuid: 94b7da1a-3a33-4bfc-a8c9-591d553b1107
+langcode: en
+status: true
+dependencies: {  }
+name: 3x_large
+label: '3X-Large (1600×1600)'
+effects:
+  c10b7cb3-0fe5-42db-82de-3d898d8d872c:
+    uuid: c10b7cb3-0fe5-42db-82de-3d898d8d872c
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: 1600
+      upscale: true

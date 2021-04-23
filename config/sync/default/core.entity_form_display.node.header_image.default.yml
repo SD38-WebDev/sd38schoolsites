@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.header_image.field_header_image
-    - image.style.thumbnail
+    - image.style.square_image_thumbnail_480x480
     - node.type.header_image
   module:
-    - image
+    - focal_point
     - path
     - scheduler
 id: node.header_image.default
@@ -24,10 +24,12 @@ content:
   field_header_image:
     weight: 121
     settings:
+      preview_image_style: square_image_thumbnail_480x480
+      preview_link: true
+      offsets: '50,50'
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   path:
     type: path

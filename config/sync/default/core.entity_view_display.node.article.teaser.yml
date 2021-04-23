@@ -1,0 +1,198 @@
+uuid: c82f687d-861b-4f22-865f-968e8102ebfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.field_feature_image
+    - field.field.node.article.field_site_section
+    - field.field.node.article.field_tags
+    - image.style.large
+    - node.type.article
+  module:
+    - ds
+    - field_group
+    - media
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 0
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: ''
+    regions:
+      main:
+        - group_content_wrapper
+        - field_feature_image
+        - node_title
+        - body
+        - node_link
+        - group_image
+        - group_row
+        - group_summary_content
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 15
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 13
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_group:
+    group_content_wrapper:
+      children:
+        - group_row
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: container
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Content Wrapper'
+    group_row:
+      children:
+        - group_image
+        - group_summary_content
+      parent_name: group_content_wrapper
+      weight: 16
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_image:
+      children:
+        - field_feature_image
+      parent_name: group_row
+      weight: 15
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: col-sm-4
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Image
+    group_summary_content:
+      children:
+        - node_title
+        - body
+        - node_link
+      parent_name: group_row
+      weight: 16
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: col
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Summary Content'
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    weight: 14
+    label: hidden
+    settings:
+      trim_length: 25
+      trim_type: words
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: smart_trim
+    region: main
+  field_feature_image:
+    type: media_thumbnail
+    weight: 0
+    region: main
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  field_site_section: true
+  field_tags: true
+  links: true

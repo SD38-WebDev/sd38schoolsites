@@ -1,0 +1,10 @@
+uuid: 9f8c3ff0-c354-4cf2-964d-e1bcfb04ca97
+langcode: en
+status: true
+dependencies: {  }
+id: basic_text_section
+label: 'Basic Text Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

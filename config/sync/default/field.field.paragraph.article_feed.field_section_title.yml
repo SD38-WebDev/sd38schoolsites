@@ -1,0 +1,19 @@
+uuid: 6716525f-08c3-41ca-9ff3-978bbd9f5fba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.article_feed
+id: paragraph.article_feed.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: article_feed
+label: 'Section Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 5e527b82-7e4f-4d98-8efc-6d7eac4b8c21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_add_background_colour
+    - paragraphs.paragraphs_type.basic_text_section
+id: paragraph.basic_text_section.field_add_background_colour
+field_name: field_add_background_colour
+entity_type: paragraph
+bundle: basic_text_section
+label: 'Add Background Colour'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,30 @@
+uuid: 285c22bd-e9bb-4da3-877b-1496afa9eb53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_feed.field_section_title
+    - field.field.paragraph.article_feed.field_site_section
+    - paragraphs.paragraphs_type.article_feed
+id: paragraph.article_feed.default
+targetEntityType: paragraph
+bundle: article_feed
+mode: default
+content:
+  field_section_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_site_section:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

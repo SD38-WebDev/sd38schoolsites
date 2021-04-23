@@ -1,0 +1,10 @@
+uuid: 6a11a49b-0a52-4b93-a374-42e0c43ae4b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.square_large_480x480_
+label: 'Square Large (480x480)'
+targetEntityType: media
+cache: true

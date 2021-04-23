@@ -1,0 +1,10 @@
+uuid: f0632d7f-b8db-41c7-8d76-20411a7c18cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.1_column
+label: '1 Column'
+targetEntityType: paragraph
+cache: true

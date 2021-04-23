@@ -1,0 +1,15 @@
+uuid: c23e57bc-4f49-4dfb-ad2d-5710dbebf4cd
+langcode: en
+status: true
+dependencies: {  }
+name: square_image_thumbnail_220x220
+label: 'Square Image Thumbnail (220x220)'
+effects:
+  356b2f0d-90ca-4ee3-ba7f-c716bf0e146a:
+    uuid: 356b2f0d-90ca-4ee3-ba7f-c716bf0e146a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 220
+      anchor: center-center

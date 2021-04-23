@@ -1,0 +1,52 @@
+uuid: 7ba229a4-1971-415e-9457-c0f890bfac98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_text_section.field_add_background_colour
+    - field.field.paragraph.basic_text_section.field_background_colour
+    - field.field.paragraph.basic_text_section.field_section_content
+    - field.field.paragraph.basic_text_section.field_section_title
+    - paragraphs.paragraphs_type.basic_text_section
+  module:
+    - color_field
+    - text
+id: paragraph.basic_text_section.default
+targetEntityType: paragraph
+bundle: basic_text_section
+mode: default
+content:
+  field_add_background_colour:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_background_colour:
+    weight: 1
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_section_content:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_section_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

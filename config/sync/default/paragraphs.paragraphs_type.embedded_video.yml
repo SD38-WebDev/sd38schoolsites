@@ -1,0 +1,10 @@
+uuid: 0120283e-2d96-4127-929a-15ee55d92541
+langcode: en
+status: true
+dependencies: {  }
+id: embedded_video
+label: 'Embedded Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

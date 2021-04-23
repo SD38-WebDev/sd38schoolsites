@@ -1,0 +1,10 @@
+uuid: 3a3a81e4-5a81-4b43-ba25-aa2bda454b7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.image_right
+label: 'Image Right'
+targetEntityType: paragraph
+cache: true

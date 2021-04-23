@@ -1,0 +1,21 @@
+uuid: f4fb2899-ebc4-4436-983f-0ad8b15ddc29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_content
+    - paragraphs.paragraphs_type.basic_text_section
+  module:
+    - text
+id: paragraph.basic_text_section.field_section_content
+field_name: field_section_content
+entity_type: paragraph
+bundle: basic_text_section
+label: 'Section Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

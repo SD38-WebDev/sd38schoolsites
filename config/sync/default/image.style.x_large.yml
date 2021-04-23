@@ -1,0 +1,15 @@
+uuid: d10fe7e4-67f5-44d4-a39f-e0830be8cc10
+langcode: en
+status: true
+dependencies: {  }
+name: x_large
+label: 'X-Large (800×800)'
+effects:
+  1ff7c297-a4fc-4e21-91c2-744c70a202eb:
+    uuid: 1ff7c297-a4fc-4e21-91c2-744c70a202eb
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      upscale: true

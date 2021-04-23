@@ -1,0 +1,53 @@
+uuid: 526c00fd-1731-48b4-a7cd-5c18a6b80d5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_text_section.field_add_background_colour
+    - field.field.paragraph.basic_text_section.field_background_colour
+    - field.field.paragraph.basic_text_section.field_section_content
+    - field.field.paragraph.basic_text_section.field_section_title
+    - paragraphs.paragraphs_type.basic_text_section
+  module:
+    - color_field
+    - text
+id: paragraph.basic_text_section.default
+targetEntityType: paragraph
+bundle: basic_text_section
+mode: default
+content:
+  field_add_background_colour:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_background_colour:
+    weight: 1
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
+  field_section_content:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_section_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

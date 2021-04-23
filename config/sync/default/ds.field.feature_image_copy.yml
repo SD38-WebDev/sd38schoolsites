@@ -1,0 +1,9 @@
+id: feature_image_copy
+label: 'Feature Image Copy'
+ui_limit: 'article|*'
+properties:
+  field_id: node.article.field_feature_image
+type: display_field_copy
+type_label: 'Copy field'
+entities:
+  node: node

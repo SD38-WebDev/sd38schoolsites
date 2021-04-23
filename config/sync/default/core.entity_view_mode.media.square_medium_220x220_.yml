@@ -1,0 +1,10 @@
+uuid: d9bf636b-c3f5-4892-9cfd-e8b349107e42
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.square_medium_220x220_
+label: 'Square Medium (220x220)'
+targetEntityType: media
+cache: true

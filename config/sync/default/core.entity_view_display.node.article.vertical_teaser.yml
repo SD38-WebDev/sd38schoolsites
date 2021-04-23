@@ -1,8 +1,9 @@
-uuid: 7bb711e6-618e-4e4c-ab6b-4ab01e20660a
+uuid: 83cdeba0-dc65-4046-af62-dbea5759b7b6
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.vertical_teaser
     - field.field.node.article.body
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_site_section
@@ -10,7 +11,7 @@ dependencies:
     - node.type.article
   module:
     - ds
-    - text
+    - smart_trim
     - user
 third_party_settings:
   ds:
@@ -25,7 +26,7 @@ third_party_settings:
           wrapper: div
           classes:
             row: row
-          add_layout_class: 0
+          add_layout_class: 1
           attributes: ''
         regions:
           top:
@@ -48,21 +49,20 @@ third_party_settings:
             attributes: ''
     regions:
       top:
-        - node_title
         - field_feature_image
       main:
+        - node_title
         - body
-        - field_tags
         - links
     fields:
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
           link: true
-          wrapper: h1
+          wrapper: h3
           class: ''
         ft:
           id: default
@@ -70,39 +70,58 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-id: node.article.default
+id: node.article.vertical_teaser
 targetEntityType: node
 bundle: article
-mode: default
+mode: vertical_teaser
 content:
   body:
     weight: 2
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
+    settings:
+      trim_length: 25
+      trim_type: words
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_link: true
+      more_text: 'Read more'
+      more_class: more-link
+      summary_handler: full
+      wrap_output: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: smart_trim
     region: main
   field_feature_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
-      view_mode: default
+      view_mode: large_480_480_
       link: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     region: top
-  field_tags:
-    weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: main
   links:
-    weight: 4
+    weight: 3
     region: main
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_site_section: true
+  field_tags: true

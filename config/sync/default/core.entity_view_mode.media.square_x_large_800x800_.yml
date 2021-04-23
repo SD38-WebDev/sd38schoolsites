@@ -1,0 +1,10 @@
+uuid: 0acadbdc-cc71-4047-9add-1fe186e4db89
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.square_x_large_800x800_
+label: 'Square X-Large (800x800)'
+targetEntityType: media
+cache: true
