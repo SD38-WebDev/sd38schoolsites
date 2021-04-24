@@ -1,0 +1,68 @@
+uuid: 37cd499e-3049-4f33-a432-a549e9865c5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.3_columns
+    - field.field.paragraph.tile_link.field_background_colour
+    - field.field.paragraph.tile_link.field_tile_image
+    - field.field.paragraph.tile_link.field_tile_url
+    - image.style.square_image_thumbnail_480x480
+    - paragraphs.paragraphs_type.tile_link
+  module:
+    - ds
+    - field_group
+    - link
+    - media
+third_party_settings:
+  field_group:
+    group_link_group:
+      children:
+        - field_tile_image
+        - field_tile_url
+      parent_name: ''
+      weight: 0
+      format_type: link
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        target: field_tile_url
+        custom_uri: ''
+        target_attribute: _blank
+      label: 'Link Group'
+id: paragraph.tile_link.3_columns
+targetEntityType: paragraph
+bundle: tile_link
+mode: 3_columns
+content:
+  field_tile_image:
+    type: media_thumbnail
+    weight: 1
+    label: hidden
+    settings:
+      image_style: square_image_thumbnail_480x480
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+  field_tile_url:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  field_background_colour: true

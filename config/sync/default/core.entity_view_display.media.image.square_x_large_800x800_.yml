@@ -1,25 +1,26 @@
-uuid: 0b5de699-5bda-42d5-9d52-ac1ee0a16ff4
+uuid: bafb9666-d458-40f4-80a2-3953da71df6a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.square_x_large_800x800_
     - field.field.media.image.field_media_image
     - image.style.3x_large
-    - image.style.thumbnail
+    - image.style.square_image_thumbnail_800x800
     - media.type.image
   module:
     - colorbox
     - ds
-id: media.image.default
+id: media.image.square_x_large_800x800_
 targetEntityType: media
 bundle: image
-mode: default
+mode: square_x_large_800x800_
 content:
   field_media_image:
     label: visually_hidden
     weight: 0
     settings:
-      colorbox_node_style: thumbnail
+      colorbox_node_style: square_image_thumbnail_800x800
       colorbox_node_style_first: ''
       colorbox_image_style: 3x_large
       colorbox_gallery: post

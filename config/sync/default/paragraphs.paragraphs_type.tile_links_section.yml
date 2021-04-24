@@ -1,7 +1,13 @@
 uuid: ae6c3fdd-2e16-4d18-8d63-7b64ce304139
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    label: 'Columns (Grid)'
+    enabled: true
 id: tile_links_section
 label: 'Tile Links Section'
 icon_uuid: null

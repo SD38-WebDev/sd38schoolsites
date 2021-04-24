@@ -42,12 +42,19 @@ content:
     region: content
   paragraph_view_mode:
     type: paragraph_view_mode
-    weight: 3
-    region: content
+    weight: -100
     settings:
-      view_modes: {  }
+      view_modes:
+        default: Default
+        1_column: '1 Column'
+        2_columns: '2 Columns'
+        3_columns: '3 Columns'
+        4_columns: '4 Columns'
+        5_columns: '5 Columns'
+        6_columns: '6 Columns'
       default_view_mode: default
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

@@ -1,0 +1,65 @@
+uuid: 4bd3c2e9-c8eb-42b8-91b2-4ea36e37cb0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tile_links_section.field_section_content
+    - field.field.paragraph.tile_links_section.field_section_title
+    - field.field.paragraph.tile_links_section.field_tile_links
+    - field.field.paragraph.tile_links_section.paragraph_view_mode
+    - paragraphs.paragraphs_type.tile_links_section
+  module:
+    - paragraph_view_mode
+    - paragraphs
+    - text
+id: paragraph.tile_links_section.default
+targetEntityType: paragraph
+bundle: tile_links_section
+mode: default
+content:
+  field_section_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tile_links:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: 3
+    settings:
+      view_modes:
+        1_column: 1_column
+        2_columns: 2_columns
+        3_columns: 3_columns
+        4_columns: 4_columns
+        5_columns: 5_columns
+        6_columns: 6_columns
+        default: 0
+      default_view_mode: 4_columns
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

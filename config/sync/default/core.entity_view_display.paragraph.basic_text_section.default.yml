@@ -9,45 +9,104 @@ dependencies:
     - field.field.paragraph.basic_text_section.field_section_title
     - paragraphs.paragraphs_type.basic_text_section
   module:
-    - color_field
+    - ds
+    - field_group
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: 'class|col-12 basic-text-section'
+    regions:
+      main:
+        - group_wrapper
+        - field_section_title
+        - field_section_content
+  field_group:
+    group_wrapper:
+      children:
+        - field_section_title
+        - field_section_content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: '[paragraph:field_add_background_colour]'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'style="background-color:[paragraph:field_background_colour:color]"'
+        effect: none
+        speed: fast
+      label: Wrapper
 id: paragraph.basic_text_section.default
 targetEntityType: paragraph
 bundle: basic_text_section
 mode: default
 content:
-  field_add_background_colour:
-    weight: 0
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_background_colour:
-    weight: 1
-    label: above
-    settings:
-      format: hex
-      opacity: true
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_section_content:
-    weight: 3
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
+    region: main
   field_section_title:
-    weight: 2
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     type: string
-    region: content
-hidden: {  }
+    region: main
+hidden:
+  field_add_background_colour: true
+  field_background_colour: true

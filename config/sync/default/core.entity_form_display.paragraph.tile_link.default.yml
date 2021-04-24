@@ -1,0 +1,44 @@
+uuid: 0063bfc6-7527-4925-a212-a3e1a1c24afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tile_link.field_background_colour
+    - field.field.paragraph.tile_link.field_tile_image
+    - field.field.paragraph.tile_link.field_tile_url
+    - paragraphs.paragraphs_type.tile_link
+  module:
+    - color_field
+    - link
+    - media_library
+id: paragraph.tile_link.default
+targetEntityType: paragraph
+bundle: tile_link
+mode: default
+content:
+  field_background_colour:
+    weight: 0
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_tile_image:
+    type: media_library_widget
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_tile_url:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

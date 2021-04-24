@@ -1,16 +1,16 @@
-uuid: ba64cb9b-1f6b-4852-93f7-dd180106bff1
+uuid: 24a9aef2-bb04-43ff-8158-109a7f18c460
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.paragraph_view_mode
-    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.tile_links_section
   module:
     - paragraph_view_mode
-id: paragraph.image_gallery.paragraph_view_mode
+id: paragraph.tile_links_section.paragraph_view_mode
 field_name: paragraph_view_mode
 entity_type: paragraph
-bundle: image_gallery
+bundle: tile_links_section
 label: 'Columns (Grid)'
 description: ''
 required: false

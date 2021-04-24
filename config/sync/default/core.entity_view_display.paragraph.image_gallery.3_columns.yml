@@ -9,13 +9,121 @@ dependencies:
     - field.field.paragraph.image_gallery.field_section_title
     - field.field.paragraph.image_gallery.paragraph_view_mode
     - paragraphs.paragraphs_type.image_gallery
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_section_title
+        - field_section_content
+        - field_images
 id: paragraph.image_gallery.3_columns
 targetEntityType: paragraph
 bundle: image_gallery
 mode: 3_columns
-content: {  }
+content:
+  field_images:
+    type: entity_reference_entity_view
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      view_mode: square_large_480x480_
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: 'row row-cols-3'
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: 'col mb-4'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+  field_section_content:
+    type: text_default
+    weight: 1
+    region: main
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title:
+    type: string
+    weight: 0
+    region: main
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
 hidden:
-  field_images: true
-  field_section_content: true
-  field_section_title: true
   paragraph_view_mode: true

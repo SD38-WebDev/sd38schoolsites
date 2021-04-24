@@ -7,6 +7,7 @@ dependencies:
 third_party_settings:
   paragraph_view_mode:
     enabled: true
+    label: 'Columns (Grid)'
 id: image_gallery
 label: 'Image Gallery'
 icon_uuid: null

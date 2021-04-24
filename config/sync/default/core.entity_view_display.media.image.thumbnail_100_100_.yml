@@ -1,8 +1,9 @@
-uuid: 0b5de699-5bda-42d5-9d52-ac1ee0a16ff4
+uuid: 681a60b1-ff5b-4a9a-89e6-00c2b0346386
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.thumbnail_100_100_
     - field.field.media.image.field_media_image
     - image.style.3x_large
     - image.style.thumbnail
@@ -10,10 +11,10 @@ dependencies:
   module:
     - colorbox
     - ds
-id: media.image.default
+id: media.image.thumbnail_100_100_
 targetEntityType: media
 bundle: image
-mode: default
+mode: thumbnail_100_100_
 content:
   field_media_image:
     label: visually_hidden

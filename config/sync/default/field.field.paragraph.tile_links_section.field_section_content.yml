@@ -1,0 +1,21 @@
+uuid: a8ab605c-0280-4096-a35d-e992aede75f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_content
+    - paragraphs.paragraphs_type.tile_links_section
+  module:
+    - text
+id: paragraph.tile_links_section.field_section_content
+field_name: field_section_content
+entity_type: paragraph
+bundle: tile_links_section
+label: 'Section Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

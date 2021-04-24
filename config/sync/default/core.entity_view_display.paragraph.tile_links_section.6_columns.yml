@@ -1,16 +1,17 @@
-uuid: 27daf210-2933-4746-9a88-7ce9af634a54
+uuid: 3cca2cec-2d3f-4515-8568-c0d47a01f4b9
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.4_columns
-    - field.field.paragraph.image_gallery.field_images
-    - field.field.paragraph.image_gallery.field_section_content
-    - field.field.paragraph.image_gallery.field_section_title
-    - field.field.paragraph.image_gallery.paragraph_view_mode
-    - paragraphs.paragraphs_type.image_gallery
+    - core.entity_view_mode.paragraph.6_columns
+    - field.field.paragraph.tile_links_section.field_section_content
+    - field.field.paragraph.tile_links_section.field_section_title
+    - field.field.paragraph.tile_links_section.field_tile_links
+    - field.field.paragraph.tile_links_section.paragraph_view_mode
+    - paragraphs.paragraphs_type.tile_links_section
   module:
     - ds
+    - entity_reference_revisions
     - text
 third_party_settings:
   ds:
@@ -38,61 +39,21 @@ third_party_settings:
       main:
         - field_section_title
         - field_section_content
-        - field_images
-id: paragraph.image_gallery.4_columns
+        - field_tile_links
+id: paragraph.tile_links_section.6_columns
 targetEntityType: paragraph
-bundle: image_gallery
-mode: 4_columns
+bundle: tile_links_section
+mode: 6_columns
 content:
-  field_images:
-    type: entity_reference_entity_view
-    weight: 2
-    region: main
-    label: hidden
-    settings:
-      view_mode: square_large_480x480_
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis: true
-            fis-el: div
-            fis-cl: 'row row-cols-4'
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: 'col mb-4'
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
   field_section_content:
-    type: text_default
     weight: 1
-    region: main
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_section_title:
-    type: string
-    weight: 0
+    type: text_default
     region: main
+  field_section_title:
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
@@ -125,5 +86,45 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
+    type: string
+    region: main
+  field_tile_links:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: 6_columns
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: 'row row-cols-6'
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: 'col mb-4'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+    region: main
 hidden:
   paragraph_view_mode: true

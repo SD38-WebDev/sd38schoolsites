@@ -1,25 +1,26 @@
-uuid: 0b5de699-5bda-42d5-9d52-ac1ee0a16ff4
+uuid: 8905fd4c-2d67-4343-bfad-fd83c10e1e25
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.medium_220_220_
     - field.field.media.image.field_media_image
     - image.style.3x_large
-    - image.style.thumbnail
+    - image.style.medium
     - media.type.image
   module:
     - colorbox
     - ds
-id: media.image.default
+id: media.image.medium_220_220_
 targetEntityType: media
 bundle: image
-mode: default
+mode: medium_220_220_
 content:
   field_media_image:
     label: visually_hidden
     weight: 0
     settings:
-      colorbox_node_style: thumbnail
+      colorbox_node_style: medium
       colorbox_node_style_first: ''
       colorbox_image_style: 3x_large
       colorbox_gallery: post

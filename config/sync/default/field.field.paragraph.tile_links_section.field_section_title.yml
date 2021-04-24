@@ -1,0 +1,19 @@
+uuid: dc500aa6-bf3d-47d7-8a0c-020aed42bb21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.tile_links_section
+id: paragraph.tile_links_section.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: tile_links_section
+label: 'Section Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
