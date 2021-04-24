@@ -1,0 +1,98 @@
+uuid: ce63a003-96f1-4327-b9cc-264dfcc5ce4e
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.background_image
+    - field.field.paragraph.image_and_text_section.field_background_colour
+    - field.field.paragraph.image_and_text_section.field_image
+    - field.field.paragraph.image_and_text_section.field_section_content
+    - field.field.paragraph.image_and_text_section.field_section_title
+    - field.field.paragraph.image_and_text_section.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_and_text_section
+  module:
+    - color_field
+    - ds
+    - paragraph_view_mode
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_background_colour
+        - paragraph_view_mode
+        - field_section_title
+        - field_section_content
+        - field_image
+id: paragraph.image_and_text_section.background_image
+targetEntityType: paragraph
+bundle: image_and_text_section
+mode: background_image
+content:
+  field_background_colour:
+    weight: 0
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: left
+  field_image:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: left
+  field_section_content:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_section_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: 0
+    region: left
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

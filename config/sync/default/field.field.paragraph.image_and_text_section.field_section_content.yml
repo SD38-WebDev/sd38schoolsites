@@ -1,0 +1,21 @@
+uuid: 55d53913-8b90-41e2-a2d7-f77dfc34866a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_content
+    - paragraphs.paragraphs_type.image_and_text_section
+  module:
+    - text
+id: paragraph.image_and_text_section.field_section_content
+field_name: field_section_content
+entity_type: paragraph
+bundle: image_and_text_section
+label: 'Section Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

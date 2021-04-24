@@ -1,0 +1,114 @@
+uuid: c1da85a6-3734-41fd-9715-5270adfcadbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.image_left
+    - field.field.paragraph.image_and_text_section.field_background_colour
+    - field.field.paragraph.image_and_text_section.field_image
+    - field.field.paragraph.image_and_text_section.field_section_content
+    - field.field.paragraph.image_and_text_section.field_section_title
+    - field.field.paragraph.image_and_text_section.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_and_text_section
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ' class|d-flex align-items-center row mb-4 no-gutters,style|background-color:[paragraph:field_background_colour:color]'
+        regions:
+          left:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-6'
+          right:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-6 p-3'
+    regions:
+      left:
+        - field_image
+      right:
+        - field_section_title
+        - field_section_content
+id: paragraph.image_and_text_section.image_left
+targetEntityType: paragraph
+bundle: image_and_text_section
+mode: image_left
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: square_x_large_800x800_
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: left
+  field_section_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+  field_section_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: right
+hidden:
+  field_background_colour: true
+  paragraph_view_mode: true

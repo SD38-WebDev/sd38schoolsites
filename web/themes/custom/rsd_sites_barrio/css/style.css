@@ -221,7 +221,7 @@ footer {
   position: absolute;
   top: 20px;
   right: 20px;
-}  
+}
 
 
 /** Typography **/
@@ -613,6 +613,9 @@ body.user-logged-in .card:hover .ops-links {
   padding: 1rem;
 }
 
+.content-section .field--type-entity-reference {
+  margin: 0;
+}
 
 /*
 .p-sm {

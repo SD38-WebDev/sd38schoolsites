@@ -5,8 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_content_section
     - node.type.page
+    - paragraphs.paragraphs_type.article_feed
     - paragraphs.paragraphs_type.basic_text_section
     - paragraphs.paragraphs_type.bp_accordion
+    - paragraphs.paragraphs_type.embedded_video
+    - paragraphs.paragraphs_type.image_and_text_section
     - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.tile_links_section
   module:
@@ -27,13 +30,16 @@ settings:
     negate: 0
     target_bundles:
       bp_accordion: bp_accordion
+      article_feed: article_feed
       basic_text_section: basic_text_section
+      embedded_video: embedded_video
       image_gallery: image_gallery
+      image_and_text_section: image_and_text_section
       tile_links_section: tile_links_section
     target_bundles_drag_drop:
       article_feed:
+        enabled: true
         weight: 22
-        enabled: false
       basic_text_section:
         enabled: true
         weight: 23
@@ -83,8 +89,11 @@ settings:
         weight: 30
         enabled: false
       embedded_video:
+        enabled: true
         weight: 39
-        enabled: false
+      image_and_text_section:
+        enabled: true
+        weight: 41
       image_gallery:
         enabled: true
         weight: 40

@@ -1,0 +1,16 @@
+uuid: ae117bc2-5616-4304-8e6a-73d8885b690c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    label: Layout
+    enabled: true
+id: image_and_text_section
+label: 'Image and Text Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

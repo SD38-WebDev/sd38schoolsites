@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
+    - image.style.large
     - node.type.article
   module:
     - ds
+    - media
     - smart_trim
     - user
 third_party_settings:
@@ -87,10 +89,10 @@ content:
       more_text: 'Read more'
       more_class: more-link
       summary_handler: full
-      wrap_output: false
       trim_options:
-        text: false
+        text: true
         trim_zero: false
+      wrap_output: false
     third_party_settings:
       ds:
         ft:
@@ -102,12 +104,12 @@ content:
     type: smart_trim
     region: main
   field_feature_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     weight: 0
     label: hidden
     settings:
-      view_mode: large_480_480_
-      link: false
+      image_style: large
+      image_link: content
     third_party_settings:
       ds:
         ft:
