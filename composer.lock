@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de52013a625be6244e191a8b9a975254",
+    "content-hash": "3455e201baa594d601718d41e265f16d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6428,6 +6428,55 @@
             "homepage": "https://www.drupal.org/project/views_bootstrap",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_bootstrap"
+            }
+        },
+        {
+            "name": "drupal/views_sort_options_weight",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_sort_options_weight.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_sort_options_weight-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "963b083181c3bd1ece04ad1fef7395535985ecbe"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1572120785",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Sineok",
+                    "homepage": "https://www.drupal.org/user/3426613",
+                    "email": "n.sineok@gmail.com"
+                }
+            ],
+            "description": "Adds Views sorting plugins which allow setting weight for each option of the list field or entity bundle.",
+            "homepage": "https://www.drupal.org/project/views_sort_options_weight",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_sort_options_weight",
+                "issues": "https://www.drupal.org/project/issues/views_sort_options_weight"
             }
         },
         {

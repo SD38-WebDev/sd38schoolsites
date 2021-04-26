@@ -33,15 +33,22 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_staff_members:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 122
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
+      title: 'Staff Member'
+      title_plural: 'Staff Members'
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: staff_member
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
     third_party_settings: {  }
     region: content
   path:

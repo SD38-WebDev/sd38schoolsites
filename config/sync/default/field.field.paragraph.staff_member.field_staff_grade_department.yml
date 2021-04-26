@@ -1,0 +1,29 @@
+uuid: a7f681bb-7760-44e2-b62e-2b18fe603913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_staff_grade_department
+    - paragraphs.paragraphs_type.staff_member
+    - taxonomy.vocabulary.staff_grades_departments
+id: paragraph.staff_member.field_staff_grade_department
+field_name: field_staff_grade_department
+entity_type: paragraph
+bundle: staff_member
+label: Grade/Department
+description: 'Supply either grades or department names. ie: Grade 1, Grade 2, Math Dept., Science Dept., etc…'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      staff_grades_departments: staff_grades_departments
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

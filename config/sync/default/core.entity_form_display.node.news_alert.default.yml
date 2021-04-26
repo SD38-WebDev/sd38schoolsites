@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.news_alert.body
+    - field.field.node.news_alert.field_alert_title
+    - field.field.node.news_alert.field_alert_type
     - node.type.news_alert
   module:
     - path
@@ -30,6 +32,20 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_alert_title:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_alert_type:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   path:
     type: path
     weight: 30

@@ -1,0 +1,61 @@
+uuid: 76d887d6-ed27-400b-897d-cdc289c51732
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - taxonomy.vocabulary.tags
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ' class|row justify-content-center'
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-9'
+    regions:
+      main:
+        - taxonomy_term_title
+        - description
+        - 'dynamic_block_field:taxonomy_term-taxonomy_posts_block'
+    fields:
+      'dynamic_block_field:taxonomy_term-taxonomy_posts_block':
+        plugin_id: 'dynamic_block_field:taxonomy_term-taxonomy_posts_block'
+        weight: 2
+        label: hidden
+        formatter: default
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: taxonomy_term.tags.full
+targetEntityType: taxonomy_term
+bundle: tags
+mode: full
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

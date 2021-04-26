@@ -256,6 +256,24 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: col
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_event_date'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 2
+    display_options:
+      display_extenders: {  }
+      block_description: 'Site Calendar Block'
     cache_metadata:
       max-age: -1
       contexts:
@@ -282,6 +300,7 @@ display:
         weight: -49
         context: '0'
         menu_name: main
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

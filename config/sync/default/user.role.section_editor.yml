@@ -1,0 +1,10 @@
+uuid: d9864ce5-6971-4a97-bc41-16b05d4b4074
+langcode: en
+status: true
+dependencies: {  }
+id: section_editor
+label: 'Section Editor'
+weight: -8
+is_admin: null
+permissions:
+  - 'search content'

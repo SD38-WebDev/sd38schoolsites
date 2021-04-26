@@ -5,6 +5,7 @@ dependencies:
   module:
     - context
     - ctools
+    - system
   theme:
     - rsd_sites_barrio
 _core:
@@ -36,7 +37,13 @@ visibility:
     bundles:
       article: article
       calendar_event: calendar_event
+      news_alert: news_alert
       page: page
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: ''
+    negate: true
+    context_mapping: {  }

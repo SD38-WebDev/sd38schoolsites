@@ -1,0 +1,11 @@
+id: taxonomy_posts_block
+label: 'Taxonomy Posts Block'
+ui_limit: ''
+properties:
+  block: 'views_block:taxonomy_posts-block_1'
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  taxonomy_term: taxonomy_term

@@ -1,0 +1,23 @@
+uuid: a5a54077-f79e-4663-be88-c4943bbbd5f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_division
+    - paragraphs.paragraphs_type.staff_member
+id: paragraph.staff_member.field_division
+field_name: field_division
+entity_type: paragraph
+bundle: staff_member
+label: Division
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

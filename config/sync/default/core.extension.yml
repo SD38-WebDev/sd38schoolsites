@@ -38,6 +38,7 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  entity_submit_redirect: 0
   eva: 0
   feeds: 0
   feeds_ical: 0
@@ -99,6 +100,7 @@ module:
   video_embed_media: 0
   video_embed_wysiwyg: 0
   views_bootstrap: 0
+  views_sort_options_weight: 0
   views_ui: 0
   viewsreference: 0
   workbench_access: 0

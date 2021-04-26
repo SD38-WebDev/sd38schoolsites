@@ -1,0 +1,34 @@
+uuid: a24b9d23-27d3-4cdf-8e73-ba500e524e71
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: user_pages
+label: 'User Pages'
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: false
+    uuid: ba376b8a-fa46-4dbe-a70f-dcff6744a2ab
+    context_mapping: {  }
+reactions:
+  regions:
+    id: regions
+    regions:
+      classy: {  }
+      seven: {  }
+      stable: {  }
+      stark: {  }
+      bootstrap_barrio: {  }
+      rsd_sites_barrio:
+        - sidebar_first
+        - sidebar_second
+    saved: false
+    uuid: ec440031-099f-4b7f-8a02-3d3e615678ef
+weight: 0

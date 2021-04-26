@@ -1,0 +1,122 @@
+uuid: cbceaf25-4ebe-4437-80b4-a15e3646b19e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.staff_listing_photo_grid
+    - field.field.node.staff_page.body
+    - field.field.node.staff_page.field_staff_members
+    - node.type.staff_page
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ' class|row justify-content-center'
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: 'class|col-12 col-lg-9'
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: class|col-12
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: 'class|col-12 col-lg-9'
+    regions:
+      top:
+        - node_title
+        - body
+      main:
+        - field_staff_members
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.staff_page.staff_listing_photo_grid
+targetEntityType: node
+bundle: staff_page
+mode: staff_listing_photo_grid
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: top
+  field_staff_members:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      view_mode: staff_member
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: 'row row-cols-6 d-flex justify-content-center'
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: 'col mb-4'
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
+hidden:
+  links: true

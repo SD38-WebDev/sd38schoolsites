@@ -1,0 +1,144 @@
+uuid: 6c7452a3-9dda-43d4-97b6-c0d7bca6167c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.staff_member.field_division
+    - field.field.paragraph.staff_member.field_external_sites
+    - field.field.paragraph.staff_member.field_first_name
+    - field.field.paragraph.staff_member.field_last_name
+    - field.field.paragraph.staff_member.field_staff_grade_department
+    - field.field.paragraph.staff_member.field_staff_photo
+    - field.field.paragraph.staff_member.field_staff_position
+    - paragraphs.paragraphs_type.staff_member
+  module:
+    - field_group
+    - link
+    - media_library
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_name
+        - group_position_details
+        - group_links
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_name:
+      children:
+        - field_first_name
+        - field_last_name
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Name
+    group_position_details:
+      children:
+        - field_staff_position
+        - field_division
+        - field_staff_grade_department
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Position Details'
+    group_links:
+      children:
+        - field_external_sites
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Links
+id: paragraph.staff_member.default
+targetEntityType: paragraph
+bundle: staff_member
+mode: default
+content:
+  field_division:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_external_sites:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_first_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_staff_grade_department:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_staff_photo:
+    type: media_library_widget
+    weight: 7
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_staff_position:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

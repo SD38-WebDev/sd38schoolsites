@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_staff_members
     - node.type.staff_page
+    - paragraphs.paragraphs_type.staff_member
   module:
     - entity_reference_revisions
 id: node.staff_page.field_staff_members
@@ -21,8 +22,15 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles: null
+    target_bundles:
+      staff_member: staff_member
     target_bundles_drag_drop:
+      article_feed:
+        weight: 24
+        enabled: false
+      basic_text_section:
+        weight: 25
+        enabled: false
       bp_accordion:
         weight: 16
         enabled: false
@@ -67,5 +75,23 @@ settings:
         enabled: false
       bp_view:
         weight: 30
+        enabled: false
+      embedded_video:
+        weight: 41
+        enabled: false
+      image_and_text_section:
+        weight: 42
+        enabled: false
+      image_gallery:
+        weight: 43
+        enabled: false
+      staff_member:
+        enabled: true
+        weight: 44
+      tile_link:
+        weight: 45
+        enabled: false
+      tile_links_section:
+        weight: 46
         enabled: false
 field_type: entity_reference_revisions

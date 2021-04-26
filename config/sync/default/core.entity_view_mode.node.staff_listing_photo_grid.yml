@@ -1,0 +1,10 @@
+uuid: b26cba28-3325-4901-929d-bff925cfe8a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.staff_listing_photo_grid
+label: 'Staff Listing - Photo Grid'
+targetEntityType: node
+cache: true

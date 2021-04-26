@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - context
+    - ctools
     - system
   theme:
     - rsd_sites_barrio
@@ -29,3 +30,10 @@ visibility:
     negate: null
     view_inclusion: {  }
     context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news_alert: news_alert
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

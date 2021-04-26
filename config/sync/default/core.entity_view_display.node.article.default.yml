@@ -15,7 +15,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bs_1col_stacked
+      id: bs_1col
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -26,31 +26,18 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 0
-          attributes: ''
+          attributes: ' class|row justify-content-center'
         regions:
-          top:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
           main:
             wrapper: div
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 1
-            attributes: ''
-          bottom:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
+            attributes: 'class|col-12 col-lg-9'
     regions:
-      top:
+      main:
         - node_title
         - field_feature_image
-      main:
         - body
         - field_tags
         - links
@@ -90,7 +77,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    region: top
+    region: main
   field_tags:
     weight: 3
     label: above

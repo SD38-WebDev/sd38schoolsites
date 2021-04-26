@@ -7,9 +7,70 @@ dependencies:
     - field.field.node.staff_page.field_staff_members
     - node.type.staff_page
   module:
-    - entity_reference_revisions
+    - ds
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ' class|row justify-content-center'
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: 'class|col-12 col-lg-9'
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: class|col-12
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: 'class|col-12 col-lg-9'
+    regions:
+      top:
+        - node_title
+        - body
+      main:
+        - 'dynamic_block_field:node-staff_listing_block'
+    fields:
+      'dynamic_block_field:node-staff_listing_block':
+        plugin_id: 'dynamic_block_field:node-staff_listing_block'
+        weight: 2
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.staff_page.default
 targetEntityType: node
 bundle: staff_page
@@ -18,22 +79,10 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_staff_members:
-    type: entity_reference_revisions_entity_view
-    weight: 102
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+    region: top
+hidden:
+  field_staff_members: true
+  links: true

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.header_image.field_header_image
-    - image.style.square_image_thumbnail_480x480
+    - image.style.large
     - node.type.header_image
   module:
     - focal_point
@@ -24,7 +24,7 @@ content:
   field_header_image:
     weight: 121
     settings:
-      preview_image_style: square_image_thumbnail_480x480
+      preview_image_style: large
       preview_link: true
       offsets: '50,50'
       progress_indicator: throbber

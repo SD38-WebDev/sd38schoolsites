@@ -1,0 +1,143 @@
+uuid: 97dda8d9-8aab-4545-8e85-c287c8ac3719
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_alert.body
+    - field.field.node.news_alert.field_alert_title
+    - field.field.node.news_alert.field_alert_type
+    - node.type.news_alert
+  module:
+    - ds
+    - field_group
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 0
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 0
+            attributes: ''
+    regions:
+      main:
+        - group_alert_type_wrapper
+        - group_news_alert_link
+        - field_alert_title
+        - body
+        - node_changed_date
+    fields:
+      node_changed_date:
+        plugin_id: node_changed_date
+        weight: 4
+        label: hidden
+        formatter: ds_post_date_long
+        ft:
+          id: default
+          settings:
+            lb: Updated
+            lb-col: false
+            classes: {  }
+  field_group:
+    group_alert_type_wrapper:
+      children:
+        - group_news_alert_link
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: main
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'news-alert [node:field_alert_type:value]'
+      label: 'Alert Type Wrapper'
+    group_news_alert_link:
+      children:
+        - field_alert_title
+        - body
+        - node_changed_date
+      parent_name: group_alert_type_wrapper
+      weight: 1
+      format_type: link
+      region: main
+      format_settings:
+        target: entity
+        custom_uri: ''
+        target_attribute: default
+        id: ''
+        classes: ''
+      label: 'News Alert Link'
+id: node.news_alert.teaser
+targetEntityType: node
+bundle: news_alert
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: main
+  field_alert_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: main
+hidden:
+  field_alert_type: true
+  links: true

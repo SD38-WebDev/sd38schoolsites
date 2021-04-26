@@ -1,0 +1,35 @@
+uuid: 21866f59-dfa8-44f9-ac04-2fdb1310b0c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_alerts
+  module:
+    - context
+    - views
+  theme:
+    - rsd_sites_barrio
+id: views_block__news_alerts_block_1
+theme: rsd_sites_barrio
+region: featured_top
+weight: 0
+provider: null
+plugin: 'views_block:news_alerts-block_1'
+settings:
+  id: 'views_block:news_alerts-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

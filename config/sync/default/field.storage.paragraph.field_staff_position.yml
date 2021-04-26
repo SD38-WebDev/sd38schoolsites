@@ -1,0 +1,20 @@
+uuid: dd5aced7-ca2c-4eba-8740-cad36c4a2dee
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_staff_position
+field_name: field_staff_position
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

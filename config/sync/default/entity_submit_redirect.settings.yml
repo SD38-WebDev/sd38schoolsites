@@ -1,0 +1,9 @@
+node:
+  header_image:
+    path: '<front>'
+  news_alert:
+    path: '<front>'
+global:
+  use_on:
+    - front
+    - backoffice

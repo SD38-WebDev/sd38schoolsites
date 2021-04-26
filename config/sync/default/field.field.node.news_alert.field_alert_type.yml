@@ -1,0 +1,21 @@
+uuid: 222ee7ba-70b6-4871-baf3-a99e47e567b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alert_type
+    - node.type.news_alert
+  module:
+    - options
+id: node.news_alert.field_alert_type
+field_name: field_alert_type
+entity_type: node
+bundle: news_alert
+label: 'Alert Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

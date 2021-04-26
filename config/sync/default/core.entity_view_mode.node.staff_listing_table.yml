@@ -1,0 +1,10 @@
+uuid: ec79df42-588f-44c3-8de8-76a6d3221ec2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.staff_listing_table
+label: 'Staff Listing - Table'
+targetEntityType: node
+cache: true

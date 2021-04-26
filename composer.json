@@ -79,6 +79,7 @@
         "drupal/unpublished_paragraphs": "^1.2",
         "drupal/video_embed_field": "^2.4",
         "drupal/views_bootstrap": "^4.3",
+        "drupal/views_sort_options_weight": "^1.2",
         "drupal/workbench_access": "^1.0@beta",
         "drush/drush": "^10.3",
         "platformsh/config-reader": "^2.4"

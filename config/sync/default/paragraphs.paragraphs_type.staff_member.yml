@@ -1,0 +1,10 @@
+uuid: e97c8b07-9bfe-4438-88cb-18b16dbd837d
+langcode: en
+status: true
+dependencies: {  }
+id: staff_member
+label: 'Staff Member'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

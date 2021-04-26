@@ -156,11 +156,23 @@ h2 a {
 /** Structural Stuff **/
 
 body #header .brand-row {
-	min-height: 6rem;
+	min-height: 8rem;
 }
 
 body.path-frontpage #header .brand-row {
 	min-height: 18rem;
+}
+
+@media (max-width: 767.98px) {
+  body.path-frontpage #header .brand-row {
+  	min-height: 8rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body.path-frontpage #header .brand-row {
+  	min-height: 12rem;
+  }
 }
 
 body #header div.logo,
@@ -184,10 +196,12 @@ body.path-frontpage #header div.welcome-txt {
 }
 
 .navbar-toggler {
-	background: red !important;
+  color: rgba(0,0,0,.5) !important;
+  border-color: rgba(0,0,0,.1) !important;
 }
 
-body .summary-text {
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
 body .summary-text,
@@ -433,15 +447,21 @@ img {
 /** SD38 News Alerts **/
 /**********************/
 
+.view-id-news_alerts {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
 .view-id-news_alerts .news-alert {
 	border-radius: 0.625rem;
-	padding: 0.75rem;
-	margin-bottom: 1.25rem;
+	padding: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .view-id-news_alerts .news-alert h2 {
 	font-size: 1.35rem;
 	margin: 0 !important;
+  font-weight: bold;
 }
 
 .view-id-news_alerts .news-alert p {
@@ -463,10 +483,6 @@ img {
 	font-weight: 600;
 }
 
-.view-id-news_alerts .alert-icon.standard-alert {
-	background-image: url('../images/icons/sd38-alert.png');
-}
-
 .view-id-news_alerts .news-alert.standard-alert,
 .view-id-news_alerts .news-alert.standard-alert a {
 	color: #24408d;
@@ -474,37 +490,22 @@ img {
 
 .view-id-news_alerts .news-alert.standard-alert {
 	background-color: rgba(245, 245, 255, 1);
-	border: 1px solid rgba(36, 63, 140, 0.25);
-}
-
-.view-id-news_alerts .alert-icon.urgent-alert {
-	background-image: url('../images/icons/sd38-urgent-alert.png');
+	border: 2px solid rgba(36, 63, 140, 1);
 }
 
 .view-id-news_alerts .news-alert.urgent-alert,
-.view-id-news_alerts .news-alert.urgent-alert a {
+  .view-id-news_alerts .news-alert.urgent-alert a {
 	color: #be1e2d;
 }
 
 .view-id-news_alerts .news-alert.urgent-alert {
 	background-color: rgba(191, 31, 47, 0.1);
-	border: 1px solid rgba(191, 31, 47, 0.25);
+	border: 2px solid rgba(191, 31, 47, 1);
 }
 
-.view-id-news_alerts .alert-icon.weather-alert {
-	background-image: url('../images/icons/sd38-snow-alert.png');
+.view-id-news_alerts a.news-alert-link {
+  text-decoration: none;
 }
-
-.view-id-news_alerts .news-alert.weather-alert,
-.view-id-news_alerts .news-alert.weather-alert a {
-	color: #00aeef;
-}
-
-.view-id-news_alerts .news-alert.weather-alert {
-	background-color: rgba(0, 176, 240, 0.1);
-	border: 1px solid rgba(0, 176, 240, 0.25);
-}
-
 
 @media screen and (max-width:767px) {
 
