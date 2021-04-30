@@ -1,0 +1,8 @@
+uuid: 4146cd3a-e5e5-445a-a759-1dbab1a2592d
+langcode: en
+status: true
+dependencies: {  }
+id: address_block
+label: 'Address Block'
+revision: 0
+description: ''

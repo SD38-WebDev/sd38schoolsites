@@ -2,6 +2,11 @@ uuid: 9c9ea97e-267a-498c-a90b-1dc8d6d42f2f
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.large_480_480_
+    - core.entity_view_mode.media.medium_220_220_
+    - core.entity_view_mode.media.thumbnail_100_100_
+    - core.entity_view_mode.media.x_large_full_width_
   module:
     - editor
     - media
@@ -40,7 +45,7 @@ filters:
     status: false
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type=''1 A I''> <li> <dl> <dt> <dd> <h2 id=''jump-*''> <h3 id> <h4 id> <h5 id> <h6 id>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span> <u> <s> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -75,8 +80,13 @@ filters:
     weight: -40
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
+      allowed_media_types:
+        image: image
+      allowed_view_modes:
+        large_480_480_: large_480_480_
+        medium_220_220_: medium_220_220_
+        thumbnail_100_100_: thumbnail_100_100_
+        x_large_full_width_: x_large_full_width_
   video_embed_wysiwyg:
     id: video_embed_wysiwyg
     provider: video_embed_wysiwyg

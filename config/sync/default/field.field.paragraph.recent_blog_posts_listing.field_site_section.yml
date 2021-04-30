@@ -1,0 +1,39 @@
+uuid: f2cb75d5-ec4a-4ac5-848a-c8185a45877f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_site_section
+    - paragraphs.paragraphs_type.recent_blog_posts_listing
+    - taxonomy.vocabulary.site_blogs_sections
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: required_by_role
+    required_plugin_options:
+      section_editor: section_editor
+      anonymous: 0
+      site_editor: 0
+      administrator: 0
+id: paragraph.recent_blog_posts_listing.field_site_section
+field_name: field_site_section
+entity_type: paragraph
+bundle: recent_blog_posts_listing
+label: 'Site Section'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      site_blogs_sections: site_blogs_sections
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

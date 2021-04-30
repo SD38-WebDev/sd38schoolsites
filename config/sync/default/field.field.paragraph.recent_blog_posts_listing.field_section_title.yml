@@ -1,0 +1,25 @@
+uuid: 90dcbe4b-6a36-4258-93ab-85f705eb7f8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.recent_blog_posts_listing
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.recent_blog_posts_listing.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: recent_blog_posts_listing
+label: 'Section Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

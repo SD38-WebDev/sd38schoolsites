@@ -1,0 +1,36 @@
+uuid: 82229bdd-5264-49fe-b186-10d2f738fea9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:address_block:e7910635-166a-459a-8822-37e985338268'
+  module:
+    - block_content
+    - context
+  theme:
+    - rsd_sites_barrio
+id: addressblock
+theme: rsd_sites_barrio
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:e7910635-166a-459a-8822-37e985338268'
+settings:
+  id: 'block_content:e7910635-166a-459a-8822-37e985338268'
+  label: 'Elementary School'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

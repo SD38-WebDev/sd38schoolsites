@@ -1,0 +1,15 @@
+uuid: 4d15adb2-8398-4add-a7d4-dbde3afae273
+langcode: en
+status: true
+dependencies: {  }
+name: article_thumbnail
+label: 'Article Thumbnail'
+effects:
+  85de907f-5837-47d1-80b5-e0df9cdcf5a7:
+    uuid: 85de907f-5837-47d1-80b5-e0df9cdcf5a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 320
+      anchor: center-center

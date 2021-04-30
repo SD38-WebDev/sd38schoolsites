@@ -83,8 +83,8 @@ content:
     weight: 3
     settings:
       rows: 9
-      summary_rows: 3
       placeholder: ''
+      summary_rows: 3
       show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary

@@ -6,7 +6,12 @@ dependencies:
     - field.storage.node.body
     - node.type.article
   module:
+    - required_api
     - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: node.article.body
 field_name: body
 entity_type: node

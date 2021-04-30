@@ -1,0 +1,102 @@
+uuid: b5b8f432-fd5e-43c2-b417-e91136f5aada
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.file.field_media_file
+    - media.type.file
+  module:
+    - ds
+    - field_group
+    - file
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - group_link
+        - media_name
+        - name
+        - field_media_file
+    fields:
+      media_name:
+        plugin_id: media_name
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: '1'
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_group:
+    group_link:
+      children:
+        - name
+      parent_name: ''
+      weight: 0
+      format_type: link
+      region: main
+      format_settings:
+        id: ''
+        classes: ''
+        target: field_media_file
+        custom_uri: ''
+        target_attribute: _blank
+      label: Link
+id: media.file.default
+targetEntityType: media
+bundle: file
+mode: default
+content:
+  field_media_file:
+    type: file_default
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  name:
+    type: string
+    weight: 2
+    region: main
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  created: true
+  thumbnail: true
+  uid: true

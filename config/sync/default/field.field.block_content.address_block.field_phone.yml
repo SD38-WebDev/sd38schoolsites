@@ -1,0 +1,26 @@
+uuid: 3ef09862-c0f1-4ab8-b39c-d1a6009c42ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address_block
+    - field.storage.block_content.field_phone
+  module:
+    - required_api
+    - telephone
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: block_content.address_block.field_phone
+field_name: field_phone
+entity_type: block_content
+bundle: address_block
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

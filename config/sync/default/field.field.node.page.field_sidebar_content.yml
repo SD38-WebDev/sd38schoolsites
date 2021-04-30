@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.basic_text_section
     - paragraphs.paragraphs_type.bp_accordion
     - paragraphs.paragraphs_type.calendar_events_list_
+    - paragraphs.paragraphs_type.recent_blog_posts_listing
   module:
     - entity_reference_revisions
     - required_api
@@ -33,6 +34,7 @@ settings:
       bp_accordion: bp_accordion
       basic_text_section: basic_text_section
       calendar_events_list_: calendar_events_list_
+      recent_blog_posts_listing: recent_blog_posts_listing
     target_bundles_drag_drop:
       article_feed:
         weight: 24
@@ -97,6 +99,12 @@ settings:
       image_gallery:
         weight: 43
         enabled: false
+      recent_blog_posts:
+        weight: 48
+        enabled: false
+      recent_blog_posts_listing:
+        enabled: true
+        weight: 49
       staff_member:
         weight: 44
         enabled: false

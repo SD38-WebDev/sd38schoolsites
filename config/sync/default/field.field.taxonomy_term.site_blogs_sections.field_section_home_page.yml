@@ -1,0 +1,34 @@
+uuid: 156ac10e-fafe-4508-90fe-d7fcb575d679
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_section_home_page
+    - node.type.page
+    - taxonomy.vocabulary.site_blogs_sections
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+id: taxonomy_term.site_blogs_sections.field_section_home_page
+field_name: field_section_home_page
+entity_type: taxonomy_term
+bundle: site_blogs_sections
+label: 'Section Home Page'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,61 @@
+uuid: 43b4f65f-6549-418a-ae0d-062a55a2d2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address_block
+    - field.storage.block_content.field_address
+  module:
+    - address
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+id: block_content.address_block.field_address
+field_name: field_address
+entity_type: block_content
+bundle: address_block
+label: Address
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    langcode: ''
+    country_code: CA
+    administrative_area: BC
+    locality: Richmond
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries:
+    CA: CA
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: required
+    postalCode:
+      override: required
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+  fields: {  }
+field_type: address

@@ -1,0 +1,10 @@
+uuid: f2ea3f91-a45e-4a85-9a71-237957c96ddc
+langcode: en
+status: true
+dependencies: {  }
+id: recent_blog_posts_listing
+label: 'Recent Blog Posts'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

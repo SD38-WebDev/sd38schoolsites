@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.basic_text_section.field_add_background_colour
     - field.field.paragraph.basic_text_section.field_background_colour
+    - field.field.paragraph.basic_text_section.field_section_bgcolour
     - field.field.paragraph.basic_text_section.field_section_content
     - field.field.paragraph.basic_text_section.field_section_title
     - paragraphs.paragraphs_type.basic_text_section
@@ -49,8 +50,6 @@ third_party_settings:
       format_type: html_element
       region: main
       format_settings:
-        id: ''
-        classes: '[paragraph:field_add_background_colour]'
         element: div
         show_label: false
         label_element: h3
@@ -58,6 +57,8 @@ third_party_settings:
         attributes: 'style="background-color:[paragraph:field_background_colour:color]"'
         effect: none
         speed: fast
+        id: ''
+        classes: '[paragraph:field_section_bgcolour:value] [paragraph:field_add_background_colour]'
       label: Wrapper
 id: paragraph.basic_text_section.default
 targetEntityType: paragraph
@@ -110,3 +111,4 @@ content:
 hidden:
   field_add_background_colour: true
   field_background_colour: true
+  field_section_bgcolour: true

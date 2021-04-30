@@ -1,0 +1,22 @@
+uuid: 1370b0cb-3867-4a4d-b0d6-418315d2d317
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: article_pattern
+label: 'Article Pattern'
+type: 'canonical_entities:node'
+pattern: '[node:field_site_section:entity:field_section_home_page]/[node:created:html_year]/[node:created:custom:m]/[node:title]'
+selection_criteria:
+  fec65ab7-a0df-4e2a-87d0-9d99126ca719:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fec65ab7-a0df-4e2a-87d0-9d99126ca719
+selection_logic: and
+weight: -5
+relationships: {  }

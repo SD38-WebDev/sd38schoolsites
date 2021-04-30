@@ -1,0 +1,54 @@
+uuid: bbb4c3a7-dd75-40a4-83fb-cd00089891b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_section_bgcolour
+field_name: field_section_bgcolour
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-none
+      label: None
+    -
+      value: bg-lightgrey
+      label: 'Light Grey'
+    -
+      value: bg-darkgrey
+      label: 'Dark Grey'
+    -
+      value: bg-cream
+      label: Cream
+    -
+      value: bg-red
+      label: 'Red (Important Notice)'
+    -
+      value: bg-sd38blue
+      label: 'SD38 Blue'
+    -
+      value: bg-sd38bluelight
+      label: 'SD38 Blue (Light)'
+    -
+      value: bg-sd38green
+      label: 'SD38 Green'
+    -
+      value: bg-sd38greenlight
+      label: 'SD38 Green (Light)'
+    -
+      value: bg-themelight
+      label: 'Custom Theme Colour Light'
+    -
+      value: bg-themedark
+      label: 'Custom Theme Colour Dark'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

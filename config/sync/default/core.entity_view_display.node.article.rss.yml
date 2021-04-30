@@ -5,9 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.article.body
+    - field.field.node.article.field_attachments
+    - field.field.node.article.field_content_section
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
+    - field.field.node.article.field_test
     - node.type.article
   module:
     - text
@@ -47,4 +50,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_attachments: true
+  field_content_section: true
   field_site_section: true
+  field_test: true

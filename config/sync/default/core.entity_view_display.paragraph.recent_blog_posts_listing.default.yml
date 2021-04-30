@@ -1,0 +1,84 @@
+uuid: 0ae7ea0d-1d39-46c4-a3a5-0b575c119b61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recent_blog_posts_listing.field_section_title
+    - field.field.paragraph.recent_blog_posts_listing.field_site_section
+    - paragraphs.paragraphs_type.recent_blog_posts_listing
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_section_title
+        - article_feed_entity_view_2
+id: paragraph.recent_blog_posts_listing.default
+targetEntityType: paragraph
+bundle: recent_blog_posts_listing
+mode: default
+content:
+  article_feed_entity_view_2:
+    weight: 1
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: main
+hidden:
+  field_site_section: true

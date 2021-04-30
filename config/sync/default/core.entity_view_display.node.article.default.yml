@@ -4,12 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_attachments
+    - field.field.node.article.field_content_section
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
+    - field.field.node.article.field_test
     - node.type.article
   module:
     - ds
+    - entity_reference_revisions
+    - file
     - text
     - user
 third_party_settings:
@@ -39,8 +44,11 @@ third_party_settings:
         - node_title
         - field_feature_image
         - body
-        - field_tags
         - links
+        - field_content_section
+        - field_attachments
+        - field_tags
+        - field_test
     fields:
       node_title:
         plugin_id: node_title
@@ -48,9 +56,9 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          link: true
           wrapper: h1
           class: ''
+          link: false
         ft:
           id: default
           settings:
@@ -69,34 +77,67 @@ content:
     third_party_settings: {  }
     type: text_default
     region: main
-  field_feature_image:
+  field_attachments:
     type: entity_reference_entity_view
-    weight: 1
-    label: hidden
+    weight: 5
+    label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: main
-  field_site_section:
-    weight: 5
-    label: above
+  field_content_section:
+    weight: 4
+    label: hidden
     settings:
-      link: true
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
+    type: entity_reference_revisions_entity_view
+    region: main
+  field_feature_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: x_large_full_width_
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: main
   field_tags:
-    weight: 3
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: main
+  field_test:
+    weight: 7
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: file_default
+    region: main
   links:
-    weight: 4
+    weight: 3
     region: main
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_site_section: true

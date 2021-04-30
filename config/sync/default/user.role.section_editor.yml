@@ -32,6 +32,7 @@ permissions:
   - 'schedule publishing of nodes'
   - 'search content'
   - 'update media'
+  - 'use text format full_html'
   - 'use workbench access'
   - 'view own unpublished content'
   - 'view own unpublished media'

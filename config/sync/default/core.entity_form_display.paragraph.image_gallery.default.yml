@@ -45,14 +45,14 @@ content:
     weight: -100
     settings:
       view_modes:
-        default: Default
-        1_column: '1 Column'
-        2_columns: '2 Columns'
-        3_columns: '3 Columns'
-        4_columns: '4 Columns'
-        5_columns: '5 Columns'
-        6_columns: '6 Columns'
-      default_view_mode: default
+        1_column: 1_column
+        2_columns: 2_columns
+        3_columns: 3_columns
+        4_columns: 4_columns
+        5_columns: 5_columns
+        6_columns: 6_columns
+        default: 0
+      default_view_mode: 1_column
     third_party_settings: {  }
     region: content
 hidden:

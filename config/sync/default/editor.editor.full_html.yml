@@ -17,10 +17,21 @@ settings:
           items:
             - Bold
             - Italic
+            - FontSize
+            - Underline
+            - Strike
+            - RemoveFormat
+        -
+          name: Alignment
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
         -
           name: Links
           items:
-            - DrupalLink
+            - Linkit
             - DrupalUnlink
         -
           name: Lists
@@ -31,7 +42,12 @@ settings:
           name: Media
           items:
             - Blockquote
-            - DrupalImage
+            - DrupalMediaLibrary
+            - Table
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
         -
           name: Tools
           items:
@@ -44,6 +60,8 @@ settings:
     font:
       font_names: ''
       font_sizes: ''
+    linkit:
+      linkit_profile: default_profile
     video_embed:
       defaults:
         children:

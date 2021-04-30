@@ -6,6 +6,7 @@ dependencies:
     - views.view.news_alerts
   module:
     - context
+    - system
     - views
   theme:
     - rsd_sites_barrio
@@ -32,4 +33,9 @@ visibility:
     id: view_inclusion
     negate: null
     view_inclusion: {  }
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: true
     context_mapping: {  }

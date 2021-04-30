@@ -1,0 +1,28 @@
+uuid: a16f3788-e45e-4f33-ac2b-62cac861b358
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.address_block
+    - field.storage.block_content.body
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: block_content.address_block.body
+field_name: body
+entity_type: block_content
+bundle: address_block
+label: 'Additional Details'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

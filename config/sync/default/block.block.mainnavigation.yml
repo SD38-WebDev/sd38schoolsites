@@ -22,7 +22,7 @@ settings:
   label_display: '0'
   level: 1
   depth: 3
-  expand_all_items: false
+  expand_all_items: true
 visibility:
   request_path_exclusion:
     id: request_path_exclusion

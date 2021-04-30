@@ -1,0 +1,30 @@
+uuid: 538e5c1f-df5e-4fa0-aaf0-898fd5217f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recent_blog_posts_listing.field_section_title
+    - field.field.paragraph.recent_blog_posts_listing.field_site_section
+    - paragraphs.paragraphs_type.recent_blog_posts_listing
+id: paragraph.recent_blog_posts_listing.default
+targetEntityType: paragraph
+bundle: recent_blog_posts_listing
+mode: default
+content:
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_site_section:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

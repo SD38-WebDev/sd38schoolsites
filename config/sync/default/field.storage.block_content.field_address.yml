@@ -1,0 +1,19 @@
+uuid: ca8acb16-54e6-4a25-a6fb-e93c4d69f12f
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - block_content
+id: block_content.field_address
+field_name: field_address
+entity_type: block_content
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
