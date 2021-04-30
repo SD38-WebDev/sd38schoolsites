@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_content_section
     - field.field.node.page.field_sidebar_content
-    - field.field.node.page.field_sidebars
     - field.field.node.page.field_site_section
     - node.type.page
   module:
@@ -54,11 +53,17 @@ third_party_settings:
     regions:
       left:
         - node_title
+        - 'dynamic_block_field:node-section_sub_menu'
         - body
         - field_content_section
       right:
         - field_sidebar_content
     fields:
+      'dynamic_block_field:node-section_sub_menu':
+        plugin_id: 'dynamic_block_field:node-section_sub_menu'
+        weight: 1
+        label: hidden
+        formatter: default
       node_title:
         plugin_id: node_title
         weight: 0
@@ -80,7 +85,7 @@ bundle: page
 mode: default
 content:
   body:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -88,7 +93,7 @@ content:
     region: left
   field_content_section:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -126,7 +131,7 @@ content:
     region: left
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -134,6 +139,5 @@ content:
     third_party_settings: {  }
     region: right
 hidden:
-  field_sidebars: true
   field_site_section: true
   links: true

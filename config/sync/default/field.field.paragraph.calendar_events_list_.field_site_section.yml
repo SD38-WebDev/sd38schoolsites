@@ -1,10 +1,10 @@
-uuid: ba59b272-ec69-44cf-947c-4bdfdd3726e4
+uuid: f8b4f515-1bb9-4ca0-9a18-c88694430e04
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_site_section
-    - node.type.article
+    - field.storage.paragraph.field_site_section
+    - paragraphs.paragraphs_type.calendar_events_list_
     - taxonomy.vocabulary.site_blogs_sections
   module:
     - required_api
@@ -16,10 +16,10 @@ third_party_settings:
       anonymous: 0
       site_editor: 0
       administrator: 0
-id: node.article.field_site_section
+id: paragraph.calendar_events_list_.field_site_section
 field_name: field_site_section
-entity_type: node
-bundle: article
+entity_type: paragraph
+bundle: calendar_events_list_
 label: 'Site Section'
 description: ''
 required: false

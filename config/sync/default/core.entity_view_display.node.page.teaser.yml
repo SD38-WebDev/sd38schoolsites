@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_content_section
     - field.field.node.page.field_sidebar_content
-    - field.field.node.page.field_sidebars
     - field.field.node.page.field_site_section
     - node.type.page
   module:
@@ -92,16 +91,6 @@ content:
       link: ''
     third_party_settings: {  }
     region: top
-  field_sidebars:
-    type: boolean
-    weight: 0
-    region: top
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
   field_site_section:
     weight: 3
     label: above

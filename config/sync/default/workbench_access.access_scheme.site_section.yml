@@ -1,0 +1,19 @@
+uuid: a23f076d-cfd8-4a8e-82f3-94bd1bde8f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_site_section
+    - taxonomy.vocabulary.site_blogs_sections
+id: site_section
+label: 'Site Section'
+plural_label: 'Site Sections'
+scheme: taxonomy
+scheme_settings:
+  vocabularies:
+    - site_blogs_sections
+  fields:
+    -
+      entity_type: node
+      bundle: page
+      field: field_site_section

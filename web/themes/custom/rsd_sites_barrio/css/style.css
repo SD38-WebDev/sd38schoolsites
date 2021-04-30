@@ -109,17 +109,90 @@ h2 a {
   max-width: 100%;
 }
 
-#block-rsd-sites-barrio-content .main-page-body,
-#block-rsd-sites-barrio-content div.content-sections > .paragraph,
-#block-rsd-sites-barrio-content div.content-sections > .paragraph--bp-accordion-container,
-#block-rsd-sites-barrio-content div.content-sections > .content-section-row,
-#block-rsd-sites-barrio-content div.content-sections > .content-section-row {
-  margin-bottom: 1.5rem !important;
+.content-section {
+  margin-bottom: 2.5rem !important;
+}
+
+.sidebar-content .content-section {
+  margin-bottom: 1.25rem !important;
+}
+
+.content-section p:last-child {
+  margin: 0;
 }
 
 .paragraph--bp-accordion-container {
   padding-top: 0;
 }
+
+.content-section .paragraph--type-basic-text-section .bg-none {
+  background: unset;
+  padding: 0rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-lightgrey {
+  background: #eee;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-darkgrey {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-cream {
+  background: #fbf7f1;
+  color: black;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-red {
+  background: #ff2600;
+  color: white;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-red a {
+  color: black !important;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-sd38blue {
+  background: #034ea2;
+  color: white;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-sd38bluelight {
+  background: #d9e5f1;
+  color: black;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-sd38green {
+  background: #00b298;
+  color: white;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-sd38greenlight {
+  background: #e6f7f5;
+  color: black;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-themelight {
+  background: #eee;
+  color: black;
+  padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-themedark {
+  background: #eee;
+  color: white;
+  padding: 1rem;
+}
+
 
 /*******************/
 /** SD38 Branding **/
@@ -174,6 +247,8 @@ body.path-frontpage #header .brand-row {
   	min-height: 12rem;
   }
 }
+
+
 
 body #header div.logo,
 body #header div.welcome-txt {
@@ -352,7 +427,8 @@ img {
 }
 
 .node--view-mode-teaser img,
-.node--view-mode-vertical-teaser img {
+.node--view-mode-vertical-teaser img,
+.view-id-frontpage .post img {
 	border-radius: 0.313rem;
 }
 
@@ -421,7 +497,7 @@ img {
   margin: 0;
 }
 
-.view-id-frontpage .view-content .views-row .container {
+.view-id-frontpage .view-content .wrapper {
 	padding: 0.75rem;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: .25rem;
@@ -813,10 +889,21 @@ div.content-row .p-xl {
 
 
 /******************************/
-/** Superfish Menu Overrides **/
+/** Section Areas **/
 /******************************/
 
+.view-section-sub-menu .view-content .nav.nav-tabs {
+  background-color: rgba(0, 0, 0, 0.035);
+  border-radius: 0.25rem;
+}
 
+.view-section-sub-menu .view-content .nav.nav-tabs .nav-link {
+  border: none !important;
+}
+
+.view-section-sub-menu .view-content .nav {
+  margin-bottom: 2rem;
+}
 
 
 /*************************************/
@@ -907,11 +994,15 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 /** Misc. Views Styles **/
 /************************/
 
-.views-listing .shaded-rows li {
+.views-listing .shaded-rows li,
+.view-section-calendar .event,
+.view-article-feed .article-post {
 	padding: 0.25rem;
 }
 
-.views-listing .shaded-rows li:nth-child(odd) {
+.views-listing .shaded-rows li:nth-child(odd),
+.view-section-calendar .event:nth-child(odd),
+.view-article-feed .article-post:nth-child(odd) {
 	background: rgba(0, 0, 0, 0.05);
 	border-radius: 0.313rem;
 }

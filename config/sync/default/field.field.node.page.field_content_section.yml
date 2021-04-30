@@ -8,12 +8,18 @@ dependencies:
     - paragraphs.paragraphs_type.article_feed
     - paragraphs.paragraphs_type.basic_text_section
     - paragraphs.paragraphs_type.bp_accordion
+    - paragraphs.paragraphs_type.calendar_events_list_
     - paragraphs.paragraphs_type.embedded_video
     - paragraphs.paragraphs_type.image_and_text_section
     - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.tile_links_section
   module:
     - entity_reference_revisions
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: node.page.field_content_section
 field_name: field_content_section
 entity_type: node
@@ -35,6 +41,7 @@ settings:
       embedded_video: embedded_video
       image_gallery: image_gallery
       image_and_text_section: image_and_text_section
+      calendar_events_list_: calendar_events_list_
       tile_links_section: tile_links_section
     target_bundles_drag_drop:
       article_feed:
@@ -88,6 +95,9 @@ settings:
       bp_view:
         weight: 30
         enabled: false
+      calendar_events_list_:
+        enabled: true
+        weight: 42
       embedded_video:
         enabled: true
         weight: 39
@@ -97,6 +107,9 @@ settings:
       image_gallery:
         enabled: true
         weight: 40
+      staff_member:
+        weight: 46
+        enabled: false
       tile_link:
         weight: 41
         enabled: false

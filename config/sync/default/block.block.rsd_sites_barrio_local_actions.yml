@@ -9,7 +9,7 @@ _core:
 id: rsd_sites_barrio_local_actions
 theme: rsd_sites_barrio
 region: content
-weight: -10
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

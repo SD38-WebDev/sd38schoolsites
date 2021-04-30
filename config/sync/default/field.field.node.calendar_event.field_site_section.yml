@@ -1,10 +1,10 @@
-uuid: ba59b272-ec69-44cf-947c-4bdfdd3726e4
+uuid: c5028c93-193b-499a-9a19-421bf9fafab4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_site_section
-    - node.type.article
+    - node.type.calendar_event
     - taxonomy.vocabulary.site_blogs_sections
   module:
     - required_api
@@ -16,10 +16,10 @@ third_party_settings:
       anonymous: 0
       site_editor: 0
       administrator: 0
-id: node.article.field_site_section
+id: node.calendar_event.field_site_section
 field_name: field_site_section
 entity_type: node
-bundle: article
+bundle: calendar_event
 label: 'Site Section'
 description: ''
 required: false

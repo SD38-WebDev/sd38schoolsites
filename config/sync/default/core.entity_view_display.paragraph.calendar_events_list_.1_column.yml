@@ -1,0 +1,88 @@
+uuid: 88c05f7a-041f-4198-9978-9e1a3d782a57
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.1_column
+    - field.field.paragraph.calendar_events_list_.field_section_title
+    - field.field.paragraph.calendar_events_list_.field_site_section
+    - field.field.paragraph.calendar_events_list_.paragraph_view_mode
+    - paragraphs.paragraphs_type.calendar_events_list_
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_section_title
+        - section_calendar_entity_view_1
+id: paragraph.calendar_events_list_.1_column
+targetEntityType: paragraph
+bundle: calendar_events_list_
+mode: 1_column
+content:
+  field_section_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: main
+  section_calendar_entity_view_1:
+    weight: 1
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_site_section: true
+  paragraph_view_mode: true
+  section_calendar_entity_view_2: true

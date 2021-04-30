@@ -41,6 +41,8 @@ if (isset($platformsh->branch)) {
   }
 }
 
+$config['system.logging']['error_level'] = 'verbose';
+
 // Enable Redis caching.
 if ($platformsh->hasRelationship('rediscache') && !InstallerKernel::installationAttempted() && extension_loaded('redis') && class_exists('Drupal\redis\ClientFactory')) {
   $redis = $platformsh->credentials('rediscache');

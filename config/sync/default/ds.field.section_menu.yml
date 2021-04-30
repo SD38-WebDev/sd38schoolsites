@@ -1,8 +1,8 @@
-id: section_sub_menu
-label: 'Section Sub Menu'
+id: section_menu
+label: 'Section Menu'
 ui_limit: ''
 properties:
-  block: 'views_block:section_sub_menu-block_1'
+  block: 'menu_block:main'
   use_block_title: false
   add_block_wrappers: false
 type: block

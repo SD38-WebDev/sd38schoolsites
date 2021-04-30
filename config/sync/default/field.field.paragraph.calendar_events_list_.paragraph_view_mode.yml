@@ -1,0 +1,21 @@
+uuid: 3f8cd166-c8c7-400e-bb6e-9aa782c567be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.paragraph_view_mode
+    - paragraphs.paragraphs_type.calendar_events_list_
+  module:
+    - paragraph_view_mode
+id: paragraph.calendar_events_list_.paragraph_view_mode
+field_name: paragraph_view_mode
+entity_type: paragraph
+bundle: calendar_events_list_
+label: 'Calendar Display'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: paragraph_view_mode

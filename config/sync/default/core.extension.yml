@@ -76,6 +76,8 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  required_api: 0
+  required_by_role: 0
   scheduler: 0
   search: 0
   serialization: 0
@@ -89,6 +91,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  theme_permission: 0
   token: 0
   toolbar: 0
   tour: 0
@@ -100,6 +103,7 @@ module:
   video_embed_media: 0
   video_embed_wysiwyg: 0
   views_bootstrap: 0
+  views_menu_children_filter: 0
   views_sort_options_weight: 0
   views_ui: 0
   viewsreference: 0

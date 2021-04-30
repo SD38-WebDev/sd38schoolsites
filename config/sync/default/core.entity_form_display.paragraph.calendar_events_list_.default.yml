@@ -1,0 +1,44 @@
+uuid: aeacdd18-19ba-4a3d-adec-f8d479d6d648
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.calendar_events_list_.field_section_title
+    - field.field.paragraph.calendar_events_list_.field_site_section
+    - field.field.paragraph.calendar_events_list_.paragraph_view_mode
+    - paragraphs.paragraphs_type.calendar_events_list_
+  module:
+    - paragraph_view_mode
+id: paragraph.calendar_events_list_.default
+targetEntityType: paragraph
+bundle: calendar_events_list_
+mode: default
+content:
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_site_section:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: 2
+    settings:
+      view_modes:
+        1_column: 1_column
+        2_columns: 2_columns
+        default: 0
+      default_view_mode: 1_column
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
