@@ -80,9 +80,9 @@ module:
   required_api: 0
   required_by_role: 0
   scheduler: 0
+  sd38_sitelinks: 0
   search: 0
   serialization: 0
-  shortcut: 0
   smart_date: 0
   smart_date_recur: 0
   smart_trim: 0
