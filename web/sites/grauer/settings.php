@@ -31,7 +31,9 @@ $platformsh_subsite_id = basename(__DIR__);
 // Set up a config sync directory.
 //
 // This is defined inside the read-only "config" directory, deployed via Git.
-$settings['config_sync_directory'] = '../config/sync/' . $platformsh_subsite_id;
+// $settings['config_sync_directory'] = '../config/sync/' . $platformsh_subsite_id;
+// This is defined to load the default configuration from the core site - elementary.
+$settings['config_sync_directory'] = '../config/sync/default';
 
 // Automatic Platform.sh settings.
 if (file_exists($app_root . '/' . $site_path . '/../settings.platformsh.php')) {
