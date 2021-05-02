@@ -73,6 +73,10 @@ h2 a {
 	background: rgba(240, 240, 240, 0.35) !important;
 }
 
+.region-top-header {
+  width: 100%;
+}
+
 .bs-region .block {
 	margin-bottom: 2rem;
 }
@@ -252,12 +256,12 @@ body.path-frontpage #header .brand-row {
 
 body #header div.logo,
 body #header div.welcome-txt {
-	display: none !important;
+	display: none;
 }
 
 body.path-frontpage #header div.logo,
 body.path-frontpage #header div.welcome-txt {
-	display: block !important;
+	display: block;
 }
 
 #navbar-main {
