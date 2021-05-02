@@ -65,7 +65,7 @@ relationships:
     elementary: 'db:elementary'
 
 # The size of the persistent disk of the application (in MB).
-disk: 40000
+disk: 25000
 
 # The 'mounts' describe writable, persistent filesystem mounts in the application.
 mounts:
