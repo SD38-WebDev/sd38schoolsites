@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.article_feed.field_referenced_tags
     - field.field.paragraph.article_feed.field_section_title
     - field.field.paragraph.article_feed.field_site_section
     - paragraphs.paragraphs_type.article_feed
@@ -11,6 +12,16 @@ targetEntityType: paragraph
 bundle: article_feed
 mode: default
 content:
+  field_referenced_tags:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   field_section_title:
     weight: 0
     settings:

@@ -1,0 +1,9 @@
+status: 1
+pattern: '[term:field_section_home_page:entity]'
+escape: false
+preserve_titles: false
+save: 0
+chunk: '50'
+dependencies:
+  config:
+    - taxonomy.vocabulary.site_blogs_sections

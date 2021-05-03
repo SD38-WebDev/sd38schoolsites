@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.image_left
     - field.field.paragraph.image_and_text_section.field_background_colour
     - field.field.paragraph.image_and_text_section.field_image
+    - field.field.paragraph.image_and_text_section.field_section_bgcolour
     - field.field.paragraph.image_and_text_section.field_section_content
     - field.field.paragraph.image_and_text_section.field_section_title
     - field.field.paragraph.image_and_text_section.paragraph_view_mode
@@ -27,7 +28,7 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: ' class|d-flex align-items-center row mb-4 no-gutters,style|background-color:[paragraph:field_background_colour:color]'
+          attributes: ' class|d-flex align-items-center row mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
         regions:
           left:
             wrapper: div
@@ -111,4 +112,5 @@ content:
     region: right
 hidden:
   field_background_colour: true
+  field_section_bgcolour: true
   paragraph_view_mode: true

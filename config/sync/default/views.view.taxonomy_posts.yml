@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.vertical_teaser
     - node.type.article
   module:
     - node
     - taxonomy
     - user
+    - views_bootstrap
 id: taxonomy_posts
 label: 'Taxonomy Posts'
 module: views
@@ -54,11 +55,21 @@ display:
           items_per_page: 20
           offset: 0
       style:
-        type: default
+        type: views_bootstrap_grid
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: col-md-3
+          col_lg: col-lg-3
+          col_xl: col-xl-3
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: vertical_teaser
       fields:
         title:
           id: title
@@ -150,7 +161,18 @@ display:
             label: ''
           granularity: second
       title: 'Taxonomy Posts'
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content: '<div class="row"><h1>Posts tagged with: {{ arguments.tid }}</h1></div>'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -197,6 +219,7 @@ display:
           reduce_duplicates: false
           plugin_id: taxonomy_index_tid
       display_extenders: {  }
+      css_class: col
     cache_metadata:
       max-age: -1
       contexts:

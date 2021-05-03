@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.article_feed.field_referenced_tags
     - field.field.paragraph.article_feed.field_section_title
     - field.field.paragraph.article_feed.field_site_section
     - paragraphs.paragraphs_type.article_feed
@@ -44,6 +45,14 @@ content:
     region: main
     settings: {  }
     third_party_settings: {  }
+  field_referenced_tags:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   field_section_title:
     weight: 0
     label: hidden

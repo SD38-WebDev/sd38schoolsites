@@ -32,18 +32,12 @@ third_party_settings:
             attributes: 'class|col-12 col-lg-9'
     regions:
       main:
-        - taxonomy_term_title
         - description
         - 'dynamic_block_field:taxonomy_term-taxonomy_posts_block'
     fields:
       'dynamic_block_field:taxonomy_term-taxonomy_posts_block':
         plugin_id: 'dynamic_block_field:taxonomy_term-taxonomy_posts_block'
-        weight: 2
-        label: hidden
-        formatter: default
-      taxonomy_term_title:
-        plugin_id: taxonomy_term_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
 id: taxonomy_term.tags.full
@@ -54,7 +48,7 @@ content:
   description:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 0
     region: main
     settings: {  }
     third_party_settings: {  }

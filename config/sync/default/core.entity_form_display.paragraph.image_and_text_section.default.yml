@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.image_and_text_section.field_background_colour
     - field.field.paragraph.image_and_text_section.field_image
+    - field.field.paragraph.image_and_text_section.field_section_bgcolour
     - field.field.paragraph.image_and_text_section.field_section_content
     - field.field.paragraph.image_and_text_section.field_section_title
     - field.field.paragraph.image_and_text_section.paragraph_view_mode
@@ -33,6 +34,12 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
+    region: content
+  field_section_bgcolour:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_section_content:
     weight: 2

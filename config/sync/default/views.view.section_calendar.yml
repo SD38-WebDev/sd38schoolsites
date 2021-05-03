@@ -162,7 +162,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Event Date'
           exclude: false
           alter:
             alter_text: false
@@ -191,13 +191,13 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: span
           element_class: ''
-          element_label_type: ''
+          element_label_type: span
           element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_label_colon: true
+          element_wrapper_type: div
+          element_wrapper_class: 'text-muted small'
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -465,7 +465,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Event Date'
           exclude: false
           alter:
             alter_text: false
@@ -494,13 +494,13 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: span
           element_class: ''
-          element_label_type: ''
+          element_label_type: span
           element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_label_colon: true
+          element_wrapper_type: div
+          element_wrapper_class: 'text-muted small'
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -509,8 +509,8 @@ display:
           click_sort_column: value
           type: smartdate_default
           settings:
-            timezone_override: ''
-            format: default
+            timezone_override: America/Vancouver
+            format: compact
             force_chronological: false
             add_classes: false
             time_wrapper: true

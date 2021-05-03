@@ -1,0 +1,28 @@
+uuid: d43ff252-c7d7-4e9e-bca7-cab7a5a98836
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tile_colour
+    - paragraphs.paragraphs_type.tile_link
+  module:
+    - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+id: paragraph.tile_link.field_tile_colour
+field_name: field_tile_colour
+entity_type: paragraph
+bundle: tile_link
+label: 'Tile Colour'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: bg-none
+default_value_callback: ''
+settings: {  }
+field_type: list_string

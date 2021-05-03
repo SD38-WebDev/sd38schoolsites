@@ -33,34 +33,14 @@ third_party_settings:
             attributes: ''
     regions:
       main:
-        - group_link
-        - media_name
-        - name
         - field_media_file
-    fields:
-      media_name:
-        plugin_id: media_name
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          link: '1'
-          wrapper: h2
-          class: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
   field_group:
     group_link:
-      children:
-        - name
+      children: {  }
       parent_name: ''
-      weight: 0
+      weight: 4
       format_type: link
-      region: main
+      region: hidden
       format_settings:
         id: ''
         classes: ''
@@ -75,28 +55,14 @@ mode: default
 content:
   field_media_file:
     type: file_default
-    weight: 2
+    weight: 0
     region: main
     label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-  name:
-    type: string
-    weight: 2
-    region: main
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 hidden:
   created: true
+  name: true
   thumbnail: true
   uid: true

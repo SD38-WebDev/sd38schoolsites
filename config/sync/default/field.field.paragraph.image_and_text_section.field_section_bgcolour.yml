@@ -1,0 +1,26 @@
+uuid: 7a68bd2f-11fd-4dad-9e7f-4c60d53b47cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_bgcolour
+    - paragraphs.paragraphs_type.image_and_text_section
+  module:
+    - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.image_and_text_section.field_section_bgcolour
+field_name: field_section_bgcolour
+entity_type: paragraph
+bundle: image_and_text_section
+label: 'Background Colour'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

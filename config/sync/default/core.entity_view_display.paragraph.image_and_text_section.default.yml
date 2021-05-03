@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.image_and_text_section.field_background_colour
     - field.field.paragraph.image_and_text_section.field_image
+    - field.field.paragraph.image_and_text_section.field_section_bgcolour
     - field.field.paragraph.image_and_text_section.field_section_content
     - field.field.paragraph.image_and_text_section.field_section_title
     - field.field.paragraph.image_and_text_section.paragraph_view_mode
     - paragraphs.paragraphs_type.image_and_text_section
   module:
-    - color_field
     - ds
     - paragraph_view_mode
     - text
@@ -44,7 +44,6 @@ third_party_settings:
             attributes: ''
     regions:
       left:
-        - field_background_colour
         - paragraph_view_mode
         - field_section_title
         - field_section_content
@@ -54,15 +53,6 @@ targetEntityType: paragraph
 bundle: image_and_text_section
 mode: default
 content:
-  field_background_colour:
-    weight: 0
-    label: above
-    settings:
-      format: hex
-      opacity: true
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: left
   field_image:
     type: entity_reference_entity_view
     weight: 3
@@ -94,4 +84,6 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_background_colour: true
+  field_section_bgcolour: true

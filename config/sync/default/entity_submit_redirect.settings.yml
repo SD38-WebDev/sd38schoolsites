@@ -9,3 +9,6 @@ global:
   use_on:
     - front
     - backoffice
+taxonomy_term:
+  site_blogs_sections:
+    path: /admin/content

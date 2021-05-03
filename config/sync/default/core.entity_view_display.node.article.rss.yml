@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
-    - field.field.node.article.field_test
     - node.type.article
   module:
     - text
@@ -53,4 +52,3 @@ hidden:
   field_attachments: true
   field_content_section: true
   field_site_section: true
-  field_test: true

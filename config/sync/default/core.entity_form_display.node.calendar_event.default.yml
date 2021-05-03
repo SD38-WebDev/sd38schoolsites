@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.calendar_event.body
     - field.field.node.calendar_event.field_event_date
+    - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
   module:
+    - address
     - field_group
     - media_library
     - path
@@ -50,6 +52,7 @@ third_party_settings:
       children:
         - field_feature_image
         - body
+        - field_event_location
       parent_name: group_tabs
       weight: 2
       format_type: tab
@@ -92,6 +95,12 @@ content:
       hide_date: true
     third_party_settings: {  }
     type: smartdate_default
+    region: content
+  field_event_location:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
     region: content
   field_feature_image:
     weight: 18

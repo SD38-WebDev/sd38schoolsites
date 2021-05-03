@@ -129,83 +129,43 @@ h2 a {
   padding-top: 0;
 }
 
-.content-section .paragraph--type-basic-text-section .bg-none {
-  background: unset;
-  padding: 0rem;
-}
+.content-section .bg-none {background: unset; padding: 0rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-lightgrey {
-  background: #eee;
-  padding: 1rem;
-}
+.content-section .bg-lightgrey {background: #eee;}
+.content-section .paragraph--type-basic-text-section .bg-lightgrey {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-darkgrey {
-  background: #333;
-  color: white;
-  padding: 1rem;
-}
+.content-section .bg-darkgrey {background: #333; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-darkgrey {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-cream {
-  background: #fbf7f1;
-  color: black;
-  padding: 1rem;
-}
+.content-section .bg-cream {background: #fbf7f1; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-cream {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-red {
-  background: #ff2600;
-  color: white;
-  padding: 1rem;
-}
+.content-section .bg-red {background: #ff2600;color: white;}
+.content-section .paragraph--type-basic-text-section .bg-red {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-red a {
-  color: black !important;
-}
+.content-section .bg-red a {color: black !important;}
 
-.content-section .paragraph--type-basic-text-section .bg-sd38blue {
-  background: #034ea2;
-  color: white;
-  padding: 1rem;
-}
+.content-section .bg-sd38blue {background: #034ea2; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-sd38blue {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-sd38blue a,
-.content-section .paragraph--type-basic-text-section .bg-sd38bluelight a {
-  color: #00b298 !important;
-}
+.content-section .bg-sd38blue a, .content-section .bg-sd38bluelight a {color: #00b298 !important;}
 
-.content-section .paragraph--type-basic-text-section .bg-sd38bluelight {
-  background: #d9e5f1;
-  color: black;
-  padding: 1rem;
-}
+.content-section .bg-sd38bluelight {background: #d9e5f1; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-sd38bluelight {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-sd38green {
-  background: #00b298;
-  color: white;
-  padding: 1rem;
-}
+.content-section .bg-sd38green {background: #00b298; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-sd38green {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-sd38green a,
-.content-section .paragraph--type-basic-text-section .bg-sd38greenlight a {
-  color: #034ea2 !important;
-}
+.content-section .bg-sd38green a, .content-section .bg-sd38greenlight a {color: #034ea2 !important;}
 
-.content-section .paragraph--type-basic-text-section .bg-sd38greenlight {
-  background: #e6f7f5;
-  color: black;
-  padding: 1rem;
-}
+.content-section .bg-sd38greenlight {background: #e6f7f5; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-sd38greenlight {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-themelight {
-  background: #eee;
-  color: black;
-  padding: 1rem;
-}
+.content-section .bg-themelight {background: #eee; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-themelight {padding: 1rem;}
 
-.content-section .paragraph--type-basic-text-section .bg-themedark {
-  background: #eee;
-  color: white;
-  padding: 1rem;
-}
+.content-section .bg-themedark {background: #eee; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-themedark {background: #eee; color: white; padding: 1rem;}
 
 
 /*******************/
@@ -241,6 +201,15 @@ h2 a {
 }
 
 /** Structural Stuff **/
+
+body .contextual-links a,
+body .contextual-links a:hover {
+  color: black !important;
+}
+
+body .contextual-links a:hover {
+  text-decoration: underline !important;
+}
 
 body #header .brand-row {
 	min-height: 8rem;
@@ -462,7 +431,8 @@ img {
 
 .node--view-mode-teaser img,
 .node--view-mode-vertical-teaser img,
-.view-id-frontpage .post img {
+.view-id-frontpage .post img,
+.field--type-image img {
 	border-radius: 0.313rem;
 }
 
@@ -525,6 +495,14 @@ img {
 .view-id-frontpage .article-img {
 	float: right;
 	width: 30%;
+}
+
+.view-id-frontpage h2 {
+  margin-bottom: .25rem;
+}
+
+.view-id-frontpage .view-content p {
+  margin: 0;
 }
 
 .view-id-frontpage .field--type-entity-reference {
@@ -835,14 +813,6 @@ div.img-caption p,
 	margin: 0;
 }
 
-.tile-link {
-	min-height: 140px;
-}
-
-.tile-link p {
-	font-weight: 800;
-}
-
 video {
 	max-width: 100%;
 }
@@ -852,30 +822,82 @@ video {
 	background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(255,255,255,0) 100%);
 }
 
+.tile-link,
+.tile-link .flex-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
 .tile-link {
-	height: 100%;
-	background: red;
 	text-align: center;
 	font-size: 1rem;
 	line-height: 1.15rem;
-	border-radius: 0.3125rem;
-	padding: 0.3125rem;
 }
 
-.tile-link:hover {
-	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.45);
+.tile-link .wrapper {
+  border-radius: 0.3125rem;
 }
 
-.tile-link p {
-	padding-top: .25rem;
+.tile-link .wrapper img {
+  border-radius: 0.3125rem 0.3125rem 0 0;
+}
+
+.tile-link .wrapper {
+  padding-bottom: 0.3125rem;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.tile-link .wrapper img {
+  margin-bottom: 0.3125rem;
+}
+
+.tile-link:hover .wrapper {
+	box-shadow: 0px 1px 15px #b24244;
 }
 
 .tile-link a,
 .tile-link a:hover {
 	color: white !important;
 	text-decoration: none;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
 }
+
+.tile-link .wrapper.bg-sd38bluelagoon {background-color:#1d84c3;}
+.tile-link .wrapper.bg-sd38royalblue {background-color:#4486a3;}
+.tile-link .wrapper.bg-sd38tealsky {background-color:#1daac3;}
+.tile-link .wrapper.bg-sd38oceangreen {background-color:#32ae71;}
+.tile-link .wrapper.bg-sd38sagegreen {background-color:#50976f;}
+.tile-link .wrapper.bg-sd38limegreen {background-color:#80b52b;}
+.tile-link .wrapper.bg-sd38golden {background-color:#c3a61d;}
+.tile-link .wrapper.bg-sd38burntorange {background-color:#d47823;}
+.tile-link .wrapper.bg-sd38earthbrown {background-color:#b1754c;}
+.tile-link .wrapper.bg-sd38crimson {background-color:#b24244;}
+.tile-link .wrapper.bg-sd38tangerine {background-color:#f77700;}
+.tile-link .wrapper.bg-sd38boysenberry {background-color:#a83755;}
+.tile-link .wrapper.bg-sd38purplegrape {background-color:#8236a9;}
+.tile-link .wrapper.bg-sd38subduedblue {background-color:#4e7591;}
+.tile-link .wrapper.bg-firehouse {background-color:#cd2d2d;}
+.tile-link .wrapper.bg-ice {background-color:#c2c4c5;}
+.tile-link .wrapper.bg-plum {background-color:#593662;}
+.tile-link .wrapper.bg-slate {background-color:#4e4e4e;}
+
+.tile-link:hover .wrapper.bg-sd38bluelagoon {box-shadow: 0px 1px 15px #1d84c3;}
+.tile-link:hover .wrapper.bg-sd38royalblue {box-shadow: 0px 1px 15px #4486a3;}
+.tile-link:hover .wrapper.bg-sd38tealsky {box-shadow: 0px 1px 15px #1daac3;}
+.tile-link:hover .wrapper.bg-sd38oceangreen {box-shadow: 0px 1px 15px #32ae71;}
+.tile-link:hover .wrapper.bg-sd38sagegreen {box-shadow: 0px 1px 15px #50976f;}
+.tile-link:hover .wrapper.bg-sd38limegreen {box-shadow: 0px 1px 15px #80b52b;}
+.tile-link:hover .wrapper.bg-sd38golden {box-shadow: 0px 1px 15px #c3a61d;}
+.tile-link:hover .wrapper.bg-sd38burntorange {box-shadow: 0px 1px 15px #d47823;}
+.tile-link:hover .wrapper.bg-sd38earthbrown {box-shadow: 0px 1px 15px #b1754c;}
+.tile-link:hover .wrapper.bg-sd38crimson {box-shadow: 0px 1px 15px #b24244;}
+.tile-link:hover .wrapper.bg-sd38tangerine {box-shadow: 0px 1px 15px #f77700;}
+.tile-link:hover .wrapper.bg-sd38boysenberry {box-shadow: 0px 1px 15px #a83755;}
+.tile-link:hover .wrapper.bg-sd38purplegrape {box-shadow: 0px 1px 15px #8236a9;}
+.tile-link:hover .wrapper.bg-sd38subduedblue {box-shadow: 0px 1px 15px #4e7591;}
+.tile-link:hover .wrapper.bg-firehouse {box-shadow: 0px 1px 15px #cd2d2d;}
+.tile-link:hover .wrapper.bg-ice {box-shadow: 0px 1px 15px #c2c4c5;}
+.tile-link:hover .wrapper.bg-plum {box-shadow: 0px 1px 15px #593662;}
+.tile-link:hover .wrapper.bg-slate {box-shadow: 0px 1px 15px #4e4e4e;}
 
 main div.content-row .paragraph {
 	border-radius: 0.625rem;
@@ -1073,6 +1095,10 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 /*****************************/
 /** Calendar / Event Styles **/
 /*****************************/
+
+.fc-view-container a.fc-event {
+  color: white !important;
+}
 
 .fc-view table thead > tr {
 	border-bottom: none;

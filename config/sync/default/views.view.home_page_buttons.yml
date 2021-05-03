@@ -172,6 +172,7 @@ display:
     display_options:
       display_extenders: {  }
       block_description: 'Home Page Button Block'
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

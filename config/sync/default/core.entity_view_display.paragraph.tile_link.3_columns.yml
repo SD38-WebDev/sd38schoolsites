@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.3_columns
-    - field.field.paragraph.tile_link.field_background_colour
+    - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
     - image.style.square_image_thumbnail_480x480
@@ -12,25 +12,75 @@ dependencies:
   module:
     - ds
     - field_group
-    - link
     - media
 third_party_settings:
   field_group:
     group_link_group:
       children:
-        - field_tile_image
-        - field_tile_url
+        - group_wrapper
       parent_name: ''
       weight: 0
       format_type: link
-      region: content
+      region: main
       format_settings:
-        id: ''
-        classes: ''
         target: field_tile_url
         custom_uri: ''
         target_attribute: _blank
+        id: ''
+        classes: flex-stretch
       label: 'Link Group'
+    group_wrapper:
+      children:
+        - field_tile_image
+        - 'dynamic_token_field:paragraph-url_title_field'
+      parent_name: group_link_group
+      weight: 20
+      format_type: html_element
+      region: main
+      format_settings:
+        id: ''
+        classes: 'wrapper [paragraph:field_tile_colour:value]'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Wrapper
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: class|flex-stretch
+    regions:
+      main:
+        - group_link_group
+        - group_wrapper
+        - field_tile_image
+        - 'dynamic_token_field:paragraph-url_title_field'
+    fields:
+      'dynamic_token_field:paragraph-url_title_field':
+        plugin_id: 'dynamic_token_field:paragraph-url_title_field'
+        weight: 22
+        label: hidden
+        formatter: default
 id: paragraph.tile_link.3_columns
 targetEntityType: paragraph
 bundle: tile_link
@@ -38,7 +88,7 @@ mode: 3_columns
 content:
   field_tile_image:
     type: media_thumbnail
-    weight: 1
+    weight: 21
     label: hidden
     settings:
       image_style: square_image_thumbnail_480x480
@@ -51,18 +101,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    region: content
-  field_tile_url:
-    weight: 2
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
+    region: main
 hidden:
-  field_background_colour: true
+  field_tile_colour: true
+  field_tile_url: true

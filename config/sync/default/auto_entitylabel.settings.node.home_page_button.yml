@@ -1,0 +1,9 @@
+status: 1
+pattern: '[node:field_button_image] – Button'
+escape: false
+preserve_titles: false
+save: 0
+chunk: '50'
+dependencies:
+  config:
+    - node.type.home_page_button

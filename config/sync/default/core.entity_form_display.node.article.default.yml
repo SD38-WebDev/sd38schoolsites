@@ -9,11 +9,9 @@ dependencies:
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
-    - field.field.node.article.field_test
     - node.type.article
   module:
     - field_group
-    - file
     - media_library
     - paragraphs
     - path
@@ -137,13 +135,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
-  field_test:
-    weight: 26
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
-    region: content
   path:
     type: path
     weight: 10
@@ -156,7 +147,8 @@ content:
       display_label: true
     weight: 7
     region: content
-    third_party_settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
   publish_on:
     type: datetime_timestamp_no_default
     weight: 11

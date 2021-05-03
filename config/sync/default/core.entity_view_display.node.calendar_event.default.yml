@@ -5,57 +5,221 @@ dependencies:
   config:
     - field.field.node.calendar_event.body
     - field.field.node.calendar_event.field_event_date
+    - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
   module:
+    - address
+    - ds
     - smart_date
     - text
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ' class|row justify-content-center'
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-3'
+          right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-9'
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_feature_image
+      right:
+        - node_title
+        - field_event_date
+        - body
+        - field_site_section
+        - field_event_location
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.calendar_event.default
 targetEntityType: node
 bundle: calendar_event
 mode: default
 content:
   body:
-    label: hidden
+    label: above
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
-    third_party_settings: {  }
-    region: content
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Details
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: mb-4
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: right
   field_event_date:
-    weight: 102
+    weight: 2
     label: above
     settings:
-      format: default
+      timezone_override: ''
+      format: compact
+      time_wrapper: true
       force_chronological: false
       add_classes: false
-      time_wrapper: true
       format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: mb-4
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     type: smartdate_default
-    region: content
-  field_feature_image:
-    weight: 103
+    region: right
+  field_event_location:
+    weight: 5
     label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_site_section:
-    weight: 104
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  links:
-    weight: 100
     settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: address_default
+    region: right
+  field_feature_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      view_mode: x_large_full_width_
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_site_section:
+    weight: 4
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    region: content
-hidden: {  }
+    type: entity_reference_label
+    region: right
+hidden:
+  links: true

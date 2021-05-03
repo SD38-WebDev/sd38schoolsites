@@ -10,111 +10,111 @@ dependencies:
 id: socialmedialinks
 theme: rsd_sites_barrio
 region: sidebar_first
-weight: -7
+weight: -11
 provider: null
 plugin: social_media_links_block
 settings:
   id: social_media_links_block
-  label: 'Social Media Links'
+  label: 'Social Media'
   provider: social_media_links
-  label_display: '0'
+  label_display: visible
   platforms:
     behance:
       value: ''
       description: ''
-      weight: '-10'
+      weight: '-34'
     bitbucket:
       value: ''
       description: ''
-      weight: '-9'
+      weight: '-33'
     contact:
       value: ''
       description: ''
-      weight: '-8'
+      weight: '-32'
     drupal:
       value: ''
       description: ''
-      weight: '-7'
-    email:
-      value: ''
-      description: ''
-      weight: '-6'
+      weight: '-31'
     facebook:
-      value: ''
+      value: apple
       description: ''
-      weight: '-5'
+      weight: '-30'
     flickr:
       value: ''
       description: ''
-      weight: '-4'
+      weight: '-29'
     github:
       value: ''
       description: ''
-      weight: '-3'
+      weight: '-28'
     gitlab:
       value: ''
       description: ''
-      weight: '-2'
+      weight: '-27'
     googleplus:
       value: ''
       description: ''
-      weight: '-1'
+      weight: '-26'
     instagram:
       value: ''
       description: ''
-      weight: '0'
+      weight: '-25'
     linkedin:
       value: ''
       description: ''
-      weight: '1'
+      weight: '-24'
     pinterest:
       value: ''
       description: ''
-      weight: '2'
+      weight: '-23'
     rss:
       value: ''
       description: ''
-      weight: '3'
+      weight: '-22'
     slideshare:
       value: ''
       description: ''
-      weight: '4'
+      weight: '-21'
     tumblr:
       value: ''
       description: ''
-      weight: '5'
+      weight: '-20'
     twitter:
-      value: ''
+      value: apple
       description: ''
-      weight: '6'
+      weight: '-19'
     vkontakte:
       value: ''
       description: ''
-      weight: '7'
+      weight: '-18'
     vimeo:
       value: ''
       description: ''
-      weight: '8'
+      weight: '-17'
     website:
       value: ''
       description: ''
-      weight: '9'
+      weight: '-16'
     whatsapp:
       value: ''
       description: ''
-      weight: '10'
+      weight: '-15'
     xing:
       value: ''
       description: ''
-      weight: '11'
+      weight: '-14'
     youtube:
       value: ''
       description: ''
-      weight: '12'
+      weight: '-13'
     youtube_channel:
-      value: ''
+      value: apple
       description: ''
-      weight: '13'
+      weight: '-12'
+    email:
+      value: example@example.com
+      description: ''
+      weight: '-11'
   appearance:
     orientation: h
     show_name: 0

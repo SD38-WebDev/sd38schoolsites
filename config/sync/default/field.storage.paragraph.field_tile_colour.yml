@@ -1,12 +1,12 @@
-uuid: bbb4c3a7-dd75-40a4-83fb-cd00089891b4
+uuid: 0b9e9dc0-eff8-40a6-ba6a-405f3b68deec
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_section_bgcolour
-field_name: field_section_bgcolour
+id: paragraph.field_tile_colour
+field_name: field_tile_colour
 entity_type: paragraph
 type: list_string
 settings:
@@ -57,16 +57,16 @@ settings:
       value: bg-sd38subduedblue
       label: 'Subdued Blue'
     -
-      value: firehouse
-      label: Firehouse
+      value: bg-firehouse
+      label: Firehosue
     -
-      value: ice
+      value: bg-ice
       label: Ice
     -
-      value: plum
+      value: bg-plum
       label: Plum
     -
-      value: slate
+      value: bg-slate
       label: Slate
     -
       value: bg-lightgrey
@@ -92,6 +92,12 @@ settings:
     -
       value: bg-sd38greenlight
       label: 'SD38 Green (Light)'
+    -
+      value: bg-themelight
+      label: 'Custom Theme Colour Light'
+    -
+      value: bg-themedark
+      label: 'Custom Theme Colour Dark'
   allowed_values_function: ''
 module: options
 locked: false

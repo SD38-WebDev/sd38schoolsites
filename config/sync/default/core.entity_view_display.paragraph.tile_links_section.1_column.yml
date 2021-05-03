@@ -111,11 +111,11 @@ content:
             ow-at: ''
             fis: true
             fis-el: div
-            fis-cl: 'row row-cols-1'
+            fis-cl: 'row row-cols-1  d-flex align-items-stretch mt-3'
             fis-at: ''
             fi: true
             fi-el: div
-            fi-cl: 'col mb-4'
+            fi-cl: 'col mb-4 tile-link'
             fi-at: ''
             suffix: ''
             lbw: false
