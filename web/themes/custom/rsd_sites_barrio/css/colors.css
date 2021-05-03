@@ -79,6 +79,10 @@ body.page-user-login #main-wrapper {
   color: #0071b3;
 }
 
+#navbar-main .is-active {
+  color: #055a8e !important;
+}
+
 .sidebar .block {
   background-color: #f6f6f2;
   border-color: #f9f9f9;

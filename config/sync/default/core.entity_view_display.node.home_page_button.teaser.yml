@@ -1,0 +1,24 @@
+uuid: 1210dc60-1d73-4625-8f21-c1a47e3608ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home_page_button.field_button_image
+    - field.field.node.home_page_button.field_link
+    - node.type.home_page_button
+  module:
+    - user
+id: node.home_page_button.teaser
+targetEntityType: node
+bundle: home_page_button
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_button_image: true
+  field_link: true

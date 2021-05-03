@@ -1,24 +1,27 @@
-uuid: bbad7aaa-1c91-4cdc-bf9f-26503850a2b5
+uuid: 099279f6-718d-4f7a-a97e-12d65c3bbfa6
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.home_page_buttons
   module:
     - context
-    - search
+    - views
   theme:
     - rsd_sites_barrio
-id: searchform
+id: views_block__home_page_buttons_block_1
 theme: rsd_sites_barrio
-region: sidebar_first
+region: sidebar_second
 weight: -8
 provider: null
-plugin: search_form_block
+plugin: 'views_block:home_page_buttons-block_1'
 settings:
-  id: search_form_block
-  label: Search
-  provider: search
-  label_display: visible
-  page_id: ''
+  id: 'views_block:home_page_buttons-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
 visibility:
   request_path_exclusion:
     id: request_path_exclusion

@@ -1,24 +1,24 @@
-uuid: bbad7aaa-1c91-4cdc-bf9f-26503850a2b5
+uuid: a6d57747-98b2-4048-b901-66b52e67a652
 langcode: en
 status: true
 dependencies:
   module:
     - context
-    - search
+    - gtranslate
+    - system
   theme:
     - rsd_sites_barrio
-id: searchform
+id: gtranslate
 theme: rsd_sites_barrio
-region: sidebar_first
-weight: -8
+region: sidebar_second
+weight: 0
 provider: null
-plugin: search_form_block
+plugin: gtranslate_block
 settings:
-  id: search_form_block
-  label: Search
-  provider: search
+  id: gtranslate_block
+  label: Translate
+  provider: gtranslate
   label_display: visible
-  page_id: ''
 visibility:
   request_path_exclusion:
     id: request_path_exclusion
@@ -29,4 +29,9 @@ visibility:
     id: view_inclusion
     negate: null
     view_inclusion: {  }
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
     context_mapping: {  }

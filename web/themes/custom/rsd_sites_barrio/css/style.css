@@ -167,6 +167,11 @@ h2 a {
   padding: 1rem;
 }
 
+.content-section .paragraph--type-basic-text-section .bg-sd38blue a,
+.content-section .paragraph--type-basic-text-section .bg-sd38bluelight a {
+  color: #00b298 !important;
+}
+
 .content-section .paragraph--type-basic-text-section .bg-sd38bluelight {
   background: #d9e5f1;
   color: black;
@@ -177,6 +182,11 @@ h2 a {
   background: #00b298;
   color: white;
   padding: 1rem;
+}
+
+.content-section .paragraph--type-basic-text-section .bg-sd38green a,
+.content-section .paragraph--type-basic-text-section .bg-sd38greenlight a {
+  color: #034ea2 !important;
 }
 
 .content-section .paragraph--type-basic-text-section .bg-sd38greenlight {
@@ -301,9 +311,29 @@ footer {
 	margin-top: 30px;
 }
 
+footer.site-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .site-footer .block {
 	border: none;
 	padding: 0;
+}
+
+.site-footer {
+  padding: 0px;
+}
+
+#richmond-footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+#richmond-footer img {
+  margin: 20px 0px;
+  opacity: 85%;
+  max-width: 75%;
+  height: auto;
 }
 
 .sidebar .block {
@@ -622,6 +652,16 @@ body.user-logged-in .card:hover .ops-links {
 .view-id-frontpage .field--type-image {
   margin: 0;
 }
+
+
+/**********************/
+/** SD38 News Alerts **/
+/**********************/
+
+.view-home-page-buttons .field--type-entity-reference {
+  margin: 0.25rem;
+}
+
 
 /* Paragraph Styling */
 

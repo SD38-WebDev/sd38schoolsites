@@ -10,7 +10,7 @@ dependencies:
 id: twitterblock
 theme: rsd_sites_barrio
 region: sidebar_first
-weight: 0
+weight: -6
 provider: null
 plugin: twitter_block
 settings:

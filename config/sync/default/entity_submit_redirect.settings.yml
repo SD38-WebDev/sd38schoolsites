@@ -3,6 +3,8 @@ node:
     path: '<front>'
   news_alert:
     path: '<front>'
+  home_page_button:
+    path: '<front>'
 global:
   use_on:
     - front

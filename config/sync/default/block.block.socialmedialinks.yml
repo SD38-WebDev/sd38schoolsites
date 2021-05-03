@@ -1,0 +1,140 @@
+uuid: 5c2ed875-570a-4fdf-aa9e-2ba3a2a745a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - social_media_links
+  theme:
+    - rsd_sites_barrio
+id: socialmedialinks
+theme: rsd_sites_barrio
+region: sidebar_first
+weight: -7
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    behance:
+      value: ''
+      description: ''
+      weight: '-10'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-9'
+    contact:
+      value: ''
+      description: ''
+      weight: '-8'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-7'
+    email:
+      value: ''
+      description: ''
+      weight: '-6'
+    facebook:
+      value: ''
+      description: ''
+      weight: '-5'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-4'
+    github:
+      value: ''
+      description: ''
+      weight: '-3'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '-2'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-1'
+    instagram:
+      value: ''
+      description: ''
+      weight: '0'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '1'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '2'
+    rss:
+      value: ''
+      description: ''
+      weight: '3'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '4'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '5'
+    twitter:
+      value: ''
+      description: ''
+      weight: '6'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '7'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '8'
+    website:
+      value: ''
+      description: ''
+      weight: '9'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '10'
+    xing:
+      value: ''
+      description: ''
+      weight: '11'
+    youtube:
+      value: ''
+      description: ''
+      weight: '12'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '13'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

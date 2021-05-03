@@ -1,0 +1,28 @@
+uuid: 762ab4b9-2f41-477c-b0b0-fbeb997774dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.home_page_button
+  module:
+    - link
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.home_page_button.field_link
+field_name: field_link
+entity_type: node
+bundle: home_page_button
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

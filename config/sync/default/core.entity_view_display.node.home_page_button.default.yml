@@ -1,0 +1,80 @@
+uuid: ccc6df5c-3630-47b9-9814-b4f932738e1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_page_button.field_button_image
+    - field.field.node.home_page_button.field_link
+    - image.style.large
+    - node.type.home_page_button
+  module:
+    - ds
+    - field_group
+    - media
+    - user
+third_party_settings:
+  field_group:
+    group_link:
+      children:
+        - field_button_image
+      parent_name: ''
+      weight: 0
+      format_type: link
+      region: main
+      format_settings:
+        id: ''
+        classes: ''
+        target: field_link
+        custom_uri: ''
+        target_attribute: _blank
+      label: Link
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - group_link
+        - body
+        - field_button_image
+id: node.home_page_button.default
+targetEntityType: node
+bundle: home_page_button
+mode: default
+content:
+  field_button_image:
+    type: media_thumbnail
+    weight: 2
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: main
+hidden:
+  field_link: true
+  links: true

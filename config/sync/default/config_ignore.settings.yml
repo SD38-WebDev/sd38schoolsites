@@ -2,5 +2,6 @@ ignored_config_entities:
   - system.site
   - color.theme.rsd_sites_barrio
   - 'webform.webform.*'
+  - system.theme.global
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

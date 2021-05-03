@@ -1,24 +1,32 @@
-uuid: bbad7aaa-1c91-4cdc-bf9f-26503850a2b5
+uuid: 6831736e-a75b-4d48-ad32-ce34d7da13c3
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.main
   module:
     - context
-    - search
+    - menu_block
   theme:
     - rsd_sites_barrio
-id: searchform
+id: mainnavigation_2
 theme: rsd_sites_barrio
-region: sidebar_first
-weight: -8
+region: footer_third
+weight: 0
 provider: null
-plugin: search_form_block
+plugin: 'menu_block:main'
 settings:
-  id: search_form_block
-  label: Search
-  provider: search
-  label_display: visible
-  page_id: ''
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'main:'
+  suggestion: main
 visibility:
   request_path_exclusion:
     id: request_path_exclusion
