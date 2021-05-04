@@ -513,7 +513,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="col-12 col-md-4"><a href="{{ view_node_1 }}">{{ field_feature_image }}</a></div>'
+            text: '<div class="col-12 col-md-4"><div class="article-img"><a href="{{ view_node_1 }}">{{ field_feature_image }}</a></div></div>'
             make_link: false
             path: ''
             absolute: false
@@ -866,7 +866,6 @@ display:
           operator: in
           value:
             article: article
-            calendar_event: calendar_event
           group: 1
           exposed: false
           expose:
@@ -1112,6 +1111,128 @@ display:
           entity_type: node
           entity_field: promote
           plugin_id: boolean
+        status_2:
+          id: status_2
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+        type_2:
+          id: type_2
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            calendar_event: calendar_event
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        promote_1:
+          id: promote_1
+          table: node_field_data
+          field: promote
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 3
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: promote
+          plugin_id: boolean
       sorts:
         sticky:
           id: sticky
@@ -1214,6 +1335,7 @@ display:
         groups:
           1: AND
           2: AND
+          3: AND
       css_class: col
       group_by: true
     cache_metadata:

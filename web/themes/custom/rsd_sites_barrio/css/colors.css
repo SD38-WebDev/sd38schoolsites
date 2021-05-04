@@ -122,6 +122,10 @@ body.page-user-login #main-wrapper {
   background: #0071b3;
 }
 
+div.article-img {
+  background-color: #055a8e;
+}
+
 /* ---------- Color Form ----------- */
 
 [dir="rtl"] .color-form .color-palette {

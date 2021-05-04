@@ -253,7 +253,18 @@ display:
       title: 'Upcoming Events'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<div class="row"><div class="col bg-light text-center text-muted rounded p-4"><small>No events scheduled at this time.</small></div></div>'
+          plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders: {  }

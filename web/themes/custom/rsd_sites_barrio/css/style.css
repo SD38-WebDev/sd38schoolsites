@@ -469,6 +469,10 @@ img {
 	margin-bottom: 3rem;
 }
 
+div.article-img {
+  border-radius: 0.3125rem;
+}
+
 .main-content .section article.node .block-inline-blockimage-block .field--type-image img {
 	margin: 0;
 }
@@ -496,11 +500,6 @@ img {
 /*********************/
 /** SD38 News Posts **/
 /*********************/
-
-.view-id-frontpage .article-img {
-	float: right;
-	width: 30%;
-}
 
 .view-id-frontpage h2 {
   margin-bottom: .25rem;
@@ -635,6 +634,11 @@ body.user-logged-in .card:hover .ops-links {
 
 
 /* Paragraph Styling */
+
+.paragraph--type-basic-text-section.paragraph {
+  display: flex;
+  width: unset;
+}
 
 .paragraph--type-image-link .field--name-field-image {
   margin: 0;

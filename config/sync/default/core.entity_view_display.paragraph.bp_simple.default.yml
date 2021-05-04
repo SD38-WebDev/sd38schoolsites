@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.bp_simple.bp_width
     - paragraphs.paragraphs_type.bp_simple
   module:
+    - ds
     - options
     - text
 _core:
@@ -37,7 +38,35 @@ content:
     weight: 3
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: p-4
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     type: text_default
     region: content
   bp_width:

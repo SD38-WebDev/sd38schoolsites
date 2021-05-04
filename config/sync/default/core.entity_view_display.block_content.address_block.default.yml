@@ -10,6 +10,8 @@ dependencies:
     - field.field.block_content.address_block.field_phone
   module:
     - address
+    - address_map_link
+    - ds
     - telephone
     - text
 id: block_content.address_block.default
@@ -28,7 +30,20 @@ content:
     weight: 0
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      address_map_link:
+        link_address: '1'
+        map_link_type: apple_maps
+        map_link_position: address
+        map_link_text: 'Get directions'
+        map_link_new_window: 0
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: address_default
     region: content
   field_fax:

@@ -7,10 +7,12 @@ dependencies:
     - field.field.node.calendar_event.field_event_date
     - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
+    - field.field.node.calendar_event.field_promote_to_school_calendar
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
   module:
     - address
+    - address_map_link
     - ds
     - smart_date
     - text
@@ -62,7 +64,6 @@ third_party_settings:
         - node_title
         - field_event_date
         - body
-        - field_site_section
         - field_event_location
     fields:
       node_title:
@@ -163,10 +164,16 @@ content:
     type: smartdate_default
     region: right
   field_event_location:
-    weight: 5
+    weight: 4
     label: above
     settings: {  }
     third_party_settings:
+      address_map_link:
+        link_address: '1'
+        map_link_type: apple_maps
+        map_link_position: address
+        map_link_text: 'Open Map'
+        map_link_new_window: '1'
       ds:
         ft:
           id: expert
@@ -213,13 +220,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_site_section:
-    weight: 4
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: right
 hidden:
+  field_promote_to_school_calendar: true
+  field_site_section: true
   links: true

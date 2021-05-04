@@ -6,6 +6,14 @@ dependencies:
     - field.storage.node.field_feature_image
     - media.type.image
     - node.type.article
+  content:
+    - 'media:image:41f172cb-91b7-4f04-acc3-90ebb3bc37fb'
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: node.article.field_feature_image
 field_name: field_feature_image
 entity_type: node
@@ -14,7 +22,10 @@ label: 'Feature Image'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    weight: '0'
+    target_uuid: 41f172cb-91b7-4f04-acc3-90ebb3bc37fb
 default_value_callback: ''
 settings:
   handler: 'default:media'

@@ -352,7 +352,7 @@ display:
   entity_view_1:
     display_plugin: entity_view
     id: entity_view_1
-    display_title: 'Article Feed EVA'
+    display_title: 'Blog Feed EVA'
     position: 1
     display_options:
       display_extenders: {  }
@@ -377,7 +377,7 @@ display:
           grouping: {  }
           row_class: mb-4
           default_row_class: true
-          col_xs: col-1
+          col_xs: col-12
           col_sm: col-sm-6
           col_md: col-md-4
           col_lg: col-lg-4
@@ -691,7 +691,7 @@ display:
           equalto: ''
           then: '<a href="{{ view_node_1 }}">{{ field_images }}</a>'
           then_translate: 1
-          or: '<a href="{{ view_node_1 }}">{{ field_feature_image }}</a>'
+          or: '<a href="{{ view_node_1 }}"><div class="article-img">{{ field_feature_image }}</div></a>'
           or_translate: 1
           strip_tags: 0
           plugin_id: views_conditional_field
@@ -1035,7 +1035,7 @@ display:
   entity_view_2:
     display_plugin: entity_view
     id: entity_view_2
-    display_title: 'Article Feed EVA - Listing'
+    display_title: 'Blog Feed EVA - Listing'
     position: 2
     display_options:
       display_extenders: {  }
