@@ -432,7 +432,8 @@ img {
 .node--view-mode-teaser img,
 .node--view-mode-vertical-teaser img,
 .view-id-frontpage .post img,
-.field--type-image img {
+.field--type-image img,
+.field--name-field-button-image img {
 	border-radius: 0.313rem;
 }
 
@@ -637,7 +638,7 @@ body.user-logged-in .card:hover .ops-links {
 /**********************/
 
 .view-home-page-buttons .field--type-entity-reference {
-  margin: 0.25rem;
+  margin: 0 0 0.75rem 0;
 }
 
 

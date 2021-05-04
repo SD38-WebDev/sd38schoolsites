@@ -148,7 +148,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Home Page Buttons'
+      title: Quicklinks
       header: {  }
       footer: {  }
       empty: {  }

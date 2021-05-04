@@ -19,7 +19,7 @@ settings:
   id: 'views_block:home_page_buttons-block_1'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility:
