@@ -5,6 +5,12 @@ dependencies:
   config:
     - field.storage.paragraph.field_section_title
     - paragraphs.paragraphs_type.image_gallery
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: paragraph.image_gallery.field_section_title
 field_name: field_section_title
 entity_type: paragraph
@@ -13,7 +19,9 @@ label: 'Section Title'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: 'Image Gallery'
 default_value_callback: ''
 settings: {  }
 field_type: string

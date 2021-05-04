@@ -118,6 +118,9 @@ body.page-user-login #main-wrapper {
   color: #fffeff;
 }
 
+.section-parent a {
+  background: #0071b3;
+}
 
 /* ---------- Color Form ----------- */
 

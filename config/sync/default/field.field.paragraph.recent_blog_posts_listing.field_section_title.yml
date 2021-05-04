@@ -19,7 +19,9 @@ label: 'Section Title'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: 'Recent Posts'
 default_value_callback: ''
 settings: {  }
 field_type: string

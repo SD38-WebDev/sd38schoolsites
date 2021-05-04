@@ -1,0 +1,15 @@
+uuid: 78b54ccc-ffe2-494e-ab4f-6cba5ae99374
+langcode: en
+status: true
+dependencies: {  }
+id: month_day_year
+label: 'Month Day Year'
+date_format: 'M j Y'
+time_format: ''
+time_hour_format: ''
+allday_label: 'All day'
+separator: ' - '
+join: ', '
+ampm_reduce: '1'
+date_first: '1'
+site_time_toggle: '1'

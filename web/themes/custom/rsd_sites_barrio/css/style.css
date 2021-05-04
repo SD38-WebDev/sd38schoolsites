@@ -300,8 +300,8 @@ footer.site-footer {
 
 #richmond-footer img {
   margin: 20px 0px;
-  opacity: 85%;
-  max-width: 75%;
+  opacity: 65%;
+  max-width: 65%;
   height: auto;
 }
 
@@ -600,22 +600,6 @@ img {
   text-decoration: none;
 }
 
-@media screen and (max-width:767px) {
-
-}
-
-body .ops-links {
-	display: none;
-	z-index: 999999999;
-}
-
-body.user-logged-in .ops-links {
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	display: none;
-}
-
 body.user-logged-in .ops-links .dropbutton-widget {
 	min-width: 8rem;
 }
@@ -637,9 +621,9 @@ body.user-logged-in .card:hover .ops-links {
 }
 
 
-/**********************/
-/** SD38 News Alerts **/
-/**********************/
+/************************************/
+/** Quicklinks - Home Page Buttons **/
+/************************************/
 
 .view-home-page-buttons .field--type-entity-reference {
   margin: 0 0 0.75rem 0;
@@ -724,33 +708,6 @@ body.user-logged-in .card:hover .ops-links {
 .content-section .field--type-entity-reference {
   margin: 0;
 }
-
-/*
-.p-sm {
-	padding-top:1rem;
-	padding-bottom:1rem;
-}
-.p-med {
-	padding-top:3rem;
-	padding-bottom:3rem;
-}
-.p-lg {
-	padding-top:6rem;
-	padding-bottom:6rem;
-}
-.m-sm {
-	margin-top:1rem;
-	margin-bottom:1rem;
-}
-.m-med {
-	margin-top:3rem;
-	margin-bottom:3rem;
-}
-.m-lg {
-	margin-top:6rem;
-	margin-bottom:6rem;
-}
-*/
 
 .p-sm {
 	padding:1rem;
@@ -966,6 +923,18 @@ div.content-row .p-xl {
 /******************************/
 /** Section Areas **/
 /******************************/
+
+
+.section-parent {
+  margin-bottom: 0.25rem;
+}
+
+.section-parent a {
+  color: white !important;
+  font-weight: 700;
+  padding: .125rem .25rem;
+  border-radius: 0.3125rem;
+}
 
 .view-section-sub-menu .view-content .nav.nav-tabs {
   background-color: rgba(0, 0, 0, 0.035);

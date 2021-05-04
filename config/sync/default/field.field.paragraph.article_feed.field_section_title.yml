@@ -5,6 +5,12 @@ dependencies:
   config:
     - field.storage.paragraph.field_section_title
     - paragraphs.paragraphs_type.article_feed
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: paragraph.article_feed.field_section_title
 field_name: field_section_title
 entity_type: paragraph
@@ -13,7 +19,9 @@ label: 'Section Title'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 'Blog Feed'
 default_value_callback: ''
 settings: {  }
 field_type: string

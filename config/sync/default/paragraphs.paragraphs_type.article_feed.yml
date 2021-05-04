@@ -1,9 +1,14 @@
 uuid: b1b82975-f987-4a75-a688-c071ed9bf2f3
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
 id: article_feed
-label: 'Article Feed'
+label: 'Blog Feed'
 icon_uuid: null
 icon_default: null
 description: ''
