@@ -395,6 +395,10 @@ a:hover.navbar-brand,
 	text-shadow: 0px 1px 10px black;
 }
 
+.view-header-image .view-content {
+  box-shadow: 0px 1px 10px #666;
+}
+
 a.navbar-brand,
 a:hover.navbar-brand {
 	line-height: 1;
@@ -639,6 +643,10 @@ body.user-logged-in .card:hover .ops-links {
 
 .view-home-page-buttons .field--type-entity-reference {
   margin: 0 0 0.75rem 0;
+}
+
+.view-home-page-buttons .field--type-entity-reference img:hover {
+  box-shadow: 0px 1px 5px #bbb;
 }
 
 
