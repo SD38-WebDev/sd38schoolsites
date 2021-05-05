@@ -464,7 +464,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="col"><div class="wrapper"><div class="row">'
+            text: '<div class="col"><div class="wrapper border-0625"><div class="row">'
             make_link: false
             path: ''
             absolute: false
@@ -1287,7 +1287,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No front page content has been created yet.<br/>Follow the <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a> to start building your site.'
+          content: '<div class="row"><div class="col bg-theme border-0625 p-4">No front page content has been created yet.</div></div>'
           plugin_id: text_custom
         node_listing_empty:
           id: node_listing_empty

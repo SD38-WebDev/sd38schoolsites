@@ -1,0 +1,40 @@
+uuid: a8f955fe-2304-4aae-8690-bef8663156c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - context
+    - menu_block
+  theme:
+    - rsd_sites_barrio
+id: useraccountmenu_2
+theme: rsd_sites_barrio
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'menu_block:account'
+settings:
+  id: 'menu_block:account'
+  label: 'Website Login'
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand: false
+  parent: 'account:'
+  suggestion: account
+visibility:
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }

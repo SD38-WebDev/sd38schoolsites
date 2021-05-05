@@ -2,14 +2,14 @@
 
 body {
   color: #3b3b3b;
-  background: #055a8f !important;
+  background: #ffffff !important;
 }
 
 #page,
 #main-wrapper,
 .region-primary-menu .menu-item a.is-active,
 .region-primary-menu .menu-item--active-trail a {
-  background: #fff;
+  /* background: #fff; */
 }
 
 .tabs ul.primary li a.is-active {
@@ -36,9 +36,9 @@ body.page-user-login #main-wrapper {
   background-color: #055a8e;
 }
 
-#navbar-main {
+/* #navbar-main {
   background-color: #1d84c3;
-}
+} */
 
 #main-wrapper a,
 #main-wrapper link,
@@ -81,6 +81,15 @@ body.page-user-login #main-wrapper {
 
 #navbar-main .is-active {
   color: #055a8e !important;
+}
+
+.sidebar .section,
+.bg-theme {
+  background-color: #055a8e08 !important;
+}
+
+#navbar-main {
+  box-shadow: 0px 150px 200px #055a8e40;
 }
 
 .sidebar .block {

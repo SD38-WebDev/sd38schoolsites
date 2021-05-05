@@ -1,5 +1,5 @@
 status: 1
-pattern: '[site:name] - Header Image - [node:field_image:entity:name]'
+pattern: '[site:name] - Header Image - [node:field_header_image:entity:name]'
 escape: false
 preserve_titles: false
 save: 0

@@ -31,7 +31,7 @@ settings:
     transparent: '0'
   border_color: ''
   language: ''
-  tweet_limit: '5'
+  tweet_limit: '3'
   related: ''
   polite: polite
 visibility:

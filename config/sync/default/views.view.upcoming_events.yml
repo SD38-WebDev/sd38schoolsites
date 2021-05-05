@@ -263,7 +263,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<div class="row"><div class="col bg-light text-center text-muted rounded p-4"><small>No events scheduled at this time.</small></div></div>'
+          content: '<div class="row"><div class="col bg-theme text-center text-muted rounded p-4"><small>No events scheduled at this time.</small></div></div>'
           plugin_id: text_custom
       relationships: {  }
       arguments: {  }
