@@ -148,7 +148,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: ''
             absolute: false
             external: false
@@ -157,7 +157,7 @@ display:
             trim_whitespace: false
             alt: 'Edit Header Image'
             rel: ''
-            link_class: 'btn btn-light btn-sm'
+            link_class: ''
             prefix: ''
             suffix: ''
             target: ''
@@ -172,8 +172,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: div
+          element_class: 'btn btn-light btn-sm'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

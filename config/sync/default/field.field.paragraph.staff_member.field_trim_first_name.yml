@@ -1,0 +1,29 @@
+uuid: 77f849e1-9c77-4b88-ba86-2d039bc41d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_trim_first_name
+    - paragraphs.paragraphs_type.staff_member
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.staff_member.field_trim_first_name
+field_name: field_trim_first_name
+entity_type: paragraph
+bundle: staff_member
+label: 'Trim First Name'
+description: 'Trims the first name to one character. John Smith becomes J. Smith'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

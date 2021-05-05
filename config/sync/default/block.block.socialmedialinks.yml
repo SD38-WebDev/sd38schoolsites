@@ -10,7 +10,7 @@ dependencies:
 id: socialmedialinks
 theme: rsd_sites_barrio
 region: sidebar_first
-weight: -11
+weight: -10
 provider: null
 plugin: social_media_links_block
 settings:

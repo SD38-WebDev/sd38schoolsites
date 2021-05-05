@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.staff_member.field_staff_grade_department
     - field.field.paragraph.staff_member.field_staff_photo
     - field.field.paragraph.staff_member.field_staff_position
+    - field.field.paragraph.staff_member.field_trim_first_name
     - image.style.square_image_thumbnail_480x480
     - paragraphs.paragraphs_type.staff_member
   module:
@@ -186,4 +187,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_trim_first_name:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
 hidden: {  }

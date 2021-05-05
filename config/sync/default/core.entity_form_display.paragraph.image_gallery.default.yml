@@ -52,7 +52,7 @@ content:
         5_columns: 5_columns
         6_columns: 6_columns
         default: 0
-      default_view_mode: 1_column
+      default_view_mode: 4_columns
     third_party_settings: {  }
     region: content
 hidden:

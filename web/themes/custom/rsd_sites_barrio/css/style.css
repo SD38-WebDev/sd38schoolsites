@@ -125,44 +125,19 @@ h2 a {
   padding-top: 0;
 }
 
-.content-section .bg-none {background: unset; padding: 0rem;}
+#search-block-form .form-search.form-control {
+  border: none;
+  margin-right: 1rem;
+  min-width: 100%;
+}
 
-.content-section .bg-lightgrey {background: #eee;}
-.content-section .paragraph--type-basic-text-section .bg-lightgrey {padding: 1rem;}
+#search-block-form .form-type-search {
+  width: 100%;
+}
 
-.content-section .bg-darkgrey {background: #333; color: white;}
-.content-section .paragraph--type-basic-text-section .bg-darkgrey {padding: 1rem;}
-
-.content-section .bg-cream {background: #fbf7f1; color: black;}
-.content-section .paragraph--type-basic-text-section .bg-cream {padding: 1rem;}
-
-.content-section .bg-red {background: #ff2600;color: white;}
-.content-section .paragraph--type-basic-text-section .bg-red {padding: 1rem;}
-
-.content-section .bg-red a {color: black !important;}
-
-.content-section .bg-sd38blue {background: #034ea2; color: white;}
-.content-section .paragraph--type-basic-text-section .bg-sd38blue {padding: 1rem;}
-
-.content-section .bg-sd38blue a, .content-section .bg-sd38bluelight a {color: #00b298 !important;}
-
-.content-section .bg-sd38bluelight {background: #d9e5f1; color: black;}
-.content-section .paragraph--type-basic-text-section .bg-sd38bluelight {padding: 1rem;}
-
-.content-section .bg-sd38green {background: #00b298; color: white;}
-.content-section .paragraph--type-basic-text-section .bg-sd38green {padding: 1rem;}
-
-.content-section .bg-sd38green a, .content-section .bg-sd38greenlight a {color: #034ea2 !important;}
-
-.content-section .bg-sd38greenlight {background: #e6f7f5; color: black;}
-.content-section .paragraph--type-basic-text-section .bg-sd38greenlight {padding: 1rem;}
-
-.content-section .bg-themelight {background: #eee; color: black;}
-.content-section .paragraph--type-basic-text-section .bg-themelight {padding: 1rem;}
-
-.content-section .bg-themedark {background: #eee; color: white;}
-.content-section .paragraph--type-basic-text-section .bg-themedark {background: #eee; color: white; padding: 1rem;}
-
+#search-block-form .form-actions {
+  display: none;
+}
 
 /*******************/
 /** SD38 Branding **/
@@ -321,7 +296,7 @@ body {
 blockquote {
 	padding: 1.5rem;
 	border-radius: 0.625rem;
-	background: rgba(0, 0, 0, 0.025);
+	background: rgba(0, 0, 0, 0.05);
 	font-style: italic;
 }
 
@@ -421,7 +396,6 @@ a:hover.navbar-brand {
 	padding: 0rem;
 	margin-bottom: 0.75rem;
 	list-style: none;
-	background-color: rgba(0, 0, 0, 0.025) !important;
 }
 
 img {
@@ -855,6 +829,71 @@ video {
 .tile-link:hover .wrapper.bg-plum {box-shadow: 0px 1px 15px #593662;}
 .tile-link:hover .wrapper.bg-slate {box-shadow: 0px 1px 15px #4e4e4e;}
 
+.content-section .bg-none {background: unset; padding: 0rem;}
+.content-section .bg-lightgrey {background: #eee;}
+.content-section .paragraph--type-basic-text-section .bg-lightgrey {padding: 1rem;}
+.content-section .bg-darkgrey {background: #333; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-darkgrey {padding: 1rem;}
+.content-section .bg-cream {background: #fbf7f1; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-cream {padding: 1rem;}
+.content-section .bg-red {background: #ff2600;color: white;}
+.content-section .paragraph--type-basic-text-section .bg-red {padding: 1rem;}
+.content-section .bg-red a {color: black !important;}
+.content-section .bg-sd38blue {background: #034ea2; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-sd38blue {padding: 1rem;}
+.content-section .bg-sd38blue a, .content-section .bg-sd38bluelight a {color: #00b298 !important;}
+.content-section .bg-sd38bluelight {background: #d9e5f1; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-sd38bluelight {padding: 1rem;}
+.content-section .bg-sd38green {background: #00b298; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-sd38green {padding: 1rem;}
+.content-section .bg-sd38green a, .content-section .bg-sd38greenlight a {color: #034ea2 !important;}
+.content-section .bg-sd38greenlight {background: #e6f7f5; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-sd38greenlight {padding: 1rem;}
+.content-section .bg-themelight {background: #eee; color: black;}
+.content-section .paragraph--type-basic-text-section .bg-themelight {padding: 1rem;}
+.content-section .bg-themedark {background: #eee; color: white;}
+.content-section .paragraph--type-basic-text-section .bg-themedark {background: #eee; color: white; padding: 1rem;}
+
+.content-section .bg-sd38bluelagoon {background-color:#1d84c3; color: white;}
+.content-section .bg-sd38royalblue {background-color:#4486a3; color: white;}
+.content-section .bg-sd38tealsky {background-color:#1daac3; color: white;}
+.content-section .bg-sd38oceangreen {background-color:#32ae71; color: white;}
+.content-section .bg-sd38sagegreen {background-color:#50976f; color: white;}
+.content-section .bg-sd38limegreen {background-color:#80b52b; color: white;}
+.content-section .bg-sd38golden {background-color:#c3a61d; color: white;}
+.content-section .bg-sd38burntorange {background-color:#d47823; color: white;}
+.content-section .bg-sd38earthbrown {background-color:#b1754c; color: white;}
+.content-section .bg-sd38crimson {background-color:#b24244; color: white;}
+.content-section .bg-sd38tangerine {background-color:#f77700; color: white;}
+.content-section .bg-sd38boysenberry {background-color:#a83755; color: white;}
+.content-section .bg-sd38purplegrape {background-color:#8236a9; color: white;}
+.content-section .bg-sd38subduedblue {background-color:#4e7591; color: white;}
+.content-section .bg-firehouse {background-color:#cd2d2d; color: white;}
+.content-section .bg-ice {background-color:#c2c4c5; color: white;}
+.content-section .bg-plum {background-color:#593662; color: white;}
+.content-section .bg-slate {background-color:#4e4e4e; color: white;}
+
+.content-section .bg-sd38bluelagoon,
+.content-section .bg-sd38royalblue,
+.content-section .bg-sd38tealsky,
+.content-section .bg-sd38oceangreen,
+.content-section .bg-sd38sagegreen,
+.content-section .bg-sd38limegreen,
+.content-section .bg-sd38golden,
+.content-section .bg-sd38burntorange,
+.content-section .bg-sd38earthbrown,
+.content-section .bg-sd38crimson,
+.content-section .bg-sd38tangerine,
+.content-section .bg-sd38boysenberry,
+.content-section .bg-sd38purplegrape,
+.content-section .bg-sd38subduedblue,
+.content-section .bg-firehouse,
+.content-section .bg-ice,
+.content-section .bg-plum,
+.content-section .bg-slate {
+  padding: 1rem;
+}
+
 main div.content-row .paragraph {
 	border-radius: 0.625rem;
 }
@@ -1037,7 +1076,6 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 .views-listing .shaded-rows li:nth-child(odd),
 .view-section-calendar .event:nth-child(odd),
 .view-article-feed .article-post:nth-child(odd) {
-	background: rgba(0, 0, 0, 0.05);
 	border-radius: 0.313rem;
 }
 

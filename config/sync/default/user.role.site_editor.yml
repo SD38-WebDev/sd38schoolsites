@@ -22,6 +22,7 @@ permissions:
   - 'administer taxonomy'
   - 'administer themes'
   - 'administer themes rsd_sites_barrio'
+  - 'bypass workbench access'
   - 'create article content'
   - 'create calendar_event content'
   - 'create header_image content'

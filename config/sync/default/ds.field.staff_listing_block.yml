@@ -2,7 +2,7 @@ id: staff_listing_block
 label: 'Staff Listing Block'
 ui_limit: ''
 properties:
-  block: 'views_block:staff_listing-block_1'
+  block: 'views_block:staff_page_list-block_1'
   use_block_title: false
   add_block_wrappers: false
 type: block

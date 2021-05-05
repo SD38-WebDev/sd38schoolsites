@@ -1,0 +1,18 @@
+uuid: 14feb484-d8f4-47fd-8f3d-89fd5125de5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_trim_first_name
+field_name: field_trim_first_name
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

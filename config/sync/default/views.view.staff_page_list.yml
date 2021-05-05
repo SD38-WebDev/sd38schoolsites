@@ -1,4 +1,4 @@
-uuid: 138a9569-a72f-4ef7-916e-d1f5a9b6527e
+uuid: 3cfbac4e-28bc-49ce-81af-3317fec28ada
 langcode: en
 status: true
 dependencies:
@@ -9,20 +9,21 @@ dependencies:
     - field.storage.paragraph.field_last_name
     - field.storage.paragraph.field_staff_grade_department
     - field.storage.paragraph.field_staff_position
-    - paragraphs.paragraphs_type.staff_member
+    - field.storage.paragraph.field_trim_first_name
   module:
     - link
     - node
     - paragraphs
     - user
     - views_bootstrap
-id: staff_listing
-label: 'Staff Listing'
+    - views_conditional
+id: staff_page_list
+label: 'Staff Page List'
 module: views
 description: ''
 tag: ''
-base_table: paragraphs_item_field_data
-base_field: id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -65,21 +66,38 @@ display:
         options:
           grouping: {  }
           row_class: ''
-          default_row_class: false
+          default_row_class: true
           override: 1
           sticky: 0
           caption: ''
           summary: ''
           description: ''
           columns:
+            field_trim_first_name: field_trim_first_name
             field_first_name: field_first_name
+            field_first_name_1: field_first_name_1
             field_last_name: field_last_name
+            views_conditional_field: views_conditional_field
             field_staff_position: field_staff_position
-            field_division_1: field_division_1
+            field_division: field_division
             field_staff_grade_department: field_staff_grade_department
             field_external_sites: field_external_sites
           info:
+            field_trim_first_name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
             field_first_name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            field_first_name_1:
               sortable: 0
               default_sort_order: asc
               align: ''
@@ -93,15 +111,20 @@ display:
               separator: ''
               empty_column: 0
               responsive: ''
+            views_conditional_field:
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
             field_staff_position:
               align: ''
               separator: ''
               empty_column: 0
               responsive: ''
-            field_division_1:
+            field_division:
               align: ''
               separator: ''
-              empty_column: 0
+              empty_column: 1
               responsive: ''
             field_staff_grade_department:
               align: ''
@@ -124,13 +147,141 @@ display:
       row:
         type: fields
       fields:
+        field_trim_first_name:
+          id: field_trim_first_name
+          table: paragraph__field_trim_first_name
+          field: field_trim_first_name
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_first_name:
           id: field_first_name
           table: paragraph__field_first_name
           field: field_first_name
-          relationship: none
+          relationship: field_staff_members
           group_type: group
-          admin_label: ''
+          admin_label: 'First Name – Trimmed'
+          label: 'First Name'
+          exclude: true
+          alter:
+            alter_text: false
+            text: '{{ field_first_name }}.'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 1
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: true
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_first_name_1:
+          id: field_first_name_1
+          table: paragraph__field_first_name
+          field: field_first_name
+          relationship: field_staff_members
+          group_type: group
+          admin_label: 'First Name – Full'
           label: ''
           exclude: true
           alter:
@@ -191,13 +342,13 @@ display:
           id: field_last_name
           table: paragraph__field_last_name
           field: field_last_name
-          relationship: none
+          relationship: field_staff_members
           group_type: group
           admin_label: ''
-          label: Name
-          exclude: false
+          label: ''
+          exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ field_first_name }} {{ field_last_name }}'
             make_link: false
             path: ''
@@ -227,7 +378,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -250,14 +401,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_staff_position:
-          id: field_staff_position
-          table: paragraph__field_staff_position
-          field: field_staff_position
+        views_conditional_field:
+          id: views_conditional_field
+          table: views_conditional
+          field: views_conditional_field
           relationship: none
           group_type: group
-          admin_label: ''
-          label: Position
+          admin_label: 'Name Output'
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -298,29 +449,23 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_division_1:
-          id: field_division_1
-          table: paragraph__field_division
-          field: field_division
-          relationship: none
+          if: field_trim_first_name
+          condition: cn
+          equalto: 'On'
+          then: '{{ field_first_name }} {{ field_last_name }}'
+          then_translate: 1
+          or: '{{ field_first_name_1 }} {{ field_last_name }}'
+          or_translate: 1
+          strip_tags: 0
+          plugin_id: views_conditional_field
+        field_staff_position:
+          id: field_staff_position
+          table: paragraph__field_staff_position
+          field: field_staff_position
+          relationship: field_staff_members
           group_type: group
           admin_label: ''
-          label: Division
+          label: Position
           exclude: false
           alter:
             alter_text: false
@@ -358,14 +503,77 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_division:
+          id: field_division
+          table: paragraph__field_division
+          field: field_division
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          label: Division
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: true
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: false
           click_sort_column: value
           type: number_integer
           settings:
             thousand_separator: ''
-            prefix_suffix: false
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -381,7 +589,7 @@ display:
           id: field_staff_grade_department
           table: paragraph__field_staff_grade_department
           field: field_staff_grade_department
-          relationship: none
+          relationship: field_staff_members
           group_type: group
           admin_label: ''
           label: ''
@@ -444,7 +652,7 @@ display:
           id: field_external_sites
           table: paragraph__field_external_sites
           field: field_external_sites
-          relationship: none
+          relationship: field_staff_members
           group_type: group
           admin_label: ''
           label: ''
@@ -494,8 +702,8 @@ display:
             trim_length: 80
             url_only: false
             url_plain: false
-            rel: nofollow
-            target: _blank
+            rel: '0'
+            target: '0'
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -510,10 +718,10 @@ display:
       filters:
         status:
           value: '1'
-          table: paragraphs_item_field_data
+          table: node_field_data
           field: status
           plugin_id: boolean
-          entity_type: paragraph
+          entity_type: node
           entity_field: status
           id: status
           expose:
@@ -521,42 +729,82 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        type:
-          id: type
+      sorts:
+        revision_id:
+          id: revision_id
           table: paragraphs_item_field_data
-          field: type
-          value:
-            staff_member: staff_member
-          entity_type: paragraph
-          entity_field: type
-          plugin_id: bundle
+          field: revision_id
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
           expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      sorts: {  }
-      title: 'Staff Listing'
+            label: ''
+          entity_type: paragraph
+          entity_field: revision_id
+          plugin_id: standard
+      title: ''
       header: {  }
       footer: {  }
       empty: {  }
       relationships:
-        reverse__node__field_staff_members:
-          id: reverse__node__field_staff_members
-          table: paragraphs_item_field_data
-          field: reverse__node__field_staff_members
+        field_staff_members:
+          id: field_staff_members
+          table: node__field_staff_members
+          field: field_staff_members
           relationship: none
           group_type: group
-          admin_label: field_staff_members
-          required: false
-          entity_type: paragraph
-          plugin_id: entity_reverse
-      arguments: {  }
+          admin_label: 'field_staff_members: Paragraph'
+          required: true
+          plugin_id: standard
+      arguments:
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: node
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          entity_type: node
+          entity_field: nid
+          plugin_id: node_nid
       display_extenders: {  }
       css_class: col
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.paragraph.field_division'
@@ -565,6 +813,7 @@ display:
         - 'config:field.storage.paragraph.field_last_name'
         - 'config:field.storage.paragraph.field_staff_grade_department'
         - 'config:field.storage.paragraph.field_staff_position'
+        - 'config:field.storage.paragraph.field_trim_first_name'
   block_1:
     display_plugin: block
     id: block_1
@@ -577,6 +826,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.paragraph.field_division'
@@ -585,3 +836,4 @@ display:
         - 'config:field.storage.paragraph.field_last_name'
         - 'config:field.storage.paragraph.field_staff_grade_department'
         - 'config:field.storage.paragraph.field_staff_position'
+        - 'config:field.storage.paragraph.field_trim_first_name'

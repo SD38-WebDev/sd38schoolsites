@@ -2,14 +2,13 @@
 
 body {
   color: #3b3b3b;
-  background: #ffffff !important;
 }
 
 #page,
 #main-wrapper,
 .region-primary-menu .menu-item a.is-active,
 .region-primary-menu .menu-item--active-trail a {
-  /* background: #fff; */
+  background: #fff;
 }
 
 .tabs ul.primary li a.is-active {
@@ -84,8 +83,15 @@ body.page-user-login #main-wrapper {
 }
 
 .sidebar .section,
-.bg-theme {
-  background-color: #055a8e08 !important;
+.bg-theme,
+.breadcrumb {
+  background-color: #055a8e09 !important;
+}
+
+.views-listing .shaded-rows li:nth-child(odd),
+.view-section-calendar .event:nth-child(odd),
+.view-article-feed .article-post:nth-child(odd) {
+  background-color: #055a8e12 !important;
 }
 
 #navbar-main {
@@ -107,8 +113,9 @@ body.page-user-login #main-wrapper {
   background-color: #0256b1;
 }
 
+body,
 .site-footer {
-  background: #055a8f;
+  background: #055a8f !important;
 }
 
 #page-wrapper .site-footer a {
@@ -133,6 +140,10 @@ body.page-user-login #main-wrapper {
 
 div.article-img {
   background-color: #055a8e;
+}
+
+.fc-today {
+  background-color: #055a8e40 !important;
 }
 
 /* ---------- Color Form ----------- */

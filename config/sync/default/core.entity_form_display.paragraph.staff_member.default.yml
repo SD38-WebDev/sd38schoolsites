@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.staff_member.field_staff_grade_department
     - field.field.paragraph.staff_member.field_staff_photo
     - field.field.paragraph.staff_member.field_staff_position
+    - field.field.paragraph.staff_member.field_trim_first_name
     - paragraphs.paragraphs_type.staff_member
   module:
     - field_group
@@ -21,7 +22,10 @@ third_party_settings:
       children:
         - group_name
         - group_position_details
+        - group_division
+        - group_grade_department
         - group_links
+        - group_photo
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -35,6 +39,7 @@ third_party_settings:
       children:
         - field_first_name
         - field_last_name
+        - field_trim_first_name
       parent_name: group_tabs
       weight: 1
       format_type: tab
@@ -49,8 +54,6 @@ third_party_settings:
     group_position_details:
       children:
         - field_staff_position
-        - field_division
-        - field_staff_grade_department
       parent_name: group_tabs
       weight: 2
       format_type: tab
@@ -66,7 +69,7 @@ third_party_settings:
       children:
         - field_external_sites
       parent_name: group_tabs
-      weight: 3
+      weight: 5
       format_type: tab
       region: content
       format_settings:
@@ -76,6 +79,48 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Links
+    group_photo:
+      children:
+        - field_staff_photo
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Photo
+    group_division:
+      children:
+        - field_division
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Division
+    group_grade_department:
+      children:
+        - field_staff_grade_department
+      parent_name: group_tabs
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Grade/Department
 id: paragraph.staff_member.default
 targetEntityType: paragraph
 bundle: staff_member
@@ -138,6 +183,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_trim_first_name:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden:
   created: true
