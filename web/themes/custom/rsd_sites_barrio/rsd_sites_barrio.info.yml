@@ -32,4 +32,9 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
-  
+
+libraries-override:
+  bootstrap_barrio/global-styling:
+    css:
+      component:
+        css/components/table.css: false
