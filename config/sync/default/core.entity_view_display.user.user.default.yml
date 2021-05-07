@@ -35,12 +35,13 @@ third_party_settings:
       left:
         - username
         - usermail
+        - 'dynamic_block_field:user-site_sections_admin_block'
       right:
         - 'dynamic_block_field:user-recent_content'
     fields:
       'dynamic_block_field:user-recent_content':
         plugin_id: 'dynamic_block_field:user-recent_content'
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
         ft:
@@ -49,6 +50,38 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
+      'dynamic_block_field:user-site_sections_admin_block':
+        plugin_id: 'dynamic_block_field:user-site_sections_admin_block'
+        weight: 2
+        label: above
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: mt-4
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
       usermail:
         plugin_id: usermail
         weight: 1

@@ -1,0 +1,44 @@
+uuid: 1e098b30-8f77-413e-89b8-5054478f39e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.navigation_menu.field_menu_link
+    - paragraphs.paragraphs_type.navigation_menu
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes: {  }
+          add_layout_class: 0
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 0
+            attributes: ''
+    regions:
+      main:
+        - section_navigation_menu_entity_view_1
+id: paragraph.navigation_menu.default
+targetEntityType: paragraph
+bundle: navigation_menu
+mode: default
+content:
+  section_navigation_menu_entity_view_1:
+    weight: 0
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_menu_link: true

@@ -17,7 +17,7 @@ provider: null
 plugin: 'menu_block:account'
 settings:
   id: 'menu_block:account'
-  label: 'Website Login'
+  label: Admin
   provider: menu_block
   label_display: visible
   follow: false

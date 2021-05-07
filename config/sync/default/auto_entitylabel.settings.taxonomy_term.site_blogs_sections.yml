@@ -1,4 +1,4 @@
-status: 1
+status: 2
 pattern: '[term:field_section_home_page:entity]'
 escape: false
 preserve_titles: false

@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.embedded_video
     - paragraphs.paragraphs_type.image_and_text_section
     - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.navigation_menu
     - paragraphs.paragraphs_type.tile_links_section
   module:
     - entity_reference_revisions
@@ -43,6 +44,7 @@ settings:
       image_and_text_section: image_and_text_section
       calendar_events_list_: calendar_events_list_
       tile_links_section: tile_links_section
+      navigation_menu: navigation_menu
     target_bundles_drag_drop:
       article_feed:
         enabled: true
@@ -101,12 +103,24 @@ settings:
       embedded_video:
         enabled: true
         weight: 39
+      file_list:
+        weight: 48
+        enabled: false
       image_and_text_section:
         enabled: true
         weight: 41
       image_gallery:
         enabled: true
         weight: 40
+      navigation_menu:
+        enabled: true
+        weight: 51
+      recent_blog_posts:
+        weight: 52
+        enabled: false
+      recent_blog_posts_listing:
+        weight: 53
+        enabled: false
       staff_member:
         weight: 46
         enabled: false

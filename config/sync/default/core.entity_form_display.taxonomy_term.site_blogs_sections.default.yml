@@ -6,7 +6,24 @@ dependencies:
     - field.field.taxonomy_term.site_blogs_sections.field_section_home_page
     - taxonomy.vocabulary.site_blogs_sections
   module:
-    - path
+    - field_group
+third_party_settings:
+  field_group:
+    group_for_site_admin_only:
+      children:
+        - name
+      parent_name: ''
+      weight: 1
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        weight: 0
+      label: 'For Site Admin Only'
 id: taxonomy_term.site_blogs_sections.default
 targetEntityType: taxonomy_term
 bundle: site_blogs_sections
@@ -24,17 +41,11 @@ content:
     region: content
   name:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 2
-    region: content
-    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
@@ -45,3 +56,4 @@ content:
     third_party_settings: {  }
 hidden:
   description: true
+  path: true

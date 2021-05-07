@@ -1,0 +1,120 @@
+uuid: 947d0262-05fa-459d-ace1-b7cec57eda42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_menu_link
+    - paragraphs.paragraphs_type.navigation_menu
+    - paragraphs.paragraphs_type.navigation_menu_link
+  module:
+    - entity_reference_revisions
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.navigation_menu.field_menu_link
+field_name: field_menu_link
+entity_type: paragraph
+bundle: navigation_menu
+label: 'Menu Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      navigation_menu_link: navigation_menu_link
+    target_bundles_drag_drop:
+      article_feed:
+        weight: 30
+        enabled: false
+      basic_text_section:
+        weight: 31
+        enabled: false
+      bp_accordion:
+        weight: 32
+        enabled: false
+      bp_accordion_section:
+        weight: 33
+        enabled: false
+      bp_blank:
+        weight: 34
+        enabled: false
+      bp_block:
+        weight: 35
+        enabled: false
+      bp_carousel:
+        weight: 36
+        enabled: false
+      bp_column_wrapper:
+        weight: 40
+        enabled: false
+      bp_columns:
+        weight: 37
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 38
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 39
+        enabled: false
+      bp_image:
+        weight: 41
+        enabled: false
+      bp_modal:
+        weight: 42
+        enabled: false
+      bp_simple:
+        weight: 43
+        enabled: false
+      bp_tab_section:
+        weight: 45
+        enabled: false
+      bp_tabs:
+        weight: 44
+        enabled: false
+      bp_view:
+        weight: 46
+        enabled: false
+      calendar_events_list_:
+        weight: 47
+        enabled: false
+      embedded_video:
+        weight: 48
+        enabled: false
+      file_list:
+        weight: 49
+        enabled: false
+      image_and_text_section:
+        weight: 50
+        enabled: false
+      image_gallery:
+        weight: 51
+        enabled: false
+      navigation_menu:
+        weight: 52
+        enabled: false
+      navigation_menu_link:
+        enabled: true
+        weight: 53
+      recent_blog_posts:
+        weight: 54
+        enabled: false
+      recent_blog_posts_listing:
+        weight: 55
+        enabled: false
+      staff_member:
+        weight: 56
+        enabled: false
+      tile_link:
+        weight: 57
+        enabled: false
+      tile_links_section:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions

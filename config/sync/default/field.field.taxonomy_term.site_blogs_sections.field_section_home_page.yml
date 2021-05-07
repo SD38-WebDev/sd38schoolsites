@@ -11,14 +11,14 @@ dependencies:
 third_party_settings:
   required_api:
     required_plugin: default
-    required_plugin_options: 1
+    required_plugin_options: 0
 id: taxonomy_term.site_blogs_sections.field_section_home_page
 field_name: field_section_home_page
 entity_type: taxonomy_term
 bundle: site_blogs_sections
 label: 'Section Home Page'
-description: ''
-required: true
+description: 'Provide the name of the section home page. You can either select an existing page or provide a the name of a page you''d like created.'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
