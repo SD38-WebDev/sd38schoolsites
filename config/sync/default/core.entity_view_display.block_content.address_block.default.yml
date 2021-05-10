@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.address_block.field_address
     - field.field.block_content.address_block.field_fax
     - field.field.block_content.address_block.field_phone
+    - field.field.block_content.address_block.field_school_email_address
   module:
     - address
     - address_map_link
@@ -22,7 +23,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -61,5 +62,19 @@ content:
       title: ''
     third_party_settings: {  }
     type: telephone_link
+    region: content
+  field_school_email_address:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: email_mailto
     region: content
 hidden: {  }
