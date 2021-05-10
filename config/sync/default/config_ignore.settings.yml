@@ -8,5 +8,6 @@ ignored_config_entities:
   - 'block.block.socialmedialinks.*'
   - block.block.addressblock
   - 'block.block.addressblock.*'
+  - 'block.block.*addressblock'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
