@@ -38,6 +38,7 @@ third_party_settings:
         - 'dynamic_block_field:user-site_sections_admin_block'
       right:
         - 'dynamic_block_field:user-recent_content'
+        - 'dynamic_block_field:user-recent_user_content'
     fields:
       'dynamic_block_field:user-recent_content':
         plugin_id: 'dynamic_block_field:user-recent_content'
@@ -50,6 +51,11 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
+      'dynamic_block_field:user-recent_user_content':
+        plugin_id: 'dynamic_block_field:user-recent_user_content'
+        weight: 4
+        label: hidden
+        formatter: default
       'dynamic_block_field:user-site_sections_admin_block':
         plugin_id: 'dynamic_block_field:user-site_sections_admin_block'
         weight: 2

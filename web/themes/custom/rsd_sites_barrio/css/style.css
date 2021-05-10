@@ -1159,3 +1159,19 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 ul.social-media-links--platforms {
   padding: 0 !important;
 }
+
+
+/*************************/
+/** User Page Overrides **/
+/*************************/
+
+body.path-user footer .field--label-inline .field__label {
+  width: unset;
+}
+
+body.path-user footer .field--label-inline .field__item {
+  background: unset;
+  margin: unset;
+  padding: unset;
+  min-width: unset;
+}

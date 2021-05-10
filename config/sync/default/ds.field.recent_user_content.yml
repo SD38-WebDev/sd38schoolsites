@@ -1,8 +1,8 @@
-id: recent_content
-label: 'Recent Site Content'
+id: recent_user_content
+label: 'Recent User Content'
 ui_limit: ''
 properties:
-  block: 'views_block:recent_user_content-block_1'
+  block: 'views_block:recent_user_content-block_2'
   use_block_title: true
   add_block_wrappers: true
 type: block
