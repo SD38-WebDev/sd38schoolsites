@@ -1,5 +1,5 @@
-status: 2
-pattern: '[site:name]'
+status: 1
+pattern: '[site:name] - Address Block'
 escape: false
 preserve_titles: false
 save: 0
