@@ -1,0 +1,10 @@
+uuid: 9f3a45da-6122-4202-9a8b-38284fb19518
+langcode: en
+status: true
+dependencies: {  }
+id: site_menu_editor
+label: 'Site Menu Editor'
+weight: -7
+is_admin: null
+permissions:
+  - 'administer menu'

@@ -1,0 +1,14 @@
+uuid: 798aa076-39b0-4a1b-a7b8-48bbfa51fbc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.site_menu_editor
+  module:
+    - user
+id: user_remove_role_action.site_menu_editor
+label: 'Remove the Site Menu Editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: site_menu_editor

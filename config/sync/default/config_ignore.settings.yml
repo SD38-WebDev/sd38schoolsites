@@ -6,6 +6,8 @@ ignored_config_entities:
   - google_analytics.settings
   - block.block.socialmedialinks
   - 'block.block.socialmedialinks.*'
+  - block.block.twitterblock
+  - 'block.block.twitterblock.*'
   - block.block.addressblock
   - 'block.block.addressblock.*'
   - 'block.block.*addressblock'
