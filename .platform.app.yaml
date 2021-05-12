@@ -46,6 +46,7 @@ relationships:
     elementary: 'db:elementary'
     woodward: 'db:woodward'
     wowk: 'db:wowk'
+    training: 'db:training'
 disk: 25000
 mounts:
     /web/files:

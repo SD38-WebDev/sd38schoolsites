@@ -41,6 +41,7 @@ db:
             - elementary
             - woodward
             - wowk
+            - training
         endpoints:
             blundell:
                 default_schema: blundell
@@ -194,5 +195,9 @@ db:
                 default_schema: wowk
                 privileges:
                     wowk: admin
+            training:
+                default_schema: training
+                privileges:
+                    training: admin
 cache:
     type: 'redis:6.0'
