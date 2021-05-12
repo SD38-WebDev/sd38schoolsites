@@ -39,6 +39,8 @@ db:
             - anderson
             - blair
             - elementary
+            - woodward
+            - wowk
         endpoints:
             blundell:
                 default_schema: blundell
@@ -184,5 +186,13 @@ db:
                 default_schema: elementary
                 privileges:
                     elementary: admin
+            woodward:
+                default_schema: woodward
+                privileges:
+                    woodward: admin
+            wowk:
+                default_schema: wowk
+                privileges:
+                    wowk: admin
 cache:
     type: 'redis:6.0'
