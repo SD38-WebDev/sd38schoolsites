@@ -58,8 +58,6 @@ relationships:
     tomsett: 'db:tomsett'
     westwind: 'db:westwind'
     whiteside: 'db:whiteside'
-    woodward: 'db:woodward'
-    wowk: 'db:wowk'
     anderson: 'db:anderson'
     blair: 'db:blair'
     elementary: 'db:elementary'

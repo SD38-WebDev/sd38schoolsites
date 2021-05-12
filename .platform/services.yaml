@@ -36,8 +36,6 @@ db:
             - tomsett
             - westwind
             - whiteside
-            - woodward
-            - wowk
             - anderson
             - blair
             - elementary
@@ -174,14 +172,6 @@ db:
                 default_schema: whiteside
                 privileges:
                     whiteside: admin
-            woodward:
-                default_schema: woodward
-                privileges:
-                    woodward: admin
-            wowk:
-                default_schema: wowk
-                privileges:
-                    wowk: admin
             anderson:
                 default_schema: anderson
                 privileges:
