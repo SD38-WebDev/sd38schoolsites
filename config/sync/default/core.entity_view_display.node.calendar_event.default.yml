@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.calendar_event.body
+    - field.field.node.calendar_event.feeds_item
     - field.field.node.calendar_event.field_event_date
     - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
@@ -221,6 +222,7 @@ content:
             lb-col: false
             classes: {  }
 hidden:
+  feeds_item: true
   field_promote_to_school_calendar: true
   field_site_section: true
   links: true

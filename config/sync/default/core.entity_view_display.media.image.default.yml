@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.media.image.field_media_image
     - image.style.3x_large
-    - image.style.thumbnail
+    - image.style.large
     - media.type.image
   module:
     - colorbox
@@ -19,7 +19,7 @@ content:
     label: visually_hidden
     weight: 0
     settings:
-      colorbox_node_style: thumbnail
+      colorbox_node_style: large
       colorbox_node_style_first: ''
       colorbox_image_style: 3x_large
       colorbox_gallery: post

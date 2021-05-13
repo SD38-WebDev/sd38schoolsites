@@ -1,0 +1,32 @@
+uuid: eabfc2a4-a2ec-4000-a954-874f655bb178
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_attachments
+    - node.type.article
+  module:
+    - file
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.article.field_legacy_attachments
+field_name: field_legacy_attachments
+entity_type: node
+bundle: article
+label: 'Legacy Attachments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx xls xlsx zip'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

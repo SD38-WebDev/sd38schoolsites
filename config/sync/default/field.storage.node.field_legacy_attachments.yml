@@ -1,0 +1,23 @@
+uuid: a483cf8a-41b1-44eb-b5e0-c1cdb5642c89
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_legacy_attachments
+field_name: field_legacy_attachments
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,153 @@
+uuid: 9e4878f2-104d-4999-8a85-6ad3241b3ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_feature_image
+    - field.field.node.article.field_legacy_image_gallery
+    - field.field.node.article.field_site_section
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      71d3272b-f9b0-4dde-8e0f-f1a0b247e7f6:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: gallery_image
+        weight: 0
+        label: Explode
+        uuid: 71d3272b-f9b0-4dde-8e0f-f1a0b247e7f6
+id: school_story_posts_import
+label: 'School Story Posts Import'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: article
+custom_sources:
+  title:
+    label: title
+    value: title
+    machine_name: title
+  nid:
+    label: Nid
+    value: Nid
+    machine_name: nid
+  school_story_category:
+    label: 'School Story Category'
+    value: 'School Story Category'
+    machine_name: school_story_category
+  body:
+    label: body
+    value: body
+    machine_name: body
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
+  feature_image:
+    label: 'feature image'
+    value: 'feature image'
+    machine_name: feature_image
+  gallery_image:
+    label: 'Gallery Image'
+    value: 'Gallery Image'
+    machine_name: gallery_image
+  our_school_story:
+    label: 'Our School Story'
+    value: 'Our School Story'
+    machine_name: our_school_story
+  created:
+    label: created
+    value: created
+    machine_name: created
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: nid
+    map:
+      value: nid
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: field_tags
+    map:
+      target_id: school_story_category
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: body
+    map:
+      value: body
+      summary: summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_feature_image
+    map:
+      target_id: feature_image
+    settings:
+      language: en
+      reference_by: fid
+      autocreate: '1'
+      existing: '1'
+  -
+    target: field_legacy_image_gallery
+    map:
+      target_id: gallery_image
+    settings:
+      language: en
+      reference_by: fid
+      autocreate: '1'
+      existing: '1'
+  -
+    target: field_site_section
+    map:
+      target_id: our_school_story
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: '1'
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: ''
+      timezone: UTC

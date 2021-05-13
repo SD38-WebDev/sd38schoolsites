@@ -1,0 +1,188 @@
+uuid: e5a395af-009f-4181-a39f-910df781bd6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_feature_image
+    - field.field.node.article.field_legacy_attachments
+    - node.type.article
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      f3b3bd64-0d0c-4a65-a473-73cc9820b2e5:
+        find: 'http://anderson.sd38.bc.ca/sites/anderson.sd38.bc.ca/files'
+        replace: /import/anderson/files/images
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: -9
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: f3b3bd64-0d0c-4a65-a473-73cc9820b2e5
+      345ec36c-7ac5-4100-aa1d-5a86755a9be0:
+        find: https
+        replace: http
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: feature_image
+        weight: 0
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 345ec36c-7ac5-4100-aa1d-5a86755a9be0
+      b5c5832e-4ec9-4a1e-86d6-964da520ea40:
+        find: https
+        replace: http
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: attachments
+        weight: 0
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: b5c5832e-4ec9-4a1e-86d6-964da520ea40
+      adfbfbe0-e3eb-41dc-839d-ecc3377b627b:
+        find: https
+        replace: http
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: -10
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: adfbfbe0-e3eb-41dc-839d-ecc3377b627b
+id: news_feed_import
+label: 'News Feed Import'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: true
+  values:
+    type: article
+custom_sources:
+  title:
+    label: title
+    value: title
+    machine_name: title
+  body:
+    label: body
+    value: body
+    machine_name: body
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
+  nid:
+    label: nid
+    value: nid
+    machine_name: nid
+  sticky:
+    label: sticky
+    value: sticky
+    machine_name: sticky
+  status:
+    label: status
+    value: status
+    machine_name: status
+  feature_image:
+    label: 'feature image'
+    value: 'feature image'
+    machine_name: feature_image
+  created:
+    label: created
+    value: created
+    machine_name: created
+  attachments:
+    label: Attachments
+    value: Attachments
+    machine_name: attachments
+  attachment_names:
+    label: 'Attachment Names'
+    value: 'Attachment Names'
+    machine_name: attachment_names
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: body
+      summary: summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: nid
+    map:
+      value: nid
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: sticky
+    map:
+      value: sticky
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: field_feature_image
+    map:
+      target_id: feature_image
+    settings:
+      language: en
+      reference_by: fid
+      autocreate: '1'
+      existing: '1'
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_legacy_attachments
+    map:
+      target_id: attachments
+      description: attachment_names
+    settings:
+      language: ''
+      reference_by: fid
+      autocreate: '1'
+      existing: '2'

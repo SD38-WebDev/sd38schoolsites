@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.calendar_event.body
+    - field.field.node.calendar_event.feeds_item
     - field.field.node.calendar_event.field_event_date
     - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
@@ -17,6 +18,7 @@ dependencies:
     - path
     - scheduler
     - smart_date
+    - smart_date_recur
     - text
 third_party_settings:
   field_group:
@@ -106,12 +108,21 @@ content:
   field_event_date:
     weight: 18
     settings:
+      show_extra: true
+      hide_date: false
       modal: false
       default_duration: 60
       default_duration_increments: "30\n60|1 hour\n90\n120|2 hours\ncustom"
-      show_extra: true
-      hide_date: true
-    third_party_settings: {  }
+    third_party_settings:
+      smart_date_recur:
+        modal: true
+        allowed_recur_freq_values:
+          DAILY: DAILY
+          WEEKLY: WEEKLY
+          MONTHLY: MONTHLY
+          YEARLY: YEARLY
+          MINUTELY: '0'
+          HOURLY: '0'
     type: smartdate_default
     region: content
   field_event_location:
@@ -197,4 +208,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

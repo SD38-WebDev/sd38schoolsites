@@ -1,0 +1,135 @@
+uuid: a7ce2da4-a2de-4a66-b2b8-3b3a2d3b6906
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.calendar_event.body
+    - field.field.node.calendar_event.field_event_date
+    - node.type.calendar_event
+  module:
+    - feeds_tamper
+    - node
+    - smart_date
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      7d41cf63-f6aa-4ed6-be9d-5da59647daad:
+        plugin: strtotime
+        source: event_date_start
+        weight: 0
+        label: 'String to Unix Timestamp'
+        uuid: 7d41cf63-f6aa-4ed6-be9d-5da59647daad
+      e448ec28-c621-4aba-9bad-6d143604e672:
+        plugin: strtotime
+        source: event_date_end
+        weight: 0
+        label: 'String to Unix Timestamp'
+        uuid: e448ec28-c621-4aba-9bad-6d143604e672
+id: calendar_ics_import
+label: 'Calendar ICS Import'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: calendar_event
+custom_sources:
+  title:
+    label: title
+    value: title
+    machine_name: title
+  event_date_start:
+    label: 'event date start'
+    value: 'event date start'
+    machine_name: event_date_start
+  event_date_end:
+    label: 'event date end'
+    value: 'event date end'
+    machine_name: event_date_end
+  body:
+    label: body
+    value: body
+    machine_name: body
+  nid:
+    label: nid
+    value: nid
+    machine_name: nid
+  created:
+    label: created
+    value: created
+    machine_name: created
+  status:
+    label: status
+    value: status
+    machine_name: status
+  sticky:
+    label: sticky
+    value: sticky
+    machine_name: sticky
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: field_event_date
+    map:
+      value: event_date_start
+      end_value: event_date_end
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: plain_text
+  -
+    target: nid
+    map:
+      value: nid
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: sticky
+    map:
+      value: sticky
+    settings:
+      language: null

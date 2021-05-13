@@ -54,7 +54,7 @@
         "drupal/entity_share": "^3.0@beta",
         "drupal/entity_submit_redirect": "^1.1",
         "drupal/eva": "^2.1",
-        "drupal/feeds": "^3.0@alpha",
+        "drupal/feeds": "3.x-dev@dev",
         "drupal/feeds_ical": "^1.1",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/field_group": "3.x-dev@dev",
@@ -118,6 +118,9 @@
           },
           "drupal/conditional_fields": {
               "Notice: Trying to access array offset on value of type null": "https://www.drupal.org/files/issues/2021-01-21/3191984-3-notice-trying-to-access-offset-on-value-of-type-null.patch"
+          },
+          "drupal/feeds": {
+              "Add a mapping target to media field": "https://www.drupal.org/files/issues/2020-12-22/feeds-media-image-2928904-39.patch"
           }
         },
         "installer-paths": {

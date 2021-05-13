@@ -408,7 +408,8 @@ img {
 .view-id-frontpage .post img,
 .field--type-image img,
 .field--name-field-button-image img,
-.article-img {
+.article-img,
+.node--view-mode-vertical-teaser .field--name-field-feature-image {
 	border-radius: 0.3125rem;
   overflow: hidden;
 }

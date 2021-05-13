@@ -11,6 +11,7 @@ dependencies:
     - image.style.article_thumbnail
     - node.type.article
     - node.type.calendar_event
+    - system.menu.main
     - taxonomy.vocabulary.site_blogs_sections
   module:
     - media
@@ -1396,6 +1397,9 @@ display:
           3: AND
       css_class: col
       group_by: false
+      use_more: false
+      use_more_always: true
+      use_more_text: 'News archive'
     cache_metadata:
       max-age: -1
       contexts:

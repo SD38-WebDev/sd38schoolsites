@@ -138,7 +138,8 @@ body,
   background: #0071b3;
 }
 
-div.article-img {
+div.article-img,
+.node--view-mode-vertical-teaser .field--name-field-feature-image {
   background-color: #055a8e;
 }
 
