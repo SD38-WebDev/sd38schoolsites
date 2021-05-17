@@ -4,7 +4,7 @@ ui_limit: ''
 properties:
   block: 'menu_block:main'
   use_block_title: false
-  add_block_wrappers: false
+  add_block_wrappers: true
   config:
     id: 'menu_block:main'
     label: ''
@@ -16,7 +16,7 @@ properties:
     depth: 1
     expand: false
     parent: 'main:'
-    suggestion: main
+    suggestion: section_menu
 type: block
 type_label: 'Block field'
 entities:
