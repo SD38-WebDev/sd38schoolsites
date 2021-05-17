@@ -15,7 +15,7 @@ third_party_settings:
     tampers:
       f3b3bd64-0d0c-4a65-a473-73cc9820b2e5:
         find: 'http://anderson.sd38.bc.ca/sites/anderson.sd38.bc.ca/files'
-        replace: /import/anderson/files/images
+        replace: /files/anderson/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -42,7 +42,7 @@ third_party_settings:
         whole: false
         plugin: find_replace
         source: attachments
-        weight: 0
+        weight: -9
         label: 'Find replace'
         word_boundaries: false
         uuid: b5c5832e-4ec9-4a1e-86d6-964da520ea40
@@ -57,6 +57,14 @@ third_party_settings:
         label: 'Find replace'
         word_boundaries: false
         uuid: adfbfbe0-e3eb-41dc-839d-ecc3377b627b
+      1a4d87ef-c3b1-42c0-8769-aa527ad44a97:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachments
+        weight: -10
+        label: Explode
+        uuid: 1a4d87ef-c3b1-42c0-8769-aa527ad44a97
 id: news_feed_import
 label: 'News Feed Import'
 description: ''
