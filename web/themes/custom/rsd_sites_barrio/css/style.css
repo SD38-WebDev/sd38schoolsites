@@ -1043,28 +1043,8 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 /** Site Section Menus **/
 /************************/
 
-.section-menu {
-	border-radius: 0.25rem;
-	margin-bottom: 1rem;
-	background-color: rgba(0, 0, 0, 0.025);
-}
-
-.section-menu .nav-link {
-	padding: 0;
-}
-
-.section-menu .nav-link a {
-	display: inline-block;
-	padding: .5rem 1rem;
-}
-
-.section-menu a,
-.section-menu a:hover {
-}
-
-.section-menu .nav-link:hover {
-	background-color: rgba(0, 0, 0, 0.05);
-	text-decoration: none;
+.field--name-dynamic-block-fieldnode-section-sub-menu nav.menu--main {
+  border-radius: .25rem;
 }
 
 

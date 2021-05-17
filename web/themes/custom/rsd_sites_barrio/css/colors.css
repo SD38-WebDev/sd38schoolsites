@@ -29,6 +29,15 @@ body {
     );
 }
 
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #0071b325 !important;
+}
+
+.field--name-dynamic-block-fieldnode-section-sub-menu nav.menu--main {
+  background-color: #055a8e09 !important;
+}
+
 body.page-user-login,
 body.page-user-login #page,
 body.page-user-login #main-wrapper {
