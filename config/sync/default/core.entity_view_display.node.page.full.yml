@@ -1,8 +1,9 @@
-uuid: d5f0895d-4e8b-4221-bfd0-f4b5f3209ba9
+uuid: 308a0a18-2c6a-47ad-9791-fe2a44e15e84
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.page.body
     - field.field.node.page.field_content_section
     - field.field.node.page.field_sidebar_content
@@ -73,10 +74,10 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-id: node.page.default
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   body:
     weight: 1

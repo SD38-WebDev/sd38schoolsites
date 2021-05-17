@@ -1,0 +1,10 @@
+uuid: f10077de-81df-423b-909e-4c23ec67e92c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_content_includes_menu_block_
+label: 'Full Content (includes menu block)'
+targetEntityType: node
+cache: true

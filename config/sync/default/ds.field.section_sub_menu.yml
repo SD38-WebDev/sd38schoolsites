@@ -2,9 +2,21 @@ id: section_sub_menu
 label: 'Section Sub Menu'
 ui_limit: ''
 properties:
-  block: 'views_block:section_sub_menu-block_1'
+  block: 'menu_block:main'
   use_block_title: false
   add_block_wrappers: false
+  config:
+    id: 'menu_block:main'
+    label: ''
+    provider: menu_block
+    label_display: visible
+    follow: false
+    follow_parent: child
+    level: 2
+    depth: 1
+    expand: false
+    parent: 'main:'
+    suggestion: main
 type: block
 type_label: 'Block field'
 entities:
