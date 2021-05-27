@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Run a given drush command over all multisites.
+# Substitute for the old `drush @all` command.
+# Assumes you are running from the context of docroot.
+
+for dir in sites/*/; do
+  if [ -f "$dir/settings.php" ]; then
+    subsite=$(echo "$dir" | cut -f 2 -d '/') ;
+    drush --uri="${subsite}" "$@"
+  fi
+done
