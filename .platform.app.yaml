@@ -80,7 +80,7 @@ hooks:
         drush -y cache-rebuild
         drush -y updatedb
 
-    post-deploy: |
+    post_deploy: |
         drush -y config-import
 
 web:
