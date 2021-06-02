@@ -81,6 +81,7 @@ hooks:
         ../drush/drush-multisite -y updatedb
 
     post_deploy: |
+        set -e
         ../drush/drush-multisite -y config-import
 
 web:
