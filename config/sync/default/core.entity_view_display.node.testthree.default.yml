@@ -1,0 +1,28 @@
+uuid: 2dbe04d9-3b87-4d4f-a335-3d6a62ac1444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testthree.body
+    - node.type.testthree
+  module:
+    - text
+    - user
+id: node.testthree.default
+targetEntityType: node
+bundle: testthree
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
