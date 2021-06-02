@@ -82,6 +82,7 @@ hooks:
 
     post_deploy: |
         set -e
+        cd web
         ../drush/drush-multisite -y config-import
 
 web:
