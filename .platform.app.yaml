@@ -8,7 +8,7 @@ runtime:
         - redis
 variables:
    php:
-       memory_limit: 768M
+       memory_limit: 2048M
 relationships:
     rediscache: 'cache:redis'
     blundell: 'db:blundell'
