@@ -6,6 +6,9 @@ dependencies:
 runtime:
     extensions:
         - redis
+variables:
+   php:
+       memory_limit: 768M
 relationships:
     rediscache: 'cache:redis'
     blundell: 'db:blundell'
@@ -82,19 +85,19 @@ build:
 hooks:
     build: |
         set -e
-        
+
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
         cd web
         ../drush/drush-multisite -y cache-rebuild
         ../drush/drush-multisite -y updatedb
-        
+
     post_deploy: |
         set -e
         cd web
         ../drush/drush-multisite -y config-import
-        
+
 web:
     locations:
         /:
