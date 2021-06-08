@@ -42,6 +42,16 @@ db:
             - woodward
             - wowk
             - training
+            - boyd
+            - burnett
+            - hjcambie
+            - macneill
+            - mcmath
+            - mcnair
+            - mcroberts
+            - palmer
+            - richmond
+            - slss
         endpoints:
             blundell:
                 default_schema: blundell
@@ -199,5 +209,45 @@ db:
                 default_schema: training
                 privileges:
                     training: admin
+            boyd:
+                default_schema: boyd
+                privileges:
+                    boyd: admin
+            burnett:
+                default_schema: burnett
+                privileges:
+                    burnett: admin
+            hjcambie:
+                default_schema: hjcambie
+                privileges:
+                    hjcambie: admin
+            macneill:
+                default_schema: macneill
+                privileges:
+                    macneill: admin
+            mcmath:
+                default_schema: mcmath
+                privileges:
+                    mcmath: admin
+            mcnair:
+                default_schema: mcnair
+                privileges:
+                    mcnair: admin
+            mcroberts:
+                default_schema: mcroberts
+                privileges:
+                    mcroberts: admin
+            palmer:
+                default_schema: palmer
+                privileges:
+                    palmer: admin
+            richmond:
+                default_schema: richmond
+                privileges:
+                    richmond: admin
+            slss:
+                default_schema: slss
+                privileges:
+                    slss: admin
 cache:
     type: 'redis:6.0'

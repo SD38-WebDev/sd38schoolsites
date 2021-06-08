@@ -317,3 +317,83 @@
         enabled: true
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://boyd.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://burnett.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://hjcambie.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://macneill.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://mcmath.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://mcnair.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://mcroberts.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://palmer.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://richmond.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://slss.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']

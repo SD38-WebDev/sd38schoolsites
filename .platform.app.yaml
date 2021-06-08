@@ -47,6 +47,16 @@ relationships:
     woodward: 'db:woodward'
     wowk: 'db:wowk'
     training: 'db:training'
+    boyd: 'db:boyd'
+    burnett: 'db:burnett'
+    hjcambie: 'db:hjcambie'
+    macneill: 'db:macneill'
+    mcmath: 'db:mcmath'
+    mcnair: 'db:mcnair'
+    mcroberts: 'db:mcroberts'
+    palmer: 'db:palmer'
+    richmond: 'db:richmond'
+    slss: 'db:slss'
 disk: 25000
 mounts:
     /web/files:
@@ -72,19 +82,19 @@ build:
 hooks:
     build: |
         set -e
-
+        
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
         cd web
         ../drush/drush-multisite -y cache-rebuild
         ../drush/drush-multisite -y updatedb
-
+        
     post_deploy: |
         set -e
         cd web
         ../drush/drush-multisite -y config-import
-
+        
 web:
     locations:
         /:
