@@ -7,8 +7,8 @@ runtime:
     extensions:
         - redis
 variables:
-   php:
-       memory_limit: 2048M
+    php:
+        memory_limit: 2048M
 relationships:
     rediscache: 'cache:redis'
     blundell: 'db:blundell'
@@ -58,6 +58,8 @@ relationships:
     mcroberts: 'db:mcroberts'
     palmer: 'db:palmer'
     slss: 'db:slss'
+    jnburnett: 'db:jnburnett'
+    rhs: 'db:rhs'
 disk: 25000
 mounts:
     /web/files:
@@ -83,19 +85,19 @@ build:
 hooks:
     build: |
         set -e
-
+        
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
         cd web
         ../drush/drush-multisite -y cache-rebuild
         ../drush/drush-multisite -y updatedb
-
+        
     post_deploy: |
         set -e
         cd web
         ../drush/drush-multisite -y config-import
-
+        
 web:
     locations:
         /:

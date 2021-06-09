@@ -50,6 +50,8 @@ db:
             - mcroberts
             - palmer
             - slss
+            - jnburnett
+            - rhs
         endpoints:
             blundell:
                 default_schema: blundell
@@ -239,5 +241,13 @@ db:
                 default_schema: slss
                 privileges:
                     slss: admin
+            jnburnett:
+                default_schema: jnburnett
+                privileges:
+                    jnburnett: admin
+            rhs:
+                default_schema: rhs
+                privileges:
+                    rhs: admin
 cache:
     type: 'redis:6.0'
