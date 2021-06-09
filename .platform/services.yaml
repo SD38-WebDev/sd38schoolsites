@@ -43,14 +43,12 @@ db:
             - wowk
             - training
             - boyd
-            - burnett
             - hjcambie
             - macneill
             - mcmath
             - mcnair
             - mcroberts
             - palmer
-            - richmond
             - slss
         endpoints:
             blundell:
@@ -213,10 +211,6 @@ db:
                 default_schema: boyd
                 privileges:
                     boyd: admin
-            burnett:
-                default_schema: burnett
-                privileges:
-                    burnett: admin
             hjcambie:
                 default_schema: hjcambie
                 privileges:
@@ -241,10 +235,6 @@ db:
                 default_schema: palmer
                 privileges:
                     palmer: admin
-            richmond:
-                default_schema: richmond
-                privileges:
-                    richmond: admin
             slss:
                 default_schema: slss
                 privileges:

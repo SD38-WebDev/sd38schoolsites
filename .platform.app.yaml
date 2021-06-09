@@ -51,14 +51,12 @@ relationships:
     wowk: 'db:wowk'
     training: 'db:training'
     boyd: 'db:boyd'
-    burnett: 'db:burnett'
     hjcambie: 'db:hjcambie'
     macneill: 'db:macneill'
     mcmath: 'db:mcmath'
     mcnair: 'db:mcnair'
     mcroberts: 'db:mcroberts'
     palmer: 'db:palmer'
-    richmond: 'db:richmond'
     slss: 'db:slss'
 disk: 25000
 mounts:
