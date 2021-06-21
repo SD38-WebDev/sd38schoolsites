@@ -234,18 +234,7 @@ display:
       title: ''
       header: {  }
       footer: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<div class="row"><a href="node/add/header_image" class="btn btn-light btn-sm">Add Header Image</a></div>'
-          plugin_id: text_custom
+      empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }

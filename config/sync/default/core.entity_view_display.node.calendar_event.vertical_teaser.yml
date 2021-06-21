@@ -1,0 +1,200 @@
+uuid: 5f6597fd-d21f-4858-84f6-48f948fc5763
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.vertical_teaser
+    - field.field.node.calendar_event.body
+    - field.field.node.calendar_event.feeds_item
+    - field.field.node.calendar_event.field_event_date
+    - field.field.node.calendar_event.field_event_location
+    - field.field.node.calendar_event.field_feature_image
+    - field.field.node.calendar_event.field_promote_to_school_calendar
+    - field.field.node.calendar_event.field_site_section
+    - image.style.article_thumbnail
+    - node.type.calendar_event
+  module:
+    - ds
+    - media
+    - smart_date
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ' class|row justify-content-center'
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - field_feature_image
+      main:
+        - node_title
+        - field_event_date
+        - body
+        - node_links
+    fields:
+      node_links:
+        plugin_id: node_links
+        weight: 4
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.calendar_event.vertical_teaser
+targetEntityType: node
+bundle: calendar_event
+mode: vertical_teaser
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 3
+    settings:
+      trim_length: 25
+      trim_type: words
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_link: true
+      more_text: 'Read more'
+      more_class: more-link
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+      wrap_output: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: Details
+            prefix: ''
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: mb-4
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    region: main
+  field_event_date:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format: compact
+      time_wrapper: true
+      force_chronological: false
+      add_classes: false
+      format_type: medium
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: strong
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: smartdate_default
+    region: main
+  field_feature_image:
+    type: media_thumbnail
+    weight: 0
+    region: top
+    label: hidden
+    settings:
+      image_style: article_thumbnail
+      image_link: content
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+hidden:
+  feeds_item: true
+  field_event_location: true
+  field_promote_to_school_calendar: true
+  field_site_section: true
+  links: true
