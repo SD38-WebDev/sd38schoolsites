@@ -1,0 +1,11 @@
+uuid: f8edc3fb-1d0a-4e16-8221-459474eca75f
+langcode: en
+status: true
+dependencies: {  }
+id: daily_notices
+vid: article_terms
+label: 'Daily Notices'
+parents:
+  - '0'
+description: ''
+weight: 0

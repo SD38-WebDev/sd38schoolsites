@@ -1,24 +1,27 @@
-uuid: a6d57747-98b2-4048-b901-66b52e67a652
+uuid: dcdddc07-0816-49f9-80a9-b143a65277fa
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.sidebar_article_blocks
   module:
     - context
-    - gtranslate
-    - system
+    - views
   theme:
     - rsd_sites_barrio
-id: gtranslate
+id: views_block__sidebar_article_blocks_daily_notices
 theme: rsd_sites_barrio
 region: sidebar_second
-weight: -8
+weight: -10
 provider: null
-plugin: gtranslate_block
+plugin: 'views_block:sidebar_article_blocks-daily_notices'
 settings:
-  id: gtranslate_block
-  label: Translate
-  provider: gtranslate
+  id: 'views_block:sidebar_article_blocks-daily_notices'
+  label: ''
+  provider: views
   label_display: visible
+  views_label: ''
+  items_per_page: none
 visibility:
   request_path_exclusion:
     id: request_path_exclusion
@@ -29,9 +32,4 @@ visibility:
     id: view_inclusion
     negate: null
     view_inclusion: {  }
-    context_mapping: {  }
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
     context_mapping: {  }

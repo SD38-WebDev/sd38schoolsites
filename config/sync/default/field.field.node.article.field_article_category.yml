@@ -1,0 +1,30 @@
+uuid: 701f4056-874b-4c62-b88c-54ffc7213055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_category
+    - node.type.article
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.article.field_article_category
+field_name: field_article_category
+entity_type: node
+bundle: article
+label: 'Article Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:config_terms_term'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+    target_vocab: article_terms
+field_type: entity_reference

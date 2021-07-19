@@ -1,0 +1,9 @@
+uuid: 1ec2d563-5a94-4881-b758-153f494abb65
+langcode: en
+status: true
+dependencies: {  }
+label: 'Article Terms'
+id: article_terms
+description: 'A collection of terms for site related functions.'
+weight: 0
+hierarchy: 0

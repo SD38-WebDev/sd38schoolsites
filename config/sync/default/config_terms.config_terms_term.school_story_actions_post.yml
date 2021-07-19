@@ -1,0 +1,11 @@
+uuid: 0955b17f-8054-4de9-98be-4a52aa732637
+langcode: en
+status: true
+dependencies: {  }
+id: school_story_actions_post
+vid: article_terms
+label: 'School Story - Actions Post'
+parents:
+  - '0'
+description: ''
+weight: 0

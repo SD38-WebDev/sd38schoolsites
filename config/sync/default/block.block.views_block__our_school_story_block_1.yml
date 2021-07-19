@@ -1,24 +1,28 @@
-uuid: a6d57747-98b2-4048-b901-66b52e67a652
+uuid: 5d0c89b9-50ef-470d-97c6-e4e0e5048755
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.our_school_story
   module:
     - context
-    - gtranslate
     - system
+    - views
   theme:
     - rsd_sites_barrio
-id: gtranslate
+id: views_block__our_school_story_block_1
 theme: rsd_sites_barrio
-region: sidebar_second
-weight: -8
+region: content
+weight: 0
 provider: null
-plugin: gtranslate_block
+plugin: 'views_block:our_school_story-block_1'
 settings:
-  id: gtranslate_block
-  label: Translate
-  provider: gtranslate
+  id: 'views_block:our_school_story-block_1'
+  label: ''
+  provider: views
   label_display: visible
+  views_label: ''
+  items_per_page: none
 visibility:
   request_path_exclusion:
     id: request_path_exclusion
@@ -32,6 +36,6 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: /our-school-story
     negate: false
     context_mapping: {  }

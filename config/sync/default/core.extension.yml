@@ -26,6 +26,7 @@ module:
   config_ignore: 0
   config_split: 0
   config_terms: 0
+  config_terms_views: 0
   contact: 0
   context: 0
   context_entity_field: 0

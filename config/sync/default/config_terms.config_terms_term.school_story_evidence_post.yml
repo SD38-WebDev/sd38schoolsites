@@ -1,0 +1,11 @@
+uuid: 70020803-c3bc-4a8e-8986-edc32ca048b7
+langcode: en
+status: true
+dependencies: {  }
+id: school_story_evidence_post
+vid: article_terms
+label: 'School Story - Evidence Post'
+parents:
+  - '0'
+description: ''
+weight: 0
