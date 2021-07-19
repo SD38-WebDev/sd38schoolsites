@@ -201,7 +201,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Daily Notices'
+      title: 'Daily Student Notices'
       header: {  }
       footer: {  }
       empty: {  }
