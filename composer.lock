@@ -3,13 +3,9 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
-    ],
-<<<<<<< HEAD
-    "content-hash": "d8beabcd3ecc5c68bdc48036a0cae5c0",
-=======
-    "content-hash": "fba030f6c47f1e5b60ab9846c3891d36",
->>>>>>> dev
-    "packages": [
+      ],
+      "content-hash": "d8beabcd3ecc5c68bdc48036a0cae5c0",
+      "packages": [
         {
             "name": "alchemy/zippy",
             "version": "0.4.9",
