@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
@@ -201,4 +202,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true

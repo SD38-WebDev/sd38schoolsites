@@ -13,8 +13,9 @@ third_party_settings:
     required_plugin: required_by_role
     required_plugin_options:
       section_editor: section_editor
+      site_menu_editor: site_menu_editor
+      site_editor: site_editor
       anonymous: 0
-      site_editor: 0
       administrator: 0
 id: paragraph.calendar_events_list_.field_site_section
 field_name: field_site_section

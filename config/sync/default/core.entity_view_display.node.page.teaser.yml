@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
@@ -104,4 +105,5 @@ content:
     region: top
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  feeds_item: true
