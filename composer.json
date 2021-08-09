@@ -23,7 +23,7 @@
         "drupal/auto_entitylabel": "^3.0@beta",
         "drupal/background_image": "^2.0",
         "drupal/background_image_formatter": "^1.7",
-        "drupal/backup_migrate": "^4.1",
+        "drupal/backup_migrate": "^4.2",
         "drupal/bg_image_formatter": "^1.14",
         "drupal/bg_img_field": "^1.7",
         "drupal/block_list_override": "^1.0",
