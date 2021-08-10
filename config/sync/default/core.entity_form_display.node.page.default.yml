@@ -6,11 +6,15 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
+    - field.field.node.page.field_feature_image
+    - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
     - node.type.page
   module:
     - field_group
+    - file
+    - media_library
     - paragraphs
     - path
     - scheduler
@@ -22,6 +26,7 @@ third_party_settings:
         - group_basic_content
         - group_content_sections
         - group_page_sidebar
+        - group_legacy
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -75,6 +80,21 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Page Sidebar'
+    group_legacy:
+      children:
+        - field_feature_image
+        - field_legacy_attachments
+      parent_name: group_tabs
+      weight: 17
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Legacy
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -114,6 +134,20 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+    region: content
+  field_feature_image:
+    weight: 28
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_legacy_attachments:
+    weight: 29
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_sidebar_content:
     type: paragraphs

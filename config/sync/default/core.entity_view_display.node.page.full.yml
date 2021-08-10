@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
+    - field.field.node.page.field_feature_image
+    - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
     - node.type.page
@@ -55,6 +57,7 @@ third_party_settings:
     regions:
       left:
         - node_title
+        - field_feature_image
         - body
         - field_content_section
       right:
@@ -81,7 +84,7 @@ bundle: page
 mode: full
 content:
   body:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -89,7 +92,7 @@ content:
     region: left
   field_content_section:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -125,9 +128,46 @@ content:
             fis-def-at: false
             fi-def-at: false
     region: left
+  field_feature_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: left
+    label: hidden
+    settings:
+      view_mode: square_large_480x480_
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: mb-3
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -165,5 +205,6 @@ content:
     region: right
 hidden:
   feeds_item: true
+  field_legacy_attachments: true
   field_site_section: true
   links: true

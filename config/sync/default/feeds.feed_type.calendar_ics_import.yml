@@ -30,10 +30,13 @@ label: 'Calendar ICS Import'
 description: ''
 help: ''
 import_period: -1
-fetcher: upload
+fetcher: http
 fetcher_configuration:
-  allowed_extensions: 'txt csv tsv xml opml'
-  directory: 'private://feeds'
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
 parser: csv
 parser_configuration:
   delimiter: ','
@@ -42,6 +45,7 @@ parser_configuration:
 processor: 'entity:node'
 processor_configuration:
   langcode: en
+  insert_new: 1
   update_existing: 2
   update_non_existent: _keep
   expire: -1

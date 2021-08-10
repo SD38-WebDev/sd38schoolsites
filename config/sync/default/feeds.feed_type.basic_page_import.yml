@@ -4,9 +4,34 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_feature_image
+    - field.field.node.page.field_legacy_attachments
     - node.type.page
   module:
+    - feeds_tamper
     - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      0520fe69-dfe0-4fc8-8299-a3fd199d9f0a:
+        find: anderson.sd38.bc.ca/sites/anderson.sd38.bc.ca/files
+        replace: /files/anderson/archive
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 0
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 0520fe69-dfe0-4fc8-8299-a3fd199d9f0a
+      c938d195-0111-4aaf-8af3-6e46e1ca73a3:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachments
+        weight: 0
+        label: Explode
+        uuid: c938d195-0111-4aaf-8af3-6e46e1ca73a3
 id: basic_page_import
 label: 'Basic Page Import'
 description: ''
@@ -62,6 +87,18 @@ custom_sources:
     label: status
     value: status
     machine_name: status
+  attachments:
+    label: Attachments
+    value: Attachments
+    machine_name: attachments
+  attachment_names:
+    label: 'Attachment Names'
+    value: 'Attachment Names'
+    machine_name: attachment_names
+  feature_image:
+    label: 'feature image'
+    value: 'feature image'
+    machine_name: feature_image
 mappings:
   -
     target: title
@@ -98,3 +135,22 @@ mappings:
       value: status
     settings:
       language: null
+  -
+    target: field_legacy_attachments
+    map:
+      target_id: attachments
+      description: attachment_names
+    settings:
+      language: ''
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_feature_image
+    map:
+      target_id: feature_image
+    settings:
+      language: en
+      reference_by: fid
+      existing: '1'
+      autocreate: 0

@@ -6,12 +6,15 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
+    - field.field.node.page.field_feature_image
+    - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
     - node.type.page
   module:
     - ds
     - entity_reference_revisions
+    - file
     - text
     - user
 third_party_settings:
@@ -52,8 +55,11 @@ third_party_settings:
             add_region_classes: 0
             attributes: class|col-12
     regions:
+      top:
+        - field_legacy_attachments
       left:
         - node_title
+        - field_feature_image
         - body
         - field_content_section
       right:
@@ -61,7 +67,7 @@ third_party_settings:
     fields:
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
@@ -80,7 +86,7 @@ bundle: page
 mode: default
 content:
   body:
-    weight: 1
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -88,7 +94,7 @@ content:
     region: left
   field_content_section:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -124,9 +130,54 @@ content:
             fis-def-at: false
             fi-def-at: false
     region: left
+  field_feature_image:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: large_480_480_
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: mb-3
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_entity_view
+    region: left
+  field_legacy_attachments:
+    weight: 0
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: top
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       view_mode: default

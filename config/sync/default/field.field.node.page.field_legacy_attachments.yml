@@ -1,10 +1,10 @@
-uuid: eabfc2a4-a2ec-4000-a954-874f655bb178
+uuid: 30154a1c-a6c2-4cb1-954a-84db88262d6b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_legacy_attachments
-    - node.type.article
+    - node.type.page
   module:
     - file
     - required_api
@@ -12,14 +12,14 @@ third_party_settings:
   required_api:
     required_plugin: default
     required_plugin_options: 0
-id: node.article.field_legacy_attachments
+id: node.page.field_legacy_attachments
 field_name: field_legacy_attachments
 entity_type: node
-bundle: article
+bundle: page
 label: 'Legacy Attachments'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

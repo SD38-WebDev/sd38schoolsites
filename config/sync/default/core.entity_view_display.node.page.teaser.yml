@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
+    - field.field.node.page.field_feature_image
+    - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
     - node.type.page
@@ -107,3 +109,5 @@ content:
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  field_feature_image: true
+  field_legacy_attachments: true
