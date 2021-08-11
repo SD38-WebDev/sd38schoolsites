@@ -136,6 +136,10 @@ custom_sources:
     label: 'Attachment Names'
     value: 'Attachment Names'
     machine_name: attachment_names
+  import_uuid:
+    label: 'Import UUID'
+    value: 'Import UUID'
+    machine_name: import_uuid
 mappings:
   -
     target: title
@@ -152,13 +156,6 @@ mappings:
     settings:
       language: ''
       format: full_html
-  -
-    target: nid
-    map:
-      value: nid
-    unique:
-      value: '1'
-    settings: {  }
   -
     target: sticky
     map:
@@ -197,3 +194,11 @@ mappings:
       reference_by: fid
       autocreate: '1'
       existing: '2'
+  -
+    target: field_import_uuid
+    map:
+      value: import_uuid
+    unique:
+      value: '1'
+    settings:
+      language: null

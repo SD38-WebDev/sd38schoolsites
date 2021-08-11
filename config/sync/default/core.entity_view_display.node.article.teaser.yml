@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_attachments
     - field.field.node.article.field_content_section
     - field.field.node.article.field_feature_image
+    - field.field.node.article.field_import_uuid
     - field.field.node.article.field_legacy_attachments
     - field.field.node.article.field_legacy_image_gallery
     - field.field.node.article.field_site_section
@@ -203,6 +204,7 @@ hidden:
   field_article_category: true
   field_attachments: true
   field_content_section: true
+  field_import_uuid: true
   field_legacy_attachments: true
   field_legacy_image_gallery: true
   field_site_section: true
