@@ -1,0 +1,25 @@
+uuid: 2b24c802-8cdc-4f8a-809c-ec230897a213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_import_uuid
+    - node.type.calendar_event
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.calendar_event.field_import_uuid
+field_name: field_import_uuid
+entity_type: node
+bundle: calendar_event
+label: 'Import UUID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

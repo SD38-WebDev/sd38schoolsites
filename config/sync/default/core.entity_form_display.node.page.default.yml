@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
     - field.field.node.page.field_feature_image
+    - field.field.node.page.field_import_uuid
     - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
@@ -112,7 +113,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -176,7 +177,7 @@ content:
     region: content
   path:
     type: path
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -184,17 +185,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 3
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -202,14 +203,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
@@ -222,7 +223,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
@@ -232,9 +233,10 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  field_import_uuid: true

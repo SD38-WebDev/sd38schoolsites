@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.calendar_event.field_event_date
     - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
+    - field.field.node.calendar_event.field_import_uuid
     - field.field.node.calendar_event.field_promote_to_school_calendar
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
@@ -153,7 +154,7 @@ content:
     region: content
   path:
     type: path
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -166,7 +167,7 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -204,9 +205,10 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  field_import_uuid: true

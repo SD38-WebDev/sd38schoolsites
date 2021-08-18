@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_feature_image
+    - field.field.node.article.field_import_uuid
+    - field.field.node.article.field_legacy_attachments
     - field.field.node.article.field_legacy_image_gallery
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
@@ -23,6 +25,38 @@ third_party_settings:
         weight: 0
         label: Explode
         uuid: 71d3272b-f9b0-4dde-8e0f-f1a0b247e7f6
+      52bf1a79-4578-41cc-b8b5-1cc88b248fa1:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachments
+        weight: 0
+        label: Explode
+        uuid: 52bf1a79-4578-41cc-b8b5-1cc88b248fa1
+      7a8bbaa4-603b-4d75-ab00-22b76ef92985:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachment_names
+        weight: 0
+        label: Explode
+        uuid: 7a8bbaa4-603b-4d75-ab00-22b76ef92985
+      6071e036-f8de-499b-8eb3-f30d9723ae72:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachments
+        weight: 1
+        label: 'Characters to trim'
+        uuid: 6071e036-f8de-499b-8eb3-f30d9723ae72
+      b231c46b-2553-4cde-8474-5a91ac4b67be:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachment_names
+        weight: 1
+        label: 'Characters to trim'
+        uuid: b231c46b-2553-4cde-8474-5a91ac4b67be
 id: school_story_posts_import
 label: 'School Story Posts Import'
 description: ''
@@ -90,6 +124,18 @@ custom_sources:
     label: created
     value: created
     machine_name: created
+  attachments:
+    label: Attachments
+    value: Attachments
+    machine_name: attachments
+  attachment_names:
+    label: 'Attachment Names'
+    value: 'Attachment Names'
+    machine_name: attachment_names
+  import_uuid:
+    label: 'Import UUID'
+    value: 'Import UUID'
+    machine_name: import_uuid
 mappings:
   -
     target: title
@@ -98,13 +144,6 @@ mappings:
     unique: {  }
     settings:
       language: null
-  -
-    target: nid
-    map:
-      value: nid
-    unique:
-      value: '1'
-    settings: {  }
   -
     target: field_tags
     map:
@@ -154,3 +193,21 @@ mappings:
     settings:
       language: ''
       timezone: UTC
+  -
+    target: field_legacy_attachments
+    map:
+      target_id: attachments
+      description: attachment_names
+    settings:
+      language: ''
+      reference_by: fid
+      existing: '0'
+      autocreate: 0
+  -
+    target: field_import_uuid
+    map:
+      value: import_uuid
+    unique:
+      value: '1'
+    settings:
+      language: null

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_feature_image
+    - field.field.node.page.field_import_uuid
     - field.field.node.page.field_legacy_attachments
     - node.type.page
   module:
@@ -32,6 +33,30 @@ third_party_settings:
         weight: 0
         label: Explode
         uuid: c938d195-0111-4aaf-8af3-6e46e1ca73a3
+      4ff66791-e516-4788-a97a-43befaf7904b:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachment_names
+        weight: 0
+        label: Explode
+        uuid: 4ff66791-e516-4788-a97a-43befaf7904b
+      f78daee1-4c67-4556-85f3-fb64b87aebc0:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachments
+        weight: 1
+        label: 'Characters to trim'
+        uuid: f78daee1-4c67-4556-85f3-fb64b87aebc0
+      7e1948bd-d35b-4b44-a74c-4c720893a153:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachment_names
+        weight: 1
+        label: 'Characters to trim'
+        uuid: 7e1948bd-d35b-4b44-a74c-4c720893a153
 id: basic_page_import
 label: 'Basic Page Import'
 description: ''
@@ -99,6 +124,10 @@ custom_sources:
     label: 'feature image'
     value: 'feature image'
     machine_name: feature_image
+  import_uuid:
+    label: 'Import UUID'
+    value: 'Import UUID'
+    machine_name: import_uuid
 mappings:
   -
     target: title
@@ -115,13 +144,6 @@ mappings:
     settings:
       language: ''
       format: full_html
-  -
-    target: nid
-    map:
-      value: nid
-    unique:
-      value: '1'
-    settings: {  }
   -
     target: created
     map:
@@ -143,7 +165,7 @@ mappings:
     settings:
       language: ''
       reference_by: fid
-      existing: '2'
+      existing: '0'
       autocreate: 0
   -
     target: field_feature_image
@@ -154,3 +176,11 @@ mappings:
       reference_by: fid
       existing: '1'
       autocreate: 0
+  -
+    target: field_import_uuid
+    map:
+      value: import_uuid
+    unique:
+      value: '1'
+    settings:
+      language: null

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.calendar_event.field_event_date
     - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
+    - field.field.node.calendar_event.field_import_uuid
     - field.field.node.calendar_event.field_promote_to_school_calendar
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
@@ -223,6 +224,7 @@ content:
             classes: {  }
 hidden:
   feeds_item: true
+  field_import_uuid: true
   field_promote_to_school_calendar: true
   field_site_section: true
   links: true

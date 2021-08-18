@@ -66,14 +66,6 @@ third_party_settings:
         weight: -10
         label: Explode
         uuid: 1a4d87ef-c3b1-42c0-8769-aa527ad44a97
-      b878a58e-b168-4730-9be3-989f4b455aed:
-        separator: ','
-        limit: null
-        plugin: explode
-        source: attachment_names
-        weight: 0
-        label: Explode
-        uuid: b878a58e-b168-4730-9be3-989f4b455aed
       6f3ea910-1f4f-495d-a251-2d73d2008aba:
         character: ''
         side: trim
@@ -82,15 +74,34 @@ third_party_settings:
         weight: -8
         label: 'Characters to trim'
         uuid: 6f3ea910-1f4f-495d-a251-2d73d2008aba
+      aefde554-c857-4960-8c87-1cd811998391:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachment_names
+        weight: 0
+        label: Explode
+        uuid: aefde554-c857-4960-8c87-1cd811998391
+      55bbbcc1-b3c3-43b0-b5e8-3dae9a10aeff:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachment_names
+        weight: 1
+        label: 'Characters to trim'
+        uuid: 55bbbcc1-b3c3-43b0-b5e8-3dae9a10aeff
 id: news_feed_import
 label: 'News Feed Import'
 description: ''
 help: ''
 import_period: -1
-fetcher: upload
+fetcher: http
 fetcher_configuration:
-  allowed_extensions: 'txt csv tsv xml opml'
-  directory: 'private://feeds'
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
 parser: csv
 parser_configuration:
   delimiter: ','
@@ -207,7 +218,7 @@ mappings:
       language: ''
       reference_by: fid
       autocreate: '1'
-      existing: '2'
+      existing: '0'
   -
     target: field_import_uuid
     map:

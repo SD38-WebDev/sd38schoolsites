@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
     - field.field.node.page.field_feature_image
+    - field.field.node.page.field_import_uuid
     - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
@@ -15,6 +16,7 @@ dependencies:
   module:
     - ds
     - entity_reference_revisions
+    - file
     - text
     - user
 third_party_settings:
@@ -61,6 +63,7 @@ third_party_settings:
         - field_feature_image
         - body
         - field_content_section
+        - field_legacy_attachments
       right:
         - field_sidebar_content
     fields:
@@ -171,9 +174,25 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
+  field_legacy_attachments:
+    type: file_table
+    weight: 5
+    region: left
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: Attachments
+            lb-col: false
+            classes: {  }
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -211,6 +230,6 @@ content:
     region: right
 hidden:
   feeds_item: true
-  field_legacy_attachments: true
+  field_import_uuid: true
   field_site_section: true
   links: true

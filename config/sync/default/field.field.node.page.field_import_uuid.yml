@@ -1,0 +1,25 @@
+uuid: cf0a3812-496b-4bc2-8f77-085acd64c161
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_import_uuid
+    - node.type.page
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.page.field_import_uuid
+field_name: field_import_uuid
+entity_type: node
+bundle: page
+label: 'Import UUID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.calendar_event.body
     - field.field.node.calendar_event.field_event_date
+    - field.field.node.calendar_event.field_import_uuid
     - node.type.calendar_event
   module:
     - feeds_tamper
@@ -88,6 +89,14 @@ custom_sources:
     label: sticky
     value: sticky
     machine_name: sticky
+  import_uuid:
+    label: 'Import UUID'
+    value: 'Import UUID'
+    machine_name: import_uuid
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
 mappings:
   -
     target: title
@@ -107,17 +116,10 @@ mappings:
     target: body
     map:
       value: body
-      summary: ''
+      summary: summary
     settings:
       language: ''
-      format: plain_text
-  -
-    target: nid
-    map:
-      value: nid
-    unique:
-      value: '1'
-    settings: {  }
+      format: full_html
   -
     target: created
     map:
@@ -135,5 +137,13 @@ mappings:
     target: sticky
     map:
       value: sticky
+    settings:
+      language: null
+  -
+    target: field_import_uuid
+    map:
+      value: import_uuid
+    unique:
+      value: '1'
     settings:
       language: null

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
     - field.field.node.page.field_feature_image
+    - field.field.node.page.field_import_uuid
     - field.field.node.page.field_legacy_attachments
     - field.field.node.page.field_sidebar_content
     - field.field.node.page.field_site_section
@@ -55,19 +56,18 @@ third_party_settings:
             add_region_classes: 0
             attributes: class|col-12
     regions:
-      top:
-        - field_legacy_attachments
       left:
         - node_title
         - field_feature_image
         - body
         - field_content_section
+        - field_legacy_attachments
       right:
         - field_sidebar_content
     fields:
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 0
         label: hidden
         formatter: default
         settings:
@@ -86,7 +86,7 @@ bundle: page
 mode: default
 content:
   body:
-    weight: 3
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -94,7 +94,7 @@ content:
     region: left
   field_content_section:
     type: entity_reference_revisions_entity_view
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -131,7 +131,7 @@ content:
             fi-def-at: false
     region: left
   field_feature_image:
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       view_mode: large_480_480_
@@ -168,13 +168,21 @@ content:
     type: entity_reference_entity_view
     region: left
   field_legacy_attachments:
-    weight: 0
+    weight: 4
     label: above
     settings:
       use_description_as_link_text: true
-    third_party_settings: {  }
-    type: file_default
-    region: top
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: Attachments
+            lb-col: false
+            classes: {  }
+    type: file_table
+    region: left
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
     weight: 5
@@ -215,5 +223,6 @@ content:
     region: right
 hidden:
   feeds_item: true
+  field_import_uuid: true
   field_site_section: true
   links: true
