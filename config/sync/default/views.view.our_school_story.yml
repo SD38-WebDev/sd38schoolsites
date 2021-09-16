@@ -234,6 +234,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -332,6 +333,7 @@ display:
         operator: AND
         groups:
           1: AND
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

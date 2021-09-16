@@ -57,6 +57,14 @@ third_party_settings:
         weight: 1
         label: 'Characters to trim'
         uuid: b231c46b-2553-4cde-8474-5a91ac4b67be
+      9ee23f39-ace4-4f49-80f9-8e1632706377:
+        character: ''
+        side: trim
+        plugin: trim
+        source: gallery_image
+        weight: 1
+        label: 'Characters to trim'
+        uuid: 9ee23f39-ace4-4f49-80f9-8e1632706377
 id: school_story_posts_import
 label: 'School Story Posts Import'
 description: ''
