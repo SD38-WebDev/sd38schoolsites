@@ -1,0 +1,24 @@
+uuid: 2d7585cd-9e20-4743-b677-68d89d6d8c40
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.newsletter.field_attachments
+    - field.field.node.newsletter.field_newsletter_date
+    - node.type.newsletter
+  module:
+    - user
+id: node.newsletter.teaser
+targetEntityType: node
+bundle: newsletter
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attachments: true
+  field_newsletter_date: true

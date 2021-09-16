@@ -1,0 +1,35 @@
+uuid: 89dfa1ea-bbca-42c1-8a95-2914496ecd74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachments
+    - media.type.file
+    - node.type.newsletter
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+id: node.newsletter.field_attachments
+field_name: field_attachments
+entity_type: node
+bundle: newsletter
+label: 'Newsletter PDF'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: created
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

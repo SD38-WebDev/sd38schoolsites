@@ -1,0 +1,29 @@
+uuid: a6b32629-f548-4183-b7d6-5f0eb8ecad2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_newsletter_date
+    - node.type.newsletter
+  module:
+    - datetime
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
+id: node.newsletter.field_newsletter_date
+field_name: field_newsletter_date
+entity_type: node
+bundle: newsletter
+label: 'Newsletter Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

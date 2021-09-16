@@ -1,0 +1,39 @@
+uuid: 32749385-4643-4a4b-9178-ec83e3c0d89e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.newsletter.field_attachments
+    - field.field.node.newsletter.field_newsletter_date
+    - node.type.newsletter
+  module:
+    - datetime
+    - user
+id: node.newsletter.default
+targetEntityType: node
+bundle: newsletter
+mode: default
+content:
+  field_attachments:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_newsletter_date:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

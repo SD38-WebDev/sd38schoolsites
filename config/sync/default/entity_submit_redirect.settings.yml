@@ -5,6 +5,8 @@ node:
     path: '<front>'
   home_page_button:
     path: '<front>'
+  newsletter:
+    path: /newsletters
 global:
   use_on:
     - front
