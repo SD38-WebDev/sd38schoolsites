@@ -150,6 +150,8 @@ body,
 div.article-img,
 .node--view-mode-vertical-teaser .field--name-field-feature-image {
   background-color: #055a8e;
+  border-radius: 0.3125rem;
+  overflow: hidden;
 }
 
 .fc-today {

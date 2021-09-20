@@ -408,10 +408,14 @@ img {
 .view-id-frontpage .post img,
 .field--type-image img,
 .field--name-field-button-image img,
-.article-img,
+.article-img img,
 .node--view-mode-vertical-teaser .field--name-field-feature-image {
 	border-radius: 0.3125rem;
   overflow: hidden;
+}
+
+.article-img img {
+  width: 480px;
 }
 
 .sidebar .block {
