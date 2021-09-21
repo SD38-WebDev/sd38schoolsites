@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.vertical_teaser
     - node.type.article
-    - node.type.calendar_event
     - system.menu.main
   module:
     - node
@@ -156,7 +155,6 @@ display:
           operator: in
           value:
             article: article
-            calendar_event: calendar_event
           group: 1
           exposed: false
           expose:

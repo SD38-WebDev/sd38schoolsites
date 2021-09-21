@@ -1,37 +1,37 @@
-uuid: 4d15adb2-8398-4add-a7d4-dbde3afae273
+uuid: 3cfe7bfc-3515-49f2-9b99-31e7d8503fa7
 langcode: en
 status: true
 dependencies:
   module:
     - image_effects
-name: article_thumbnail
-label: 'Article List Thumbnail'
+name: article_grid_
+label: 'Article Grid Thumbnail'
 effects:
-  50f8e3f2-4ad4-4fd1-b4c7-69b6cd0cf613:
-    uuid: 50f8e3f2-4ad4-4fd1-b4c7-69b6cd0cf613
+  219eb6d2-a980-43b1-bb37-cc0793b06a4d:
+    uuid: 219eb6d2-a980-43b1-bb37-cc0793b06a4d
     id: image_scale
     weight: 2
     data:
       width: 480
       height: null
       upscale: true
-  53428d40-4376-439a-995c-aff238707709:
-    uuid: 53428d40-4376-439a-995c-aff238707709
+  e7352022-9ae8-491f-8693-d486f40a33d1:
+    uuid: e7352022-9ae8-491f-8693-d486f40a33d1
     id: image_scale
     weight: 2
     data:
       width: null
       height: 320
       upscale: false
-  28d9f1ac-7366-4b87-acb6-23efb27a1cad:
-    uuid: 28d9f1ac-7366-4b87-acb6-23efb27a1cad
+  b2557eaa-d4ac-49ee-ad63-84585aeffec6:
+    uuid: b2557eaa-d4ac-49ee-ad63-84585aeffec6
     id: image_effects_set_canvas
     weight: 3
     data:
       canvas_size: exact
       exact:
         width: '480'
-        height: '320'
+        height: '300'
         placement: center-center
         x_offset: 0
         y_offset: 0

@@ -53,6 +53,9 @@ module:
   field_group_link: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
+  file_mdm_exif: 0
+  file_mdm_font: 0
   filter: 0
   fitvids: 0
   focal_point: 0
@@ -62,6 +65,8 @@ module:
   help: 0
   history: 0
   image: 0
+  image_effects: 0
+  imagemagick: 0
   jsonapi: 0
   layout_discovery: 0
   libraries: 0
@@ -92,6 +97,7 @@ module:
   smart_date_recur: 0
   smart_trim: 0
   social_media_links: 0
+  sophron: 0
   system: 0
   tamper: 0
   taxonomy: 0

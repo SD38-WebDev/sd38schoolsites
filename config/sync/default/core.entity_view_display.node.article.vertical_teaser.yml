@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.article.field_legacy_image_gallery
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
-    - image.style.article_thumbnail
+    - image.style.article_grid_
     - node.type.article
   module:
     - ds
@@ -115,7 +115,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: article_thumbnail
+      image_style: article_grid_
       image_link: content
     third_party_settings:
       ds:
