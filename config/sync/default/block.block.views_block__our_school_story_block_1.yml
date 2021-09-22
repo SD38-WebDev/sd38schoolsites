@@ -13,7 +13,7 @@ dependencies:
 id: views_block__our_school_story_block_1
 theme: rsd_sites_barrio
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:our_school_story-block_1'
 settings:

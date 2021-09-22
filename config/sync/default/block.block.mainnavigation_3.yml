@@ -1,23 +1,34 @@
-uuid: a646acbf-5e0b-4a0a-8b57-2123337c1f0b
+uuid: 1231ac6a-bb1e-4d75-a992-182bd4dec966
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.main
   module:
     - context
-    - system
+    - menu_block
   theme:
     - rsd_sites_barrio
-id: mainpagecontent
+id: mainnavigation_3
 theme: rsd_sites_barrio
 region: content
-weight: -7
+weight: -12
 provider: null
-plugin: system_main_block
+plugin: 'menu_block:main'
 settings:
-  id: system_main_block
-  label: 'Main page content'
-  provider: system
+  id: 'menu_block:main'
+  label: 'Sub Menu Items'
+  provider: menu_block
   label_display: '0'
+  follow: true
+  follow_parent: child
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'main:'
+  suggestion: main
+  label_type: block
+  label_link: false
 visibility:
   request_path_exclusion:
     id: request_path_exclusion

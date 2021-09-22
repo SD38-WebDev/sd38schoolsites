@@ -34,7 +34,7 @@ features:
   favicon: true
 logo:
   use_default: false
-  path: ''
+  path: 'public://BlundellLogo600px-whitestroke_0.png'
 favicon:
   use_default: true
 bootstrap_barrio_source: bootstrap_barrio/bootstrap_cdn
