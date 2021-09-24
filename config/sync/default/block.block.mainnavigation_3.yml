@@ -1,12 +1,13 @@
 uuid: 1231ac6a-bb1e-4d75-a992-182bd4dec966
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
   module:
     - context
     - menu_block
+    - system
   theme:
     - rsd_sites_barrio
 id: mainnavigation_3
@@ -26,7 +27,7 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'main:'
-  suggestion: main
+  suggestion: section_menu
   label_type: block
   label_link: false
 visibility:
@@ -39,4 +40,9 @@ visibility:
     id: view_inclusion
     negate: null
     view_inclusion: {  }
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
     context_mapping: {  }

@@ -34,6 +34,7 @@ body {
   background-color: #0071b325 !important;
 }
 
+.field--name-dynamic-block-fieldnode-section-menu-block ul.nav,
 .field--name-dynamic-block-fieldnode-section-sub-menu nav.menu--main {
   background-color: #055a8e09 !important;
 }

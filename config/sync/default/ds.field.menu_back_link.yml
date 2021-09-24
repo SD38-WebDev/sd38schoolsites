@@ -1,0 +1,25 @@
+id: menu_back_link
+label: 'Menu Back Link'
+ui_limit: ''
+properties:
+  block: 'menu_block:main'
+  use_block_title: true
+  add_block_wrappers: true
+  config:
+    id: 'menu_block:main'
+    label: ''
+    provider: menu_block
+    label_display: visible
+    follow: true
+    follow_parent: active
+    level: 1
+    depth: 1
+    expand_all_items: false
+    parent: 'main:'
+    suggestion: main
+    label_type: parent
+    label_link: true
+type: block
+type_label: 'Block field'
+entities:
+  node: node
