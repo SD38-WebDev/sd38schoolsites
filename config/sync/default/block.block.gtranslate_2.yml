@@ -10,7 +10,7 @@ dependencies:
 id: gtranslate_2
 theme: rsd_sites_barrio
 region: footer_fourth
-weight: -9
+weight: -11
 provider: null
 plugin: gtranslate_block
 settings:

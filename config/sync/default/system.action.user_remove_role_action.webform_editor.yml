@@ -1,0 +1,14 @@
+uuid: 957cd3f5-f990-4e3b-a3ed-2c81a3a67d5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.webform_editor
+  module:
+    - user
+id: user_remove_role_action.webform_editor
+label: 'Remove the Webform Editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: webform_editor

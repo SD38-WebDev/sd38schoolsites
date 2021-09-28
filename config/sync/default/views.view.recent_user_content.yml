@@ -541,7 +541,7 @@ display:
           plugin_id: standard
       arguments: {  }
       display_extenders: {  }
-      css_class: col
+      css_class: ''
       use_ajax: false
     cache_metadata:
       max-age: -1
@@ -1027,6 +1027,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.taxonomy_term.field_section_home_page'
+        - 'config_split_state:field.storage.taxonomy_term.field_section_home_page'
   block_2:
     display_plugin: block
     id: block_2

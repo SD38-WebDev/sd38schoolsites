@@ -151,10 +151,10 @@
         <div class="{{ container }}">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
             <div class="site-footer row">
-              <div class="col-lg col-12"><a href="https://www.sd38.bc.ca" target="_blank" title="School District No. 38 (Richmond)"><div id="richmond-footer"><img src="/themes/custom/rsd_sites_barrio/images/sd38-logo-white.png"></a><br>Developed and powered by School District No. 38 (Richmond). Copyright © {{ "now"|date("Y") }}</div>{{ page.footer_first }}</div>
-              <div class="col-lg col-12">{{ page.footer_second }}</div>
-              <div class="col-lg col-12">{{ page.footer_third }}</div>
-              <div class="col-lg col-12 text-lg-right">{{ page.footer_fourth }}</div>
+              <div class="col-lg"><a href="https://www.sd38.bc.ca" target="_blank" title="School District No. 38 (Richmond)"><div id="richmond-footer"><img src="/themes/custom/rsd_sites_barrio/images/sd38-logo-white.png"></a><br>Developed and powered by School District No. 38 (Richmond). Copyright © {{ "now"|date("Y") }}</div>{{ page.footer_first }}</div>
+              <div class="col-lg">{{ page.footer_second }}</div>
+              <div class="col-lg">{{ page.footer_third }}</div>
+              <div class="col-lg text-lg-right">{{ page.footer_fourth }}</div>
             </div>
           {% endif %}
           {% if page.footer_fifth %}

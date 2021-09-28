@@ -12,7 +12,7 @@ dependencies:
 id: addressblock
 theme: rsd_sites_barrio
 region: footer_fourth
-weight: -9
+weight: -12
 provider: null
 plugin: 'block_content:e7910635-166a-459a-8822-37e985338268'
 settings:

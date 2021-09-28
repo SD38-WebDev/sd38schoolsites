@@ -12,7 +12,7 @@ dependencies:
 id: mainnavigation_2
 theme: rsd_sites_barrio
 region: footer_third
-weight: 0
+weight: -12
 provider: null
 plugin: 'menu_block:main'
 settings:

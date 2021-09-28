@@ -91,6 +91,7 @@
         "drupal/views_menu_children_filter": "^1.0@RC",
         "drupal/views_sort_options_weight": "^1.2",
         "drupal/views_year_filter": "^1.7",
+        "drupal/webform": "^6.0",
         "drupal/workbench": "^1.3",
         "drupal/workbench_access": "^1.0@beta",
         "drupal/workbench_menu_access": "^1.3",
