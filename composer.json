@@ -12,7 +12,33 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "recurser/jquery-simple-color",
+              "version": "1.2.3",
+              "type": "drupal-library",
+              "source": {
+                "url": "https://github.com/recurser/jquery-simple-color",
+                "type": "git",
+                "reference": "master"
+              }
+            }
+          },
+          {
+              "type": "package",
+              "package": {
+                "name": "bgrins/spectrum",
+                "version": "1.8.1",
+                "type": "drupal-library",
+                "source": {
+                  "url": "https://github.com/bgrins/spectrum",
+                  "type": "git",
+                  "reference": "master"
+                }
+              }
+            }
     ],
     "require": {
         "composer/installers": "^1.2",
