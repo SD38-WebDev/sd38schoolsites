@@ -41,6 +41,7 @@
             }
     ],
     "require": {
+        "bgrins/spectrum": "^1.8",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "~1.0",
         "drupal/address": "^1.9",
@@ -122,7 +123,8 @@
         "drupal/workbench_access": "^1.0@beta",
         "drupal/workbench_menu_access": "^1.3",
         "drush/drush": "^10.4.3",
-        "platformsh/config-reader": "^2.4"
+        "platformsh/config-reader": "^2.4",
+        "recurser/jquery-simple-color": "^1.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -141,9 +143,6 @@
         "patches": {
           "drupal/field_group": {
               "Adds tokens to html_element groups": "https://www.drupal.org/files/issues/2020-07-03/2961885-13.patch"
-          },
-          "drupal/feeds": {
-              "Add a mapping target to media field": "https://www.drupal.org/files/issues/2020-12-22/feeds-media-image-2928904-39.patch"
           }
         },
         "installer-paths": {
