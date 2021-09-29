@@ -1,0 +1,27 @@
+uuid: 68dc7f50-ec80-4d33-a5b5-146dd81cf447
+langcode: en
+status: true
+dependencies:
+  module:
+    - context_entity_field
+name: unpublished_content_css
+label: 'Unpublished Content CSS'
+group: null
+description: 'Add CSS class to each unpublished node.'
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_field:node':
+    id: 'entity_field:node'
+    field_name: status
+    field_state: value
+    field_value: '0'
+    context_mapping:
+      node: '@node.node_route_context:node'
+    negate: 0
+reactions:
+  body_class:
+    id: body_class
+    body_class: unpublished
+    saved: false
+weight: 0
