@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f0ffc52a9c7ff6bcd37813259fbda0f",
+    "content-hash": "52bf7b2da88684bae6c47f754076e157",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9091,6 +9091,38 @@
             "time": "2021-09-20T12:20:58+00:00"
         },
         {
+            "name": "onlyextart/colorbox",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/onlyextart/colorbox.git",
+                "reference": "e58476becbc89dc671093d1bcd9f99b2167fa8f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/onlyextart/colorbox/zipball/e58476becbc89dc671093d1bcd9f99b2167fa8f7",
+                "reference": "e58476becbc89dc671093d1bcd9f99b2167fa8f7",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Drupal 8. Plugin in the root libraries folder (/libraries).",
+            "homepage": "https://github.com/onlyextart/colorbox.git",
+            "keywords": [
+                "Slick colorbox",
+                "colorbox"
+            ],
+            "support": {
+                "issues": "https://github.com/onlyextart/colorbox/issues",
+                "source": "https://github.com/onlyextart/colorbox/tree/master"
+            },
+            "time": "2017-08-23T07:59:49+00:00"
+        },
+        {
             "name": "pear/archive_tar",
             "version": "1.4.14",
             "source": {
@@ -12354,7 +12386,8 @@
         "drupal/theme_permission": 10,
         "drupal/twitter_block": 15,
         "drupal/views_menu_children_filter": 5,
-        "drupal/workbench_access": 10
+        "drupal/workbench_access": 10,
+        "onlyextart/colorbox": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

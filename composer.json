@@ -123,6 +123,7 @@
         "drupal/workbench_access": "^1.0@beta",
         "drupal/workbench_menu_access": "^1.3",
         "drush/drush": "^10.4.3",
+        "onlyextart/colorbox": "9999999-dev",
         "platformsh/config-reader": "^2.4",
         "recurser/jquery-simple-color": "^1.2"
     },
