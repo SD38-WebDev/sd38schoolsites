@@ -85,7 +85,6 @@ parser_configuration:
 processor: 'entity:node'
 processor_configuration:
   langcode: en
-  insert_new: 1
   update_existing: 2
   update_non_existent: _keep
   expire: -1
@@ -176,7 +175,7 @@ mappings:
       language: en
       reference_by: fid
       autocreate: '1'
-      existing: '1'
+      existing: '2'
   -
     target: field_legacy_image_gallery
     map:
@@ -185,7 +184,7 @@ mappings:
       language: en
       reference_by: fid
       autocreate: '1'
-      existing: '1'
+      existing: '2'
   -
     target: field_site_section
     map:
@@ -209,7 +208,7 @@ mappings:
     settings:
       language: ''
       reference_by: fid
-      existing: '0'
+      existing: '2'
       autocreate: 0
   -
     target: field_import_uuid

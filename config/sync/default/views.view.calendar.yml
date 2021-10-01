@@ -480,7 +480,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: col
+      css_class: ''
       filter_groups:
         operator: OR
         groups:
@@ -496,6 +496,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
+        - 'config_split_state:field.storage.node.field_event_date'
   block_1:
     display_plugin: block
     id: block_1
@@ -514,6 +515,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
+        - 'config_split_state:field.storage.node.field_event_date'
   page_1:
     display_plugin: page
     id: page_1
@@ -542,3 +544,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
+        - 'config_split_state:field.storage.node.field_event_date'

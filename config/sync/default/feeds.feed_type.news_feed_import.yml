@@ -110,7 +110,6 @@ parser_configuration:
 processor: 'entity:node'
 processor_configuration:
   langcode: en
-  insert_new: 1
   update_existing: 2
   update_non_existent: _keep
   expire: -1
@@ -201,7 +200,7 @@ mappings:
       language: en
       reference_by: fid
       autocreate: '1'
-      existing: '1'
+      existing: '2'
   -
     target: created
     map:
@@ -218,7 +217,7 @@ mappings:
       language: ''
       reference_by: fid
       autocreate: '1'
-      existing: '0'
+      existing: '2'
   -
     target: field_import_uuid
     map:

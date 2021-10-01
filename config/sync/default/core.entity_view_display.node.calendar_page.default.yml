@@ -33,14 +33,12 @@ third_party_settings:
             attributes: ''
           left:
             wrapper: div
-            classes:
-              col-sm-6: col-sm-6
+            classes: {  }
             add_region_classes: 1
-            attributes: 'class|col-12 col-lg-9'
+            attributes: 'class|col-12 col-md-12 col-lg-9'
           right:
             wrapper: div
-            classes:
-              col-sm-6: col-sm-6
+            classes: {  }
             add_region_classes: 1
             attributes: 'class|col-12 col-lg-3'
           bottom:
