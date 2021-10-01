@@ -292,12 +292,16 @@ footer.site-footer {
 
 /** Typography **/
 
-##block-mainpagecontent h1 {
+#block-mainpagecontent h1 {
   margin-bottom: 1.5rem !important;
 }
 
 #block-mainpagecontent h2 {
   margin-bottom: 1.5rem !important;
+}
+
+#block-mainpagecontent .post h2 {
+  margin-bottom: 0.5rem !important;
 }
 
 h1,
@@ -307,6 +311,7 @@ h2 a {
   font-weight: 600;
 }
 
+h2 a,
 h3 a {
   text-decoration: none;
 }
