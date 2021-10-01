@@ -93,7 +93,7 @@
         "drupal/entity_reference_revisions": "^1.9",
         "drupal/entity_submit_redirect": "^1.1",
         "drupal/eva": "^2.1",
-        "drupal/feeds": "3.x-dev@dev",
+        "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ical": "^1.1",
         "drupal/feeds_tamper": "^2.0@beta",
         "drupal/field_group": "3.x-dev@dev",
@@ -158,6 +158,9 @@
         "patches": {
           "drupal/field_group": {
               "Adds tokens to html_element groups": "https://www.drupal.org/files/issues/2020-07-03/2961885-13.patch"
+          },
+          "drupal/feeds": {
+              "Add a mapping target to media field": "https://www.drupal.org/files/issues/2021-08-22/feeds-media-image-2928904.patch"
           }
         },
         "installer-paths": {

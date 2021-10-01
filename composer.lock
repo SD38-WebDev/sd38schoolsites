@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "628d502457e10ed16241d2361ff14efd",
+    "content-hash": "15e3189bddc7327334040ee23c0ed7b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4760,11 +4760,17 @@
         },
         {
             "name": "drupal/feeds",
-            "version": "dev-3.x",
+            "version": "3.0.0-alpha10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds.git",
-                "reference": "41b17ffd9a57886c56d440dcb2d55aff770b9bd5"
+                "reference": "8.x-3.0-alpha10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-alpha10.zip",
+                "reference": "8.x-3.0-alpha10",
+                "shasum": "84691c6258503c8d4afea5009dcd21bbd8292d49"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -4775,12 +4781,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.x-dev",
-                    "datestamp": "1627831314",
+                    "version": "8.x-3.0-alpha10",
+                    "datestamp": "1612455136",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -12387,7 +12390,7 @@
         "drupal/config_split": 10,
         "drupal/context": 10,
         "drupal/context_entity_field": 15,
-        "drupal/feeds": 20,
+        "drupal/feeds": 15,
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
         "drupal/field_group_link": 5,
