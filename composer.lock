@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15e3189bddc7327334040ee23c0ed7b6",
+    "content-hash": "5b9979b333753963d7ed18e7d751af7e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4355,6 +4355,73 @@
             }
         },
         {
+            "name": "drupal/disable_messages",
+            "version": "2.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/disable_messages.git",
+                "reference": "2.1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/disable_messages-2.1.0-alpha1.zip",
+                "reference": "2.1.0-alpha1",
+                "shasum": "c3bd64ee4da07e97e4c5464db16ad59e561a5ed7"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0-alpha1",
+                    "datestamp": "1627681269",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Zyxware Technologies (zyxware)",
+                    "homepage": "https://www.drupal.org/u/zyxware",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "binnythomas",
+                    "homepage": "https://www.drupal.org/user/3123091"
+                },
+                {
+                    "name": "varunity",
+                    "homepage": "https://www.drupal.org/user/273530"
+                },
+                {
+                    "name": "vimaljoseph",
+                    "homepage": "https://www.drupal.org/user/817380"
+                },
+                {
+                    "name": "zyxware",
+                    "homepage": "https://www.drupal.org/user/222163"
+                }
+            ],
+            "description": "Allows filtering messages shown to the end user using regular expression patterns.",
+            "homepage": "https://drupal.org/project/disable_messages",
+            "keywords": [
+                "content",
+                "display",
+                "messages"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/disable_messages",
+                "issues": "https://drupal.org/project/issues/disable_messages"
+            }
+        },
+        {
             "name": "drupal/display_field_copy",
             "version": "2.0.0",
             "source": {
@@ -6171,6 +6238,67 @@
             "homepage": "https://www.drupal.org/project/paragraphs_edit",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs_edit"
+            }
+        },
+        {
+            "name": "drupal/password_policy",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/password_policy.git",
+                "reference": "8.x-3.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/password_policy-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "6fbc4fe40ab26ec19e5ca37aaaa676348dc7fddb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/ctools": "^3.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0",
+                    "datestamp": "1625082607",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "AohRveTPV",
+                    "homepage": "https://www.drupal.org/user/2760115"
+                },
+                {
+                    "name": "deekayen",
+                    "homepage": "https://www.drupal.org/user/972"
+                },
+                {
+                    "name": "miglius",
+                    "homepage": "https://www.drupal.org/user/18741"
+                },
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "shrop",
+                    "homepage": "https://www.drupal.org/user/14767"
+                }
+            ],
+            "description": "Sets up constraints and expiration of passwords.",
+            "homepage": "https://www.drupal.org/project/password_policy",
+            "support": {
+                "source": "https://git.drupalcode.org/project/password_policy"
             }
         },
         {
@@ -12390,6 +12518,7 @@
         "drupal/config_split": 10,
         "drupal/context": 10,
         "drupal/context_entity_field": 15,
+        "drupal/disable_messages": 15,
         "drupal/feeds": 15,
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,

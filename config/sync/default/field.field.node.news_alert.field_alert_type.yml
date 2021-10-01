@@ -7,15 +7,22 @@ dependencies:
     - node.type.news_alert
   module:
     - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
 id: node.news_alert.field_alert_type
 field_name: field_alert_type
 entity_type: node
 bundle: news_alert
 label: 'Alert Type'
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: standard-alert
 default_value_callback: ''
 settings: {  }
 field_type: list_string
