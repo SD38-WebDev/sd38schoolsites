@@ -61,7 +61,7 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 9
+          items_per_page: 6
           offset: 0
           id: 0
           total_pages: null
@@ -371,6 +371,7 @@ display:
         pager: false
         filters: false
         filter_groups: false
+        use_ajax: false
       style:
         type: views_bootstrap_grid
         options:
@@ -863,14 +864,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: p
+          element_class: small
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -945,7 +946,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: ''
+          element_class: read-more-link
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -984,7 +985,7 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 9
+          items_per_page: 6
           offset: 0
           id: 0
           total_pages: null
@@ -1029,6 +1030,7 @@ display:
         operator: AND
         groups:
           1: AND
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1042,6 +1044,9 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
+        - 'config_split_state:field.storage.node.body'
+        - 'config_split_state:field.storage.node.field_feature_image'
+        - 'config_split_state:field.storage.paragraph.field_images'
   entity_view_2:
     display_plugin: entity_view
     id: entity_view_2

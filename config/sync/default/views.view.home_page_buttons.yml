@@ -155,7 +155,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: col
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:

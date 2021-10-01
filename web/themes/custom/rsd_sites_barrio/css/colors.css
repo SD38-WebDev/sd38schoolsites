@@ -36,7 +36,7 @@ body {
 
 .field--name-dynamic-block-fieldnode-section-menu-block ul.nav,
 .field--name-dynamic-block-fieldnode-section-sub-menu nav.menu--main {
-  background-color: #055a8e09 !important;
+  background-color: #055a8e15 !important;
 }
 
 body.page-user-login,
@@ -101,7 +101,7 @@ body.page-user-login #main-wrapper {
 .views-listing .shaded-rows li:nth-child(odd),
 .view-section-calendar .event:nth-child(odd),
 .view-article-feed .article-post:nth-child(odd) {
-  background-color: #055a8e12 !important;
+  background-color: #055a8e10 !important;
 }
 
 #navbar-main {

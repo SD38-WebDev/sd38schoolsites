@@ -67,13 +67,6 @@ body.unpublished #block-mainpagecontent {
   border-radius: 0.5rem;
 }
 
-h1,
-h2,
-h1 a,
-h2 a {
-  font-weight: 600;
-}
-
 .region-top-header {
   width: 100%;
 }
@@ -230,8 +223,8 @@ body.path-frontpage #header div.welcome-txt {
 }
 
 .navbar-toggler {
-  color: rgba(0,0,0,.5) !important;
-  border-color: rgba(0,0,0,.1) !important;
+  color: rgba(0,0,0,0.5) !important;
+  border-color: rgba(0,0,0,0.1) !important;
 }
 
 .navbar-toggler-icon {
@@ -250,6 +243,11 @@ body #navbar-main .sf-menu li a {
 #navbar-main .dropdown-item.active,
 #navbar-main .dropdown-item:active {
 	background: #ffffff;
+}
+
+#navbar-main .dropdown-item:focus,
+#navbar-main .dropdown-item:hover {
+  background-color: rgba(0,0,0,0.05);
 }
 
 footer {
@@ -294,8 +292,31 @@ footer.site-footer {
 
 /** Typography **/
 
+##block-mainpagecontent h1 {
+  margin-bottom: 1.5rem !important;
+}
+
+#block-mainpagecontent h2 {
+  margin-bottom: 1.5rem !important;
+}
+
+h1,
+h2,
+h1 a,
+h2 a {
+  font-weight: 600;
+}
+
+h3 a {
+  text-decoration: none;
+}
+
 body {
 	font-size: 1.15rem;
+}
+
+.view-article-feed p {
+  margin-bottom: 0.25rem;
 }
 
 blockquote {
@@ -307,6 +328,10 @@ blockquote {
 
 blockquote p:last-child {
 	margin: 0;
+}
+
+.read-more-link a {
+  text-decoration: none;
 }
 
 #header .school-name,
@@ -421,6 +446,7 @@ img {
 
 .article-img img {
   width: 480px;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar .block {
@@ -1056,8 +1082,13 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 .field--name-dynamic-block-fieldnode-section-sub-menu nav.menu--main {
   border-radius: .25rem;
   margin-bottom: 1.5rem;
+  box-shadow: 0px 2px #00000025;
 }
 
+.field--name-dynamic-block-fieldnode-section-menu-block ul.nav a,
+.field--name-dynamic-block-fieldnode-section-sub-menu nav.menu--main a {
+  font-weight: 600;
+}
 
 /************************/
 /** Misc. Views Styles **/
