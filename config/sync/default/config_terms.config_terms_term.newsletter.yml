@@ -1,0 +1,11 @@
+uuid: 1de3e4b4-1382-416b-93ca-788f96390cb2
+langcode: en
+status: true
+dependencies: {  }
+id: newsletter
+vid: article_terms
+label: Newsletter
+parents:
+  - '0'
+description: ''
+weight: 0
