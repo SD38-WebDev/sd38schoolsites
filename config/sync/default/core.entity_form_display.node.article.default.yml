@@ -43,11 +43,10 @@ third_party_settings:
       children:
         - title
         - field_site_section
-        - field_article_category
+        - field_tags
         - body
         - field_feature_image
         - field_attachments
-        - field_tags
       parent_name: group_tabs
       weight: 1
       format_type: tab
@@ -109,12 +108,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_article_category:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_attachments:
     type: media_library_widget
     weight: 8
@@ -172,7 +165,7 @@ content:
     type: options_select
     region: content
   field_tags:
-    weight: 9
+    weight: 5
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -246,4 +239,5 @@ content:
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  field_article_category: true
   field_import_uuid: true

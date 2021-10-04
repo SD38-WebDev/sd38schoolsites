@@ -1,9 +1,10 @@
-uuid: c5e2b162-27bb-463f-b017-eac007088fe9
+uuid: 26e93c65-dd1d-4f96-9f5c-3bb0766f1963
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.tags
+    - core.entity_view_mode.taxonomy_term.full
+    - taxonomy.vocabulary.district_terms
   module:
     - ds
     - text
@@ -21,14 +22,14 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: ''
+          attributes: ' class|row justify-content-center'
         regions:
           main:
             wrapper: div
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 1
-            attributes: ''
+            attributes: 'class|col-12 col-lg-9'
     regions:
       main:
         - description
@@ -39,10 +40,10 @@ third_party_settings:
         weight: 1
         label: hidden
         formatter: default
-id: taxonomy_term.tags.default
+id: taxonomy_term.district_terms.full
 targetEntityType: taxonomy_term
-bundle: tags
-mode: default
+bundle: district_terms
+mode: full
 content:
   description:
     label: hidden

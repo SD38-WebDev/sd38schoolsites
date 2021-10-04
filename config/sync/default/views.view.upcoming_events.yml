@@ -287,7 +287,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
           exposed: false
           expose:
             label: ''
@@ -321,6 +321,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
+        - 'config_split_state:field.storage.node.field_event_date'
   block_1:
     display_plugin: block
     id: block_1
@@ -337,3 +338,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
+        - 'config_split_state:field.storage.node.field_event_date'

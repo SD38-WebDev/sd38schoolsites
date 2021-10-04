@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_referenced_tags
     - paragraphs.paragraphs_type.article_feed
+    - taxonomy.vocabulary.district_terms
     - taxonomy.vocabulary.tags
   module:
     - required_api
@@ -26,10 +27,11 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
+      district_terms: district_terms
       tags: tags
     sort:
       field: name
       direction: asc
     auto_create: true
-    auto_create_bundle: ''
+    auto_create_bundle: district_terms
 field_type: entity_reference

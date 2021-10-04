@@ -60,10 +60,13 @@ third_party_settings:
             add_region_classes: 1
             attributes: ''
     regions:
+      top:
+        - field_import_uuid
       left:
         - field_feature_image
         - node_changed_date
         - node_post_date
+        - field_tags
       right:
         - node_title
         - body
@@ -72,11 +75,10 @@ third_party_settings:
         - field_legacy_image_gallery
         - field_legacy_attachments
         - field_attachments
-        - field_tags
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 1
+        weight: 2
         label: inline
         formatter: ds_post_date_full_date_only
         ft:
@@ -108,7 +110,7 @@ third_party_settings:
             fi-def-at: false
       node_post_date:
         plugin_id: node_post_date
-        weight: 2
+        weight: 3
         label: inline
         formatter: ds_post_date_full_date_only
         ft:
@@ -140,7 +142,7 @@ third_party_settings:
             fi-def-at: false
       node_title:
         plugin_id: node_title
-        weight: 3
+        weight: 5
         label: hidden
         formatter: default
         settings:
@@ -159,23 +161,15 @@ bundle: article
 mode: default
 content:
   body:
-    weight: 4
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: right
-  field_article_category:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_attachments:
     type: entity_reference_entity_view
-    weight: 9
+    weight: 11
     label: above
     settings:
       view_mode: default
@@ -212,7 +206,7 @@ content:
             fi-def-at: false
     region: right
   field_content_section:
-    weight: 6
+    weight: 8
     label: hidden
     settings:
       view_mode: default
@@ -222,7 +216,7 @@ content:
     region: right
   field_feature_image:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       view_mode: large_480_480_
@@ -258,15 +252,15 @@ content:
             fi-def-at: false
     region: left
   field_import_uuid:
-    weight: 13
+    weight: 0
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: top
   field_legacy_attachments:
-    weight: 8
+    weight: 10
     label: above
     settings:
       use_description_as_link_text: true
@@ -283,7 +277,7 @@ content:
     region: right
   field_legacy_image_gallery:
     type: entity_reference_entity_view
-    weight: 7
+    weight: 9
     label: hidden
     settings:
       view_mode: default
@@ -291,7 +285,7 @@ content:
     third_party_settings: {  }
     region: right
   field_tags:
-    weight: 10
+    weight: 4
     label: above
     settings:
       link: true
@@ -304,7 +298,7 @@ content:
             lb: ''
             prefix: ''
             lbw: true
-            lbw-el: h2
+            lbw-el: h3
             lbw-cl: ''
             lbw-at: ''
             ow-el: ''
@@ -326,12 +320,13 @@ content:
             fi: false
             fi-def-at: false
     type: entity_reference_label
-    region: right
+    region: left
   links:
-    weight: 5
+    weight: 7
     region: right
     settings: {  }
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  field_article_category: true
   field_site_section: true

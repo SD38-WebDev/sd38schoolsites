@@ -1,9 +1,9 @@
-uuid: c5e2b162-27bb-463f-b017-eac007088fe9
+uuid: f4032b9a-62b5-4243-a00c-cb5c565c254d
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.district_terms
   module:
     - ds
     - text
@@ -39,9 +39,9 @@ third_party_settings:
         weight: 1
         label: hidden
         formatter: default
-id: taxonomy_term.tags.default
+id: taxonomy_term.district_terms.default
 targetEntityType: taxonomy_term
-bundle: tags
+bundle: district_terms
 mode: default
 content:
   description:

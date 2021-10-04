@@ -1,0 +1,8 @@
+uuid: 48816af5-9cda-4539-987d-fa02b0dd7462
+langcode: en
+status: true
+dependencies: {  }
+name: 'District Terms'
+vid: district_terms
+description: 'Terms for District related functions'
+weight: 0

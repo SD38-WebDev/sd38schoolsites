@@ -335,7 +335,7 @@ display:
           break_phrase: true
           add_table: true
           require_value: false
-          reduce_duplicates: false
+          reduce_duplicates: true
           plugin_id: taxonomy_index_tid
       display_extenders: {  }
       group_by: true
