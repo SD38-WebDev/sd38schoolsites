@@ -1,0 +1,19 @@
+uuid: 4bd50705-1ae3-427d-934d-4d30469d675c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - telephone
+id: block_content.field_early_warning_line
+field_name: field_early_warning_line
+entity_type: block_content
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

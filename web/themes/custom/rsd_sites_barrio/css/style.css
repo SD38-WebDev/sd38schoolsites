@@ -137,6 +137,10 @@ body.unpublished #block-mainpagecontent {
   display: none;
 }
 
+.align-center {
+  text-align: center;
+}
+
 /*******************/
 /** SD38 Branding **/
 /*******************/
