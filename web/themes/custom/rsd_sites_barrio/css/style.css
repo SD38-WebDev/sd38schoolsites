@@ -402,7 +402,7 @@ blockquote p:last-child {
 }
 
 .view-id-frontpage h2 {
-	font-size: 1.5rem;
+	font-size: 1.5rem !important;
 }
 
 .view-id-blog_posts h2 {
@@ -429,7 +429,7 @@ blockquote p:last-child {
 
 .sidebar .h2,
 .sidebar h2 {
-	font-size: 1.35rem;
+	font-size: 1.35rem !important;
   margin: 0 0 .125rem 0;
   border: none;
 }
