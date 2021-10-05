@@ -5,18 +5,20 @@ dependencies:
   module:
     - node
 id: basic_page_pattern
-label: 'Basic Page Pattern'
+label: 'Basic Calendar and Staff Page Pattern'
 type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  34b68d39-760d-4fbe-b51b-3f153c6b84b8:
+  3a7495d7-9a88-45c8-89ac-b0a76875de55:
     id: node_type
     bundles:
+      calendar_page: calendar_page
       page: page
+      staff_page: staff_page
     negate: false
     context_mapping:
       node: node
-    uuid: 34b68d39-760d-4fbe-b51b-3f153c6b84b8
+    uuid: 3a7495d7-9a88-45c8-89ac-b0a76875de55
 selection_logic: and
 weight: -5
 relationships: {  }
