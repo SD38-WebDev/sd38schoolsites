@@ -18,7 +18,7 @@ properties:
     parent: 'main:'
     suggestion: section_menu
     label_type: parent
-    label_link: true
+    label_link: false
 type: block
 type_label: 'Block field'
 entities:

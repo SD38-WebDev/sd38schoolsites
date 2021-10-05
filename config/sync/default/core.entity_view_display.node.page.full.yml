@@ -58,9 +58,7 @@ third_party_settings:
             attributes: class|col-12
     regions:
       left:
-        - 'dynamic_token_field:node-menu_back_button_field'
         - node_title
-        - 'dynamic_block_field:node-section_menu_block'
         - field_feature_image
         - body
         - field_content_section
@@ -68,19 +66,9 @@ third_party_settings:
       right:
         - field_sidebar_content
     fields:
-      'dynamic_block_field:node-section_menu_block':
-        plugin_id: 'dynamic_block_field:node-section_menu_block'
-        weight: 2
-        label: hidden
-        formatter: default
-      'dynamic_token_field:node-menu_back_button_field':
-        plugin_id: 'dynamic_token_field:node-menu_back_button_field'
-        weight: 0
-        label: hidden
-        formatter: default
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 0
         label: hidden
         formatter: default
         settings:
@@ -99,7 +87,7 @@ bundle: page
 mode: full
 content:
   body:
-    weight: 4
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -107,7 +95,7 @@ content:
     region: left
   field_content_section:
     type: entity_reference_revisions_entity_view
-    weight: 5
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -145,7 +133,7 @@ content:
     region: left
   field_feature_image:
     type: entity_reference_entity_view
-    weight: 3
+    weight: 1
     region: left
     label: hidden
     settings:
@@ -182,7 +170,7 @@ content:
             fi-def-at: false
   field_legacy_attachments:
     type: file_table
-    weight: 6
+    weight: 4
     region: left
     label: above
     settings:
@@ -198,7 +186,7 @@ content:
             classes: {  }
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
-    weight: 7
+    weight: 5
     label: hidden
     settings:
       view_mode: default
