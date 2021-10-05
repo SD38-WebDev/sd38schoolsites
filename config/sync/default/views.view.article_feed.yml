@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_feature_image
     - field.storage.paragraph.field_images
-    - image.style.article_thumbnail
+    - image.style.square_image_thumbnail_220x220
     - node.type.article
   module:
     - eva
@@ -521,8 +521,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="col-4"><a href="{{ view_node_1 }}"><div class="article-img">{{ field_feature_image }}</div></a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -562,7 +562,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: article_thumbnail
+            image_style: square_image_thumbnail_220x220
             image_link: ''
           group_column: target_id
           group_columns: {  }
@@ -585,8 +585,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="col-4"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -626,7 +626,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: article_thumbnail
+            image_style: square_image_thumbnail_220x220
             image_link: ''
           group_column: entity_id
           group_columns: {  }
@@ -639,6 +639,55 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'HTML Markup - Opening'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<div class="row">'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
         views_conditional_field:
           id: views_conditional_field
           table: views_conditional
@@ -690,12 +739,61 @@ display:
           if: field_feature_image
           condition: em
           equalto: ''
-          then: '<a href="{{ view_node_1 }}">{{ field_images }}</a>'
+          then: '{{ field_images }}'
           then_translate: 1
-          or: '<a href="{{ view_node_1 }}"><div class="article-img">{{ field_feature_image }}</div></a>'
+          or: '{{ field_feature_image }}'
           or_translate: 1
           strip_tags: 0
           plugin_id: views_conditional_field
+        nothing_4:
+          id: nothing_4
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'HTML Markup - Second Column Opening'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<div class="col">'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
         title:
           id: title
           table: node_field_data
@@ -768,7 +866,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Published
+          label: Posted
           exclude: false
           alter:
             alter_text: true
@@ -799,9 +897,9 @@ display:
             html: false
           element_type: ''
           element_class: ''
-          element_label_type: ''
+          element_label_type: strong
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: div
           element_wrapper_class: 'text-muted small'
           element_default_classes: true
@@ -836,7 +934,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -909,18 +1007,18 @@ display:
           prefix: ''
           suffix: ''
           plugin_id: field
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
+        nothing_5:
+          id: nothing_5
+          table: views
+          field: nothing
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'HTML Markup - Second Column Closing'
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '</div>'
             make_link: false
             path: ''
             absolute: false
@@ -945,23 +1043,68 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: read-more-link
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          text: 'Read more…'
-          output_url_as_text: false
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
+          hide_alter_empty: false
+          plugin_id: custom
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: 'HTML Markup - Closing'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
       relationships:
         field_content_section:
           id: field_content_section
