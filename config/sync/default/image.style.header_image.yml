@@ -4,14 +4,26 @@ status: true
 dependencies:
   module:
     - focal_point
+    - image_effects
 name: header_image
 label: 'Header Image'
 effects:
   5d8a535f-54aa-4bec-81f8-89663f9ea989:
     uuid: 5d8a535f-54aa-4bec-81f8-89663f9ea989
     id: focal_point_scale_and_crop
-    weight: 1
+    weight: -9
     data:
-      width: 1750
-      height: 500
+      width: 1400
+      height: 400
       crop_type: focal_point
+  7ffe92bd-9136-4534-8463-5f21cd506b62:
+    uuid: 7ffe92bd-9136-4534-8463-5f21cd506b62
+    id: image_effects_strip_metadata
+    weight: -10
+    data: {  }
+  5f1cfd1b-8964-45a7-9940-ef9259ae4061:
+    uuid: 5f1cfd1b-8964-45a7-9940-ef9259ae4061
+    id: image_convert
+    weight: 3
+    data:
+      extension: jpg

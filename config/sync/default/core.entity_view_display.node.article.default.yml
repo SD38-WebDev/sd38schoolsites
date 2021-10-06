@@ -62,8 +62,6 @@ third_party_settings:
     regions:
       left:
         - field_feature_image
-        - node_changed_date
-        - node_post_date
         - field_tags
       right:
         - node_title
@@ -73,10 +71,11 @@ third_party_settings:
         - field_legacy_image_gallery
         - field_legacy_attachments
         - field_attachments
+        - node_changed_date
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 1
+        weight: 9
         label: inline
         formatter: ds_post_date_full_date_only
         ft:
@@ -106,41 +105,9 @@ third_party_settings:
             fis-def-at: false
             fi: false
             fi-def-at: false
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 2
-        label: inline
-        formatter: ds_post_date_full_date_only
-        ft:
-          id: expert
-          settings:
-            lb: Published
-            prefix: ''
-            lbw: true
-            lbw-el: strong
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'text-muted small'
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: small
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
       node_title:
         plugin_id: node_title
-        weight: 4
+        weight: 2
         label: hidden
         formatter: default
         settings:
@@ -159,7 +126,7 @@ bundle: article
 mode: default
 content:
   body:
-    weight: 5
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -167,7 +134,7 @@ content:
     region: right
   field_attachments:
     type: entity_reference_entity_view
-    weight: 10
+    weight: 8
     label: above
     settings:
       view_mode: default
@@ -204,7 +171,7 @@ content:
             fi-def-at: false
     region: right
   field_content_section:
-    weight: 7
+    weight: 5
     label: hidden
     settings:
       view_mode: default
@@ -250,7 +217,7 @@ content:
             fi-def-at: false
     region: left
   field_legacy_attachments:
-    weight: 9
+    weight: 7
     label: above
     settings:
       use_description_as_link_text: true
@@ -267,7 +234,7 @@ content:
     region: right
   field_legacy_image_gallery:
     type: entity_reference_entity_view
-    weight: 8
+    weight: 6
     label: hidden
     settings:
       view_mode: default
@@ -275,7 +242,7 @@ content:
     third_party_settings: {  }
     region: right
   field_tags:
-    weight: 3
+    weight: 1
     label: above
     settings:
       link: true
@@ -312,7 +279,7 @@ content:
     type: entity_reference_label
     region: left
   links:
-    weight: 6
+    weight: 4
     region: right
     settings: {  }
     third_party_settings: {  }
