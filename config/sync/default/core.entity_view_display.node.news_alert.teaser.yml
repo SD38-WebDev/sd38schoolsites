@@ -41,19 +41,6 @@ third_party_settings:
         - group_news_alert_link
         - field_alert_title
         - body
-        - node_changed_date
-    fields:
-      node_changed_date:
-        plugin_id: node_changed_date
-        weight: 4
-        label: hidden
-        formatter: ds_post_date_long
-        ft:
-          id: default
-          settings:
-            lb: Updated
-            lb-col: false
-            classes: {  }
   field_group:
     group_alert_type_wrapper:
       children:
@@ -77,7 +64,6 @@ third_party_settings:
       children:
         - field_alert_title
         - body
-        - node_changed_date
       parent_name: group_alert_type_wrapper
       weight: 1
       format_type: link
