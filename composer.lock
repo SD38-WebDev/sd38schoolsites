@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cac92f6f02d7e9cc74ddb1375e50fe0",
+    "content-hash": "c5e387b1ad0e771e5ba61e4671bdbc5c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5616,6 +5616,54 @@
             }
         },
         {
+            "name": "drupal/http_response_headers",
+            "version": "2.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/http_response_headers.git",
+                "reference": "8.x-2.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/http_response_headers-8.x-2.0-rc1.zip",
+                "reference": "8.x-2.0-rc1",
+                "shasum": "783a096671595d4415c19bde9af3d03b002f7a53"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-rc1",
+                    "datestamp": "1590148876",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL 2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "minnur",
+                    "homepage": "https://www.drupal.org/user/702026"
+                },
+                {
+                    "name": "vijaycs85",
+                    "homepage": "https://www.drupal.org/user/93488"
+                }
+            ],
+            "description": "Allows addition, removal and modification of http headers.",
+            "homepage": "https://www.drupal.org/project/http_response_headers",
+            "support": {
+                "source": "https://git.drupalcode.org/project/http_response_headers"
+            }
+        },
+        {
             "name": "drupal/image_effects",
             "version": "3.1.0",
             "source": {
@@ -7328,17 +7376,11 @@
         },
         {
             "name": "drupal/views_ical",
-            "version": "1.0.0-alpha8",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_ical.git",
-                "reference": "8.x-1.0-alpha8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_ical-8.x-1.0-alpha8.zip",
-                "reference": "8.x-1.0-alpha8",
-                "shasum": "e7704584e8e9670041a0dc6ea9886ba799471fee"
+                "reference": "8b017a8dd2bb3f7cb9630b83bca8e00c6d98a5d1"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -7347,9 +7389,12 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.0-alpha8",
-                    "datestamp": "1631148670",
+                    "version": "8.x-1.0-alpha7+2-dev",
+                    "datestamp": "1631138701",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -12669,11 +12714,12 @@
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
         "drupal/field_group_link": 5,
+        "drupal/http_response_headers": 5,
         "drupal/libraries": 10,
         "drupal/paragraphs_edit": 15,
         "drupal/theme_permission": 10,
         "drupal/twitter_block": 15,
-        "drupal/views_ical": 15,
+        "drupal/views_ical": 20,
         "drupal/views_menu_children_filter": 5,
         "drupal/workbench_access": 10,
         "onlyextart/colorbox": 20

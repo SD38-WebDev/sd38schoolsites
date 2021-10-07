@@ -102,6 +102,7 @@ module:
   smart_trim: 0
   social_media_links: 0
   sophron: 0
+  sophron_guesser: 0
   system: 0
   tamper: 0
   taxonomy: 0
@@ -120,6 +121,7 @@ module:
   video_embed_wysiwyg: 0
   views_bootstrap: 0
   views_conditional: 0
+  views_ical: 0
   views_menu_children_filter: 0
   views_sort_options_weight: 0
   views_ui: 0
