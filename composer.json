@@ -131,6 +131,7 @@
         "drupal/video_embed_field": "^2.4",
         "drupal/views_bootstrap": "^4.3",
         "drupal/views_conditional": "^1.4",
+        "drupal/views_ical": "^1.0@alpha",
         "drupal/views_menu_children_filter": "^1.0@RC",
         "drupal/views_sort_options_weight": "^1.2",
         "drupal/views_year_filter": "^1.7",
