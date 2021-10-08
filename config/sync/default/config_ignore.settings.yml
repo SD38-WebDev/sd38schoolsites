@@ -11,5 +11,6 @@ ignored_config_entities:
   - block.block.addressblock
   - 'block.block.addressblock.*'
   - 'block.block.*addressblock'
+  - 'rsd_sites_barrio.settings.logo.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

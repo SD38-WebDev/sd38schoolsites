@@ -13,6 +13,7 @@ dependencies:
     - smart_date
     - taxonomy
     - user
+    - views_ical
 id: calendar
 label: Calendar
 module: views
@@ -100,39 +101,54 @@ display:
           id: title
           table: node_field_data
           field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
+          label: ''
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -143,6 +159,9 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         field_event_date:
           id: field_event_date
           table: node__field_event_date
@@ -505,6 +524,226 @@ display:
     display_options:
       display_extenders: {  }
       block_description: 'Site Calendar Block'
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<a class=\"btn btn-primary\" role=\"button\" href=\"webcal://[site:url-brief]/calendar-feed.ics\"><i class=\"bi bi-calendar-plus\"></i><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-calendar-plus\" viewBox=\"0 0 16 16\">\r\n  <path d=\"M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z\"></path>\r\n  <path d=\"M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z\"></path>\r\n</svg> Subscribe to our calendar</a>"
+            format: full_html
+          plugin_id: text
+      defaults:
+        footer: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_event_date'
+        - 'config_split_state:field.storage.node.field_event_date'
+  ical_1:
+    display_plugin: ical
+    id: ical_1
+    display_title: 'iCal display'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      row:
+        type: ical_fields_wizard
+        options:
+          default_field_elements: 0
+          inline: {  }
+          separator: ''
+          hide_empty: 0
+      path: calendar-feed.ics
+      filename: ''
+      style:
+        type: ical_wizard
+        options:
+          date_field: field_event_date
+          end_date_field: none
+          no_time_field: none
+          summary_field: title
+          location_field: none
+          url_field: none
+          description_field: none
+          uid_field: none
+          default_transparency: TRANSPARENT
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 0
+            ellipsis: 0
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_event_date:
+          id: field_event_date
+          table: node__field_event_date
+          field: field_event_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          click_sort_column: value
+          type: smartdate_default
+          settings:
+            timezone_override: America/Vancouver
+            format: default
+            force_chronological: 0
+            add_classes: 0
+            time_wrapper: 0
+          group_column: value
+          group_columns: {  }
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          multi_type: separator
+          separator: ', '
+          field_api_classes: 0
+          plugin_id: field
+      defaults:
+        fields: false
+        sorts: false
+        header: false
+        title: false
+        sitename_title: false
+      sorts:
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: date
+      pager:
+        type: some
+        options:
+          items_per_page: '500'
+          offset: '0'
+      displays:
+        block_1: block_1
+        default: 0
+        page_1: 0
+      header: {  }
+      title: 'School Calendar'
+      sitename_title: 0
     cache_metadata:
       max-age: -1
       contexts:
