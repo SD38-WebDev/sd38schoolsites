@@ -7,6 +7,11 @@ dependencies:
     - media.type.image
   module:
     - image
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 1
 id: media.image.field_media_image
 field_name: field_media_image
 entity_type: media
