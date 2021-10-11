@@ -1397,7 +1397,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<div class="row"><div class="col bg-theme border-0625 p-4">No front page content has been created yet.</div></div>'
+          content: '<div class="row"><div class="col bg-theme border-0625 p-4">No front page content has been published yet.</div></div>'
           plugin_id: text_custom
         node_listing_empty:
           id: node_listing_empty
