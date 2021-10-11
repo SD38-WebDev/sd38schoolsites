@@ -372,6 +372,7 @@ display:
         filters: false
         filter_groups: false
         use_ajax: false
+        empty: false
       style:
         type: views_bootstrap_grid
         options:
@@ -899,7 +900,7 @@ display:
           element_class: ''
           element_label_type: strong
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: div
           element_wrapper_class: 'text-muted small'
           element_default_classes: true
@@ -1174,6 +1175,18 @@ display:
         groups:
           1: AND
       use_ajax: true
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<div class="row"><div class="col bg-theme border-0625 p-4">No articles have been published yet.</div></div>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:
