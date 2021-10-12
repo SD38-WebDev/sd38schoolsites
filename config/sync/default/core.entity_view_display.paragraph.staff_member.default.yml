@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.staff_member.field_division
+    - field.field.paragraph.staff_member.field_email
     - field.field.paragraph.staff_member.field_external_sites
     - field.field.paragraph.staff_member.field_first_name
     - field.field.paragraph.staff_member.field_last_name
+    - field.field.paragraph.staff_member.field_phone
     - field.field.paragraph.staff_member.field_staff_grade_department
     - field.field.paragraph.staff_member.field_staff_photo
     - field.field.paragraph.staff_member.field_staff_position
@@ -62,6 +64,13 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_email:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_external_sites:
     type: link_separate
     weight: 4
@@ -157,6 +166,13 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
+  field_phone:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_staff_grade_department:
     type: entity_reference_rss_category
     weight: 5
