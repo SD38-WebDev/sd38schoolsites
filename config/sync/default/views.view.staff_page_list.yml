@@ -8,6 +8,7 @@ dependencies:
     - field.storage.paragraph.field_external_sites
     - field.storage.paragraph.field_first_name
     - field.storage.paragraph.field_last_name
+    - field.storage.paragraph.field_name_title
     - field.storage.paragraph.field_phone
     - field.storage.paragraph.field_staff_grade_department
     - field.storage.paragraph.field_staff_position
@@ -15,6 +16,7 @@ dependencies:
   module:
     - link
     - node
+    - options
     - paragraphs
     - telephone
     - user
@@ -166,6 +168,68 @@ display:
       row:
         type: fields
       fields:
+        field_name_title:
+          id: field_name_title
+          table: paragraph__field_name_title
+          field: field_name_title
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_trim_first_name:
           id: field_trim_first_name
           table: paragraph__field_trim_first_name
@@ -471,9 +535,9 @@ display:
           if: field_trim_first_name
           condition: cn
           equalto: 'On'
-          then: '{{ field_first_name }} {{ field_last_name }}'
+          then: '{{ field_name_title }} {{ field_first_name }} {{ field_last_name }}'
           then_translate: 1
-          or: '{{ field_first_name_1 }} {{ field_last_name }}'
+          or: '{{ field_name_title }} {{ field_first_name_1 }} {{ field_last_name }}'
           or_translate: 1
           strip_tags: 0
           plugin_id: views_conditional_field
@@ -943,6 +1007,7 @@ display:
         - 'config:field.storage.paragraph.field_external_sites'
         - 'config:field.storage.paragraph.field_first_name'
         - 'config:field.storage.paragraph.field_last_name'
+        - 'config:field.storage.paragraph.field_name_title'
         - 'config:field.storage.paragraph.field_phone'
         - 'config:field.storage.paragraph.field_staff_grade_department'
         - 'config:field.storage.paragraph.field_staff_position'
@@ -952,6 +1017,7 @@ display:
         - 'config_split_state:field.storage.paragraph.field_external_sites'
         - 'config_split_state:field.storage.paragraph.field_first_name'
         - 'config_split_state:field.storage.paragraph.field_last_name'
+        - 'config_split_state:field.storage.paragraph.field_name_title'
         - 'config_split_state:field.storage.paragraph.field_phone'
         - 'config_split_state:field.storage.paragraph.field_staff_grade_department'
         - 'config_split_state:field.storage.paragraph.field_staff_position'
@@ -977,6 +1043,7 @@ display:
         - 'config:field.storage.paragraph.field_external_sites'
         - 'config:field.storage.paragraph.field_first_name'
         - 'config:field.storage.paragraph.field_last_name'
+        - 'config:field.storage.paragraph.field_name_title'
         - 'config:field.storage.paragraph.field_phone'
         - 'config:field.storage.paragraph.field_staff_grade_department'
         - 'config:field.storage.paragraph.field_staff_position'
@@ -986,6 +1053,7 @@ display:
         - 'config_split_state:field.storage.paragraph.field_external_sites'
         - 'config_split_state:field.storage.paragraph.field_first_name'
         - 'config_split_state:field.storage.paragraph.field_last_name'
+        - 'config_split_state:field.storage.paragraph.field_name_title'
         - 'config_split_state:field.storage.paragraph.field_phone'
         - 'config_split_state:field.storage.paragraph.field_staff_grade_department'
         - 'config_split_state:field.storage.paragraph.field_staff_position'
