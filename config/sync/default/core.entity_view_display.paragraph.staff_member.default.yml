@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.staff_member.field_external_sites
     - field.field.paragraph.staff_member.field_first_name
     - field.field.paragraph.staff_member.field_last_name
+    - field.field.paragraph.staff_member.field_name_title
     - field.field.paragraph.staff_member.field_phone
     - field.field.paragraph.staff_member.field_staff_grade_department
     - field.field.paragraph.staff_member.field_staff_photo
@@ -19,6 +20,7 @@ dependencies:
     - ds
     - link
     - media
+    - options
     - smart_trim
     - taxonomy
 third_party_settings:
@@ -166,6 +168,13 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
+  field_name_title:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_phone:
     weight: 8
     label: above

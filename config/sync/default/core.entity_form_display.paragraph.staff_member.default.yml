@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.staff_member.field_external_sites
     - field.field.paragraph.staff_member.field_first_name
     - field.field.paragraph.staff_member.field_last_name
+    - field.field.paragraph.staff_member.field_name_title
     - field.field.paragraph.staff_member.field_phone
     - field.field.paragraph.staff_member.field_staff_grade_department
     - field.field.paragraph.staff_member.field_staff_photo
@@ -41,6 +42,7 @@ third_party_settings:
       label: Tabs
     group_name:
       children:
+        - field_name_title
         - field_first_name
         - field_last_name
         - field_trim_first_name
@@ -170,7 +172,7 @@ content:
     type: link_default
     region: content
   field_first_name:
-    weight: 2
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -178,12 +180,18 @@ content:
     type: string_textfield
     region: content
   field_last_name:
-    weight: 3
+    weight: 13
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_name_title:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_phone:
     weight: 10
@@ -220,7 +228,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_trim_first_name:
-    weight: 4
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }

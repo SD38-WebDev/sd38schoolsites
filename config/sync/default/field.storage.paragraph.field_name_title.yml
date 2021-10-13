@@ -1,0 +1,48 @@
+uuid: 0562b36f-07d3-49fe-bd74-691aa20e175e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_name_title
+field_name: field_name_title
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Mr.
+      label: Mr.
+    -
+      value: Mrs.
+      label: Mrs.
+    -
+      value: Ms.
+      label: Ms.
+    -
+      value: Miss
+      label: Miss
+    -
+      value: M.
+      label: M.
+    -
+      value: Mme
+      label: Mme
+    -
+      value: Mlle
+      label: Mlle
+    -
+      value: Prof.
+      label: Prof.
+    -
+      value: Dr.
+      label: Dr.
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

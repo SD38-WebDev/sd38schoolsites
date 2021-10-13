@@ -1,0 +1,26 @@
+uuid: 50fa217a-1a11-4911-99ca-f1ec6253afd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name_title
+    - paragraphs.paragraphs_type.staff_member
+  module:
+    - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.staff_member.field_name_title
+field_name: field_name_title
+entity_type: paragraph
+bundle: staff_member
+label: Title/Prefix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
