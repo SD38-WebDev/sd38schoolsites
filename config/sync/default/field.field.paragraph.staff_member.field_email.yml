@@ -1,0 +1,25 @@
+uuid: 9c0a08d1-89c8-4a48-b0a3-9b6a33923f8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_email
+    - paragraphs.paragraphs_type.staff_member
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.staff_member.field_email
+field_name: field_email
+entity_type: paragraph
+bundle: staff_member
+label: Email
+description: Optional.
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

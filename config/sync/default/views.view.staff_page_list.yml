@@ -4,16 +4,21 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_division
+    - field.storage.paragraph.field_email
     - field.storage.paragraph.field_external_sites
     - field.storage.paragraph.field_first_name
     - field.storage.paragraph.field_last_name
+    - field.storage.paragraph.field_name_title
+    - field.storage.paragraph.field_phone
     - field.storage.paragraph.field_staff_grade_department
     - field.storage.paragraph.field_staff_position
     - field.storage.paragraph.field_trim_first_name
   module:
     - link
     - node
+    - options
     - paragraphs
+    - telephone
     - user
     - views_bootstrap
     - views_conditional
@@ -82,6 +87,8 @@ display:
             field_division: field_division
             field_staff_grade_department: field_staff_grade_department
             field_external_sites: field_external_sites
+            field_email: field_email
+            field_phone: field_phone
           info:
             field_trim_first_name:
               sortable: 0
@@ -119,7 +126,7 @@ display:
             field_staff_position:
               align: ''
               separator: ''
-              empty_column: 0
+              empty_column: 1
               responsive: ''
             field_division:
               align: ''
@@ -129,12 +136,26 @@ display:
             field_staff_grade_department:
               align: ''
               separator: ''
-              empty_column: 0
+              empty_column: 1
               responsive: ''
             field_external_sites:
               align: ''
               separator: ''
-              empty_column: 0
+              empty_column: 1
+              responsive: ''
+            field_email:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 1
+              responsive: ''
+            field_phone:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 1
               responsive: ''
           default: '-1'
           empty_table: 0
@@ -147,6 +168,68 @@ display:
       row:
         type: fields
       fields:
+        field_name_title:
+          id: field_name_title
+          table: paragraph__field_name_title
+          field: field_name_title
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_trim_first_name:
           id: field_trim_first_name
           table: paragraph__field_trim_first_name
@@ -452,9 +535,9 @@ display:
           if: field_trim_first_name
           condition: cn
           equalto: 'On'
-          then: '{{ field_first_name }} {{ field_last_name }}'
+          then: '{{ field_name_title }} {{ field_first_name }} {{ field_last_name }}'
           then_translate: 1
-          or: '{{ field_first_name_1 }} {{ field_last_name }}'
+          or: '{{ field_name_title }} {{ field_first_name_1 }} {{ field_last_name }}'
           or_translate: 1
           strip_tags: 0
           plugin_id: views_conditional_field
@@ -592,7 +675,7 @@ display:
           relationship: field_staff_members
           group_type: group
           admin_label: ''
-          label: ''
+          label: Grade/Dept.
           exclude: false
           alter:
             alter_text: false
@@ -655,7 +738,7 @@ display:
           relationship: field_staff_members
           group_type: group
           admin_label: ''
-          label: ''
+          label: Online
           exclude: false
           alter:
             alter_text: false
@@ -705,6 +788,131 @@ display:
             rel: '0'
             target: '0'
           group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_email:
+          id: field_email
+          table: paragraph__field_email
+          field: field_email
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          label: Email
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: email_mailto
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_phone:
+          id: field_phone
+          table: paragraph__field_phone
+          field: field_phone
+          relationship: field_staff_members
+          group_type: group
+          admin_label: ''
+          label: Phone
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: telephone_link
+          settings:
+            title: ''
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -795,16 +1003,22 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.paragraph.field_division'
+        - 'config:field.storage.paragraph.field_email'
         - 'config:field.storage.paragraph.field_external_sites'
         - 'config:field.storage.paragraph.field_first_name'
         - 'config:field.storage.paragraph.field_last_name'
+        - 'config:field.storage.paragraph.field_name_title'
+        - 'config:field.storage.paragraph.field_phone'
         - 'config:field.storage.paragraph.field_staff_grade_department'
         - 'config:field.storage.paragraph.field_staff_position'
         - 'config:field.storage.paragraph.field_trim_first_name'
         - 'config_split_state:field.storage.paragraph.field_division'
+        - 'config_split_state:field.storage.paragraph.field_email'
         - 'config_split_state:field.storage.paragraph.field_external_sites'
         - 'config_split_state:field.storage.paragraph.field_first_name'
         - 'config_split_state:field.storage.paragraph.field_last_name'
+        - 'config_split_state:field.storage.paragraph.field_name_title'
+        - 'config_split_state:field.storage.paragraph.field_phone'
         - 'config_split_state:field.storage.paragraph.field_staff_grade_department'
         - 'config_split_state:field.storage.paragraph.field_staff_position'
         - 'config_split_state:field.storage.paragraph.field_trim_first_name'
@@ -825,16 +1039,22 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.paragraph.field_division'
+        - 'config:field.storage.paragraph.field_email'
         - 'config:field.storage.paragraph.field_external_sites'
         - 'config:field.storage.paragraph.field_first_name'
         - 'config:field.storage.paragraph.field_last_name'
+        - 'config:field.storage.paragraph.field_name_title'
+        - 'config:field.storage.paragraph.field_phone'
         - 'config:field.storage.paragraph.field_staff_grade_department'
         - 'config:field.storage.paragraph.field_staff_position'
         - 'config:field.storage.paragraph.field_trim_first_name'
         - 'config_split_state:field.storage.paragraph.field_division'
+        - 'config_split_state:field.storage.paragraph.field_email'
         - 'config_split_state:field.storage.paragraph.field_external_sites'
         - 'config_split_state:field.storage.paragraph.field_first_name'
         - 'config_split_state:field.storage.paragraph.field_last_name'
+        - 'config_split_state:field.storage.paragraph.field_name_title'
+        - 'config_split_state:field.storage.paragraph.field_phone'
         - 'config_split_state:field.storage.paragraph.field_staff_grade_department'
         - 'config_split_state:field.storage.paragraph.field_staff_position'
         - 'config_split_state:field.storage.paragraph.field_trim_first_name'

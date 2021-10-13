@@ -1,0 +1,26 @@
+uuid: 0ea541c0-d407-41f3-9a73-9ae2ecf43441
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phone
+    - paragraphs.paragraphs_type.staff_member
+  module:
+    - required_api
+    - telephone
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.staff_member.field_phone
+field_name: field_phone
+entity_type: paragraph
+bundle: staff_member
+label: Phone
+description: 'Optional. School staff should not publish their phone numbers on the staff page. This option is available in instances where a contact number must be provided.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

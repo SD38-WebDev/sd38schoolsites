@@ -1,6 +1,6 @@
 uuid: cbceaf25-4ebe-4437-80b4-a15e3646b19e
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.staff_listing_photo_grid

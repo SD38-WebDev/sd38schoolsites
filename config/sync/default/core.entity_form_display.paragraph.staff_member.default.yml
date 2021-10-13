@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.staff_member.field_division
+    - field.field.paragraph.staff_member.field_email
     - field.field.paragraph.staff_member.field_external_sites
     - field.field.paragraph.staff_member.field_first_name
     - field.field.paragraph.staff_member.field_last_name
+    - field.field.paragraph.staff_member.field_name_title
+    - field.field.paragraph.staff_member.field_phone
     - field.field.paragraph.staff_member.field_staff_grade_department
     - field.field.paragraph.staff_member.field_staff_photo
     - field.field.paragraph.staff_member.field_staff_position
@@ -15,17 +18,17 @@ dependencies:
   module:
     - field_group
     - link
-    - media_library
+    - telephone
 third_party_settings:
   field_group:
     group_tabs:
       children:
         - group_name
+        - group_contact_details
         - group_position_details
         - group_division
         - group_grade_department
         - group_links
-        - group_photo
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -37,6 +40,7 @@ third_party_settings:
       label: Tabs
     group_name:
       children:
+        - field_name_title
         - field_first_name
         - field_last_name
         - field_trim_first_name
@@ -55,7 +59,7 @@ third_party_settings:
       children:
         - field_staff_position
       parent_name: group_tabs
-      weight: 2
+      weight: 3
       format_type: tab
       region: content
       format_settings:
@@ -69,7 +73,7 @@ third_party_settings:
       children:
         - field_external_sites
       parent_name: group_tabs
-      weight: 5
+      weight: 6
       format_type: tab
       region: content
       format_settings:
@@ -80,12 +84,11 @@ third_party_settings:
         required_fields: true
       label: Links
     group_photo:
-      children:
-        - field_staff_photo
-      parent_name: group_tabs
-      weight: 6
+      children: {  }
+      parent_name: ''
+      weight: 2
       format_type: tab
-      region: content
+      region: hidden
       format_settings:
         id: ''
         classes: ''
@@ -97,7 +100,7 @@ third_party_settings:
       children:
         - field_division
       parent_name: group_tabs
-      weight: 3
+      weight: 4
       format_type: tab
       region: content
       format_settings:
@@ -111,7 +114,7 @@ third_party_settings:
       children:
         - field_staff_grade_department
       parent_name: group_tabs
-      weight: 4
+      weight: 5
       format_type: tab
       region: content
       format_settings:
@@ -121,6 +124,22 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Grade/Department
+    group_contact_details:
+      children:
+        - field_email
+        - field_phone
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: 'These settings are optional.'
+        formatter: closed
+        required_fields: true
+      label: 'Contact Details'
 id: paragraph.staff_member.default
 targetEntityType: paragraph
 bundle: staff_member
@@ -133,6 +152,14 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_email:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
   field_external_sites:
     weight: 5
     settings:
@@ -142,7 +169,7 @@ content:
     type: link_default
     region: content
   field_first_name:
-    weight: 2
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -150,12 +177,25 @@ content:
     type: string_textfield
     region: content
   field_last_name:
-    weight: 3
+    weight: 13
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_name_title:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_phone:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
     region: content
   field_staff_grade_department:
     weight: 6
@@ -166,13 +206,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_staff_photo:
-    type: media_library_widget
-    weight: 7
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
     region: content
   field_staff_position:
     weight: 4
@@ -185,7 +218,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_trim_first_name:
-    weight: 4
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
@@ -193,4 +226,5 @@ content:
     region: content
 hidden:
   created: true
+  field_staff_photo: true
   status: true
