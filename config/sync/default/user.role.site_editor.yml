@@ -100,6 +100,7 @@ permissions:
   - 'search content'
   - 'update any media'
   - 'update media'
+  - 'use text format basic_html'
   - 'use text format full_html'
   - 'use workbench access'
   - 'view all media revisions'
