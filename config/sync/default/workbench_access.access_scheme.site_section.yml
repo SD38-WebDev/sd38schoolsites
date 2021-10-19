@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.field_site_section
+    - field.field.node.calendar_event.field_site_section
     - field.field.node.page.field_site_section
     - taxonomy.vocabulary.site_blogs_sections
 id: site_section
@@ -16,4 +18,12 @@ scheme_settings:
     -
       entity_type: node
       bundle: page
+      field: field_site_section
+    -
+      entity_type: node
+      bundle: article
+      field: field_site_section
+    -
+      entity_type: node
+      bundle: calendar_event
       field: field_site_section
