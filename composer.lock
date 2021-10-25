@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "422bdde344a6744c11769dbfa7360b5b",
+    "content-hash": "713a70126d0dbc7a0582922fa04940e4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4935,27 +4935,28 @@
         },
         {
             "name": "drupal/feeds_ical",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds_ical.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_ical-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "e960c62a8025105bdc7ffe99a912dd0ac8b9dd05"
+                "url": "https://ftp.drupal.org/files/projects/feeds_ical-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "efb2e0bf211f6a2f5dce521f789d9b76405d574f"
             },
             "require": {
+                "drupal/core": "^8 || ^9",
                 "drupal/feeds": "*",
                 "johngrogg/ics-parser": "^2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1556764086",
+                    "version": "8.x-1.2",
+                    "datestamp": "1634404962",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6003,6 +6004,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/onlyone",
                 "issues": "https://www.drupal.org/project/issues/onlyone"
+            }
+        },
+        {
+            "name": "drupal/outlook_calendar",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/outlook_calendar.git",
+                "reference": "8.x-4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/outlook_calendar-8.x-4.1.zip",
+                "reference": "8.x-4.1",
+                "shasum": "064dd5164e951a3f20dc80e2b74d70dffbb353fd"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.1",
+                    "datestamp": "1577309583",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jack_ry",
+                    "homepage": "https://www.drupal.org/user/3336600"
+                }
+            ],
+            "description": "Fetch Outlook Calendar Events as nodes.",
+            "homepage": "https://www.drupal.org/project/outlook_calendar",
+            "support": {
+                "source": "https://git.drupalcode.org/project/outlook_calendar"
             }
         },
         {
@@ -7260,6 +7305,134 @@
             "homepage": "https://www.drupal.org/project/views_bootstrap",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_bootstrap"
+            }
+        },
+        {
+            "name": "drupal/views_bulk_edit",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_bulk_edit.git",
+                "reference": "8.x-2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_edit-8.x-2.6.zip",
+                "reference": "8.x-2.6",
+                "shasum": "0e0f1dab2fa0903cbe2656e754b0d9ed3a935fbb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "require-dev": {
+                "drupal/views_bulk_operations": "~3.0"
+            },
+            "suggest": {
+                "drupal/views_bulk_operations": "Get VBO for all the views benefits like batching, ability to select all view results or persistent selection across pages"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.6",
+                    "datestamp": "1623748025",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Grabias",
+                    "homepage": "https://www.drupal.org/u/graber"
+                },
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                }
+            ],
+            "description": "Allows bulk edition of entity field values.",
+            "homepage": "https://www.drupal.org/project/views_bulk_edit",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_bulk_edit",
+                "issues": "https://www.drupal.org/project/issues/views_bulk_edit?version=8.x"
+            }
+        },
+        {
+            "name": "drupal/views_bulk_operations",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
+                "reference": "4.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "d5bb4afeaaead0b8ebc7dd9e1fc6aac464aff4b1"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drush/drush": "^10"
+            },
+            "suggest": {
+                "drush/drush": "^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0",
+                    "datestamp": "1625650987",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Grabias",
+                    "homepage": "https://www.drupal.org/u/graber"
+                },
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "infojunkie",
+                    "homepage": "https://www.drupal.org/user/48424"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                }
+            ],
+            "description": "Adds an ability to perform bulk operations on selected entities from view results. Provides an API to create such operations.",
+            "homepage": "https://www.drupal.org/project/views_bulk_operations",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_bulk_operations/-/tree/8.x-3.x",
+                "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
             }
         },
         {
@@ -8705,6 +8878,52 @@
             "time": "2020-04-16T23:44:31+00:00"
         },
         {
+            "name": "jamesiarmes/php-ntlm",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jamesiarmes/php-ntlm.git",
+                "reference": "08fa988af7506b8dc366737b06c86633ba8cecbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jamesiarmes/php-ntlm/zipball/08fa988af7506b8dc366737b06c86633ba8cecbc",
+                "reference": "08fa988af7506b8dc366737b06c86633ba8cecbc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-soap": "*",
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "jamesiarmes\\PhpNtlm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Armes",
+                    "email": "jamesiarmes@gmail.com"
+                }
+            ],
+            "description": "Library for communicating with Microsoft services using NTLM authentication.",
+            "support": {
+                "issues": "https://github.com/jamesiarmes/php-ntlm/issues",
+                "source": "https://github.com/jamesiarmes/php-ntlm/tree/master"
+            },
+            "time": "2017-10-04T01:14:17+00:00"
+        },
+        {
             "name": "johngrogg/ics-parser",
             "version": "v2.2.2",
             "source": {
@@ -9684,6 +9903,57 @@
                 "source": "https://github.com/PhenX/php-font-lib/tree/0.5.2"
             },
             "time": "2020-03-08T15:31:32+00:00"
+        },
+        {
+            "name": "php-ews/php-ews",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jamesiarmes/php-ews.git",
+                "reference": "405f03cb679eff59c84f223962c9cadf14b38450"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jamesiarmes/php-ews/zipball/405f03cb679eff59c84f223962c9cadf14b38450",
+                "reference": "405f03cb679eff59c84f223962c9cadf14b38450",
+                "shasum": ""
+            },
+            "require": {
+                "ext-soap": "*",
+                "jamesiarmes/php-ntlm": "~1.0",
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "mustache/mustache": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "jamesiarmes\\PhpEws\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Armes",
+                    "email": "jamesiarmes@gmail.com"
+                }
+            ],
+            "description": "Library for communicating with Exchange Web Services.",
+            "homepage": "http://jamesarmes.com/php-ews/",
+            "support": {
+                "issues": "https://github.com/jamesiarmes/php-ews/issues",
+                "source": "https://github.com/jamesiarmes/php-ews/tree/master"
+            },
+            "time": "2017-10-04T01:18:36+00:00"
         },
         {
             "name": "platformsh/config-reader",
