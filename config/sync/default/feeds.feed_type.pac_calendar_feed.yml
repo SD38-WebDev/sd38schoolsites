@@ -1,0 +1,94 @@
+uuid: 22b586fa-2f08-4d1f-b83d-10a67c8569ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.calendar_event.body
+    - field.field.node.calendar_event.feeds_item
+    - field.field.node.calendar_event.field_event_date
+    - field.field.node.calendar_event.field_site_section
+    - node.type.calendar_event
+  module:
+    - feeds_ical
+    - feeds_tamper
+    - node
+    - smart_date
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      0aa900bf-d0b9-4597-82b9-1dfa25760a47:
+        text: PAC
+        plugin: rewrite
+        source: site_section
+        weight: 0
+        label: Rewrite
+        uuid: 0aa900bf-d0b9-4597-82b9-1dfa25760a47
+id: pac_calendar_feed
+label: 'PAC Calendar Feed'
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: feeds_ical
+parser_configuration: {  }
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: calendar_event
+custom_sources:
+  site_section:
+    label: 'Site Section'
+    value: 'Site Section'
+    machine_name: site_section
+mappings:
+  -
+    target: field_event_date
+    map:
+      value: dtstart
+      end_value: dtend
+    settings:
+      language: null
+  -
+    target: title
+    map:
+      value: summary
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: feeds_item
+    map:
+      url: 'parent:source'
+      guid: uid
+    unique: {  }
+    settings: {  }
+  -
+    target: body
+    map:
+      value: description
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_site_section
+    map:
+      target_id: site_section
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
