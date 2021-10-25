@@ -27,8 +27,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 36adefee-ebeb-4b4a-989d-6d4fcce4a5fc
       17403a4d-769e-4e18-8db9-1dee598c6947:
-        find: ''
-        replace: ''
+        find: 'http://anderson.sd38.bc.ca/sites/anderson.sd38.bc.ca/files'
+        replace: /files/anderson/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -38,8 +38,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 17403a4d-769e-4e18-8db9-1dee598c6947
       7e46f6ff-2711-4c1d-bce5-60b3e96f505d:
-        find: ''
-        replace: ''
+        find: 'http://blair.sd38.bc.ca/sites/blair.sd38.bc.ca/files'
+        replace: /files/blair/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -49,8 +49,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 7e46f6ff-2711-4c1d-bce5-60b3e96f505d
       97700d07-8835-4aef-9bec-6138b4da2afd:
-        find: ''
-        replace: ''
+        find: 'http://blundell.sd38.bc.ca/sites/blundell.sd38.bc.ca/files'
+        replace: /files/blundell/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -60,8 +60,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 97700d07-8835-4aef-9bec-6138b4da2afd
       06b11d71-e06b-40aa-a05e-9d7fa0f55a76:
-        find: ''
-        replace: ''
+        find: 'http://boyd.sd38.bc.ca/sites/boyd.sd38.bc.ca/files'
+        replace: /files/boyd/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -71,8 +71,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 06b11d71-e06b-40aa-a05e-9d7fa0f55a76
       bd960c78-0983-4a96-8266-6348a87dc9e1:
-        find: ''
-        replace: ''
+        find: 'http://bridge.sd38.bc.ca/sites/bridge.sd38.bc.ca/files'
+        replace: /files/bridge/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -82,8 +82,8 @@ third_party_settings:
         word_boundaries: false
         uuid: bd960c78-0983-4a96-8266-6348a87dc9e1
       28af2bef-3289-4350-9b32-7e1c13f2a3db:
-        find: ''
-        replace: ''
+        find: 'http://brighouse.sd38.bc.ca/sites/brighouse.sd38.bc.ca/files'
+        replace: /files/brighouse/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -93,8 +93,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 28af2bef-3289-4350-9b32-7e1c13f2a3db
       5f4c4198-dddb-445b-b4e7-31d8a5be7d31:
-        find: ''
-        replace: ''
+        find: 'http://jnburnett.sd38.bc.ca/sites/jnburnett.sd38.bc.ca/files'
+        replace: /files/jnburnett/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -104,8 +104,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 5f4c4198-dddb-445b-b4e7-31d8a5be7d31
       869ae4e7-7cb0-4786-9ca4-3097e06da14c:
-        find: ''
-        replace: ''
+        find: 'http://byng.sd38.bc.ca/sites/byng.sd38.bc.ca/files'
+        replace: /files/byng/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -115,8 +115,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 869ae4e7-7cb0-4786-9ca4-3097e06da14c
       dc7e3ec6-ed12-4e5b-bf24-8c7587070ff8:
-        find: ''
-        replace: ''
+        find: 'http://hjcambie.sd38.bc.ca/sites/hjcambie.sd38.bc.ca/files'
+        replace: /files/cambie/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -126,8 +126,8 @@ third_party_settings:
         word_boundaries: false
         uuid: dc7e3ec6-ed12-4e5b-bf24-8c7587070ff8
       8c10c079-70bf-4471-bf77-6457c9357a6a:
-        find: ''
-        replace: ''
+        find: 'http://cook.sd38.bc.ca/sites/cook.sd38.bc.ca/files'
+        replace: /files/cook/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -137,8 +137,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 8c10c079-70bf-4471-bf77-6457c9357a6a
       1a2e1975-4653-4675-b819-d00e3b046ccd:
-        find: ''
-        replace: ''
+        find: 'http://debeck.sd38.bc.ca/sites/debeck.sd38.bc.ca/files'
+        replace: /files/debeck/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -148,8 +148,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 1a2e1975-4653-4675-b819-d00e3b046ccd
       23968790-5654-4a67-a00a-1aee4b88c5f1:
-        find: ''
-        replace: ''
+        find: 'http://diefenbaker.sd38.bc.ca/sites/diefenbaker.sd38.bc.ca/files'
+        replace: /files/diefenbaker/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -159,8 +159,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 23968790-5654-4a67-a00a-1aee4b88c5f1
       c871b29d-9db3-45e9-8e8b-2377a7a0fb02:
-        find: ''
-        replace: ''
+        find: 'http://dixon.sd38.bc.ca/sites/dixon.sd38.bc.ca/files'
+        replace: /files/dixon/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -170,8 +170,8 @@ third_party_settings:
         word_boundaries: false
         uuid: c871b29d-9db3-45e9-8e8b-2377a7a0fb02
       9732d83c-3e27-4795-8a49-42b1343765fa:
-        find: ''
-        replace: ''
+        find: 'http://errington.sd38.bc.ca/sites/errington.sd38.bc.ca/files'
+        replace: /files/errington/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -181,8 +181,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 9732d83c-3e27-4795-8a49-42b1343765fa
       4830c6de-660d-4247-86f8-8f3ae41352ad:
-        find: ''
-        replace: ''
+        find: 'http://ferris.sd38.bc.ca/sites/ferris.sd38.bc.ca/files'
+        replace: /files/ferris/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -192,8 +192,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 4830c6de-660d-4247-86f8-8f3ae41352ad
       05e59219-c0d4-4275-b1b7-f6ed0f47135f:
-        find: ''
-        replace: ''
+        find: 'http://gardencity.sd38.bc.ca/sites/gardencity.sd38.bc.ca/files'
+        replace: /files/gardencity/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -203,8 +203,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 05e59219-c0d4-4275-b1b7-f6ed0f47135f
       7e0177f6-dc51-4c31-a50c-6c878d1c7b7d:
-        find: ''
-        replace: ''
+        find: 'http://currie.sd38.bc.ca/sites/currie.sd38.bc.ca/files'
+        replace: /files/currie/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -214,8 +214,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 7e0177f6-dc51-4c31-a50c-6c878d1c7b7d
       b2e0c190-cc40-499d-9c29-8b2beab55617:
-        find: ''
-        replace: ''
+        find: 'http://gilmore.sd38.bc.ca/sites/gilmore.sd38.bc.ca/files'
+        replace: /files/gilmore/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -225,8 +225,8 @@ third_party_settings:
         word_boundaries: false
         uuid: b2e0c190-cc40-499d-9c29-8b2beab55617
       b2b18859-c0c8-4252-a9f6-a842365f5ab1:
-        find: ''
-        replace: ''
+        find: 'http://grauer.sd38.bc.ca/sites/grauer.sd38.bc.ca/files'
+        replace: /files/grauer/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -236,8 +236,8 @@ third_party_settings:
         word_boundaries: false
         uuid: b2b18859-c0c8-4252-a9f6-a842365f5ab1
       c81c269e-b030-47cc-9df1-2d7436c9db95:
-        find: ''
-        replace: ''
+        find: 'http://hamilton.sd38.bc.ca/sites/hamilton.sd38.bc.ca/files'
+        replace: /files/hamilton/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -247,8 +247,8 @@ third_party_settings:
         word_boundaries: false
         uuid: c81c269e-b030-47cc-9df1-2d7436c9db95
       6dcc6104-83d7-4735-bdaa-b39a20c5710b:
-        find: ''
-        replace: ''
+        find: 'http://homma.sd38.bc.ca/sites/homma.sd38.bc.ca/files'
+        replace: /files/homma/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -258,8 +258,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 6dcc6104-83d7-4735-bdaa-b39a20c5710b
       62057bb9-feb5-4c55-a824-03888e8d8661:
-        find: ''
-        replace: ''
+        find: 'http://kidd.sd38.bc.ca/sites/kidd.sd38.bc.ca/files'
+        replace: /files/kidd/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -269,8 +269,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 62057bb9-feb5-4c55-a824-03888e8d8661
       7da26b6c-b7aa-4158-b786-0af469e61311:
-        find: ''
-        replace: ''
+        find: 'http://kingswood.sd38.bc.ca/sites/kingswood.sd38.bc.ca/files'
+        replace: /files/kingswood/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -280,8 +280,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 7da26b6c-b7aa-4158-b786-0af469e61311
       aa80d8aa-413f-4408-949f-1d5e3d121b63:
-        find: ''
-        replace: ''
+        find: 'http://lee.sd38.bc.ca/sites/lee.sd38.bc.ca/files'
+        replace: /files/lee/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -291,8 +291,8 @@ third_party_settings:
         word_boundaries: false
         uuid: aa80d8aa-413f-4408-949f-1d5e3d121b63
       8b0bf9cc-799e-43f8-9972-8ff4581c32d3:
-        find: ''
-        replace: ''
+        find: 'http://macneill.sd38.bc.ca/sites/macneill.sd38.bc.ca/files'
+        replace: /files/macneill/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -302,8 +302,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 8b0bf9cc-799e-43f8-9972-8ff4581c32d3
       b3196773-31b9-4456-9128-0c14a63882b9:
-        find: ''
-        replace: ''
+        find: 'http://maplelane.sd38.bc.ca/sites/maplelane.sd38.bc.ca/files'
+        replace: /files/maplelane/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -313,8 +313,8 @@ third_party_settings:
         word_boundaries: false
         uuid: b3196773-31b9-4456-9128-0c14a63882b9
       bfdae0b2-e000-453f-a20a-69521dffd291:
-        find: ''
-        replace: ''
+        find: 'http://mckay.sd38.bc.ca/sites/mckay.sd38.bc.ca/files'
+        replace: /files/mckay/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -324,8 +324,8 @@ third_party_settings:
         word_boundaries: false
         uuid: bfdae0b2-e000-453f-a20a-69521dffd291
       4bc36818-3719-4716-9d45-28b6c93d9e58:
-        find: ''
-        replace: ''
+        find: 'http://mckinney.sd38.bc.ca/sites/mckinney.sd38.bc.ca/files'
+        replace: /files/mckinney/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -335,8 +335,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 4bc36818-3719-4716-9d45-28b6c93d9e58
       b607adec-f3f1-4a2a-a848-9b76b7ca7666:
-        find: ''
-        replace: ''
+        find: 'http://mcmath.sd38.bc.ca/sites/mcmath.sd38.bc.ca/files'
+        replace: /files/mcmath/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -346,8 +346,8 @@ third_party_settings:
         word_boundaries: false
         uuid: b607adec-f3f1-4a2a-a848-9b76b7ca7666
       8fe40e9b-1a20-4526-9bc8-c117310435b9:
-        find: ''
-        replace: ''
+        find: 'http://mcnair.sd38.bc.ca/sites/mcnair.sd38.bc.ca/files'
+        replace: /files/mcnair/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -357,8 +357,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 8fe40e9b-1a20-4526-9bc8-c117310435b9
       72eaf700-1072-42c2-97d8-234cdd765a9a:
-        find: ''
-        replace: ''
+        find: 'http://mcneely.sd38.bc.ca/sites/mcneely.sd38.bc.ca/files'
+        replace: /files/mcneely/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -368,8 +368,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 72eaf700-1072-42c2-97d8-234cdd765a9a
       430ce2eb-2250-4374-bf61-026f69c55eac:
-        find: ''
-        replace: ''
+        find: 'http://mcneely.sd38.bc.ca/sites/mcneely.sd38.bc.ca/files'
+        replace: /files/mcneely/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -379,8 +379,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 430ce2eb-2250-4374-bf61-026f69c55eac
       176fc736-4d69-4135-8a03-980a88b65ebe:
-        find: ''
-        replace: ''
+        find: 'http://mcroberts.sd38.bc.ca/sites/mcroberts.sd38.bc.ca/files'
+        replace: /files/mcroberts/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -390,8 +390,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 176fc736-4d69-4135-8a03-980a88b65ebe
       83f387c4-f082-4ed9-9896-3b8daa6a0165:
-        find: ''
-        replace: ''
+        find: 'http://mitchell.sd38.bc.ca/sites/mitchell.sd38.bc.ca/files'
+        replace: /files/mitchell/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -401,8 +401,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 83f387c4-f082-4ed9-9896-3b8daa6a0165
       baa33338-ce96-47f2-b14b-c321fa427e6e:
-        find: ''
-        replace: ''
+        find: 'http://palmer.sd38.bc.ca/sites/palmer.sd38.bc.ca/files'
+        replace: /files/palmer/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -412,8 +412,8 @@ third_party_settings:
         word_boundaries: false
         uuid: baa33338-ce96-47f2-b14b-c321fa427e6e
       6da63293-8907-4fdb-8a82-0aa4acbff11b:
-        find: ''
-        replace: ''
+        find: 'http://quilchena.sd38.bc.ca/sites/quilchena.sd38.bc.ca/files'
+        replace: /files/quilchena/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -423,8 +423,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 6da63293-8907-4fdb-8a82-0aa4acbff11b
       3f2df6aa-cdab-430b-9cbd-b78319e759ff:
-        find: ''
-        replace: ''
+        find: 'http://rhs.sd38.bc.ca/sites/rhs.sd38.bc.ca/files'
+        replace: /files/rhs/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -434,8 +434,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 3f2df6aa-cdab-430b-9cbd-b78319e759ff
       eb738bc3-2ffd-457d-82ed-e8fd3c71ca44:
-        find: ''
-        replace: ''
+        find: 'http://spulukwuks.sd38.bc.ca/sites/spulukwuks.sd38.bc.ca/files'
+        replace: /files/spulukwuks/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -445,8 +445,8 @@ third_party_settings:
         word_boundaries: false
         uuid: eb738bc3-2ffd-457d-82ed-e8fd3c71ca44
       dcd60273-b9a2-448d-9c3a-045615daffc3:
-        find: ''
-        replace: ''
+        find: 'http://steves.sd38.bc.ca/sites/steves.sd38.bc.ca/files'
+        replace: /files/steves/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -456,8 +456,8 @@ third_party_settings:
         word_boundaries: false
         uuid: dcd60273-b9a2-448d-9c3a-045615daffc3
       4f08270c-5325-4445-9619-9268e08677d9:
-        find: ''
-        replace: ''
+        find: 'http://slss.sd38.bc.ca/sites/slss.sd38.bc.ca/files'
+        replace: /files/slss/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -467,8 +467,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 4f08270c-5325-4445-9619-9268e08677d9
       2446c083-be4d-4e3f-bc26-ac0119d14ab0:
-        find: ''
-        replace: ''
+        find: 'http://tait.sd38.bc.ca/sites/tait.sd38.bc.ca/files'
+        replace: /files/tait/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -478,8 +478,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 2446c083-be4d-4e3f-bc26-ac0119d14ab0
       aaa9c202-26db-47df-a2df-ca6e15f841e1:
-        find: ''
-        replace: ''
+        find: 'http://thompson.sd38.bc.ca/sites/thompson.sd38.bc.ca/files'
+        replace: /files/thompson/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -489,8 +489,8 @@ third_party_settings:
         word_boundaries: false
         uuid: aaa9c202-26db-47df-a2df-ca6e15f841e1
       15be0057-6f47-4766-975b-40333f6e3c90:
-        find: ''
-        replace: ''
+        find: 'http://tomsett.sd38.bc.ca/sites/tomsett.sd38.bc.ca/files'
+        replace: /files/tomsett/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -500,8 +500,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 15be0057-6f47-4766-975b-40333f6e3c90
       8b6dab81-3e27-4b6e-94d8-3c93b82d86a4:
-        find: ''
-        replace: ''
+        find: 'http://westwind.sd38.bc.ca/sites/westwind.sd38.bc.ca/files'
+        replace: /files/westwind/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -511,8 +511,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 8b6dab81-3e27-4b6e-94d8-3c93b82d86a4
       3bc65919-2d18-440b-9063-b9d62994e575:
-        find: ''
-        replace: ''
+        find: 'http://whiteside.sd38.bc.ca/sites/whiteside.sd38.bc.ca/files'
+        replace: /files/whiteside/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -522,8 +522,8 @@ third_party_settings:
         word_boundaries: false
         uuid: 3bc65919-2d18-440b-9063-b9d62994e575
       a38af231-b3bb-4020-8f24-fbfabe8c42c1:
-        find: ''
-        replace: ''
+        find: 'http://woodward.sd38.bc.ca/sites/woodward.sd38.bc.ca/files'
+        replace: /files/woodward/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
@@ -533,8 +533,8 @@ third_party_settings:
         word_boundaries: false
         uuid: a38af231-b3bb-4020-8f24-fbfabe8c42c1
       baba0925-17cc-4952-ab7f-19e6b48384eb:
-        find: ''
-        replace: ''
+        find: 'http://wowk.sd38.bc.ca/sites/wowk.sd38.bc.ca/files'
+        replace: /files/wowk/archive
         case_sensitive: false
         whole: false
         plugin: find_replace
