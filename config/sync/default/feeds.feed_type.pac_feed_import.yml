@@ -1,0 +1,758 @@
+uuid: 67958499-5203-4919-887d-7a383050a75b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_feature_image
+    - field.field.node.article.field_import_uuid
+    - field.field.node.article.field_legacy_attachments
+    - field.field.node.article.field_site_section
+    - node.type.article
+  module:
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      36adefee-ebeb-4b4a-989d-6d4fcce4a5fc:
+        find: https
+        replace: http
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 0
+        label: 'Find replace https to http'
+        word_boundaries: false
+        uuid: 36adefee-ebeb-4b4a-989d-6d4fcce4a5fc
+      17403a4d-769e-4e18-8db9-1dee598c6947:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 1
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 17403a4d-769e-4e18-8db9-1dee598c6947
+      7e46f6ff-2711-4c1d-bce5-60b3e96f505d:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 2
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 7e46f6ff-2711-4c1d-bce5-60b3e96f505d
+      97700d07-8835-4aef-9bec-6138b4da2afd:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 3
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 97700d07-8835-4aef-9bec-6138b4da2afd
+      06b11d71-e06b-40aa-a05e-9d7fa0f55a76:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 4
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 06b11d71-e06b-40aa-a05e-9d7fa0f55a76
+      bd960c78-0983-4a96-8266-6348a87dc9e1:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 5
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: bd960c78-0983-4a96-8266-6348a87dc9e1
+      28af2bef-3289-4350-9b32-7e1c13f2a3db:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 6
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 28af2bef-3289-4350-9b32-7e1c13f2a3db
+      5f4c4198-dddb-445b-b4e7-31d8a5be7d31:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 7
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 5f4c4198-dddb-445b-b4e7-31d8a5be7d31
+      869ae4e7-7cb0-4786-9ca4-3097e06da14c:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 8
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 869ae4e7-7cb0-4786-9ca4-3097e06da14c
+      dc7e3ec6-ed12-4e5b-bf24-8c7587070ff8:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 9
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: dc7e3ec6-ed12-4e5b-bf24-8c7587070ff8
+      8c10c079-70bf-4471-bf77-6457c9357a6a:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 10
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 8c10c079-70bf-4471-bf77-6457c9357a6a
+      1a2e1975-4653-4675-b819-d00e3b046ccd:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 11
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 1a2e1975-4653-4675-b819-d00e3b046ccd
+      23968790-5654-4a67-a00a-1aee4b88c5f1:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 12
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 23968790-5654-4a67-a00a-1aee4b88c5f1
+      c871b29d-9db3-45e9-8e8b-2377a7a0fb02:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 13
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: c871b29d-9db3-45e9-8e8b-2377a7a0fb02
+      9732d83c-3e27-4795-8a49-42b1343765fa:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 14
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 9732d83c-3e27-4795-8a49-42b1343765fa
+      4830c6de-660d-4247-86f8-8f3ae41352ad:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 15
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 4830c6de-660d-4247-86f8-8f3ae41352ad
+      05e59219-c0d4-4275-b1b7-f6ed0f47135f:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 16
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 05e59219-c0d4-4275-b1b7-f6ed0f47135f
+      7e0177f6-dc51-4c31-a50c-6c878d1c7b7d:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 17
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 7e0177f6-dc51-4c31-a50c-6c878d1c7b7d
+      b2e0c190-cc40-499d-9c29-8b2beab55617:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 18
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: b2e0c190-cc40-499d-9c29-8b2beab55617
+      b2b18859-c0c8-4252-a9f6-a842365f5ab1:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 19
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: b2b18859-c0c8-4252-a9f6-a842365f5ab1
+      c81c269e-b030-47cc-9df1-2d7436c9db95:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 20
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: c81c269e-b030-47cc-9df1-2d7436c9db95
+      6dcc6104-83d7-4735-bdaa-b39a20c5710b:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 21
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 6dcc6104-83d7-4735-bdaa-b39a20c5710b
+      62057bb9-feb5-4c55-a824-03888e8d8661:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 22
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 62057bb9-feb5-4c55-a824-03888e8d8661
+      7da26b6c-b7aa-4158-b786-0af469e61311:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 23
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 7da26b6c-b7aa-4158-b786-0af469e61311
+      aa80d8aa-413f-4408-949f-1d5e3d121b63:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 24
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: aa80d8aa-413f-4408-949f-1d5e3d121b63
+      8b0bf9cc-799e-43f8-9972-8ff4581c32d3:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 25
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 8b0bf9cc-799e-43f8-9972-8ff4581c32d3
+      b3196773-31b9-4456-9128-0c14a63882b9:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 26
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: b3196773-31b9-4456-9128-0c14a63882b9
+      bfdae0b2-e000-453f-a20a-69521dffd291:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 27
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: bfdae0b2-e000-453f-a20a-69521dffd291
+      4bc36818-3719-4716-9d45-28b6c93d9e58:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 28
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 4bc36818-3719-4716-9d45-28b6c93d9e58
+      b607adec-f3f1-4a2a-a848-9b76b7ca7666:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 29
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: b607adec-f3f1-4a2a-a848-9b76b7ca7666
+      8fe40e9b-1a20-4526-9bc8-c117310435b9:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 30
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 8fe40e9b-1a20-4526-9bc8-c117310435b9
+      72eaf700-1072-42c2-97d8-234cdd765a9a:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 31
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 72eaf700-1072-42c2-97d8-234cdd765a9a
+      430ce2eb-2250-4374-bf61-026f69c55eac:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 32
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 430ce2eb-2250-4374-bf61-026f69c55eac
+      176fc736-4d69-4135-8a03-980a88b65ebe:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 33
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 176fc736-4d69-4135-8a03-980a88b65ebe
+      83f387c4-f082-4ed9-9896-3b8daa6a0165:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 34
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 83f387c4-f082-4ed9-9896-3b8daa6a0165
+      baa33338-ce96-47f2-b14b-c321fa427e6e:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 35
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: baa33338-ce96-47f2-b14b-c321fa427e6e
+      6da63293-8907-4fdb-8a82-0aa4acbff11b:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 36
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 6da63293-8907-4fdb-8a82-0aa4acbff11b
+      3f2df6aa-cdab-430b-9cbd-b78319e759ff:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 37
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 3f2df6aa-cdab-430b-9cbd-b78319e759ff
+      eb738bc3-2ffd-457d-82ed-e8fd3c71ca44:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 38
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: eb738bc3-2ffd-457d-82ed-e8fd3c71ca44
+      dcd60273-b9a2-448d-9c3a-045615daffc3:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 39
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: dcd60273-b9a2-448d-9c3a-045615daffc3
+      4f08270c-5325-4445-9619-9268e08677d9:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 40
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 4f08270c-5325-4445-9619-9268e08677d9
+      2446c083-be4d-4e3f-bc26-ac0119d14ab0:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 41
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 2446c083-be4d-4e3f-bc26-ac0119d14ab0
+      aaa9c202-26db-47df-a2df-ca6e15f841e1:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 42
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: aaa9c202-26db-47df-a2df-ca6e15f841e1
+      15be0057-6f47-4766-975b-40333f6e3c90:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 43
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 15be0057-6f47-4766-975b-40333f6e3c90
+      8b6dab81-3e27-4b6e-94d8-3c93b82d86a4:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 44
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 8b6dab81-3e27-4b6e-94d8-3c93b82d86a4
+      3bc65919-2d18-440b-9063-b9d62994e575:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 45
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 3bc65919-2d18-440b-9063-b9d62994e575
+      a38af231-b3bb-4020-8f24-fbfabe8c42c1:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 46
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: a38af231-b3bb-4020-8f24-fbfabe8c42c1
+      baba0925-17cc-4952-ab7f-19e6b48384eb:
+        find: ''
+        replace: ''
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 47
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: baba0925-17cc-4952-ab7f-19e6b48384eb
+      f61fff72-94e1-45cc-a251-9b2a59c0cae6:
+        find: http
+        replace: https
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: body
+        weight: 48
+        label: 'Find replace http to https'
+        word_boundaries: false
+        uuid: f61fff72-94e1-45cc-a251-9b2a59c0cae6
+      66c66cae-0a1d-4585-9ce1-3bf3911a7ef0:
+        find: https
+        replace: http
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: feature_image
+        weight: 0
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 66c66cae-0a1d-4585-9ce1-3bf3911a7ef0
+      fb02cea2-3f1c-42ba-914d-f165ed16365b:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachments
+        weight: 0
+        label: Explode
+        uuid: fb02cea2-3f1c-42ba-914d-f165ed16365b
+      9a3f3e53-dbc2-4398-a4e4-e1faca87bb18:
+        find: https
+        replace: http
+        case_sensitive: false
+        whole: false
+        plugin: find_replace
+        source: attachments
+        weight: 1
+        label: 'Find replace'
+        word_boundaries: false
+        uuid: 9a3f3e53-dbc2-4398-a4e4-e1faca87bb18
+      5e6f4910-7a9d-4a72-9135-391d500c0ec5:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachments
+        weight: 2
+        label: 'Characters to trim'
+        uuid: 5e6f4910-7a9d-4a72-9135-391d500c0ec5
+      0c6d5f3b-a495-49f6-be59-ec93c56ae959:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachment_names
+        weight: 0
+        label: Explode
+        uuid: 0c6d5f3b-a495-49f6-be59-ec93c56ae959
+      12b67904-511a-4123-8ab2-5aba0ed078b7:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachment_names
+        weight: 1
+        label: 'Characters to trim'
+        uuid: 12b67904-511a-4123-8ab2-5aba0ed078b7
+id: pac_feed_import
+label: 'PAC Feed Import'
+description: ''
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: article
+custom_sources:
+  title:
+    label: title
+    value: title
+    machine_name: title
+  body:
+    label: body
+    value: body
+    machine_name: body
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
+  sticky:
+    label: sticky
+    value: sticky
+    machine_name: sticky
+  '':
+    label: ''
+    value: ''
+    machine_name: ''
+  feature_image:
+    label: 'feature image'
+    value: 'feature image'
+    machine_name: feature_image
+  attachments:
+    label: Attachments
+    value: Attachments
+    machine_name: attachments
+  attachment_names:
+    label: 'Attachment Names'
+    value: 'Attachment Names'
+    machine_name: attachment_names
+  import_uuid:
+    label: 'Import UUID'
+    value: 'Import UUID'
+    machine_name: import_uuid
+  status:
+    label: status
+    value: status
+    machine_name: status
+  site_section:
+    label: 'Site Section'
+    value: 'Site Section'
+    machine_name: site_section
+  created:
+    label: created
+    value: created
+    machine_name: created
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: ''
+  -
+    target: body
+    map:
+      value: body
+      summary: summary
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: sticky
+    map:
+      value: sticky
+    settings:
+      language: null
+  -
+    target: field_feature_image
+    map:
+      target_id: feature_image
+    settings:
+      language: en
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_legacy_attachments
+    map:
+      target_id: attachments
+      description: attachment_names
+    settings:
+      language: en
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_import_uuid
+    map:
+      value: import_uuid
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: field_site_section
+    map:
+      target_id: site_section
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
