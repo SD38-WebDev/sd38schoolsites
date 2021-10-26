@@ -9,14 +9,14 @@ label: 'Article Pattern'
 type: 'canonical_entities:node'
 pattern: '[node:field_site_section:entity:field_section_home_page]/news/[node:created:html_year]/[node:created:custom:m]/[node:title]'
 selection_criteria:
-  5cb6fd0e-e908-4ad0-b5d5-822463935b4f:
+  17209d04-2d4a-40d7-b560-9cba5ecaa067:
     id: node_type
     bundles:
       article: article
     negate: false
     context_mapping:
       node: node
-    uuid: 5cb6fd0e-e908-4ad0-b5d5-822463935b4f
+    uuid: 17209d04-2d4a-40d7-b560-9cba5ecaa067
 selection_logic: and
 weight: -5
 relationships: {  }
