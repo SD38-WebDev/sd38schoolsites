@@ -108,7 +108,7 @@
         "drupal/image_effects": "^3.1",
         "drupal/imagemagick": "^3.2",
         "drupal/libraries": "^3.0@beta",
-        "drupal/linkit": "^4.3",
+        "drupal/linkit": "^4.4",
         "drupal/menu_block": "^1.7",
         "drupal/onlyone": "^1.10",
         "drupal/outlook_calendar": "^4.1",
@@ -168,6 +168,9 @@
           },
           "drupal/feeds": {
               "Add a mapping target to media field": "https://www.drupal.org/files/issues/2021-08-22/feeds-media-image-2928904.patch"
+          },
+          "drupal/core": {
+              "Move cursor to new line after image insert in CKEditor": "https://www.drupal.org/files/issues/2019-12-18/0004-Set-focus-for-chrome-after-html-insert-with-space.patch"
           }
         },
         "installer-paths": {
