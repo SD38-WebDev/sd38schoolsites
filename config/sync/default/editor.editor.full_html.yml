@@ -33,6 +33,7 @@ settings:
           items:
             - Linkit
             - DrupalUnlink
+            - DrupalLink
         -
           name: Lists
           items:
@@ -42,6 +43,7 @@ settings:
           name: Media
           items:
             - Blockquote
+            - DrupalImage
             - DrupalMediaLibrary
             - Table
         -
@@ -70,7 +72,7 @@ settings:
           width: '854'
           height: '480'
 image_upload:
-  status: false
+  status: true
   scheme: public
   directory: inline-images
   max_size: ''
