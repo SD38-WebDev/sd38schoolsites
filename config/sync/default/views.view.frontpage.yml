@@ -143,7 +143,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<h2><a href="{{ view_node_1 }}">{{ title__value }}</a></h2>'
+            text: '<h2><a href="{{ view_node_1 }}">{{ title }}</a></h2>'
             make_link: false
             path: ''
             absolute: false
