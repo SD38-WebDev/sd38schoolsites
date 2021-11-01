@@ -143,7 +143,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<h2><a href="{{ view_node_1 }}">{{ title__value }}</a></h2>'
+            text: '<h2><a href="{{ view_node_1 }}">{{ title }}</a></h2>'
             make_link: false
             path: ''
             absolute: false
@@ -821,7 +821,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col\">\r\n{{ field_section_home_page }}\r\n{{ title }}\r\n{{ field_event_date }}\r\n{{ body }}\r\n{{ view_node }}\r\n</div>"
+            text: "<div class=\"col\">\r\n{{ field_section_home_page }}\r\n{{ title }}\r\n{{ field_event_date }}\r\n<div class=\"small\">\r\n{{ body }}\r\n{{ view_node }}\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

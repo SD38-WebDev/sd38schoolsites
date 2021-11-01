@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.6_columns
+    - field.field.paragraph.tile_link.field_link_text
     - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
@@ -32,7 +33,7 @@ third_party_settings:
     group_wrapper:
       children:
         - field_tile_image
-        - 'dynamic_token_field:paragraph-url_title_field'
+        - field_link_text
       parent_name: group_link_group
       weight: 20
       format_type: html_element
@@ -74,18 +75,20 @@ third_party_settings:
         - group_link_group
         - group_wrapper
         - field_tile_image
-        - 'dynamic_token_field:paragraph-url_title_field'
-    fields:
-      'dynamic_token_field:paragraph-url_title_field':
-        plugin_id: 'dynamic_token_field:paragraph-url_title_field'
-        weight: 22
-        label: hidden
-        formatter: default
+        - field_link_text
 id: paragraph.tile_link.6_columns
 targetEntityType: paragraph
 bundle: tile_link
 mode: 6_columns
 content:
+  field_link_text:
+    type: string
+    weight: 22
+    region: main
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_tile_image:
     type: media_thumbnail
     weight: 21
