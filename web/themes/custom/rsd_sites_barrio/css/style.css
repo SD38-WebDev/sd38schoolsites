@@ -695,6 +695,10 @@ body.user-logged-in .card:hover .ops-links {
 
 /* Paragraph Styling */
 
+.paragraph .contextual {
+  width: auto !important;
+}t
+
 .paragraph--type-basic-text-section.paragraph {
   display: flex;
   width: unset;
@@ -1194,6 +1198,10 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 /*****************************/
 /** Calendar / Event Styles **/
 /*****************************/
+
+.fc table {
+  font-size: 0.92em;
+}
 
 .fc-view-container a.fc-event {
   color: white !important;
