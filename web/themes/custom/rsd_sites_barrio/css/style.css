@@ -111,6 +111,11 @@ body.unpublished #block-mainpagecontent {
   margin-bottom: 2.5rem !important;
 }
 
+.sidebar-content .sidebar-menu li:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: .25rem!important;
+}
+
 .sidebar-content .content-section {
   margin-bottom: 1.25rem !important;
 }
@@ -464,8 +469,10 @@ a:hover.navbar-brand {
 	font-weight: 600;
 }
 
-#main-wrapper a.btn,
-#navbar-main a.btn {
+#main-wrapper a.btn-secondary,
+#navbar-main a.btn-secondary,
+#main-wrapper a.btn-primary,
+#navbar-main a.btn-primary {
   color: #fff !important;
 }
 

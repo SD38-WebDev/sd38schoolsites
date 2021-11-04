@@ -1,0 +1,10 @@
+uuid: 1eb165fa-50e8-4b22-9d1d-4751312260a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_content_w_sidebar_menu_
+label: 'Full Content (with sidebar menu)'
+targetEntityType: node
+cache: true

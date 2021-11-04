@@ -5,6 +5,6 @@ dependencies:
   module:
     - node
 id: node.full_content_includes_menu_block_
-label: 'Full Content (includes menu block)'
+label: 'Full Content (with menu bar)'
 targetEntityType: node
 cache: true
