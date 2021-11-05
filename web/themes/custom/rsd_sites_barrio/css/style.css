@@ -111,6 +111,11 @@ body.unpublished #block-mainpagecontent {
   margin-bottom: 2.5rem !important;
 }
 
+.sidebar-content .sidebar-menu li:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: .25rem!important;
+}
+
 .sidebar-content .content-section {
   margin-bottom: 1.25rem !important;
 }
@@ -464,8 +469,10 @@ a:hover.navbar-brand {
 	font-weight: 600;
 }
 
-#main-wrapper a.btn,
-#navbar-main a.btn {
+#main-wrapper a.btn-secondary,
+#navbar-main a.btn-secondary,
+#main-wrapper a.btn-primary,
+#navbar-main a.btn-primary {
   color: #fff !important;
 }
 
@@ -695,6 +702,10 @@ body.user-logged-in .card:hover .ops-links {
 
 /* Paragraph Styling */
 
+.paragraph .contextual {
+  width: auto !important;
+}t
+
 .paragraph--type-basic-text-section.paragraph {
   display: flex;
   width: unset;
@@ -862,6 +873,13 @@ video {
 .tile-link .flex-stretch {
   display: flex;
   align-items: stretch;
+}
+
+.tile-link .bs-1col,
+.tile-link .field-group-link,
+.tile-link .field-group-link .wrapper,
+.tile-link:hover .field-group-link .wrapper {
+  flex: 1;
 }
 
 .tile-link {
@@ -1194,6 +1212,10 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 /*****************************/
 /** Calendar / Event Styles **/
 /*****************************/
+
+.fc table {
+  font-size: 0.92em;
+}
 
 .fc-view-container a.fc-event {
   color: white !important;

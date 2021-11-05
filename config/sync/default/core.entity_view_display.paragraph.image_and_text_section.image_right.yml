@@ -28,7 +28,7 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: ' class|d-flex align-items-center mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
+          attributes: ' class|d-flex row align-items-center mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
         regions:
           left:
             wrapper: div

@@ -1185,7 +1185,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<div class="row"><div class="col bg-theme border-0625 p-4">No articles have been published yet.</div></div>'
+          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
           plugin_id: text_custom
     cache_metadata:
       max-age: -1

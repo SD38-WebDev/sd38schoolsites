@@ -26,9 +26,10 @@ third_party_settings:
       format_settings:
         target: field_tile_url
         custom_uri: ''
-        target_attribute: _blank
+        target_attribute: default
         id: ''
         classes: flex-stretch
+        show_empty_fields: false
       label: 'Link Group'
     group_wrapper:
       children:

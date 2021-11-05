@@ -71,7 +71,7 @@ display:
           default_view: dayGridMonth
           firstDay: '0'
           nav_links: 0
-          timeFormat: 'hh:mm a'
+          timeFormat: ''
           allowEventOverlap: 1
           updateAllowed: 1
           updateConfirm: 1
@@ -86,7 +86,10 @@ display:
           color_bundle:
             article: '#3a87ad'
             calendar_event: '#3a87ad'
+            calendar_page: '#3a87ad'
             header_image: '#3a87ad'
+            home_page_button: '#3a87ad'
+            newsletter: '#3a87ad'
             news_alert: '#3a87ad'
             page: '#3a87ad'
             staff_page: '#3a87ad'
