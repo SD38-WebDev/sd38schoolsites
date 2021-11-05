@@ -875,6 +875,13 @@ video {
   align-items: stretch;
 }
 
+.tile-link .bs-1col,
+.tile-link .field-group-link,
+.tile-link .field-group-link .wrapper,
+.tile-link:hover .field-group-link .wrapper {
+  flex: 1;
+}
+
 .tile-link {
 	text-align: center;
 	font-size: 1rem;
