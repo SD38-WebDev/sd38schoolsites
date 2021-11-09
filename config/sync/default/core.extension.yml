@@ -68,6 +68,7 @@ module:
   image: 0
   image_effects: 0
   imagemagick: 0
+  jquery_ui: 0
   jsonapi: 0
   layout_discovery: 0
   libraries: 0
@@ -106,7 +107,10 @@ module:
   system: 0
   tamper: 0
   taxonomy: 0
+  taxonomy_manager: 0
   telephone: 0
+  term_merge: 0
+  term_reference_change: 0
   text: 0
   theme_permission: 0
   token: 0

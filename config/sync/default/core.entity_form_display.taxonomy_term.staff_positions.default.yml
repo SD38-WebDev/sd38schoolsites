@@ -1,0 +1,38 @@
+uuid: 402eff56-8f1a-4917-97be-d555f44ce042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.staff_positions.field_grouped_header
+    - taxonomy.vocabulary.staff_positions
+id: taxonomy_term.staff_positions.default
+targetEntityType: taxonomy_term
+bundle: staff_positions
+mode: default
+content:
+  field_grouped_header:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

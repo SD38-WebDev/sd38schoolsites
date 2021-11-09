@@ -1,6 +1,6 @@
 uuid: 1af5bad2-2dd7-4eda-8dc6-f89d2663ff41
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.node.staff_listing_table
@@ -14,7 +14,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bs_1col_stacked
+      id: bs_2col_stacked
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -32,13 +32,17 @@ third_party_settings:
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 0
-            attributes: 'class|col-12 col-lg-9'
-          main:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 0
             attributes: class|col-12
+          left:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-9'
+          right:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-3'
           bottom:
             wrapper: div
             classes:
@@ -46,15 +50,15 @@ third_party_settings:
             add_region_classes: 0
             attributes: 'class|col-12 col-lg-9'
     regions:
-      top:
+      left:
         - node_title
-        - body
-      main:
         - 'dynamic_block_field:node-staff_listing_block'
+      right:
+        - body
     fields:
       'dynamic_block_field:node-staff_listing_block':
         plugin_id: 'dynamic_block_field:node-staff_listing_block'
-        weight: 2
+        weight: 1
         label: hidden
         formatter: default
       node_title:
@@ -80,10 +84,10 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
-    region: top
+    region: right
 hidden:
   field_staff_members: true
   links: true

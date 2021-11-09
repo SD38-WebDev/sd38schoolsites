@@ -1,0 +1,30 @@
+uuid: 5fe930aa-b29a-481e-9496-9c49a1430e06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.staff_positions.field_grouped_header
+    - taxonomy.vocabulary.staff_positions
+  module:
+    - text
+id: taxonomy_term.staff_positions.default
+targetEntityType: taxonomy_term
+bundle: staff_positions
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_grouped_header:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

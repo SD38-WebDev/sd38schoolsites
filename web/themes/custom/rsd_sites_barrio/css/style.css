@@ -373,6 +373,13 @@ h3 a {
     font-size:0.9rem !important;
 }
 
+#block-mainpagecontent .view-staff-page-list h2 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
 body {
 	font-size: 1.15rem;
 }
@@ -558,6 +565,10 @@ img {
 .site-footer .page-link,
 .site-footer a:active {
 	color: white;
+}
+
+.w-30 {
+  width: 30%;
 }
 
 /*********************/
@@ -1199,6 +1210,11 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 .view-id-user_content_list .views-form { /** Fix alignment issue. Matches '.col' style **/
 	padding-right: 15px;
 	padding-left: 15px;
+}
+
+#block-mainpagecontent .view-staff-page-list {
+  background: white;
+  border-radius: 0.3125rem;
 }
 
 /**********************/
