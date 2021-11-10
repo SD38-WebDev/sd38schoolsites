@@ -45,7 +45,7 @@ filters:
     status: false
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span> <u> <s> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p> <h1> <pre>'
+      allowed_html: '<a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span> <u> <s> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <drupal-media data-entity-type data-entity-uuid data-entity-substitution data-view-mode data-align data-caption alt title> <p> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -93,3 +93,10 @@ filters:
     status: false
     weight: -42
     settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -51
+    settings:
+      title: false
