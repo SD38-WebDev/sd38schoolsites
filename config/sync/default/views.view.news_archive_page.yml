@@ -383,7 +383,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<div class="row"><h1>[site:name] News</h1></div>'
+          content: '<div class="row"><h1>News Archive</h1></div>'
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -418,11 +418,12 @@ display:
         type: normal
         title: News
         description: ''
-        expanded: false
+        expanded: true
         parent: ''
         weight: -49
         context: '0'
         menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

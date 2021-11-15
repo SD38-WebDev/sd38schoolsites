@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c4ee9777e71e38ad37c4948b1bab018",
+    "content-hash": "de0ff53ac31559669ead83a400cf221c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2619,17 +2619,17 @@
         },
         {
             "name": "drupal/bg_image_formatter",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bg_image_formatter.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bg_image_formatter-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "74da652fd07c9d9fb613571bcbc697567f497ec6"
+                "url": "https://ftp.drupal.org/files/projects/bg_image_formatter-8.x-1.15.zip",
+                "reference": "8.x-1.15",
+                "shasum": "fae1e0880d7a4f0052223246d3a6ba6102926239"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2640,8 +2640,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1588018377",
+                    "version": "8.x-1.15",
+                    "datestamp": "1635517518",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3251,24 +3251,24 @@
         },
         {
             "name": "drupal/color_field",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/color_field.git",
-                "reference": "8.x-2.4"
+                "reference": "8.x-2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.4.zip",
-                "reference": "8.x-2.4",
-                "shasum": "11c163a409f4f70083f188d917fecc6052c53a2f"
+                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.5.zip",
+                "reference": "8.x-2.5",
+                "shasum": "9b0d299cb24d3cb21c7fb6a6a08d32ae5aed8652"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "require-dev": {
-                "drupal/token": "~1.3",
-                "nickwilde1990/php-composter-phpcs-drupal": "^2.0"
+                "drupal/core-recommended": "*",
+                "drupal/token": "~1.3"
             },
             "suggest": {
                 "bower-asset/jquery-simple-color": "^v1.2.2: Provides JavaScript library necessary for the Color Grid widget",
@@ -3277,8 +3277,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.4",
-                    "datestamp": "1596479692",
+                    "version": "8.x-2.5",
+                    "datestamp": "1632938098",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3665,17 +3665,17 @@
         },
         {
             "name": "drupal/config_terms",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_terms.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_terms-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "43261e452c63c554bb3c9a29c73405fbc4603599"
+                "url": "https://ftp.drupal.org/files/projects/config_terms-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "5f0983ffa3444d8d779d6e3ceff4c57485cffcdd"
             },
             "require": {
                 "drupal/core": "^8.7.12 || ^9.0"
@@ -3683,8 +3683,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1617247080",
+                    "version": "8.x-1.5",
+                    "datestamp": "1634594062",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5959,26 +5959,26 @@
         },
         {
             "name": "drupal/libraries",
-            "version": "3.0.0-beta1",
+            "version": "3.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/libraries.git",
-                "reference": "8.x-3.0-beta1"
+                "reference": "8.x-3.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/libraries-8.x-3.0-beta1.zip",
-                "reference": "8.x-3.0-beta1",
-                "shasum": "7843870c52251cc5290e1cdca94524f71edbf016"
+                "url": "https://ftp.drupal.org/files/projects/libraries-8.x-3.0-beta2.zip",
+                "reference": "8.x-3.0-beta2",
+                "shasum": "6e2ade6754f1406345e35b55cf27006b80349c25"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-beta1",
-                    "datestamp": "1618261123",
+                    "version": "8.x-3.0-beta2",
+                    "datestamp": "1635190094",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -6262,17 +6262,17 @@
         },
         {
             "name": "drupal/paragraph_view_mode",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraph_view_mode.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraph_view_mode-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "f0032635ee78c9d7c3286f928d861a79812dc3a2"
+                "url": "https://ftp.drupal.org/files/projects/paragraph_view_mode-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "d31e2a8f75b94a8e2079771c677b8e42ef837afb"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9.0",
@@ -6281,8 +6281,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1605481252",
+                    "version": "2.0.2",
+                    "datestamp": "1634386045",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

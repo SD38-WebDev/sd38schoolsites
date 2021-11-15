@@ -64,6 +64,7 @@ permissions:
   - 'delete terms in staff_positions'
   - 'delete terms in tags'
   - 'ds switch page'
+  - 'ds switch staff_page'
   - 'edit any article content'
   - 'edit any calendar_event content'
   - 'edit any calendar_page content'
