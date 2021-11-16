@@ -3,3 +3,13 @@ sd38_sitelinks.front_page:
   route_name: '<front>'
   menu_name: main
   weight: -50
+sd38_sitelinks.staff_positions:
+  title: 'Staff Positions'
+  parent: system.admin_content
+  url: internal:/admin/structure/taxonomy/manage/staff_positions/overview
+  weight: 50
+sd38_sitelinks.staff_grades_departments:
+  title: 'Staff Grades/Depts'
+  parent: system.admin_content
+  url: internal:/admin/structure/taxonomy/manage/staff_grades_departments/overview
+  weight: 49

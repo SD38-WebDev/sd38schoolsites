@@ -1,0 +1,25 @@
+uuid: 8550b773-3ad4-471c-85a0-1a3a20650fa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_grouped_header
+    - taxonomy.vocabulary.staff_positions
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: taxonomy_term.staff_positions.field_grouped_header
+field_name: field_grouped_header
+entity_type: taxonomy_term
+bundle: staff_positions
+label: 'Grouped Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

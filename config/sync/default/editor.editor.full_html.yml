@@ -31,7 +31,6 @@ settings:
         -
           name: Links
           items:
-            - Linkit
             - DrupalUnlink
             - DrupalLink
         -
@@ -62,8 +61,6 @@ settings:
     font:
       font_names: ''
       font_sizes: ''
-    linkit:
-      linkit_profile: default_profile
     video_embed:
       defaults:
         children:
@@ -71,6 +68,9 @@ settings:
           responsive: true
           width: '854'
           height: '480'
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default_profile
 image_upload:
   status: true
   scheme: public

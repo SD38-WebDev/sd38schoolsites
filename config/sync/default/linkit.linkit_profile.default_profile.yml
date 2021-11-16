@@ -7,19 +7,12 @@ dependencies:
 id: default_profile
 label: 'Default Profile'
 description: ''
-attributes:
-  target:
-    id: target
-    weight: 0
-    settings:
-      widget_type: simple_checkbox
 matchers:
   df4eb3c2-7ab7-4851-846a-b477b93c5aa4:
     uuid: df4eb3c2-7ab7-4851-846a-b477b93c5aa4
     id: 'entity:node'
     weight: 0
     settings:
-      result_description: '<strong>Updated:</strong> [node:changed] <strong>Node ID:</strong> [node:nid]'
       bundles:
         article: article
         calendar_event: calendar_event
@@ -28,3 +21,5 @@ matchers:
         staff_page: staff_page
       group_by_bundle: true
       include_unpublished: true
+      substitution_type: canonical
+      metadata: '<strong>Updated:</strong> [node:changed] <strong>Node ID:</strong> [node:nid]'

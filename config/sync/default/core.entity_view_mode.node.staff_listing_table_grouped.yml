@@ -1,0 +1,10 @@
+uuid: f7c9ef3e-bc63-41ef-b023-545ab49f7b7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.staff_listing_table_grouped
+label: 'Staff Listing - Table Grouped'
+targetEntityType: node
+cache: true

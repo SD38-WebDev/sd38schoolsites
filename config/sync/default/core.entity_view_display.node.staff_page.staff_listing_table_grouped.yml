@@ -1,8 +1,9 @@
-uuid: e0e00821-4374-4132-b19a-0b9878cb9ea9
+uuid: 75ab1682-20bb-41d1-9323-4d3a46ce6d13
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.staff_listing_table_grouped
     - field.field.node.staff_page.body
     - field.field.node.staff_page.field_staff_members
     - node.type.staff_page
@@ -47,16 +48,16 @@ third_party_settings:
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 0
-            attributes: 'class|col-12 col-lg-9'
+            attributes: class|col-12
     regions:
       left:
         - node_title
-        - 'dynamic_block_field:node-staff_listing_block'
+        - 'dynamic_block_field:node-staff_listing_block_grouped'
       right:
         - body
     fields:
-      'dynamic_block_field:node-staff_listing_block':
-        plugin_id: 'dynamic_block_field:node-staff_listing_block'
+      'dynamic_block_field:node-staff_listing_block_grouped':
+        plugin_id: 'dynamic_block_field:node-staff_listing_block_grouped'
         weight: 1
         label: hidden
         formatter: default
@@ -75,10 +76,10 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-id: node.staff_page.default
+id: node.staff_page.staff_listing_table_grouped
 targetEntityType: node
 bundle: staff_page
-mode: default
+mode: staff_listing_table_grouped
 content:
   body:
     label: hidden
