@@ -607,7 +607,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: 'col text-wrap'
+          element_class: 'col text-wrap small'
           element_label_type: div
           element_label_class: col
           element_label_colon: true
@@ -991,7 +991,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: col-1
+          element_class: 'col-1 small'
           element_label_type: ''
           element_label_class: col-1
           element_label_colon: true
