@@ -3,21 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_banner.field_images
+    - field.field.paragraph.image_banner.field_banner_image
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.image_banner
   module:
-    - media_library
+    - image
 id: paragraph.image_banner.default
 targetEntityType: paragraph
 bundle: image_banner
 mode: default
 content:
-  field_images:
-    weight: 0
+  field_banner_image:
+    weight: 1
     settings:
-      media_types: {  }
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: media_library_widget
+    type: image_image
     region: content
 hidden:
   created: true
