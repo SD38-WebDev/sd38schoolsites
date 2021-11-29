@@ -105,6 +105,9 @@ settings:
       image_and_text_section:
         enabled: true
         weight: 41
+      image_banner:
+        weight: 52
+        enabled: false
       image_gallery:
         enabled: true
         weight: 40

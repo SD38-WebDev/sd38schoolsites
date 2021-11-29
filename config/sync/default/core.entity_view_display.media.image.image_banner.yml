@@ -1,0 +1,38 @@
+uuid: bb233a6a-5af1-4349-83b1-2bcd2c4082b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.image_banner
+    - field.field.media.image.field_media_image
+    - image.style.image_banner
+    - media.type.image
+  module:
+    - ds
+    - image
+id: media.image.image_banner
+targetEntityType: media
+bundle: image
+mode: image_banner
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: image_banner
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

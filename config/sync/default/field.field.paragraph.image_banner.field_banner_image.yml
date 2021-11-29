@@ -1,0 +1,43 @@
+uuid: a93a2640-87ad-4463-86cc-ed737f812a87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_image
+    - paragraphs.paragraphs_type.image_banner
+  module:
+    - image
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.image_banner.field_banner_image
+field_name: field_banner_image
+entity_type: paragraph
+bundle: image_banner
+label: 'Banner Image'
+description: 'Banner images are automatically cropped to 1200px by 300px. Uploading images at these dimenions yields the best results.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'banner-images/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
