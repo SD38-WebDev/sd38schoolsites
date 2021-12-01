@@ -17,14 +17,6 @@ dependencies:
 third_party_settings:
   feeds_tamper:
     tampers:
-      71d3272b-f9b0-4dde-8e0f-f1a0b247e7f6:
-        separator: ','
-        limit: null
-        plugin: explode
-        source: gallery_image
-        weight: 0
-        label: Explode
-        uuid: 71d3272b-f9b0-4dde-8e0f-f1a0b247e7f6
       52bf1a79-4578-41cc-b8b5-1cc88b248fa1:
         separator: ','
         limit: null
@@ -57,14 +49,6 @@ third_party_settings:
         weight: 1
         label: 'Characters to trim'
         uuid: b231c46b-2553-4cde-8474-5a91ac4b67be
-      9ee23f39-ace4-4f49-80f9-8e1632706377:
-        character: ''
-        side: trim
-        plugin: trim
-        source: gallery_image
-        weight: 1
-        label: 'Characters to trim'
-        uuid: 9ee23f39-ace4-4f49-80f9-8e1632706377
       f4b0c9da-ce49-447d-a937-10baef1f244d:
         find: https
         replace: http
@@ -604,6 +588,29 @@ third_party_settings:
         label: 'Find replace http to https'
         word_boundaries: false
         uuid: 4c14a8dd-1866-401c-bc34-3dbe862707f0
+      456e6099-d057-46fd-9237-91dabe13b895:
+        allowed_tags: ''
+        plugin: strip_tags
+        source: image_gallery_new
+        weight: 0
+        label: 'Strip tags'
+        uuid: 456e6099-d057-46fd-9237-91dabe13b895
+      976b215c-44cf-430b-9a58-1b8052e1e723:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: image_gallery_new
+        weight: 1
+        label: Explode
+        uuid: 976b215c-44cf-430b-9a58-1b8052e1e723
+      366ccf64-88b5-4481-b7a1-57604a4f8178:
+        character: ''
+        side: trim
+        plugin: trim
+        source: image_gallery_new
+        weight: 2
+        label: 'Characters to trim'
+        uuid: 366ccf64-88b5-4481-b7a1-57604a4f8178
 id: school_story_posts_import
 label: 'School Story Posts Import'
 description: ''
@@ -682,6 +689,10 @@ custom_sources:
     label: 'Import UUID'
     value: 'Import UUID'
     machine_name: import_uuid
+  image_gallery_new:
+    label: 'Image Gallery NEW'
+    value: 'Image Gallery NEW'
+    machine_name: image_gallery_new
 mappings:
   -
     target: title
@@ -718,7 +729,7 @@ mappings:
   -
     target: field_legacy_image_gallery
     map:
-      target_id: gallery_image
+      target_id: image_gallery_new
     settings:
       language: en
       reference_by: fid
