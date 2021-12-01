@@ -1,0 +1,91 @@
+uuid: 107ee081-f30d-440f-9223-2cd10788b131
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.calendar_without_times_
+    - field.field.node.calendar_page.body
+    - node.type.calendar_page
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 0
+          attributes: ' class|row justify-content-center'
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          left:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: 'class|col-12 col-md-12 col-lg-9'
+          right:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: 'class|col-12 col-lg-3'
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - node_title
+        - 'dynamic_block_field:node-calendar_block_without_times_'
+      right:
+        - body
+    fields:
+      'dynamic_block_field:node-calendar_block_without_times_':
+        plugin_id: 'dynamic_block_field:node-calendar_block_without_times_'
+        weight: 1
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+id: node.calendar_page.calendar_without_times_
+targetEntityType: node
+bundle: calendar_page
+mode: calendar_without_times_
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: right
+hidden:
+  links: true

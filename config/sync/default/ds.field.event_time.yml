@@ -1,0 +1,11 @@
+id: event_time
+label: 'Event Time'
+ui_limit: 'calendar_event|*'
+properties:
+  block: 'views_block:event_time-block_1'
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

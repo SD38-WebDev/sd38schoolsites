@@ -1307,6 +1307,10 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 	font-weight: 800;
 }
 
+.without-times .fc .fc-time {
+  display: none;
+}
+
 
 /** Social Media Links **/
 
