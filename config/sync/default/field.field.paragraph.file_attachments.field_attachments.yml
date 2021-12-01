@@ -1,0 +1,34 @@
+uuid: 63e3c923-e2d4-4940-a72f-97617642bfcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attachments
+    - media.type.file
+    - paragraphs.paragraphs_type.file_attachments
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.file_attachments.field_attachments
+field_name: field_attachments
+entity_type: paragraph
+bundle: file_attachments
+label: Attachments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

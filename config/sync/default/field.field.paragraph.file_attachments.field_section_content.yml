@@ -1,0 +1,26 @@
+uuid: 2e7d3121-e01e-40a7-84f0-4904bb71051e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_content
+    - paragraphs.paragraphs_type.file_attachments
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.file_attachments.field_section_content
+field_name: field_section_content
+entity_type: paragraph
+bundle: file_attachments
+label: 'Section Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
