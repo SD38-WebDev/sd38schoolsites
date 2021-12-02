@@ -1,0 +1,11 @@
+id: calendar_block_without_times_
+label: 'Calendar Block (without times)'
+ui_limit: ''
+properties:
+  block: 'views_block:calendar-block_2'
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

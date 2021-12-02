@@ -1,0 +1,10 @@
+uuid: a2112843-4e08-43b6-a696-5bb6ea1059b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.calendar_without_times_
+label: 'Calendar (without times)'
+targetEntityType: node
+cache: true

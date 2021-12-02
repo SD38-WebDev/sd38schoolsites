@@ -152,7 +152,8 @@ content:
             fis-el: ''
             fis-cl: ''
             fis-at: ''
-            fi-el: ''
+            fi: true
+            fi-el: div
             fi-cl: ''
             fi-at: ''
             suffix: ''
@@ -161,7 +162,6 @@ content:
             ow-def-cl: false
             fis: false
             fis-def-at: false
-            fi: false
             fi-def-at: false
     type: smartdate_default
     region: right

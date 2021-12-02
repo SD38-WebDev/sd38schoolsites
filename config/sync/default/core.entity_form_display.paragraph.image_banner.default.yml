@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_banner.field_banner_image
-    - image.style.thumbnail
+    - image.style.medium
     - paragraphs.paragraphs_type.image_banner
   module:
-    - image
+    - focal_point
 id: paragraph.image_banner.default
 targetEntityType: paragraph
 bundle: image_banner
@@ -16,10 +16,12 @@ content:
   field_banner_image:
     weight: 1
     settings:
+      preview_image_style: medium
+      preview_link: true
+      offsets: '50,50'
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
 hidden:
   created: true

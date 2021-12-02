@@ -9,7 +9,9 @@ dependencies:
     - paragraphs.paragraphs_type.basic_text_section
     - paragraphs.paragraphs_type.bp_accordion
     - paragraphs.paragraphs_type.calendar_events_list_
+    - paragraphs.paragraphs_type.file_attachments
     - paragraphs.paragraphs_type.image_and_text_section
+    - paragraphs.paragraphs_type.image_banner
     - paragraphs.paragraphs_type.image_gallery
     - paragraphs.paragraphs_type.tile_links_section
   module:
@@ -41,6 +43,8 @@ settings:
       image_and_text_section: image_and_text_section
       calendar_events_list_: calendar_events_list_
       tile_links_section: tile_links_section
+      file_attachments: file_attachments
+      image_banner: image_banner
     target_bundles_drag_drop:
       article_feed:
         enabled: true
@@ -99,6 +103,9 @@ settings:
       embedded_video:
         weight: 39
         enabled: false
+      file_attachments:
+        enabled: true
+        weight: 51
       file_list:
         weight: 48
         enabled: false
@@ -106,8 +113,8 @@ settings:
         enabled: true
         weight: 41
       image_banner:
+        enabled: true
         weight: 52
-        enabled: false
       image_gallery:
         enabled: true
         weight: 40
