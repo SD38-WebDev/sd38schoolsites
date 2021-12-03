@@ -1,8 +1,9 @@
-uuid: aef421f1-a7f0-478f-8c81-820d78cc56b5
+uuid: 4bc2e0c1-1a46-4cbc-8668-a1242612a31a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.staff_member.field_division
     - field.field.paragraph.staff_member.field_email
     - field.field.paragraph.staff_member.field_external_sites
@@ -14,16 +15,9 @@ dependencies:
     - field.field.paragraph.staff_member.field_staff_photo
     - field.field.paragraph.staff_member.field_staff_position
     - field.field.paragraph.staff_member.field_trim_first_name
-    - image.style.square_image_thumbnail_480x480
     - paragraphs.paragraphs_type.staff_member
   module:
     - ds
-    - link
-    - media
-    - options
-    - smart_trim
-    - taxonomy
-    - telephone
 third_party_settings:
   ds:
     layout:
@@ -48,76 +42,36 @@ third_party_settings:
             attributes: ''
     regions:
       main:
-        - field_staff_photo
         - field_first_name
         - field_last_name
-        - field_division
-        - field_external_sites
-        - field_staff_grade_department
         - field_staff_position
-        - field_trim_first_name
-        - field_phone
-        - field_email
-        - field_name_title
-id: paragraph.staff_member.default
+        - field_staff_grade_department
+        - field_division
+id: paragraph.staff_member.preview
 targetEntityType: paragraph
 bundle: staff_member
-mode: default
+mode: preview
 content:
   field_division:
     type: number_unformatted
-    weight: 3
-    region: main
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_email:
-    weight: 9
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: main
-  field_external_sites:
-    type: link_separate
     weight: 4
     region: main
-    label: above
-    settings:
-      trim_length: 80
-      rel: ''
-      target: ''
-      url_only: false
-      url_plain: false
-    third_party_settings: {  }
-  field_first_name:
-    type: smart_trim
-    weight: 1
-    region: main
-    label: hidden
-    settings:
-      trim_length: 1
-      trim_type: chars
-      trim_suffix: ''
-      wrap_class: trimmed
-      more_text: More
-      more_class: more-link
-      wrap_output: false
-      more_link: false
-      trim_options:
-        text: false
-        trim_zero: false
-      summary_handler: full
+    label: inline
+    settings: {  }
     third_party_settings:
       ds:
+        ds_limit: ''
         ft:
           id: expert
           settings:
-            lb: ''
+            lb: Div
             prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
+            lbw: true
+            lbw-el: span
+            lbw-cl: label
             lbw-at: ''
+            lb-col: true
+            ow: true
             ow-el: span
             ow-cl: ''
             ow-at: ''
@@ -129,17 +83,14 @@ content:
             fi-cl: ''
             fi-at: ''
             suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
             fis-def-at: false
             fi-def-at: false
-  field_last_name:
+  field_first_name:
     type: string
-    weight: 2
+    weight: 0
     region: main
     label: hidden
     settings:
@@ -154,7 +105,8 @@ content:
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
-            ow-el: ''
+            ow: true
+            ow-el: span
             ow-cl: ''
             ow-at: ''
             fis-el: ''
@@ -167,65 +119,125 @@ content:
             suffix: ''
             lbw: false
             lb-col: false
-            ow: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
             fis-def-at: false
             fi-def-at: false
-  field_name_title:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: main
-  field_phone:
-    weight: 8
-    label: above
-    settings:
-      title: ''
-    third_party_settings: {  }
-    type: telephone_link
-    region: main
-  field_staff_grade_department:
-    type: entity_reference_rss_category
-    weight: 5
-    region: main
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_staff_photo:
-    type: media_thumbnail
-    weight: 0
+  field_last_name:
+    type: string
+    weight: 1
     region: main
     label: hidden
     settings:
-      image_style: square_image_thumbnail_480x480
-      image_link: ''
+      link_to_entity: false
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: span
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
-            classes: {  }
-  field_staff_position:
-    type: entity_reference_rss_category
-    weight: 6
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_staff_grade_department:
+    type: entity_reference_label
+    weight: 3
     region: main
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-  field_trim_first_name:
-    weight: 7
-    label: above
+    label: inline
     settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: Grade/Dept
+            prefix: ''
+            lbw: true
+            lbw-el: span
+            lbw-cl: label
+            lbw-at: ''
+            lb-col: true
+            ow: true
+            ow-el: span
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+  field_staff_position:
+    type: entity_reference_label
+    weight: 2
     region: main
-hidden: {  }
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: span
+            lbw-cl: label
+            lbw-at: ''
+            lb-col: true
+            ow: true
+            ow-el: span
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+hidden:
+  field_email: true
+  field_external_sites: true
+  field_name_title: true
+  field_phone: true
+  field_staff_photo: true
+  field_trim_first_name: true
