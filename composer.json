@@ -74,6 +74,7 @@
         "drupal/bootstrap_paragraphs": "^2.0@beta",
         "drupal/business_rules": "^2.0@beta",
         "drupal/calendar": "^1.0@alpha",
+        "drupal/ckeditor_bootstrap_table": "^1.2",
         "drupal/ckeditor_font": "^1.2",
         "drupal/color_field": "^2.5",
         "drupal/colorbox": "^1.7",

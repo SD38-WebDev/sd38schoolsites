@@ -310,8 +310,22 @@ footer.site-footer {
   right: 20px;
 }
 
+/*************************/
+/** Body Content Tables **/
+/*************************/
 
+/* #block-mainpagecontent table thead {
+  background: #00000016;
+}
+
+#block-mainpagecontent table tr:nth-child(even) {
+  background: #00000008;
+} */
+
+
+/****************/
 /** Typography **/
+/****************/
 
 #block-mainpagecontent h1 {
   margin-bottom: 1.5rem !important;
