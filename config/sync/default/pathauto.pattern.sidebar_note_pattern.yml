@@ -1,0 +1,22 @@
+uuid: 1f2f3912-1a40-4bcc-a2e9-270570e496b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sidebar_note_pattern
+label: 'Sidebar Note Pattern'
+type: 'canonical_entities:node'
+pattern: '[random:hash:sha512]'
+selection_criteria:
+  8bd1f46f-adbb-44e8-b955-90ed38bc6668:
+    id: node_type
+    bundles:
+      sidebar_note: sidebar_note
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8bd1f46f-adbb-44e8-b955-90ed38bc6668
+selection_logic: and
+weight: -5
+relationships: {  }

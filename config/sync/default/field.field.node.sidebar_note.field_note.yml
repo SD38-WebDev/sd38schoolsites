@@ -1,0 +1,26 @@
+uuid: 5127fc12-e291-489a-adbf-be7e1f5d9796
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - node.type.sidebar_note
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.sidebar_note.field_note
+field_name: field_note
+entity_type: node
+bundle: sidebar_note
+label: Note
+description: 'REMINDER: These notes are limited to 256 characters.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

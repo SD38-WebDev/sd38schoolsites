@@ -1,0 +1,9 @@
+status: 1
+pattern: 'Sidebar Note - [node:field_note_title:value]'
+escape: false
+preserve_titles: false
+save: 0
+chunk: '50'
+dependencies:
+  config:
+    - node.type.sidebar_note

@@ -12,7 +12,7 @@ dependencies:
 id: useraccountmenu_2
 theme: rsd_sites_barrio
 region: sidebar_second
-weight: -7
+weight: -6
 provider: null
 plugin: 'menu_block:account'
 settings:
