@@ -17,7 +17,7 @@ field_name: field_note
 entity_type: node
 bundle: sidebar_note
 label: Note
-description: 'REMINDER: These notes are limited to 256 characters.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
