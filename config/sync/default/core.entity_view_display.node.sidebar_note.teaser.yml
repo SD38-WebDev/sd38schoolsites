@@ -1,16 +1,20 @@
 uuid: 4d1235c3-fe98-44b3-aa7d-fda515213adb
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.sidebar_note.field_left_sidebar_note
     - field.field.node.sidebar_note.field_note
     - field.field.node.sidebar_note.field_note_title
+    - field.field.node.sidebar_note.field_note_title_left
+    - field.field.node.sidebar_note.field_note_title_right
+    - field.field.node.sidebar_note.field_right_sidebar_note
     - field.field.node.sidebar_note.field_sidebar
     - node.type.sidebar_note
   module:
     - ds
-    - smart_trim
+    - text
     - user
 third_party_settings:
   ds:
@@ -36,31 +40,20 @@ third_party_settings:
             attributes: ''
     regions:
       main:
-        - field_note_title
-        - field_note
+        - field_left_sidebar_note
+        - field_right_sidebar_note
 id: node.sidebar_note.teaser
 targetEntityType: node
 bundle: sidebar_note
 mode: teaser
 content:
-  field_note:
-    type: smart_trim
-    weight: 1
+  field_left_sidebar_note:
+    type: text_trimmed
+    weight: 0
     region: main
-    label: hidden
+    label: above
     settings:
       trim_length: 250
-      trim_type: chars
-      trim_suffix: ''
-      wrap_class: trimmed
-      more_text: More
-      more_class: more-link
-      wrap_output: false
-      more_link: false
-      trim_options:
-        text: false
-        trim_zero: false
-      summary_handler: full
     third_party_settings:
       ds:
         ft:
@@ -69,42 +62,25 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-  field_note_title:
-    type: string
-    weight: 0
+  field_right_sidebar_note:
+    type: text_trimmed
+    weight: 1
     region: main
-    label: hidden
+    label: above
     settings:
-      link_to_entity: false
+      trim_length: 250
     third_party_settings:
       ds:
         ft:
-          id: expert
+          id: default
           settings:
             lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: h2
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
             lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
+            classes: {  }
 hidden:
+  field_note: true
+  field_note_title: true
+  field_note_title_left: true
+  field_note_title_right: true
   field_sidebar: true
   links: true

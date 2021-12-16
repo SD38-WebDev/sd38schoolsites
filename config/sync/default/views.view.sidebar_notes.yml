@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_note
-    - field.storage.node.field_note_title
+    - core.entity_view_mode.node.sidebar_note_left
+    - core.entity_view_mode.node.sidebar_note_right
+    - field.storage.node.field_left_sidebar_note
+    - field.storage.node.field_right_sidebar_note
     - node.type.sidebar_note
   module:
     - node
-    - options
     - smart_trim
     - user
 id: sidebar_notes
@@ -58,17 +59,15 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          relationship: none
+          view_mode: sidebar_note_left
       fields:
-        field_note_title:
-          id: field_note_title
-          table: node__field_note_title
-          field: field_note_title
+        field_right_sidebar_note:
+          id: field_right_sidebar_note
+          table: node__field_right_sidebar_note
+          field: field_right_sidebar_note
           relationship: none
           group_type: group
           admin_label: ''
@@ -100,69 +99,6 @@ display:
             strip_tags: false
             trim: false
             preserve_tags: ''
-            html: false
-          element_type: h2
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_note:
-          id: field_note
-          table: node__field_note
-          field: field_note
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: '<b> <p> <br> <ol><ul><li> <table>'
             html: false
           element_type: ''
           element_class: ''
@@ -258,10 +194,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_note'
-        - 'config:field.storage.node.field_note_title'
-        - 'config_split_state:field.storage.node.field_note'
-        - 'config_split_state:field.storage.node.field_note_title'
+        - 'config:field.storage.node.field_right_sidebar_note'
+        - 'config_split_state:field.storage.node.field_right_sidebar_note'
   block_1:
     display_plugin: block
     id: block_1
@@ -296,56 +230,90 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_sidebar_value:
-          id: field_sidebar_value
-          table: node__field_sidebar
-          field: field_sidebar_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: and
-          value:
-            'Left Sidebar': 'Left Sidebar'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
       defaults:
         filters: false
         filter_groups: false
+        fields: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       display_description: ''
       block_hide_empty: true
+      fields:
+        field_left_sidebar_note:
+          id: field_left_sidebar_note
+          table: node__field_left_sidebar_note
+          field: field_left_sidebar_note
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: smart_trim
+          settings:
+            trim_length: 250
+            trim_type: chars
+            trim_suffix: ''
+            wrap_output: false
+            wrap_class: trimmed
+            more_link: false
+            more_text: More
+            more_class: more-link
+            trim_options:
+              text: false
+              trim_zero: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
     cache_metadata:
       max-age: -1
       contexts:
@@ -354,10 +322,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_note'
-        - 'config:field.storage.node.field_note_title'
-        - 'config_split_state:field.storage.node.field_note'
-        - 'config_split_state:field.storage.node.field_note_title'
+        - 'config:field.storage.node.field_left_sidebar_note'
+        - 'config_split_state:field.storage.node.field_left_sidebar_note'
   block_2:
     display_plugin: block
     id: block_2
@@ -422,56 +388,100 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_sidebar_value:
-          id: field_sidebar_value
-          table: node__field_sidebar
-          field: field_sidebar_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: and
-          value:
-            'Right Sidebar': 'Right Sidebar'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
       defaults:
         filters: false
         filter_groups: false
+        fields: false
+        style: false
+        row: false
       filter_groups:
         operator: AND
         groups:
           1: AND
       display_description: ''
       block_hide_empty: true
+      fields:
+        field_right_sidebar_note:
+          id: field_right_sidebar_note
+          table: node__field_right_sidebar_note
+          field: field_right_sidebar_note
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: smart_trim
+          settings:
+            trim_length: 250
+            trim_type: chars
+            trim_suffix: ''
+            wrap_output: false
+            wrap_class: trimmed
+            more_link: false
+            more_text: More
+            more_class: more-link
+            trim_options:
+              text: false
+              trim_zero: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: sidebar_note_right
     cache_metadata:
       max-age: -1
       contexts:
@@ -480,7 +490,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_note'
-        - 'config:field.storage.node.field_note_title'
-        - 'config_split_state:field.storage.node.field_note'
-        - 'config_split_state:field.storage.node.field_note_title'
+        - 'config:field.storage.node.field_right_sidebar_note'
+        - 'config_split_state:field.storage.node.field_right_sidebar_note'

@@ -1,0 +1,10 @@
+uuid: e112f42f-9430-4ee3-b15b-373d5c094edf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sidebar_note_left
+label: 'Sidebar Note - Left'
+targetEntityType: node
+cache: true

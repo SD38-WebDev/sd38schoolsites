@@ -1,5 +1,5 @@
 status: 1
-pattern: 'Sidebar Note - [node:field_note_title:value]'
+pattern: 'Sidebar Notes'
 escape: false
 preserve_titles: false
 save: 0

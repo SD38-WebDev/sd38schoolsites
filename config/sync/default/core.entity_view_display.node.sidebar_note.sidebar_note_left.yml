@@ -1,8 +1,9 @@
-uuid: 7a07d7e6-e2f2-4e64-b1fe-2dec66410931
+uuid: 6d0f2c7f-2b15-4726-8c81-c25af816763e
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.sidebar_note_left
     - field.field.node.sidebar_note.field_left_sidebar_note
     - field.field.node.sidebar_note.field_note
     - field.field.node.sidebar_note.field_note_title
@@ -29,23 +30,21 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 0
-          attributes: ' class|row justify-content-center'
+          attributes: ''
         regions:
           main:
             wrapper: div
             classes: {  }
             add_region_classes: 0
-            attributes: 'class|col-12 col-lg-4'
+            attributes: ''
     regions:
       main:
         - field_note_title_left
         - field_left_sidebar_note
-        - field_note_title_right
-        - field_right_sidebar_note
-id: node.sidebar_note.default
+id: node.sidebar_note.sidebar_note_left
 targetEntityType: node
 bundle: sidebar_note
-mode: default
+mode: sidebar_note_left
 content:
   field_left_sidebar_note:
     weight: 1
@@ -83,7 +82,9 @@ content:
     type: text_default
     region: main
   field_note_title_left:
+    type: string
     weight: 0
+    region: main
     label: hidden
     settings:
       link_to_entity: false
@@ -116,81 +117,10 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
-    type: string
-    region: main
-  field_note_title_right:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi: true
-            fi-el: h2
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi-def-at: false
-    type: string
-    region: main
-  field_right_sidebar_note:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: h2
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-    type: text_default
-    region: main
 hidden:
   field_note: true
   field_note_title: true
+  field_note_title_right: true
+  field_right_sidebar_note: true
   field_sidebar: true
   links: true

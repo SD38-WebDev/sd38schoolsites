@@ -22,7 +22,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Sidebar Note'
+name: 'Sidebar Notes'
 type: sidebar_note
 description: 'Sidebar notes are limited to 250 characters and are used to display additional information on a website homepage. These notes can be configured to appear on either the left or right sidebar.'
 help: ''

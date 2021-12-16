@@ -3,15 +3,52 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.sidebar_note.field_left_sidebar_note
     - field.field.node.sidebar_note.field_note
     - field.field.node.sidebar_note.field_note_title
+    - field.field.node.sidebar_note.field_note_title_left
+    - field.field.node.sidebar_note.field_note_title_right
+    - field.field.node.sidebar_note.field_right_sidebar_note
     - field.field.node.sidebar_note.field_sidebar
     - node.type.sidebar_note
   module:
+    - field_group
     - maxlength
     - path
     - scheduler
     - text
+third_party_settings:
+  field_group:
+    group_left_sidebar:
+      children:
+        - field_note_title_left
+        - field_left_sidebar_note
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Left Sidebar'
+    group_right_sidebar:
+      children:
+        - field_note_title_right
+        - field_right_sidebar_note
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Right Sidebar'
 id: node.sidebar_note.default
 targetEntityType: node
 bundle: sidebar_note
@@ -19,12 +56,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_note:
-    weight: 3
+  field_left_sidebar_note:
+    weight: 2
     settings:
       rows: 3
       placeholder: ''
@@ -36,23 +73,38 @@ content:
         maxlength_js_truncate_html: true
     type: text_textarea
     region: content
-  field_note_title:
-    weight: 2
+  field_note_title_left:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_sidebar:
-    weight: 1
-    settings: {  }
+  field_note_title_right:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: string_textfield
+    region: content
+  field_right_sidebar_note:
+    weight: 5
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 250
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+        maxlength_js_truncate_html: true
+    type: text_textarea
     region: content
   path:
     type: path
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -60,12 +112,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 9
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 9
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -73,19 +125,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 6
     region: content
     settings:
       size: 60
@@ -93,7 +145,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -103,8 +155,11 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 10
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_note: true
+  field_note_title: true
+  field_sidebar: true
