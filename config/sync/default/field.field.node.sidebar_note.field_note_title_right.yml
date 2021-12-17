@@ -1,0 +1,25 @@
+uuid: 3493d31f-a947-4952-b31f-b2f941329a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note_title_right
+    - node.type.sidebar_note
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.sidebar_note.field_note_title_right
+field_name: field_note_title_right
+entity_type: node
+bundle: sidebar_note
+label: 'Note Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

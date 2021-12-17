@@ -7,6 +7,8 @@ node:
     path: '<front>'
   newsletter:
     path: /newsletters
+  sidebar_note:
+    path: '<front>'
 global:
   use_on:
     - front

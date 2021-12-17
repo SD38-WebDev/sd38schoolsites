@@ -9,6 +9,7 @@ dependencies:
     - core.entity_view_mode.media.x_large_full_width_
   module:
     - editor
+    - linkit
     - media
     - video_embed_wysiwyg
 name: 'Full HTML'

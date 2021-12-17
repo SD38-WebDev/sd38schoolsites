@@ -12,7 +12,7 @@ dependencies:
 id: views_block__sidebar_article_blocks_daily_notices
 theme: rsd_sites_barrio
 region: sidebar_second
-weight: -10
+weight: -9
 provider: null
 plugin: 'views_block:sidebar_article_blocks-daily_notices'
 settings:

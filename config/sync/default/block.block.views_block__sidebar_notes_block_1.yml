@@ -1,0 +1,52 @@
+uuid: 34c4b775-d302-4bf9-a470-5708584ee568
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sidebar_notes
+  module:
+    - context
+    - system
+    - views
+  theme:
+    - rsd_sites_barrio
+id: views_block__sidebar_notes_block_1
+theme: rsd_sites_barrio
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'views_block:sidebar_notes-block_1'
+settings:
+  id: 'views_block:sidebar_notes-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  context_all:
+    id: context_all
+    values: ''
+    negate: null
+    context_mapping: {  }
+  context:
+    id: context
+    values: ''
+    negate: null
+    context_mapping: {  }
+  user_status:
+    id: user_status
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

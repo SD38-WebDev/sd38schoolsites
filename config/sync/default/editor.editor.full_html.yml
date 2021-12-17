@@ -54,6 +54,9 @@ settings:
           items:
             - Source
   plugins:
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default_profile
     language:
       language_list: un
     stylescombo:
@@ -68,9 +71,6 @@ settings:
           responsive: true
           width: '854'
           height: '480'
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: default_profile
 image_upload:
   status: true
   scheme: public

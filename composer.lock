@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ebceb11199c7421d65583cec1008192",
+    "content-hash": "39b5894bad0d1bdbf39a2dc5328efc23",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3189,6 +3189,50 @@
             }
         },
         {
+            "name": "drupal/ckeditor_bootstrap_table",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor_bootstrap_table.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_bootstrap_table-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "6d18dc4a1eaeadb3613a103d33210e3c16842d02"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1591104808",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "majid.ali",
+                    "homepage": "https://www.drupal.org/user/1271330"
+                }
+            ],
+            "description": "Adds Bootstrap Table to CKEditor",
+            "homepage": "https://www.drupal.org/project/ckeditor_bootstrap_table",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditor_bootstrap_table"
+            }
+        },
+        {
             "name": "drupal/ckeditor_font",
             "version": "1.2.0",
             "source": {
@@ -6128,6 +6172,70 @@
             }
         },
         {
+            "name": "drupal/maxlength",
+            "version": "2.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/maxlength.git",
+                "reference": "2.0.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/maxlength-2.0.0-rc1.zip",
+                "reference": "2.0.0-rc1",
+                "shasum": "1d08a0a49b36b8593be203fc3c423dd29647fc4b"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-rc1",
+                    "datestamp": "1634070330",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cedewey",
+                    "homepage": "https://www.drupal.org/user/38694"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "hipp2bsquare",
+                    "homepage": "https://www.drupal.org/user/2473076"
+                },
+                {
+                    "name": "mariuss",
+                    "homepage": "https://www.drupal.org/user/28539"
+                },
+                {
+                    "name": "pmichelazzo",
+                    "homepage": "https://www.drupal.org/user/182237"
+                },
+                {
+                    "name": "srdtwc",
+                    "homepage": "https://www.drupal.org/user/3422763"
+                }
+            ],
+            "description": "Limit the number of characters in textfields and textareas and shows the amount of characters left.",
+            "homepage": "https://www.drupal.org/project/maxlength",
+            "support": {
+                "source": "https://git.drupalcode.org/project/maxlength"
+            }
+        },
+        {
             "name": "drupal/menu_block",
             "version": "1.7.0",
             "source": {
@@ -7069,6 +7177,59 @@
             "homepage": "https://www.drupal.org/project/sophron",
             "support": {
                 "source": "https://git.drupalcode.org/project/sophron"
+            }
+        },
+        {
+            "name": "drupal/tabtamer",
+            "version": "2.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tabtamer.git",
+                "reference": "2.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/tabtamer-2.0.0-beta1.zip",
+                "reference": "2.0.0-beta1",
+                "shasum": "fe491518caaa11d5b2ced45e7edb82264240910f"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta1",
+                    "datestamp": "1632215409",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Szczepan Musial",
+                    "homepage": "https://www.drupal.org/u/lamp5",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "lamp5",
+                    "homepage": "https://www.drupal.org/user/2870321"
+                }
+            ],
+            "description": "Tab Tamer is an administration utility that provides easy re-ordering, hiding, and deactivation of tabs and subtabs. You can also rename tab labels. Tab Tamer makes use of Drupal's drag ordering, but degrades gracefully when javascript is disabled. Tab Tamer utilizes Drupal's cache system to help conserve server resources.",
+            "homepage": "https://www.drupal.org/project/tabtamer",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/tabtamer",
+                "issues": "https://www.drupal.org/project/issues/tabtamer"
             }
         },
         {
@@ -13972,7 +14133,9 @@
         "drupal/field_group_link": 5,
         "drupal/libraries": 10,
         "drupal/linkit": 10,
+        "drupal/maxlength": 5,
         "drupal/paragraphs_edit": 15,
+        "drupal/tabtamer": 10,
         "drupal/term_merge": 20,
         "drupal/theme_permission": 10,
         "drupal/twitter_block": 15,
