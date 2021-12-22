@@ -5,12 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.sidebar_note.field_left_sidebar_note
-    - field.field.node.sidebar_note.field_note
-    - field.field.node.sidebar_note.field_note_title
     - field.field.node.sidebar_note.field_note_title_left
     - field.field.node.sidebar_note.field_note_title_right
     - field.field.node.sidebar_note.field_right_sidebar_note
-    - field.field.node.sidebar_note.field_sidebar
     - node.type.sidebar_note
   module:
     - ds
@@ -78,9 +75,6 @@ content:
             lb-col: false
             classes: {  }
 hidden:
-  field_note: true
-  field_note_title: true
   field_note_title_left: true
   field_note_title_right: true
-  field_sidebar: true
   links: true
