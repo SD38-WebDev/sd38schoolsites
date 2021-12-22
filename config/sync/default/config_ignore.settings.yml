@@ -1,10 +1,9 @@
 ignored_config_entities:
   - system.site
   - color.theme.rsd_sites_barrio
+  - color.theme.rsd_sites_barrio.logo
   - 'webform.webform.*'
   - system.theme.global
-  - system.theme.global.logo
-  - 'system.theme.global.logo.*'
   - google_analytics.settings
   - block.block.socialmedialinks
   - 'block.block.socialmedialinks.*'
