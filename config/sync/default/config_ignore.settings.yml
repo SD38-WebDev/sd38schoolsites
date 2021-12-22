@@ -3,6 +3,8 @@ ignored_config_entities:
   - color.theme.rsd_sites_barrio
   - 'webform.webform.*'
   - system.theme.global
+  - system.theme.global.logo
+  - 'system.theme.global.logo.*'
   - google_analytics.settings
   - block.block.socialmedialinks
   - 'block.block.socialmedialinks.*'
@@ -11,6 +13,5 @@ ignored_config_entities:
   - block.block.addressblock
   - 'block.block.addressblock.*'
   - 'block.block.*addressblock'
-  - 'rsd_sites_barrio.settings.logo.*'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
