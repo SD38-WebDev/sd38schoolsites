@@ -60,7 +60,7 @@ relationships:
     slss: 'db:slss'
     jnburnett: 'db:jnburnett'
     rhs: 'db:rhs'
-disk: 60000
+disk: 70000
 mounts:
     /web/files:
         source: local
