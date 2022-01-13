@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.calendar_event.field_event_location
     - field.field.node.calendar_event.field_feature_image
     - field.field.node.calendar_event.field_import_uuid
+    - field.field.node.calendar_event.field_promote_to_front_page
     - field.field.node.calendar_event.field_promote_to_school_calendar
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
@@ -70,7 +71,7 @@ third_party_settings:
       label: 'Additional Details'
     group_promotion:
       children:
-        - promote
+        - field_promote_to_front_page
         - field_promote_to_school_calendar
         - sticky
       parent_name: ''
@@ -79,11 +80,12 @@ third_party_settings:
       region: content
       format_settings:
         description: ''
+        open: true
         weight: 0
         required_fields: true
         id: ''
         classes: ''
-        open: false
+        show_empty_fields: false
       label: 'Promotion Options'
 id: node.calendar_event.default
 targetEntityType: node
@@ -109,7 +111,7 @@ content:
   field_event_date:
     weight: 18
     settings:
-      show_extra: true
+      show_extra: false
       hide_date: false
       modal: false
       default_duration: 60
@@ -139,8 +141,14 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
+  field_promote_to_front_page:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_promote_to_school_calendar:
-    weight: 12
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
@@ -157,13 +165,6 @@ content:
     weight: 5
     region: content
     settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 11
-    region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -182,7 +183,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -212,3 +213,4 @@ content:
 hidden:
   feeds_item: true
   field_import_uuid: true
+  promote: true

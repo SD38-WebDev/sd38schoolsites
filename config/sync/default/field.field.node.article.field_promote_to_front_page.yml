@@ -1,0 +1,26 @@
+uuid: bdfbac12-3cf5-4994-96cb-bf5171f8b99e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promote_to_front_page
+    - node.type.article
+  module:
+    - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.article.field_promote_to_front_page
+field_name: field_promote_to_front_page
+entity_type: node
+bundle: article
+label: 'Promote to front page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -54,9 +54,9 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: some
         options:
-          items_per_page: null
+          items_per_page: 200
           offset: 0
       style:
         type: fullcalendar_view_display
@@ -628,7 +628,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 year'
+            value: '-6 months'
             type: offset
           group: 1
           exposed: false
@@ -838,7 +838,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 year'
+            value: '-6 months'
             type: offset
           group: 2
           exposed: false
