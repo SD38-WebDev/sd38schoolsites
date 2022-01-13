@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_import_uuid
     - field.field.node.article.field_legacy_attachments
     - field.field.node.article.field_legacy_image_gallery
+    - field.field.node.article.field_promote_to_front_page
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
     - node.type.article
@@ -19,6 +20,7 @@ dependencies:
     - ds
     - entity_reference_revisions
     - file
+    - options
     - text
     - user
 third_party_settings:
@@ -62,7 +64,6 @@ third_party_settings:
     regions:
       left:
         - field_feature_image
-        - field_tags
       right:
         - node_title
         - body
@@ -75,7 +76,7 @@ third_party_settings:
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 9
+        weight: 8
         label: inline
         formatter: ds_post_date_full_date_only
         ft:
@@ -107,7 +108,7 @@ third_party_settings:
             fi-def-at: false
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 1
         label: hidden
         formatter: default
         settings:
@@ -126,7 +127,7 @@ bundle: article
 mode: default
 content:
   body:
-    weight: 3
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -134,7 +135,7 @@ content:
     region: right
   field_attachments:
     type: entity_reference_entity_view
-    weight: 8
+    weight: 7
     label: above
     settings:
       view_mode: default
@@ -171,7 +172,7 @@ content:
             fi-def-at: false
     region: right
   field_content_section:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -217,7 +218,7 @@ content:
             fi-def-at: false
     region: left
   field_legacy_attachments:
-    weight: 7
+    weight: 6
     label: above
     settings:
       use_description_as_link_text: true
@@ -234,52 +235,22 @@ content:
     region: right
   field_legacy_image_gallery:
     type: entity_reference_entity_view
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: right
-  field_tags:
-    weight: 1
+  field_promote_to_front_page:
+    weight: 8
     label: above
-    settings:
-      link: true
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: h3
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
-    type: entity_reference_label
-    region: left
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   links:
-    weight: 4
+    weight: 3
     region: right
     settings: {  }
     third_party_settings: {  }
@@ -288,3 +259,4 @@ hidden:
   field_article_category: true
   field_import_uuid: true
   field_site_section: true
+  field_tags: true

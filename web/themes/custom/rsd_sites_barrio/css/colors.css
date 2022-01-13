@@ -95,7 +95,7 @@ body.page-user-login #main-wrapper {
 .sidebar .section,
 .bg-theme,
 .breadcrumb {
-  background-color: #055a8e09 !important;
+  background-color: #055a8e10 !important;
 }
 
 .views-listing .shaded-rows li:nth-child(odd),
@@ -105,7 +105,7 @@ body.page-user-login #main-wrapper {
 }
 
 #navbar-main {
-  box-shadow: 0px 150px 200px #055a8e40;
+  box-shadow: 0px 1px 4px #055a8e40;
 }
 
 .sidebar .block {
