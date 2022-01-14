@@ -74,4 +74,4 @@ foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route)
 
 // Add additional domain mappings here.
 
-$sites['cambie-new.sd38.bc.ca'] = 'hjcambie';
+$sites['hjcambie-new.sd38.bc.ca'] = 'hjcambie';
