@@ -9,7 +9,7 @@ third_party_settings:
     label: Layout
     enabled: true
 id: image_and_text_section
-label: 'Image and Text Section'
+label: 'Media and Text Section'
 icon_uuid: null
 icon_default: null
 description: ''

@@ -56,7 +56,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 200
+          items_per_page: 500
           offset: 0
       style:
         type: fullcalendar_view_display
@@ -80,7 +80,7 @@ display:
           dialogWindow: 0
           openEntityInNewTab: 1
           createEventLink: 0
-          eventLimit: '2'
+          eventLimit: '4'
           tax_field: ''
           vocabularies: ''
           color_bundle:
@@ -92,6 +92,7 @@ display:
             newsletter: '#3a87ad'
             news_alert: '#3a87ad'
             page: '#3a87ad'
+            sidebar_note: '#3a87ad'
             staff_page: '#3a87ad'
           rrule: ''
           duration: ''

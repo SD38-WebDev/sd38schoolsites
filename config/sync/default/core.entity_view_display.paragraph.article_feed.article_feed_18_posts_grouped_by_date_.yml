@@ -1,13 +1,16 @@
-uuid: e0fd03d2-c70d-47a2-a936-3fbbd360886f
+uuid: fa9f42c0-ed98-4b31-80bc-9f3e46f7b713
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.remote_video.field_media_oembed_video
-    - media.type.remote_video
+    - core.entity_view_mode.paragraph.article_feed_18_posts_grouped_by_date_
+    - field.field.paragraph.article_feed.field_referenced_tags
+    - field.field.paragraph.article_feed.field_section_title
+    - field.field.paragraph.article_feed.field_site_section
+    - field.field.paragraph.article_feed.paragraph_view_mode
+    - paragraphs.paragraphs_type.article_feed
   module:
     - ds
-    - media
 third_party_settings:
   ds:
     layout:
@@ -32,19 +35,23 @@ third_party_settings:
             attributes: ''
     regions:
       main:
-        - field_media_oembed_video
-id: media.remote_video.default
-targetEntityType: media
-bundle: remote_video
-mode: default
+        - field_section_title
+        - article_feed_entity_view_4
+id: paragraph.article_feed.article_feed_18_posts_grouped_by_date_
+targetEntityType: paragraph
+bundle: article_feed
+mode: article_feed_18_posts_grouped_by_date_
 content:
-  field_media_oembed_video:
-    type: oembed
-    label: hidden
+  article_feed_entity_view_4:
+    weight: 1
+    region: main
+    settings: {  }
+    third_party_settings: {  }
+  field_section_title:
     weight: 0
+    label: hidden
     settings:
-      max_width: 600
-      max_height: 0
+      link_to_entity: false
     third_party_settings:
       ds:
         ft:
@@ -62,8 +69,8 @@ content:
             fis-cl: ''
             fis-at: ''
             fi: true
-            fi-el: div
-            fi-cl: 'embed-responsive embed-responsive-16by9'
+            fi-el: h2
+            fi-cl: ''
             fi-at: ''
             suffix: ''
             lbw: false
@@ -74,9 +81,12 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
+    type: string
     region: main
 hidden:
-  created: true
-  name: true
-  thumbnail: true
-  uid: true
+  article_feed_entity_view_1: true
+  article_feed_entity_view_3: true
+  article_feed_entity_view_5: true
+  field_referenced_tags: true
+  field_site_section: true
+  paragraph_view_mode: true

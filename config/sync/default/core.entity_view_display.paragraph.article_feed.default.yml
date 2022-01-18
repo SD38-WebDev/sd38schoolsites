@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.article_feed.field_referenced_tags
     - field.field.paragraph.article_feed.field_section_title
     - field.field.paragraph.article_feed.field_site_section
+    - field.field.paragraph.article_feed.paragraph_view_mode
     - paragraphs.paragraphs_type.article_feed
   module:
     - ds
@@ -45,14 +46,6 @@ content:
     region: main
     settings: {  }
     third_party_settings: {  }
-  field_referenced_tags:
-    weight: 2
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_section_title:
     weight: 0
     label: hidden
@@ -90,4 +83,9 @@ content:
     type: string
     region: main
 hidden:
+  article_feed_entity_view_3: true
+  article_feed_entity_view_4: true
+  article_feed_entity_view_5: true
+  field_referenced_tags: true
   field_site_section: true
+  paragraph_view_mode: true

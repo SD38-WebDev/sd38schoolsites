@@ -5,12 +5,19 @@ dependencies:
   config:
     - field.storage.paragraph.field_image
     - media.type.image
+    - media.type.remote_video
     - paragraphs.paragraphs_type.image_and_text_section
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: paragraph.image_and_text_section.field_image
 field_name: field_image
 entity_type: paragraph
 bundle: image_and_text_section
-label: Image
+label: Media
 description: ''
 required: false
 translatable: false
@@ -21,8 +28,9 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      remote_video: remote_video
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference

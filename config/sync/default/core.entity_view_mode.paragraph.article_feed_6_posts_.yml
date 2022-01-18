@@ -1,0 +1,10 @@
+uuid: ff4ab0ed-a485-4fbd-b5c0-8cc59c1a5a1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.article_feed_6_posts_
+label: 'Article Feed (6 Posts)'
+targetEntityType: paragraph
+cache: true

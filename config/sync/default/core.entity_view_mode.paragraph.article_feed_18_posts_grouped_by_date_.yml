@@ -1,0 +1,10 @@
+uuid: 854ae51f-d18c-47ac-946c-7c6e8118511a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.article_feed_18_posts_grouped_by_date_
+label: 'Article Feed (18 Posts - Grouped by Date)'
+targetEntityType: paragraph
+cache: true

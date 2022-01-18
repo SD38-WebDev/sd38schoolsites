@@ -50,13 +50,13 @@ content:
     region: content
   paragraph_view_mode:
     type: paragraph_view_mode
-    weight: 0
+    weight: -100
     settings:
       view_modes:
-        image_left: image_left
-        image_right: image_right
-        default: 0
-      default_view_mode: image_left
+        default: Default
+        image_left: 'Image Left'
+        image_right: 'Image Right'
+      default_view_mode: default
     third_party_settings: {  }
     region: content
 hidden:

@@ -1,0 +1,10 @@
+uuid: f5a908ce-afc9-4b76-b953-6be27c8c16eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.article_feed_18_posts_
+label: 'Article Feed (18 Posts)'
+targetEntityType: paragraph
+cache: true
