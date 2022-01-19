@@ -19,8 +19,7 @@ third_party_settings:
         label: ''
         layout:
           wrapper: div
-          classes:
-            row: row
+          classes: {  }
           add_layout_class: 1
           attributes: ''
         regions:
