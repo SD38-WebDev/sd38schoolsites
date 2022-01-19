@@ -311,6 +311,14 @@ footer.site-footer {
 }
 
 /*************************/
+/** Program Site Styles **/
+/*************************/
+
+body.path-frontpage .field--name-node-title {
+  display: none;
+}
+
+/*************************/
 /** Body Content Tables **/
 /*************************/
 
