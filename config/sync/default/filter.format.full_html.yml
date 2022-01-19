@@ -83,6 +83,7 @@ filters:
       default_view_mode: default
       allowed_media_types:
         image: image
+        remote_video: remote_video
       allowed_view_modes:
         large_480_480_: large_480_480_
         medium_220_220_: medium_220_220_

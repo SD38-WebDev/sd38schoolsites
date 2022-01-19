@@ -613,6 +613,10 @@ img.align-center {
   padding: 1rem 0 1rem 0;
 }
 
+.media.media--type-remote-video {
+  margin-bottom: 1rem;
+}
+
 /**********************/
 /** SD38 News Posts **/
 /*********************/
