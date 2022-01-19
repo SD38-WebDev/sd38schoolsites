@@ -6,7 +6,10 @@ dependencies:
     - field.field.paragraph.article_feed.field_referenced_tags
     - field.field.paragraph.article_feed.field_section_title
     - field.field.paragraph.article_feed.field_site_section
+    - field.field.paragraph.article_feed.paragraph_view_mode
     - paragraphs.paragraphs_type.article_feed
+  module:
+    - paragraph_view_mode
 id: paragraph.article_feed.default
 targetEntityType: paragraph
 bundle: article_feed
@@ -35,6 +38,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: -100
+    settings:
+      view_modes:
+        default: default
+        article_feed_18_posts_: article_feed_18_posts_
+        article_feed_18_posts_grouped_by_date_: article_feed_18_posts_grouped_by_date_
+        article_feed_6_posts_: article_feed_6_posts_
+        article_feed_6_posts_column_: article_feed_6_posts_column_
+      default_view_mode: default
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

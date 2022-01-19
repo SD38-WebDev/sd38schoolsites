@@ -6,7 +6,8 @@ dependencies:
     - paragraph_view_mode
 third_party_settings:
   paragraph_view_mode:
-    enabled: false
+    enabled: true
+    label: 'Display mode'
 id: article_feed
 label: 'Article Feed'
 icon_uuid: null

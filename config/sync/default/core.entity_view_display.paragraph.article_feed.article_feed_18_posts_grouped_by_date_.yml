@@ -1,8 +1,9 @@
-uuid: 285c22bd-e9bb-4da3-877b-1496afa9eb53
+uuid: fa9f42c0-ed98-4b31-80bc-9f3e46f7b713
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.paragraph.article_feed_18_posts_grouped_by_date_
     - field.field.paragraph.article_feed.field_referenced_tags
     - field.field.paragraph.article_feed.field_section_title
     - field.field.paragraph.article_feed.field_site_section
@@ -35,13 +36,13 @@ third_party_settings:
     regions:
       main:
         - field_section_title
-        - article_feed_entity_view_1
-id: paragraph.article_feed.default
+        - article_feed_entity_view_4
+id: paragraph.article_feed.article_feed_18_posts_grouped_by_date_
 targetEntityType: paragraph
 bundle: article_feed
-mode: default
+mode: article_feed_18_posts_grouped_by_date_
 content:
-  article_feed_entity_view_1:
+  article_feed_entity_view_4:
     weight: 1
     region: main
     settings: {  }
@@ -83,8 +84,8 @@ content:
     type: string
     region: main
 hidden:
+  article_feed_entity_view_1: true
   article_feed_entity_view_3: true
-  article_feed_entity_view_4: true
   article_feed_entity_view_5: true
   field_referenced_tags: true
   field_site_section: true
