@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.basic_text_section
     - paragraphs.paragraphs_type.bp_accordion
     - paragraphs.paragraphs_type.calendar_events_list_
+    - paragraphs.paragraphs_type.embedded_video
     - paragraphs.paragraphs_type.file_attachments
     - paragraphs.paragraphs_type.image_and_text_section
     - paragraphs.paragraphs_type.image_banner
@@ -39,6 +40,7 @@ settings:
       bp_accordion: bp_accordion
       article_feed: article_feed
       basic_text_section: basic_text_section
+      embedded_video: embedded_video
       image_gallery: image_gallery
       image_and_text_section: image_and_text_section
       calendar_events_list_: calendar_events_list_
@@ -101,8 +103,8 @@ settings:
         enabled: true
         weight: 42
       embedded_video:
+        enabled: true
         weight: 39
-        enabled: false
       file_attachments:
         enabled: true
         weight: 51

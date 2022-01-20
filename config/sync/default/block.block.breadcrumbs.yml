@@ -23,11 +23,11 @@ visibility:
   request_path_exclusion:
     id: request_path_exclusion
     pages: ''
-    negate: null
+    negate: true
     context_mapping: {  }
   view_inclusion:
     id: view_inclusion
-    negate: null
+    negate: false
     view_inclusion: {  }
     context_mapping: {  }
   'entity_bundle:node':
@@ -37,3 +37,29 @@ visibility:
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+  context_all:
+    id: context_all
+    values: ''
+    negate: null
+    context_mapping: {  }
+  context:
+    id: context
+    values: ''
+    negate: null
+    context_mapping: {  }
+  user_status:
+    id: user_status
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

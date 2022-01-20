@@ -23,3 +23,15 @@ matchers:
       include_unpublished: true
       substitution_type: canonical
       metadata: '<strong>Updated:</strong> [node:changed] <strong>Node ID:</strong> [node:nid]'
+      limit: 100
+  d9e27838-571a-4993-8bf7-8c8e48cee3b2:
+    uuid: d9e27838-571a-4993-8bf7-8c8e48cee3b2
+    id: 'entity:media'
+    weight: 0
+    settings:
+      metadata: '<strong>Updated:</strong> [media:changed] <strong>Node ID:</strong> [media:mid]'
+      bundles:
+        file: file
+      group_by_bundle: true
+      substitution_type: media
+      limit: 100

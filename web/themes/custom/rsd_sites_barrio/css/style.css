@@ -311,6 +311,14 @@ footer.site-footer {
 }
 
 /*************************/
+/** Program Site Styles **/
+/*************************/
+
+body.path-frontpage .field--name-node-title {
+  display: none;
+}
+
+/*************************/
 /** Body Content Tables **/
 /*************************/
 
@@ -613,7 +621,11 @@ img.align-center {
   padding: 1rem 0 1rem 0;
 }
 
-/*********************/
+.media.media--type-remote-video {
+  margin-bottom: 1rem;
+}
+
+/**********************/
 /** SD38 News Posts **/
 /*********************/
 
