@@ -420,10 +420,9 @@ display:
         description: ''
         expanded: true
         parent: ''
-        weight: -49
+        weight: -99
         context: '0'
         menu_name: main
-        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

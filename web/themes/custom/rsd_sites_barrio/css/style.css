@@ -1254,6 +1254,21 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
   font-weight: 600;
 }
 
+.nav-list .nav {
+  flex-direction: column!important;
+}
+
+.nav-list .nav .nav-item {
+  background-color: #00000005;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.nav-list .nav .nav-item:hover {
+  background-color: #00000008;
+}
+
 /************************/
 /** Misc. Views Styles **/
 /************************/

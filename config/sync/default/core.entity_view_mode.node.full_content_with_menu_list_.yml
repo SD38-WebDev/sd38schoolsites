@@ -1,0 +1,10 @@
+uuid: cbd67efa-9613-4686-8fd1-25d8f911ea3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_content_with_menu_list_
+label: 'Full Content (with menu list)'
+targetEntityType: node
+cache: true
