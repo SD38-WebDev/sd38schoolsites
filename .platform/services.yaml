@@ -52,6 +52,9 @@ db:
             - slss
             - jnburnett
             - rhs
+            - careerprograms
+            - ce
+            - rvs
         endpoints:
             blundell:
                 default_schema: blundell
@@ -249,5 +252,17 @@ db:
                 default_schema: rhs
                 privileges:
                     rhs: admin
+            careerprograms:
+                default_schema: careerprograms
+                privileges:
+                    careerprograms: admin
+            ce:
+                default_schema: ce
+                privileges:
+                    ce: admin
+            rvs:
+                default_schema: rvs
+                privileges:
+                    rvs: admin
 cache:
     type: 'redis:6.0'

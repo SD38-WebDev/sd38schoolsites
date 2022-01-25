@@ -2,7 +2,7 @@ sd38_sitelinks.front_page:
   title: 'Home'
   route_name: '<front>'
   menu_name: main
-  weight: -50
+  weight: -100
 sd38_sitelinks.staff_positions:
   title: 'Staff Positions'
   parent: system.admin_content
