@@ -103,6 +103,7 @@
         "drupal/field_group_link": "^3.0@RC",
         "drupal/field_permissions": "^1.1",
         "drupal/fitvids": "^1.1",
+        "drupal/flood_control": "^2.2",
         "drupal/focal_point": "^1.5",
         "drupal/fontyourface": "^3.6",
         "drupal/fullcalendar_view": "^5.0",

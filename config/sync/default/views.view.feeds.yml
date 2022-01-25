@@ -1,21 +1,20 @@
-uuid: afbece06-d222-42b0-88de-5e8d19abbe83
+uuid: 9ad970f6-0e39-4926-a477-8ac3dbe2bbe4
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.site_blogs_sections
+    - feeds.feed_type.calendar_upload
   module:
-    - node
-    - taxonomy
+    - feeds
     - user
     - views_bootstrap
-id: site_sections
-label: 'Site Sections'
+id: feeds
+label: Feeds
 module: views
 description: ''
 tag: ''
-base_table: taxonomy_term_field_data
-base_field: tid
+base_table: feeds_feed
+base_field: fid
 display:
   default:
     display_plugin: default
@@ -26,7 +25,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'create terms in site_blogs_sections'
+          perm: 'access feed overview'
       cache:
         type: tag
         options: {  }
@@ -49,10 +48,23 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: mini
         options:
-          items_per_page: null
+          items_per_page: 5
           offset: 0
+          id: 1
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       style:
         type: views_bootstrap_table
         options:
@@ -65,17 +77,25 @@ display:
           summary: ''
           description: ''
           columns:
-            name: name
-            edit_taxonomy_term: edit_taxonomy_term
+            title: title
+            edit_feeds_feed: edit_feeds_feed
+            delete_feeds_feed: delete_feeds_feed
           info:
-            name:
+            title:
               sortable: 0
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: 0
               responsive: ''
-            edit_taxonomy_term:
+            edit_feeds_feed:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            delete_feeds_feed:
               sortable: 0
               default_sort_order: asc
               align: ''
@@ -92,11 +112,16 @@ display:
             hover: 0
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
-        tid:
-          id: tid
-          table: taxonomy_term_field_data
-          field: tid
+        imported:
+          id: imported
+          table: feeds_feed
+          field: imported
           relationship: none
           group_type: group
           admin_label: ''
@@ -142,10 +167,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
+          type: timestamp
           settings:
-            thousand_separator: ''
-            prefix_suffix: false
+            date_format: custom
+            custom_date_format: 'M d Y h:i:s A'
+            timezone: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -156,21 +182,21 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: taxonomy_term
-          entity_field: tid
+          entity_type: feeds_feed
+          entity_field: imported
           plugin_id: field
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: field_section_home_page
+        title:
+          id: title
+          table: feeds_feed
+          field: title
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ title }}<br>\r\n<span class=\"small fw-bold\">Imported:</span><span class=\"small\"> {{ imported }}</span>"
             make_link: false
             path: ''
             absolute: false
@@ -188,59 +214,6 @@ display:
             max_length: 0
             word_boundary: true
             ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: view
-          output_url_as_text: true
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Section
-          exclude: false
-          alter:
-            alter_text: true
-            text: '<a href="{{ view_node }}">{{ name }}</a>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: false
-            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -274,14 +247,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          convert_spaces: false
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: term_name
-        edit_taxonomy_term:
-          id: edit_taxonomy_term
-          table: taxonomy_term_data
-          field: edit_taxonomy_term
+          entity_type: null
+          entity_field: title
+          plugin_id: field
+        edit_feeds_feed:
+          id: edit_feeds_feed
+          table: feeds_feed
+          field: edit_feeds_feed
           relationship: none
           group_type: group
           admin_label: ''
@@ -329,20 +301,20 @@ display:
           text: Edit
           output_url_as_text: false
           absolute: false
-          entity_type: taxonomy_term
+          entity_type: feeds_feed
           plugin_id: entity_link_edit
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
+        delete_feeds_feed:
+          id: delete_feeds_feed
+          table: feeds_feed
+          field: delete_feeds_feed
           relationship: none
           group_type: group
           admin_label: ''
-          label: Permissions
+          label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '<a href="/admin/config/workflow/workbench_access/site_section/sections/{{ tid }}/users">Manage Editors</a>'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -371,44 +343,76 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
+          hide_alter_empty: true
+          text: Delete
+          output_url_as_text: false
+          absolute: false
+          entity_type: feeds_feed
+          plugin_id: entity_link_delete
       filters:
-        status:
-          value: '1'
-          table: taxonomy_term_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: taxonomy_term
-          entity_field: status
-          id: status
+        type:
+          id: type
+          table: feeds_feed
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            calendar_upload: calendar_upload
+          group: 1
+          exposed: false
           expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
-        vid:
-          id: vid
-          table: taxonomy_term_field_data
-          field: vid
-          value:
-            site_blogs_sections: site_blogs_sections
-          entity_type: taxonomy_term
-          entity_field: vid
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: feeds_feed
+          entity_field: type
           plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
       sorts: {  }
-      title: 'Site Sections'
-      header: {  }
+      title: 'Feeds (Calendar Upload)'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<div class="row small">Upload an ICS file to add events to your website calendar.</div>'
+          plugin_id: text_custom
       footer:
         area_text_custom:
           id: area_text_custom
@@ -417,40 +421,22 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
+          empty: false
           tokenize: false
-          content: '<div class="row"><a type="button" role="button" class="btn btn-light" href="/admin/structure/taxonomy/manage/site_blogs_sections/add"">Add Site Section</a></div>'
+          content: '<div class="row"><a type="button" role="button" class="btn btn-light" href="/feed/add">Add Calendar Upload</a></div>'
           plugin_id: text_custom
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<div class="row"><div class="col bg-theme text-center text-muted rounded p-4"><small>No sections have been created.</small></div></div>'
-          plugin_id: text_custom
-      relationships:
-        field_section_home_page:
-          id: field_section_home_page
-          table: taxonomy_term__field_section_home_page
-          field: field_section_home_page
-          relationship: none
-          group_type: group
-          admin_label: 'field_section_home_page: Content'
-          required: false
-          plugin_id: standard
+      empty: {  }
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
       css_class: col
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - user.permissions
       tags: {  }
   block_1:
@@ -460,11 +446,12 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Site Sections Admin Block'
+      block_description: 'User Feeds'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - user.permissions
       tags: {  }
