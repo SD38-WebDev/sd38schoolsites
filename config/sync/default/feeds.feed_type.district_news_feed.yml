@@ -36,16 +36,39 @@ third_party_settings:
         weight: 1
         label: 'Keyword filter'
         uuid: b3f1fd1f-cd6c-4ccb-8d12-27102da6d9b4
+      f78cf59e-ac9b-4786-83ea-2ad22f024f6b:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: destination
+        weight: 2
+        label: Explode
+        uuid: f78cf59e-ac9b-4786-83ea-2ad22f024f6b
+      9494f4f9-e249-4acc-b0a1-63e493fe26fa:
+        character: ''
+        side: trim
+        plugin: trim
+        source: destination
+        weight: 3
+        label: 'Characters to trim'
+        uuid: 9494f4f9-e249-4acc-b0a1-63e493fe26fa
+      1d1e2e3b-1d05-46a9-8940-a9b60d2e4e0b:
+        glue: ','
+        plugin: implode
+        source: destination
+        weight: 4
+        label: Implode
+        uuid: 1d1e2e3b-1d05-46a9-8940-a9b60d2e4e0b
 id: district_news_feed
 label: 'District News Feed'
 description: ''
 help: ''
-import_period: 3600
+import_period: 0
 fetcher: http
 fetcher_configuration:
   auto_detect_feeds: false
   use_pubsubhubbub: false
-  always_download: true
+  always_download: false
   fallback_hub: ''
   request_timeout: 30
 parser: csv
@@ -57,7 +80,7 @@ processor: 'entity:node'
 processor_configuration:
   langcode: en
   update_existing: 2
-  update_non_existent: 'entity:unpublish_action:node'
+  update_non_existent: _delete
   expire: -1
   owner_feed_author: false
   owner_id: 1
