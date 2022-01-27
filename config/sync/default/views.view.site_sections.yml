@@ -431,7 +431,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<div class="row"><div class="col bg-theme text-center text-muted rounded p-4"><small>No sections have been created.</small></div></div>'
+          content: '<div class="row"><div class="col bg-theme text-center text-muted rounded p-4 mb-3"><small>No sections have been created.</small></div></div>'
           plugin_id: text_custom
       relationships:
         field_section_home_page:

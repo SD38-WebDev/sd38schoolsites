@@ -3,9 +3,39 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.body
+    - field.field.node.article.field_district_news_destination
+    - field.field.node.article.field_feature_image
+    - field.field.node.article.field_import_uuid
     - node.type.article
   module:
+    - feeds_tamper
     - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      f5add57d-0077-4bf8-b18a-6f84e62b4941:
+        invert: false
+        plugin: required
+        source: destination
+        weight: 0
+        label: Required
+        uuid: f5add57d-0077-4bf8-b18a-6f84e62b4941
+      b3f1fd1f-cd6c-4ccb-8d12-27102da6d9b4:
+        words: ''
+        word_boundaries: false
+        exact: false
+        case_sensitive: false
+        invert: false
+        word_list:
+          - ''
+        regex: false
+        function: mb_stripos
+        plugin: keyword_filter
+        source: destination
+        weight: 1
+        label: 'Keyword filter'
+        uuid: b3f1fd1f-cd6c-4ccb-8d12-27102da6d9b4
 id: district_news_feed
 label: 'District News Feed'
 description: ''
@@ -44,6 +74,30 @@ custom_sources:
     label: body
     value: body
     machine_name: body
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
+  destination:
+    label: destination
+    value: destination
+    machine_name: destination
+  status:
+    label: status
+    value: status
+    machine_name: status
+  sticky:
+    label: sticky
+    value: sticky
+    machine_name: sticky
+  import_uuid:
+    label: 'Import UUID'
+    value: 'Import UUID'
+    machine_name: import_uuid
+  feature_image:
+    label: 'feature image'
+    value: 'feature image'
+    machine_name: feature_image
 mappings:
   -
     target: title
@@ -52,3 +106,46 @@ mappings:
     unique: {  }
     settings:
       language: ''
+  -
+    target: body
+    map:
+      value: body
+      summary: summary
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_district_news_destination
+    map:
+      value: destination
+    settings:
+      language: null
+  -
+    target: status
+    map:
+      value: status
+    settings:
+      language: null
+  -
+    target: sticky
+    map:
+      value: sticky
+    settings:
+      language: null
+  -
+    target: field_import_uuid
+    map:
+      value: import_uuid
+    unique:
+      value: '1'
+    settings:
+      language: null
+  -
+    target: field_feature_image
+    map:
+      target_id: feature_image
+    settings:
+      language: en
+      reference_by: fid
+      existing: '2'
+      autocreate: 0

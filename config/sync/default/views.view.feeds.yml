@@ -421,11 +421,22 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: false
           content: '<div class="row"><a type="button" role="button" class="btn btn-light" href="/feed/add">Add Calendar Upload</a></div>'
           plugin_id: text_custom
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<div class="row"><div class="col bg-theme text-center text-muted rounded p-4 mb-2"><small>No calendar uploads have been added.</small></div></div>'
+          plugin_id: text_custom
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
