@@ -3,9 +3,44 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.body
     - node.type.article
   module:
+    - feeds_tamper
     - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      d67d064d-d19e-405b-bab0-a3015dd96f4f:
+        words: test
+        word_boundaries: false
+        exact: false
+        case_sensitive: false
+        invert: false
+        word_list:
+          - test
+        regex: false
+        function: mb_stripos
+        plugin: keyword_filter
+        source: title
+        weight: 0
+        label: 'Keyword filter'
+        uuid: d67d064d-d19e-405b-bab0-a3015dd96f4f
+      ab8eef3d-91e2-4271-8e2c-2d723edf2a58:
+        words: test2
+        word_boundaries: false
+        exact: false
+        case_sensitive: false
+        invert: false
+        word_list:
+          - test2
+        regex: false
+        function: mb_stripos
+        plugin: keyword_filter
+        source: body
+        weight: 0
+        label: 'Keyword filter'
+        uuid: ab8eef3d-91e2-4271-8e2c-2d723edf2a58
 id: testfeed
 label: testfeed
 description: ''
@@ -32,5 +67,43 @@ processor_configuration:
   skip_hash_check: false
   values:
     type: article
-custom_sources: {  }
-mappings: {  }
+custom_sources:
+  title:
+    label: title
+    value: title
+    machine_name: title
+  body:
+    label: body
+    value: body
+    machine_name: body
+  summary:
+    label: summary
+    value: summary
+    machine_name: summary
+  nid:
+    label: nid
+    value: nid
+    machine_name: nid
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: body
+      summary: summary
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: nid
+    map:
+      value: nid
+    unique:
+      value: '1'
+    settings: {  }
