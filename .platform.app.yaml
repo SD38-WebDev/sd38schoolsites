@@ -60,6 +60,9 @@ relationships:
     slss: 'db:slss'
     jnburnett: 'db:jnburnett'
     rhs: 'db:rhs'
+    careerprograms: 'db:careerprograms'
+    ce: 'db:ce'
+    rvs: 'db:rvs'
 disk: 70000
 mounts:
     /web/files:
@@ -85,19 +88,19 @@ build:
 hooks:
     build: |
         set -e
-
+        
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
         cd web
         ../drush/drush-multisite -y cache-rebuild
         ../drush/drush-multisite -y updatedb
-
+        
     post_deploy: |
         set -e
         cd web
         ../drush/drush-multisite -y config-import
-
+        
 web:
     locations:
         /:

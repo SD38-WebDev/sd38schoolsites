@@ -2,8 +2,6 @@ uuid: a324739f-fbd9-45ce-ab12-5826f73b103f
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.admin
   module:
     - feeds
     - user
@@ -722,7 +720,7 @@ display:
       display_extenders: {  }
       path: admin/content/feed
       menu:
-        type: normal
+        type: none
         title: Feeds
         description: ''
         expanded: false

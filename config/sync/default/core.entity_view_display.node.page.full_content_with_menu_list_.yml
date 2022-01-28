@@ -1,27 +1,22 @@
-uuid: 7bb711e6-618e-4e4c-ab6b-4ab01e20660a
+uuid: b52c85ed-ca16-43de-8862-0381068f1c1f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.feeds_item
-    - field.field.node.article.field_article_category
-    - field.field.node.article.field_attachments
-    - field.field.node.article.field_content_section
-    - field.field.node.article.field_district_news_destination
-    - field.field.node.article.field_feature_image
-    - field.field.node.article.field_import_uuid
-    - field.field.node.article.field_legacy_attachments
-    - field.field.node.article.field_legacy_image_gallery
-    - field.field.node.article.field_promote_to_front_page
-    - field.field.node.article.field_site_section
-    - field.field.node.article.field_tags
-    - node.type.article
+    - core.entity_view_mode.node.full_content_with_menu_list_
+    - field.field.node.page.body
+    - field.field.node.page.feeds_item
+    - field.field.node.page.field_content_section
+    - field.field.node.page.field_feature_image
+    - field.field.node.page.field_import_uuid
+    - field.field.node.page.field_legacy_attachments
+    - field.field.node.page.field_sidebar_content
+    - field.field.node.page.field_site_section
+    - node.type.page
   module:
     - ds
     - entity_reference_revisions
     - file
-    - options
     - text
     - user
 third_party_settings:
@@ -35,8 +30,7 @@ third_party_settings:
         label: ''
         layout:
           wrapper: div
-          classes:
-            row: row
+          classes: {  }
           add_layout_class: 0
           attributes: ' class|row justify-content-center'
         regions:
@@ -44,65 +38,61 @@ third_party_settings:
             wrapper: div
             classes:
               col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
+            add_region_classes: 0
+            attributes: class|col-12
           left:
             wrapper: div
             classes: {  }
-            add_region_classes: 1
-            attributes: 'class|col-12 col-lg-3'
+            add_region_classes: 0
+            attributes: 'class|col-12 col-lg-9'
           right:
             wrapper: div
             classes: {  }
-            add_region_classes: 1
-            attributes: 'class|col-12 col-lg-9'
+            add_region_classes: 0
+            attributes: 'class|col-12 col-lg-3 sidebar-content'
           bottom:
             wrapper: div
             classes:
               col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
+            add_region_classes: 0
+            attributes: class|col-12
     regions:
-      top:
-        - field_promote_to_front_page
       left:
-        - field_feature_image
-      right:
         - node_title
+        - field_feature_image
         - body
-        - links
         - field_content_section
-        - field_legacy_image_gallery
         - field_legacy_attachments
-        - field_attachments
-        - node_changed_date
+        - 'dynamic_block_field:node-section_menu_block'
+      right:
+        - field_sidebar_content
     fields:
-      node_changed_date:
-        plugin_id: node_changed_date
-        weight: 9
-        label: inline
-        formatter: ds_post_date_full_date_only
+      'dynamic_block_field:node-section_menu_block':
+        plugin_id: 'dynamic_block_field:node-section_menu_block'
+        weight: 5
+        label: hidden
+        formatter: default
         ft:
           id: expert
           settings:
-            lb: Updated
+            lb: ''
             prefix: ''
-            lbw: true
-            lbw-el: strong
+            lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
-            lb-col: true
             ow: true
             ow-el: div
-            ow-cl: 'text-muted small'
+            ow-cl: nav-list
             ow-at: ''
             fis-el: ''
             fis-cl: ''
             fis-at: ''
-            fi-el: small
+            fi-el: ''
             fi-cl: ''
             fi-at: ''
             suffix: ''
+            lbw: false
+            lb-col: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
@@ -111,7 +101,7 @@ third_party_settings:
             fi-def-at: false
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 0
         label: hidden
         formatter: default
         settings:
@@ -124,25 +114,25 @@ third_party_settings:
             lb: ''
             lb-col: false
             classes: {  }
-id: node.article.default
+id: node.page.full_content_with_menu_list_
 targetEntityType: node
-bundle: article
-mode: default
+bundle: page
+mode: full_content_with_menu_list_
 content:
   body:
-    weight: 3
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: right
-  field_attachments:
-    type: entity_reference_entity_view
-    weight: 8
-    label: above
+    region: left
+  field_content_section:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
     settings:
       view_mode: default
-      link: false
+      link: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -151,40 +141,30 @@ content:
           settings:
             lb: ''
             prefix: ''
-            lbw: true
-            lbw-el: h2
+            lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
             ow-el: ''
             ow-cl: ''
             ow-at: ''
-            fis: true
-            fis-el: div
-            fis-cl: 'row row-cols-2  d-flex align-items-stretch mt-3'
+            fis-el: ''
+            fis-cl: ''
             fis-at: ''
             fi: true
-            fi-el: div
-            fi-cl: 'col mb-2'
+            fi-el: ''
+            fi-cl: content-section
             fi-at: ''
             suffix: ''
+            lbw: false
             lb-col: false
             ow: false
             ow-def-at: false
             ow-def-cl: false
+            fis: false
             fis-def-at: false
             fi-def-at: false
-    region: right
-  field_content_section:
-    weight: 5
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: right
+    region: left
   field_feature_image:
-    type: entity_reference_entity_view
     weight: 1
     label: hidden
     settings:
@@ -207,9 +187,8 @@ content:
             fis-el: ''
             fis-cl: ''
             fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: article-img
+            fi-el: ''
+            fi-cl: ''
             fi-at: ''
             suffix: ''
             lbw: false
@@ -218,10 +197,12 @@ content:
             ow-def-cl: false
             fis: false
             fis-def-at: false
+            fi: false
             fi-def-at: false
+    type: entity_reference_entity_view
     region: left
   field_legacy_attachments:
-    weight: 7
+    weight: 4
     label: above
     settings:
       use_description_as_link_text: true
@@ -234,33 +215,48 @@ content:
             lb: Attachments
             lb-col: false
             classes: {  }
-    type: file_default
-    region: right
-  field_legacy_image_gallery:
-    type: entity_reference_entity_view
+    type: file_table
+    region: left
+  field_sidebar_content:
+    type: entity_reference_revisions_entity_view
     weight: 6
     label: hidden
     settings:
       view_mode: default
-      link: false
-    third_party_settings: {  }
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: content-section
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
     region: right
-  field_promote_to_front_page:
-    weight: 0
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: top
-  links:
-    weight: 4
-    region: right
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   feeds_item: true
-  field_article_category: true
-  field_district_news_destination: true
   field_import_uuid: true
   field_site_section: true
-  field_tags: true
+  links: true
