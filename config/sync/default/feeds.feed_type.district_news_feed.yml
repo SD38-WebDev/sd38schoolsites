@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_attachments
     - field.field.node.article.field_district_news_destination
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_import_uuid
@@ -121,6 +122,10 @@ custom_sources:
     label: 'feature image'
     value: 'feature image'
     machine_name: feature_image
+  attachments:
+    label: Attachments
+    value: Attachments
+    machine_name: attachments
 mappings:
   -
     target: title
@@ -169,6 +174,15 @@ mappings:
       target_id: feature_image
     settings:
       language: en
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: field_attachments
+    map:
+      target_id: attachments
+    settings:
+      language: ''
       reference_by: fid
       existing: '2'
       autocreate: 0
