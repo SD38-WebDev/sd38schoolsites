@@ -60,6 +60,22 @@ third_party_settings:
         weight: 4
         label: Implode
         uuid: 1d1e2e3b-1d05-46a9-8940-a9b60d2e4e0b
+      ba8fe080-4d22-4431-b5fe-c0d1604338ed:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: attachments
+        weight: 0
+        label: Explode
+        uuid: ba8fe080-4d22-4431-b5fe-c0d1604338ed
+      6760177a-e675-4e08-964e-c4cbb13e49cd:
+        character: ''
+        side: trim
+        plugin: trim
+        source: attachments
+        weight: 1
+        label: 'Characters to trim'
+        uuid: 6760177a-e675-4e08-964e-c4cbb13e49cd
 id: district_news_feed
 label: 'District News Feed'
 description: ''
