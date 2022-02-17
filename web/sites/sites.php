@@ -54,6 +54,12 @@
  * @see https://www.drupal.org/documentation/install/multi-site
  */
 
+ // Add additional domain mappings here.
+ $sites['dev.ddev.site'] = 'dev';
+ $sites['schooldev.ddev.site'] = 'schooldev';
+ $sites['trainingdev.ddev.site'] = 'trainingdev';
+
+
 $platformsh = new \Platformsh\ConfigReader\Config();
 
 if (!$platformsh->inRuntime()) {
@@ -71,7 +77,3 @@ foreach ($platformsh->getUpstreamRoutes($platformsh->applicationName) as $route)
     $sites[$host] = $subdomain;
   }
 }
-
-// Add additional domain mappings here.
-
-$sites['hjcambie-new.sd38.bc.ca'] = 'hjcambie';
