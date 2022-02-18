@@ -2,11 +2,14 @@ uuid: f0c699fb-ffbe-43cd-aa7c-230673a7a4c9
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.article
+    - node.type.page
   module:
     - node
     - user
 id: ddev_test
-label: 'DDEV TEST'
+label: 'DDEV TEST TWO'
 module: views
 description: ''
 tag: ''
@@ -131,6 +134,49 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            article: article
+            page: page
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       sorts:
         created:
           id: created
@@ -147,12 +193,13 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'DDEV TEST'
+      title: 'DDEV TEST TWO'
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
