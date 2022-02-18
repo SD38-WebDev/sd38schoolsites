@@ -21,7 +21,6 @@ dependencies:
     - ds
     - entity_reference_revisions
     - file
-    - options
     - text
     - user
 third_party_settings:
@@ -63,8 +62,6 @@ third_party_settings:
             add_region_classes: 1
             attributes: ''
     regions:
-      top:
-        - field_promote_to_front_page
       left:
         - field_feature_image
       right:
@@ -79,7 +76,7 @@ third_party_settings:
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 9
+        weight: 8
         label: inline
         formatter: ds_post_date_full_date_only
         ft:
@@ -111,7 +108,7 @@ third_party_settings:
             fi-def-at: false
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 1
         label: hidden
         formatter: default
         settings:
@@ -130,7 +127,7 @@ bundle: article
 mode: default
 content:
   body:
-    weight: 3
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -138,7 +135,7 @@ content:
     region: right
   field_attachments:
     type: entity_reference_entity_view
-    weight: 8
+    weight: 7
     label: above
     settings:
       view_mode: default
@@ -175,7 +172,7 @@ content:
             fi-def-at: false
     region: right
   field_content_section:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -185,7 +182,7 @@ content:
     region: right
   field_feature_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: large_480_480_
@@ -221,7 +218,7 @@ content:
             fi-def-at: false
     region: left
   field_legacy_attachments:
-    weight: 7
+    weight: 6
     label: above
     settings:
       use_description_as_link_text: true
@@ -238,22 +235,15 @@ content:
     region: right
   field_legacy_image_gallery:
     type: entity_reference_entity_view
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: right
-  field_promote_to_front_page:
-    weight: 0
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: top
   links:
-    weight: 4
+    weight: 3
     region: right
     settings: {  }
     third_party_settings: {  }
@@ -262,5 +252,6 @@ hidden:
   field_article_category: true
   field_district_news_destination: true
   field_import_uuid: true
+  field_promote_to_front_page: true
   field_site_section: true
   field_tags: true
