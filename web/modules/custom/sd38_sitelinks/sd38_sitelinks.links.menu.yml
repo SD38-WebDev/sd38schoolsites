@@ -13,3 +13,8 @@ sd38_sitelinks.staff_grades_departments:
   parent: system.admin_content
   url: internal:/admin/structure/taxonomy/manage/staff_grades_departments/overview
   weight: 49
+sd38_sitelinks.site_tags:
+  title: 'Tags (for Articles)'
+  parent: system.admin_content
+  url: internal:/admin/structure/taxonomy/manage/tags/overview
+  weight: 48

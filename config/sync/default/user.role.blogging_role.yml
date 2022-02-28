@@ -1,0 +1,14 @@
+uuid: 35141702-480d-484d-b7de-de4a8d123eb0
+langcode: en
+status: true
+dependencies: {  }
+id: blogging_role
+label: 'Blogging Role'
+weight: -6
+is_admin: null
+permissions:
+  - 'administer taxonomy'
+  - 'create terms in tags'
+  - 'delete terms in tags'
+  - 'edit terms in tags'
+  - 'merge taxonomy terms'

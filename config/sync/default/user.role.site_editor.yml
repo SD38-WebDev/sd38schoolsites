@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: site_editor
 label: 'Site Editor'
-weight: -5
+weight: -4
 is_admin: null
 permissions:
   - 'access content overview'
