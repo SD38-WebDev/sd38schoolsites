@@ -61,9 +61,9 @@ content:
         4_columns: 4_columns
         5_columns: 5_columns
         6_columns: 6_columns
-        default: 0
-        1_column: 0
-        2_columns: 0
+        default: '0'
+        1_column: '0'
+        2_columns: '0'
       default_view_mode: 4_columns
     third_party_settings: {  }
     region: content

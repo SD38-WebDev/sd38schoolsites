@@ -10,9 +10,9 @@ palette:
   titleslogan: '#fffeff'
   text: '#3b3b3b'
   link: '#51ba8d'
-logo: 'public://color/rsd_sites_barrio-d61d5ffd/logo.svg'
+logo: 'public://color/rsd_sites_barrio-774af763/logo.svg'
 stylesheets:
-  - 'public://color/rsd_sites_barrio-d61d5ffd/colors.css'
+  - 'public://color/rsd_sites_barrio-774af763/colors.css'
 files:
-  - 'public://color/rsd_sites_barrio-d61d5ffd/logo.svg'
-  - 'public://color/rsd_sites_barrio-d61d5ffd/colors.css'
+  - 'public://color/rsd_sites_barrio-774af763/logo.svg'
+  - 'public://color/rsd_sites_barrio-774af763/colors.css'

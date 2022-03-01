@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: site_menu_editor
 label: 'Site Menu Editor'
-weight: -6
+weight: -5
 is_admin: null
 permissions:
   - 'administer menu'

@@ -35,7 +35,7 @@ content:
       view_modes:
         1_column: 1_column
         2_columns: 2_columns
-        default: 0
+        default: '0'
       default_view_mode: 1_column
     third_party_settings: {  }
     region: content
