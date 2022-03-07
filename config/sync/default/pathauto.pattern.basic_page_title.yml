@@ -1,22 +1,22 @@
-uuid: b73047db-8e0b-4edc-a3dd-7617b5ec2bfc
+uuid: 55d53d65-4c11-4e9a-bcb4-7fcd1a42214b
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: basic_page
+id: basic_page_title
 label: 'Basic Page'
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:menu-link:title]'
 selection_criteria:
-  e344027e-5892-467b-b11f-83b4df0da210:
+  630fc5a2-8f84-462d-83da-4cdcdb2884b2:
     id: node_type
     bundles:
       page: page
     negate: false
     context_mapping:
       node: node
-    uuid: e344027e-5892-467b-b11f-83b4df0da210
+    uuid: 630fc5a2-8f84-462d-83da-4cdcdb2884b2
 selection_logic: and
-weight: -5
+weight: -8
 relationships: {  }

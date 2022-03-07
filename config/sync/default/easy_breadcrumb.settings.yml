@@ -5,13 +5,13 @@ home_segment_title: Home
 home_segment_keep: false
 include_title_segment: true
 language_path_prefix_as_segment: false
-use_menu_title_as_fallback: false
-use_page_title_as_menu_title_fallback: false
+use_menu_title_as_fallback: true
+use_page_title_as_menu_title_fallback: true
 remove_repeated_segments: true
 term_hierarchy: false
 absolute_paths: false
 hide_single_home_item: false
-title_from_page_when_available: true
+title_from_page_when_available: false
 capitalizator_mode: ucwords
 capitalizator_ignored_words:
   - of
@@ -34,8 +34,9 @@ custom_paths: ''
 title_segment_as_link: false
 follow_redirects: true
 limit_segment_display: false
-truncator_mode: false
-truncator_length: '100'
+truncator_mode: true
+truncator_length: 32
 truncator_dots: true
 _core:
   default_config_hash: 8EmQa_u-FWYuP_YcNy-Tp3PuLk583dbhIB8xbNQ58TE
+segment_display_limit: ''
