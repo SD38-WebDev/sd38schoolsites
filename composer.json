@@ -182,6 +182,9 @@
           "drupal/field_group": {
               "Adds tokens to html_element groups": "https://www.drupal.org/files/issues/2020-07-03/2961885-13.patch"
           },
+          "drupal/feeds_ical": {
+              "Resolve Abstract Method Glitch": "https://www.drupal.org/files/issues/2022-03-14/feeds-ical-3261836-7.patch"
+          },
           "drupal/core": {
               "Move cursor to new line after image insert in CKEditor": "https://www.drupal.org/files/issues/2019-12-18/0004-Set-focus-for-chrome-after-html-insert-with-space.patch"
           }
