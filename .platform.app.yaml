@@ -88,19 +88,21 @@ build:
 hooks:
     build: |
         set -e
-        
+
     deploy: |
         set -e
         php ./drush/platformsh_generate_drush_yml.php
         cd web
         ../drush/drush-multisite -y cache-rebuild
         ../drush/drush-multisite -y updatedb
-        
+
     post_deploy: |
         set -e
         cd web
         ../drush/drush-multisite -y config-import
-        
+        ../drush/drush-multisite state:set system.maintenance_mode 0 --input-format=integer
+        ../drush/drush-multisite cr
+
 web:
     locations:
         /:
