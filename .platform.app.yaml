@@ -100,7 +100,8 @@ hooks:
         set -e
         cd web
         ../drush/drush-multisite -y config-import
-        ../drush/drush-multisite state:set system.maintenance_mode 1 --input-format=integer
+        # THE CODE BELOW WILL PUT SITES IN OR OUT OF MAINTENANCE MODE 1 to enable 0 to disable
+        ../drush/drush-multisite state:set system.maintenance_mode 0 --input-format=integer
         ../drush/drush-multisite cr
 
 web:
