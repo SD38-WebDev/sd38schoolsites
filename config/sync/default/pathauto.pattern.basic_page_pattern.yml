@@ -9,16 +9,15 @@ label: 'Basic Calendar and Staff Page Pattern'
 type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  3a7495d7-9a88-45c8-89ac-b0a76875de55:
+  6de56302-799c-434c-8279-27de552f6001:
     id: node_type
     bundles:
       calendar_page: calendar_page
-      page: page
       staff_page: staff_page
     negate: false
     context_mapping:
       node: node
-    uuid: 3a7495d7-9a88-45c8-89ac-b0a76875de55
+    uuid: 6de56302-799c-434c-8279-27de552f6001
 selection_logic: and
-weight: -5
+weight: -9
 relationships: {  }

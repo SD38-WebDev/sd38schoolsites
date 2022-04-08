@@ -284,6 +284,14 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
+"https://kingswood.sd38.bc.ca":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
 "https://lee.{default}/":
     type: upstream
     upstream: "app:http"
@@ -324,7 +332,23 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
+"https://mckay.sd38.bc.ca":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
 "https://mckinney.{default}/":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+
+"https://mckinney.sd38.bc.ca":
     type: upstream
     upstream: "app:http"
     cache:
