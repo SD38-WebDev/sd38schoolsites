@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e738e63e8563ffab865a29cd5d3778b0",
+    "content-hash": "7f51e1d745df66da5afb85a69a4a0126",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7059,17 +7059,17 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.5.1",
+            "version": "3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.5.1"
+                "reference": "3.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.5.1.zip",
-                "reference": "3.5.1",
-                "shasum": "bebf090fee43ce53469146a07676b0a844bbcd8d"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-3.4.3.zip",
+                "reference": "3.4.3",
+                "shasum": "802f21abc5c1848b04b88169cd63e0980ed5ec85"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -7082,8 +7082,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.5.1",
-                    "datestamp": "1646337034",
+                    "version": "3.4.3",
+                    "datestamp": "1634467244",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
