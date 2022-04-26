@@ -28,7 +28,7 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: ' class|d-flex row sd38-mts align-items-center mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
+          attributes: ' class|d-flex row mts mts-il align-items-center mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
         regions:
           left:
             wrapper: div
@@ -39,7 +39,7 @@ third_party_settings:
             wrapper: div
             classes: {  }
             add_region_classes: 1
-            attributes: 'class|col-12 col-lg-6 p-3'
+            attributes: 'class|col-12 col-lg-6 text-area'
     regions:
       left:
         - field_image
