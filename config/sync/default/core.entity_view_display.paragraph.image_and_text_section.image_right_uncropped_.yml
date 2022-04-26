@@ -1,9 +1,9 @@
-uuid: 5e0860a9-48b6-45df-8be1-a40606fe866d
+uuid: a1086664-0497-496c-ba5e-153198740ca6
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.image_right
+    - core.entity_view_mode.paragraph.image_right_uncropped_
     - field.field.paragraph.image_and_text_section.field_background_colour
     - field.field.paragraph.image_and_text_section.field_image
     - field.field.paragraph.image_and_text_section.field_section_bgcolour
@@ -46,20 +46,21 @@ third_party_settings:
         - field_section_content
       right:
         - field_image
-id: paragraph.image_and_text_section.image_right
+id: paragraph.image_and_text_section.image_right_uncropped_
 targetEntityType: paragraph
 bundle: image_and_text_section
-mode: image_right
+mode: image_right_uncropped_
 content:
   field_image:
     type: entity_reference_entity_view
     weight: 2
     label: hidden
     settings:
-      view_mode: square_x_large_800x800_
+      view_mode: x_large_full_width_
       link: false
     third_party_settings:
       ds:
+        ds_limit: ''
         ft:
           id: default
           settings:

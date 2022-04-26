@@ -72,15 +72,14 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
+          'link class': ''
           wrapper: h1
           class: ''
           link: false
         ft:
-          id: default
+          id: reset
           settings:
             lb: ''
-            lb-col: false
-            classes: {  }
 id: node.page.full
 targetEntityType: node
 bundle: page

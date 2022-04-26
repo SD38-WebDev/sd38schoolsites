@@ -1,0 +1,10 @@
+uuid: c7d6ada4-0bca-4e82-94bd-b43f581ea981
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.image_left_uncropped_
+label: 'Image Left (uncropped)'
+targetEntityType: paragraph
+cache: true

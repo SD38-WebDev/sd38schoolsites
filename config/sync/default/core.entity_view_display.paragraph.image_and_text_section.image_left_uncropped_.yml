@@ -1,9 +1,9 @@
-uuid: 5e0860a9-48b6-45df-8be1-a40606fe866d
+uuid: 09d93547-33ae-4e10-96cd-4a3e47210bda
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.image_right
+    - core.entity_view_mode.paragraph.image_left_uncropped_
     - field.field.paragraph.image_and_text_section.field_background_colour
     - field.field.paragraph.image_and_text_section.field_image
     - field.field.paragraph.image_and_text_section.field_section_bgcolour
@@ -34,48 +34,49 @@ third_party_settings:
             wrapper: div
             classes: {  }
             add_region_classes: 1
-            attributes: 'class|col-12 col-lg-6 p-3'
+            attributes: 'class|col-12 col-lg-6'
           right:
             wrapper: div
             classes: {  }
             add_region_classes: 1
-            attributes: 'class|col-12 col-lg-6'
+            attributes: 'class|col-12 col-lg-6 p-3'
     regions:
       left:
+        - field_image
+      right:
         - field_section_title
         - field_section_content
-      right:
-        - field_image
-id: paragraph.image_and_text_section.image_right
+id: paragraph.image_and_text_section.image_left_uncropped_
 targetEntityType: paragraph
 bundle: image_and_text_section
-mode: image_right
+mode: image_left_uncropped_
 content:
   field_image:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 0
     label: hidden
     settings:
-      view_mode: square_x_large_800x800_
+      view_mode: x_large_full_width_
       link: false
     third_party_settings:
       ds:
+        ds_limit: ''
         ft:
           id: default
           settings:
             lb: ''
             lb-col: false
             classes: {  }
-    region: right
+    region: left
   field_section_content:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: left
+    region: right
   field_section_title:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -109,7 +110,7 @@ content:
             fis-def-at: false
             fi-def-at: false
     type: string
-    region: left
+    region: right
 hidden:
   field_background_colour: true
   field_section_bgcolour: true

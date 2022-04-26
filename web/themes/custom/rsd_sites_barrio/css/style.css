@@ -1035,7 +1035,7 @@ video {
 
 /* .content-section {border: 1px solid purple;}
 .content-section .d-flex {border: 1px solid green;} */
-.content-section .sd38-mts.row {--bs-gutter-x: 0rem;}
+.content-section .mts.row {--bs-gutter-x: 0rem;}
 
 .content-section .bg-none {background: unset; padding: 0rem;}
 .content-section .bg-lightgrey {background: #eee;}
@@ -1081,6 +1081,10 @@ video {
 .content-section .bg-plum {background-color:#593662; color: white;}
 .content-section .bg-slate {background-color:#4e4e4e; color: white;}
 
+.content-section .sd38-mts .bs-region--left {
+  padding:0;
+}
+
 .content-section .bg-lightgrey,
 .content-section .bg-sd38bluelagoon,
 .content-section .bg-sd38royalblue,
@@ -1100,8 +1104,44 @@ video {
 .content-section .bg-ice,
 .content-section .bg-plum,
 .content-section .bg-slate {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: .5rem;
+}
+
+.content-section .mts-il .bs-region--left {padding: 1rem 1rem 1rem 0rem;}
+.content-section .mts-il .bs-region--right {padding: 1rem 0rem 1rem 1rem;}
+
+.content-section .mts-ir .bs-region--left {padding: 1rem 1rem 1rem 0rem;}
+.content-section .mts-ir .bs-region--right {padding: 1rem 0rem 1rem 1rem;}
+
+@media (max-width: 991.98px) {
+  .content-section .mts-il .bs-region--left {padding: 1rem 0rem 1rem 0rem;}
+  .content-section .mts-il .bs-region--right {padding: 1rem 0rem 1rem 0rem;}
+
+  .content-section .mts-ir .bs-region--left {padding: 1rem 0rem 1rem 0rem;}
+  .content-section .mts-ir .bs-region--right {padding: 1rem 0rem 1rem 0rem;}
+}
+
+.content-section .mts.bg-lightgrey .bs-region,
+.content-section .mts.bg-sd38bluelagoon .bs-region,
+.content-section .mts.bg-sd38royalblue .bs-region,
+.content-section .mts.bg-sd38tealsky .bs-region,
+.content-section .mts.bg-sd38oceangreen .bs-region,
+.content-section .mts.bg-sd38sagegreen .bs-region,
+.content-section .mts.bg-sd38limegreen .bs-region,
+.content-section .mts.bg-sd38golden .bs-region,
+.content-section .mts.bg-sd38burntorange .bs-region,
+.content-section .mts.bg-sd38earthbrown .bs-region,
+.content-section .mts.bg-sd38crimson .bs-region,
+.content-section .mts.bg-sd38tangerine .bs-region,
+.content-section .mts.bg-sd38boysenberry .bs-region,
+.content-section .mts.bg-sd38purplegrape .bs-region,
+.content-section .mts.bg-sd38subduedblue .bs-region,
+.content-section .mts.bg-firehouse .bs-region,
+.content-section .mts.bg-ice .bs-region,
+.content-section .mts.bg-plum .bs-region,
+.content-section .mts.bg-slate .bs-region {
+  padding: 1rem;
 }
 
 main div.content-row .paragraph {

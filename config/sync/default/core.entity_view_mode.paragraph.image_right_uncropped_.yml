@@ -1,0 +1,10 @@
+uuid: 7d335480-89cd-4877-8c0a-46c73be48644
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.image_right_uncropped_
+label: 'Image Right (uncropped)'
+targetEntityType: paragraph
+cache: true
