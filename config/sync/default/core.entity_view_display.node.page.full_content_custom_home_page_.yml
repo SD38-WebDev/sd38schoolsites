@@ -31,7 +31,7 @@ third_party_settings:
           wrapper: div
           classes: {  }
           add_layout_class: 0
-          attributes: ' class|row justify-content-center'
+          attributes: ' id|carousel-home, class|row justify-content-center'
         regions:
           top:
             wrapper: div
@@ -43,23 +43,25 @@ third_party_settings:
             wrapper: div
             classes: {  }
             add_region_classes: 0
-            attributes: 'class|col col-lg-9'
+            attributes: 'class|col-12 col-md-12 col-lg-8'
           right:
             wrapper: div
             classes: {  }
             add_region_classes: 0
-            attributes: 'class|col col-lg-3 sidebar-content'
+            attributes: 'class|col-12 col-md-12 col-lg-4 sidebar-content'
           bottom:
             wrapper: div
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 0
-            attributes: class|col-12
+            attributes: 'class|col-12 mt-5'
     regions:
       top:
         - body
       left:
         - 'dynamic_block_field:node-carousel'
+      right:
+        - 'dynamic_block_field:node-latest_news_block'
       bottom:
         - field_content_section
         - field_sidebar_content
@@ -69,6 +71,17 @@ third_party_settings:
         weight: 1
         label: hidden
         formatter: default
+      'dynamic_block_field:node-latest_news_block':
+        plugin_id: 'dynamic_block_field:node-latest_news_block'
+        weight: 2
+        label: hidden
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: 'Latest News'
+            lb-col: false
+            classes: {  }
 id: node.page.full_content_custom_home_page_
 targetEntityType: node
 bundle: page
@@ -83,7 +96,7 @@ content:
     region: top
   field_content_section:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       view_mode: default
@@ -121,7 +134,7 @@ content:
     region: bottom
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: default

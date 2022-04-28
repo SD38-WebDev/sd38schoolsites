@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.promo_cards_section.field_columns
     - field.field.paragraph.promo_cards_section.field_promo_cards
     - field.field.paragraph.promo_cards_section.field_section_title
     - paragraphs.paragraphs_type.promo_cards_section
@@ -13,9 +14,16 @@ targetEntityType: paragraph
 bundle: promo_cards_section
 mode: default
 content:
+  field_columns:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_promo_cards:
     type: paragraphs
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

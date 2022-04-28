@@ -1,0 +1,31 @@
+uuid: c7e76146-4d5f-4eac-b1d9-b44ee5906cd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns
+    - paragraphs.paragraphs_type.promo_cards_section
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.promo_cards_section.field_columns
+field_name: field_columns
+entity_type: paragraph
+bundle: promo_cards_section
+label: Columns
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 4
+default_value_callback: ''
+settings:
+  min: 2
+  max: 6
+  prefix: ''
+  suffix: ''
+field_type: integer

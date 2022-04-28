@@ -180,23 +180,12 @@ display:
           granularity: second
       title: ''
       header: {  }
-      footer:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: '<div class="spacer"></div>'
-          plugin_id: text_custom
+      footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      css_class: col-12
+      css_class: 'col-12 spacer'
     cache_metadata:
       max-age: -1
       contexts:

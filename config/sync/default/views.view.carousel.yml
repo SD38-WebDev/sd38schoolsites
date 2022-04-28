@@ -10,7 +10,7 @@ dependencies:
   module:
     - media
     - node
-    - text
+    - smart_trim
     - user
     - views_bootstrap
 id: carousel
@@ -61,7 +61,7 @@ display:
         type: views_bootstrap_carousel
         options:
           grouping: {  }
-          interval: '3000'
+          interval: '4000'
           keyboard: 1
           ride: 1
           navigation: 1
@@ -236,9 +236,20 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_summary_or_trimmed
+          type: smart_trim
           settings:
-            trim_length: 600
+            trim_length: 30
+            trim_type: words
+            trim_suffix: …
+            wrap_output: false
+            wrap_class: trimmed
+            more_link: false
+            more_text: 'Read more'
+            more_class: more-link
+            summary_handler: full
+            trim_options:
+              text: true
+              trim_zero: false
           group_column: value
           group_columns: {  }
           group_rows: true
