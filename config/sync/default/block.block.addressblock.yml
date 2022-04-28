@@ -2,10 +2,7 @@ uuid: 82229bdd-5264-49fe-b186-10d2f738fea9
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:address_block:e7910635-166a-459a-8822-37e985338268'
   module:
-    - block_content
     - context
   theme:
     - rsd_sites_barrio

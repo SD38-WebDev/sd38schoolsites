@@ -193,7 +193,11 @@ body #header .brand-row {
 	min-height: 8rem;
 }
 
-body.path-frontpage #header .brand-row {
+body #header-img-area .spacer {
+  min-height: 20rem;
+}
+
+/* body.path-frontpage #header .brand-row {
 	min-height: 18rem;
 }
 
@@ -207,7 +211,7 @@ body.path-frontpage #header .brand-row {
   body.path-frontpage #header .brand-row {
   	min-height: 12rem;
   }
-}
+} */
 
 body #header .logo{
   display: none !important;
@@ -304,11 +308,11 @@ footer.site-footer {
 	margin: 0px;
 }
 
-#block-views-block-header-image-block-1 {
+/* #block-views-block-header-image-block-1 {
   position: absolute;
   top: 20px;
   right: 20px;
-}
+} */
 
 /*************************/
 /** Program Site Styles **/

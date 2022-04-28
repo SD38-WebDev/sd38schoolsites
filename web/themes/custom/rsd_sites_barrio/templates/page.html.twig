@@ -78,7 +78,7 @@
 			</div>
 		</div>
         {% if page.secondary_menu or page.top_header or page.top_header_form %}
-          <nav{{ navbar_top_attributes }}>
+          <div id="header-img-area">
           {% if container_navbar %}
           <div class="container">
           {% endif %}
@@ -92,7 +92,7 @@
           {% if container_navbar %}
           </div>
           {% endif %}
-          </nav>
+				</div>
         {% endif %}
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}

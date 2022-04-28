@@ -1,0 +1,17 @@
+uuid: ee3fc070-a72f-4b72-8320-7af838394b54
+langcode: en
+status: true
+dependencies: {  }
+name: custom_home_page
+label: 'Custom Home Page'
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: HAS-HEADER-IMG
+    saved: false
+weight: 0

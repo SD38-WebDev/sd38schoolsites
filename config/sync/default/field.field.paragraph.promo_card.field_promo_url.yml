@@ -1,0 +1,28 @@
+uuid: b76c6148-1237-4135-92e1-c968f4c83f01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_url
+    - paragraphs.paragraphs_type.promo_card
+  module:
+    - link
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.promo_card.field_promo_url
+field_name: field_promo_url
+entity_type: paragraph
+bundle: promo_card
+label: 'Promo URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

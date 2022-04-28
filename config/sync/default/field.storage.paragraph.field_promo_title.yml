@@ -1,4 +1,4 @@
-uuid: 897aeb85-c8b6-4ea2-b9f5-840e3e4a5833
+uuid: 2923305d-5e4e-4dee-a5bf-9ea0af8c684b
 langcode: en
 status: true
 dependencies:
@@ -8,12 +8,12 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: paragraph.field_section_title
-field_name: field_section_title
+id: paragraph.field_promo_title
+field_name: field_promo_title
 entity_type: paragraph
 type: string
 settings:
-  max_length: 255
+  max_length: 512
   is_ascii: false
   case_sensitive: false
 module: core

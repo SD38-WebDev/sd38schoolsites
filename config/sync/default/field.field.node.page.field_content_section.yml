@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_and_text_section
     - paragraphs.paragraphs_type.image_banner
     - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.promo_cards_section
     - paragraphs.paragraphs_type.tile_links_section
   module:
     - entity_reference_revisions
@@ -47,6 +48,7 @@ settings:
       tile_links_section: tile_links_section
       file_attachments: file_attachments
       image_banner: image_banner
+      promo_cards_section: promo_cards_section
     target_bundles_drag_drop:
       article_feed:
         enabled: true
@@ -126,6 +128,12 @@ settings:
       navigation_menu_link:
         weight: 53
         enabled: false
+      promo_card:
+        weight: 60
+        enabled: false
+      promo_cards_section:
+        enabled: true
+        weight: 61
       recent_blog_posts:
         weight: 52
         enabled: false

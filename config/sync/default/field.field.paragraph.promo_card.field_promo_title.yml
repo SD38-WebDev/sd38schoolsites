@@ -1,0 +1,25 @@
+uuid: 6a1711c6-1212-49fc-a86b-7455b4467127
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_title
+    - paragraphs.paragraphs_type.promo_card
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.promo_card.field_promo_title
+field_name: field_promo_title
+entity_type: paragraph
+bundle: promo_card
+label: 'Promo Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

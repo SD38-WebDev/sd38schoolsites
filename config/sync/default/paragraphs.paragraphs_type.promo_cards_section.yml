@@ -1,0 +1,10 @@
+uuid: 9566a445-a8b1-411f-9fa5-a454bd43e741
+langcode: en
+status: true
+dependencies: {  }
+id: promo_cards_section
+label: 'Promo Cards Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

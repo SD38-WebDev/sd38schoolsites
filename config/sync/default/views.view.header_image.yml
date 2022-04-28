@@ -104,15 +104,15 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
+          hide_empty: true
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: target_id
           type: bg_image_formatter
           settings:
             image_style: header_image
             css_settings:
-              bg_image_selector: 'body #navbar-top'
+              bg_image_selector: 'body #header-img-area'
               bg_image_z_index: auto
               bg_image_color: '#FFFFFF'
               bg_image_x: center
@@ -136,59 +136,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        edit_node:
-          id: edit_node
-          table: node
-          field: edit_node
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: '<a class="btn btn-sm btn-light" href="{{ field_header_image }}">Edit Header Image</a>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: 'Edit Header Image'
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: 'Edit Header Image'
-          output_url_as_text: true
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link_edit
       filters:
         status:
           value: '1'
@@ -233,7 +180,18 @@ display:
           granularity: second
       title: ''
       header: {  }
-      footer: {  }
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<div class="spacer"></div>'
+          plugin_id: text_custom
       empty: {  }
       relationships: {  }
       arguments: {  }
@@ -256,6 +214,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:

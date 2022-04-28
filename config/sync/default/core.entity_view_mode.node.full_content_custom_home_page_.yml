@@ -1,0 +1,10 @@
+uuid: bcb80dc6-8b8d-4d7c-b05e-ba01e14eb510
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.full_content_custom_home_page_
+label: 'Full content (Custom Home Page)'
+targetEntityType: node
+cache: true
