@@ -9,24 +9,89 @@ dependencies:
     - field.field.paragraph.promo_card.field_promo_url
     - paragraphs.paragraphs_type.promo_card
   module:
+    - field_group
     - link
     - maxlength
     - media_library
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_media
+        - group_promo_text
+        - group_link_settings_url_
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        width_breakpoint: 640
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: Tabs
+    group_media:
+      children:
+        - field_image
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Media
+    group_promo_text:
+      children:
+        - field_promo_title
+        - field_promo_text
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Promo Text'
+    group_link_settings_url_:
+      children:
+        - field_promo_url
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Link Settings (URL)'
 id: paragraph.promo_card.default
 targetEntityType: paragraph
 bundle: promo_card
 mode: default
 content:
   field_image:
-    weight: 1
+    weight: 3
     settings:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
     region: content
   field_promo_text:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -39,7 +104,7 @@ content:
     type: text_textarea
     region: content
   field_promo_title:
-    weight: 0
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -47,7 +112,7 @@ content:
     type: string_textfield
     region: content
   field_promo_url:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''

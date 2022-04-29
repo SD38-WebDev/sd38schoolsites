@@ -10,20 +10,69 @@ dependencies:
     - field.field.paragraph.basic_text_section.field_section_title
     - paragraphs.paragraphs_type.basic_text_section
   module:
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_section_content
+        - group_colour_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        direction: vertical
+        width_breakpoint: 640
+      label: Tabs
+    group_section_content:
+      children:
+        - field_section_title
+        - field_section_content
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Section Content'
+    group_colour_settings:
+      children:
+        - field_section_bgcolour
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Colour Settings'
 id: paragraph.basic_text_section.default
 targetEntityType: paragraph
 bundle: basic_text_section
 mode: default
 content:
   field_section_bgcolour:
-    weight: 1
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_section_content:
-    weight: 2
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -31,7 +80,7 @@ content:
     type: text_textarea
     region: content
   field_section_title:
-    weight: 0
+    weight: 3
     settings:
       size: 60
       placeholder: ''

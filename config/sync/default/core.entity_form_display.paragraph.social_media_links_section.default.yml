@@ -1,0 +1,44 @@
+uuid: e63f20f4-a96b-458f-88c1-b0a9531a3889
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_links_section.field_section_title
+    - field.field.paragraph.social_media_links_section.field_social_media_link
+    - paragraphs.paragraphs_type.social_media_links_section
+  module:
+    - paragraphs
+id: paragraph.social_media_links_section.default
+targetEntityType: paragraph
+bundle: social_media_links_section
+mode: default
+content:
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_media_link:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

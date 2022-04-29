@@ -1,0 +1,25 @@
+uuid: bc0f9524-a687-4565-afbe-93a812c61cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.social_media_links_section
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.social_media_links_section.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: social_media_links_section
+label: 'Section Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

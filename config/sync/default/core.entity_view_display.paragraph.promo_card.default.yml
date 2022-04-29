@@ -29,18 +29,18 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: ''
+          attributes: ' class|promo-card'
         regions:
           main:
             wrapper: div
-            classes:
-              col-sm-12: col-sm-12
+            classes: {  }
             add_region_classes: 1
             attributes: ''
     regions:
       main:
         - group_promo_url
         - field_image
+        - group_container
         - field_promo_title
         - field_promo_text
         - field_promo_url
@@ -48,28 +48,47 @@ third_party_settings:
     group_promo_url:
       children:
         - field_image
-        - field_promo_title
-        - field_promo_text
-        - field_promo_url
+        - group_container
       parent_name: ''
       weight: 0
       format_type: link
       region: main
       format_settings:
-        show_empty_fields: false
-        id: ''
-        classes: ''
         target: field_promo_url
         custom_uri: ''
         target_attribute: default
+        id: ''
+        classes: ''
+        show_empty_fields: false
       label: 'Promo URL'
+    group_container:
+      children:
+        - field_promo_title
+        - field_promo_text
+        - field_promo_url
+      parent_name: group_promo_url
+      weight: 22
+      format_type: html_element
+      region: main
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'promo-content pt-2'
+        show_empty_fields: false
+      label: Container
 id: paragraph.promo_card.default
 targetEntityType: paragraph
 bundle: promo_card
 mode: default
 content:
   field_image:
-    weight: 1
+    weight: 21
     label: hidden
     settings:
       image_style: promo_image_16_9_ratio_
@@ -78,22 +97,43 @@ content:
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
-            classes: {  }
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     type: media_thumbnail
     region: main
   field_promo_text:
-    weight: 3
+    weight: 23
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: main
   field_promo_title:
-    weight: 2
+    weight: 22
     label: hidden
     settings:
       link_to_entity: false
@@ -129,7 +169,7 @@ content:
     type: string
     region: main
   field_promo_url:
-    weight: 4
+    weight: 24
     label: hidden
     settings:
       trim_length: 80

@@ -21,7 +21,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bs_2col_stacked
+      id: bs_2col_bricked
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -39,16 +39,36 @@ third_party_settings:
               col-sm-12: col-sm-12
             add_region_classes: 0
             attributes: class|col-12
-          left:
+          top_left:
             wrapper: div
-            classes: {  }
-            add_region_classes: 0
-            attributes: 'class|col-12 col-md-12 col-lg-8'
-          right:
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: class|col-lg-8
+          top_right:
             wrapper: div
-            classes: {  }
-            add_region_classes: 0
-            attributes: 'class|col-12 col-md-12 col-lg-4 sidebar-content'
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: class|col-lg-4
+          middle:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom_left:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
+          bottom_right:
+            wrapper: div
+            classes:
+              col-sm-6: col-sm-6
+            add_region_classes: 1
+            attributes: ''
           bottom:
             wrapper: div
             classes:
@@ -58,12 +78,13 @@ third_party_settings:
     regions:
       top:
         - body
-      left:
+      top_left:
         - 'dynamic_block_field:node-carousel'
-      right:
+      top_right:
         - 'dynamic_block_field:node-latest_news_block'
-      bottom:
+      middle:
         - field_content_section
+      bottom:
         - field_sidebar_content
     fields:
       'dynamic_block_field:node-carousel':
@@ -131,7 +152,7 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
-    region: bottom
+    region: middle
   field_sidebar_content:
     type: entity_reference_revisions_entity_view
     weight: 4

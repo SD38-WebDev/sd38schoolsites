@@ -1,12 +1,11 @@
-uuid: ad66e32e-d47f-44f5-b081-c1e703624ad6
+uuid: c375e06c-8efc-4e97-a8ad-b55daa4e24f6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.promo_cards_section.field_columns
-    - field.field.paragraph.promo_cards_section.field_promo_cards
-    - field.field.paragraph.promo_cards_section.field_section_title
-    - paragraphs.paragraphs_type.promo_cards_section
+    - field.field.paragraph.social_media_links_section.field_section_title
+    - field.field.paragraph.social_media_links_section.field_social_media_link
+    - paragraphs.paragraphs_type.social_media_links_section
   module:
     - ds
     - entity_reference_revisions
@@ -16,69 +15,30 @@ third_party_settings:
       id: bs_1col
       library: null
       disable_css: false
-      entity_classes: all_classes
+      entity_classes: no_classes
       settings:
         label: ''
         layout:
           wrapper: div
           classes:
-            row: row
-          add_layout_class: 1
+            clearfix: clearfix
+          add_layout_class: 0
           attributes: ''
         regions:
           main:
             wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
+            classes: {  }
+            add_region_classes: 0
             attributes: ''
     regions:
       main:
         - field_section_title
-        - field_promo_cards
-id: paragraph.promo_cards_section.default
+        - field_social_media_link
+id: paragraph.social_media_links_section.default
 targetEntityType: paragraph
-bundle: promo_cards_section
+bundle: social_media_links_section
 mode: default
 content:
-  field_promo_cards:
-    type: entity_reference_revisions_entity_view
-    weight: 1
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings:
-      ds:
-        ds_limit: '4'
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis: true
-            fis-el: div
-            fis-cl: 'row mt-3 justify-content-center'
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: 'col-md mb-4'
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
-    region: main
   field_section_title:
     weight: 0
     label: hidden
@@ -115,5 +75,42 @@ content:
             fi-def-at: false
     type: string
     region: main
-hidden:
-  field_columns: true
+  field_social_media_link:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: social-media-links
+            ow-at: ''
+            fis-el: div
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: main
+hidden: {  }

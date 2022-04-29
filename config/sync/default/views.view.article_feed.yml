@@ -1201,9 +1201,6 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
-        - 'config_split_state:field.storage.node.body'
-        - 'config_split_state:field.storage.node.field_feature_image'
-        - 'config_split_state:field.storage.paragraph.field_images'
   entity_view_2:
     display_plugin: entity_view
     id: entity_view_2
@@ -1218,7 +1215,7 @@ display:
           grouping: {  }
           row_class: article-post
           default_row_class: true
-          col_xs: col-1
+          col_xs: col-12
           col_sm: col-sm-12
           col_md: col-md-12
           col_lg: col-lg-12
@@ -2217,9 +2214,6 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
-        - 'config_split_state:field.storage.node.body'
-        - 'config_split_state:field.storage.node.field_feature_image'
-        - 'config_split_state:field.storage.paragraph.field_images'
   entity_view_4:
     display_plugin: entity_view
     id: entity_view_4
@@ -3142,9 +3136,6 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
-        - 'config_split_state:field.storage.node.body'
-        - 'config_split_state:field.storage.node.field_feature_image'
-        - 'config_split_state:field.storage.paragraph.field_images'
   entity_view_5:
     display_plugin: entity_view
     id: entity_view_5
@@ -3996,6 +3987,3 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
-        - 'config_split_state:field.storage.node.body'
-        - 'config_split_state:field.storage.node.field_feature_image'
-        - 'config_split_state:field.storage.paragraph.field_images'

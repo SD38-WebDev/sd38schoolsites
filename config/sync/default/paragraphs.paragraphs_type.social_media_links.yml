@@ -1,4 +1,4 @@
-uuid: 9566a445-a8b1-411f-9fa5-a454bd43e741
+uuid: 41019ab6-9312-492a-8cc1-d4dec681fa49
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
 third_party_settings:
   paragraph_view_mode:
     enabled: false
-id: promo_cards_section
-label: 'Promo Cards Section'
+id: social_media_links
+label: 'Social Media Link'
 icon_uuid: null
 icon_default: null
-description: 'Uo to 4 Promo Cards can be added per section.'
+description: ''
 behavior_plugins: {  }
