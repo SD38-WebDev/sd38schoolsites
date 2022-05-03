@@ -9,16 +9,66 @@ dependencies:
     - field.field.paragraph.tile_links_section.paragraph_view_mode
     - paragraphs.paragraphs_type.tile_links_section
   module:
+    - field_group
     - paragraph_view_mode
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_section_content
+        - group_tile_links
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: vertical
+        width_breakpoint: 640
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: Tabs
+    group_section_content:
+      children:
+        - field_section_title
+        - field_section_content
+        - paragraph_view_mode
+      parent_name: group_tabs
+      weight: 9
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Section Content'
+    group_tile_links:
+      children:
+        - field_tile_links
+      parent_name: group_tabs
+      weight: 10
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Tile Links'
 id: paragraph.tile_links_section.default
 targetEntityType: paragraph
 bundle: tile_links_section
 mode: default
 content:
   field_section_content:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -26,7 +76,7 @@ content:
     type: text_textarea
     region: content
   field_section_title:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -35,15 +85,15 @@ content:
     region: content
   field_tile_links:
     type: paragraphs
-    weight: 3
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: closed
       closed_mode: summary
-      autocollapse: none
+      autocollapse: all
       closed_mode_threshold: 0
-      add_mode: button
+      add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: tile_link
       features:
@@ -54,7 +104,7 @@ content:
     region: content
   paragraph_view_mode:
     type: paragraph_view_mode
-    weight: 2
+    weight: 3
     settings:
       view_modes:
         3_columns: 3_columns

@@ -1,0 +1,116 @@
+uuid: c375e06c-8efc-4e97-a8ad-b55daa4e24f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_links_section.field_section_title
+    - field.field.paragraph.social_media_links_section.field_social_media_link
+    - paragraphs.paragraphs_type.social_media_links_section
+  module:
+    - ds
+    - entity_reference_revisions
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            clearfix: clearfix
+          add_layout_class: 0
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 0
+            attributes: ''
+    regions:
+      main:
+        - field_section_title
+        - field_social_media_link
+id: paragraph.social_media_links_section.default
+targetEntityType: paragraph
+bundle: social_media_links_section
+mode: default
+content:
+  field_section_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: string
+    region: main
+  field_social_media_link:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: social-media-links
+            ow-at: ''
+            fis-el: div
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: main
+hidden: {  }

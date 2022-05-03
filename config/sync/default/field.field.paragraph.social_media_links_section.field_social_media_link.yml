@@ -1,0 +1,138 @@
+uuid: 457f0761-ddff-414d-a337-662da1135a7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_link
+    - paragraphs.paragraphs_type.social_media_links
+    - paragraphs.paragraphs_type.social_media_links_section
+  module:
+    - entity_reference_revisions
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.social_media_links_section.field_social_media_link
+field_name: field_social_media_link
+entity_type: paragraph
+bundle: social_media_links_section
+label: 'Social Media Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      social_media_links: social_media_links
+    target_bundles_drag_drop:
+      article_feed:
+        weight: 36
+        enabled: false
+      basic_text_section:
+        weight: 37
+        enabled: false
+      bp_accordion:
+        weight: 38
+        enabled: false
+      bp_accordion_section:
+        weight: 39
+        enabled: false
+      bp_blank:
+        weight: 40
+        enabled: false
+      bp_block:
+        weight: 41
+        enabled: false
+      bp_carousel:
+        weight: 42
+        enabled: false
+      bp_column_wrapper:
+        weight: 46
+        enabled: false
+      bp_columns:
+        weight: 43
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 44
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 45
+        enabled: false
+      bp_image:
+        weight: 47
+        enabled: false
+      bp_modal:
+        weight: 48
+        enabled: false
+      bp_simple:
+        weight: 49
+        enabled: false
+      bp_tab_section:
+        weight: 51
+        enabled: false
+      bp_tabs:
+        weight: 50
+        enabled: false
+      bp_view:
+        weight: 52
+        enabled: false
+      calendar_events_list_:
+        weight: 53
+        enabled: false
+      embedded_video:
+        weight: 54
+        enabled: false
+      file_attachments:
+        weight: 55
+        enabled: false
+      file_list:
+        weight: 56
+        enabled: false
+      image_and_text_section:
+        weight: 57
+        enabled: false
+      image_banner:
+        weight: 58
+        enabled: false
+      image_gallery:
+        weight: 59
+        enabled: false
+      navigation_menu:
+        weight: 60
+        enabled: false
+      navigation_menu_link:
+        weight: 61
+        enabled: false
+      promo_card:
+        weight: 62
+        enabled: false
+      promo_cards_section:
+        weight: 63
+        enabled: false
+      recent_blog_posts:
+        weight: 64
+        enabled: false
+      recent_blog_posts_listing:
+        weight: 65
+        enabled: false
+      social_media_links:
+        enabled: true
+        weight: 66
+      social_media_links_section:
+        weight: 67
+        enabled: false
+      staff_member:
+        weight: 68
+        enabled: false
+      tile_link:
+        weight: 69
+        enabled: false
+      tile_links_section:
+        weight: 70
+        enabled: false
+field_type: entity_reference_revisions

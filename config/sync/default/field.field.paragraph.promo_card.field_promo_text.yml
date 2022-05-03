@@ -1,0 +1,26 @@
+uuid: 5ce387c6-909a-46e2-8813-fdf3a7989ab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_text
+    - paragraphs.paragraphs_type.promo_card
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.promo_card.field_promo_text
+field_name: field_promo_text
+entity_type: paragraph
+bundle: promo_card
+label: 'Promo Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

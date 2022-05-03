@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   6de56302-799c-434c-8279-27de552f6001:
-    id: node_type
+    id: 'entity_bundle:node'
     bundles:
       calendar_page: calendar_page
       staff_page: staff_page

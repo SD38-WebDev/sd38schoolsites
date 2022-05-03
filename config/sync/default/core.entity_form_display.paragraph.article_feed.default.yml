@@ -16,7 +16,7 @@ bundle: article_feed
 mode: default
 content:
   field_referenced_tags:
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -34,22 +34,22 @@ content:
     type: string_textfield
     region: content
   field_site_section:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   paragraph_view_mode:
     type: paragraph_view_mode
-    weight: -100
+    weight: 1
     settings:
       view_modes:
-        default: default
         article_feed_18_posts_: article_feed_18_posts_
         article_feed_18_posts_grouped_by_date_: article_feed_18_posts_grouped_by_date_
         article_feed_6_posts_: article_feed_6_posts_
         article_feed_6_posts_column_: article_feed_6_posts_column_
-      default_view_mode: default
+        default: '0'
+      default_view_mode: article_feed_6_posts_
     third_party_settings: {  }
     region: content
 hidden:

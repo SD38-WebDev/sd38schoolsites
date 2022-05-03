@@ -11,6 +11,7 @@ dependencies:
   module:
     - field_group
     - link
+    - maxlength
     - media_library
 third_party_settings:
   field_group:
@@ -23,9 +24,11 @@ third_party_settings:
       format_type: tabs
       region: content
       format_settings:
-        direction: vertical
+        direction: horizontal
+        width_breakpoint: 640
         id: ''
         classes: ''
+        show_empty_fields: false
       label: Tabs
     group_tile_image:
       children:
@@ -65,9 +68,12 @@ content:
   field_link_text:
     weight: 4
     settings:
-      size: 128
+      size: 50
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
     type: string_textfield
     region: content
   field_tile_colour:

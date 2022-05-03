@@ -28,13 +28,13 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: ' class|d-flex row align-items-center mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
+          attributes: ' class|d-flex row mts mts-ir align-items-center mb-4 no-gutters [paragraph:field_section_bgcolour:value]'
         regions:
           left:
             wrapper: div
             classes: {  }
             add_region_classes: 1
-            attributes: 'class|col-12 col-lg-6 p-3'
+            attributes: 'class|col-12 col-lg-6 text-area'
           right:
             wrapper: div
             classes: {  }

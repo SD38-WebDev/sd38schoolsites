@@ -1,0 +1,15 @@
+uuid: 9566a445-a8b1-411f-9fa5-a454bd43e741
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: promo_cards_section
+label: 'Promo Cards Section'
+icon_uuid: null
+icon_default: null
+description: 'Uo to 4 Promo Cards can be added per section.'
+behavior_plugins: {  }

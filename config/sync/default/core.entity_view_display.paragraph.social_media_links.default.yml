@@ -1,0 +1,81 @@
+uuid: a9d0ebe6-9abf-4a5e-be68-d67cd877f23b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_links.field_platform
+    - field.field.paragraph.social_media_links.field_social_media_url
+    - paragraphs.paragraphs_type.social_media_links
+  module:
+    - ds
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes: {  }
+          add_layout_class: 0
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 0
+            attributes: ''
+    regions:
+      main:
+        - field_social_media_url
+id: paragraph.social_media_links.default
+targetEntityType: paragraph
+bundle: social_media_links
+mode: default
+content:
+  field_social_media_url:
+    type: link_separate
+    weight: 0
+    region: main
+    label: hidden
+    settings:
+      trim_length: 80
+      target: _blank
+      url_only: false
+      url_plain: false
+      rel: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: ''
+            fi-cl: '[paragraph:field_platform:value] social-link'
+            fi-at: 'title="[paragraph:field_platform:value]"'
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+hidden:
+  field_platform: true

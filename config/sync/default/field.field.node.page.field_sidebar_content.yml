@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.bp_accordion
     - paragraphs.paragraphs_type.calendar_events_list_
     - paragraphs.paragraphs_type.recent_blog_posts_listing
+    - paragraphs.paragraphs_type.social_media_links_section
   module:
     - entity_reference_revisions
     - required_api
@@ -35,6 +36,7 @@ settings:
       basic_text_section: basic_text_section
       calendar_events_list_: calendar_events_list_
       recent_blog_posts_listing: recent_blog_posts_listing
+      social_media_links_section: social_media_links_section
     target_bundles_drag_drop:
       article_feed:
         weight: 24
@@ -93,11 +95,32 @@ settings:
       embedded_video:
         weight: 41
         enabled: false
+      file_attachments:
+        weight: 55
+        enabled: false
+      file_list:
+        weight: 56
+        enabled: false
       image_and_text_section:
         weight: 42
         enabled: false
+      image_banner:
+        weight: 58
+        enabled: false
       image_gallery:
         weight: 43
+        enabled: false
+      navigation_menu:
+        weight: 60
+        enabled: false
+      navigation_menu_link:
+        weight: 61
+        enabled: false
+      promo_card:
+        weight: 62
+        enabled: false
+      promo_cards_section:
+        weight: 63
         enabled: false
       recent_blog_posts:
         weight: 48
@@ -105,6 +128,12 @@ settings:
       recent_blog_posts_listing:
         enabled: true
         weight: 49
+      social_media_links:
+        weight: 66
+        enabled: false
+      social_media_links_section:
+        enabled: true
+        weight: 67
       staff_member:
         weight: 44
         enabled: false

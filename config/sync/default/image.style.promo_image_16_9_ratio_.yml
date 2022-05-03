@@ -1,0 +1,17 @@
+uuid: 5eb81636-651b-4c8e-9a17-a2750e93419c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: promo_image_16_9_ratio_
+label: 'Promo Image (16:9 Ratio)'
+effects:
+  a3600a72-d650-474e-ab76-f353c3a10e30:
+    uuid: a3600a72-d650-474e-ab76-f353c3a10e30
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 450
+      crop_type: focal_point

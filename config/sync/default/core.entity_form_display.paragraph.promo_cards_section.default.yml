@@ -1,0 +1,102 @@
+uuid: 4c63675c-b02b-4410-9260-9813c85101b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.promo_cards_section.field_columns
+    - field.field.paragraph.promo_cards_section.field_promo_cards
+    - field.field.paragraph.promo_cards_section.field_section_title
+    - paragraphs.paragraphs_type.promo_cards_section
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_section_content
+        - group_promo_cards
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: vertical
+        width_breakpoint: 640
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: Tabs
+    group_section_content:
+      children:
+        - field_section_title
+        - field_columns
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Section Content'
+    group_promo_cards:
+      children:
+        - field_promo_cards
+      parent_name: group_tabs
+      weight: 7
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Promo Cards'
+id: paragraph.promo_cards_section.default
+targetEntityType: paragraph
+bundle: promo_cards_section
+mode: default
+content:
+  field_columns:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_promo_cards:
+    type: paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: promo_card
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_section_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

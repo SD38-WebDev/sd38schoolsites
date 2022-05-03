@@ -1,0 +1,10 @@
+uuid: c52b6a3c-7212-4bd6-bee7-393743d1c50c
+langcode: en
+status: true
+dependencies: {  }
+id: promo_card
+label: 'Promo Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

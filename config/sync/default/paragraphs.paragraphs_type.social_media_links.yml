@@ -1,0 +1,15 @@
+uuid: 41019ab6-9312-492a-8cc1-d4dec681fa49
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: social_media_links
+label: 'Social Media Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

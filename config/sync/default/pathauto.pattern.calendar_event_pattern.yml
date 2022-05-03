@@ -10,7 +10,7 @@ type: 'canonical_entities:node'
 pattern: '[node:field_site_section:entity:field_section_home_page]/[node:field_event_date:0:format:year_only]/[node:title]'
 selection_criteria:
   85090285-c5d4-46fe-b21f-b4aa7274e57e:
-    id: node_type
+    id: 'entity_bundle:node'
     bundles:
       calendar_event: calendar_event
     negate: false

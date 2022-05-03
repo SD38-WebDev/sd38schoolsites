@@ -1,0 +1,132 @@
+uuid: caba15dd-ea3e-417d-adc4-401f0115cf03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_promo_cards
+    - paragraphs.paragraphs_type.promo_card
+    - paragraphs.paragraphs_type.promo_cards_section
+  module:
+    - entity_reference_revisions
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: paragraph.promo_cards_section.field_promo_cards
+field_name: field_promo_cards
+entity_type: paragraph
+bundle: promo_cards_section
+label: 'Promo Cards'
+description: 'Note: A maximum of 4 Promo Cards will display on the page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      promo_card: promo_card
+    target_bundles_drag_drop:
+      article_feed:
+        weight: 34
+        enabled: false
+      basic_text_section:
+        weight: 35
+        enabled: false
+      bp_accordion:
+        weight: 36
+        enabled: false
+      bp_accordion_section:
+        weight: 37
+        enabled: false
+      bp_blank:
+        weight: 38
+        enabled: false
+      bp_block:
+        weight: 39
+        enabled: false
+      bp_carousel:
+        weight: 40
+        enabled: false
+      bp_column_wrapper:
+        weight: 44
+        enabled: false
+      bp_columns:
+        weight: 41
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 42
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 43
+        enabled: false
+      bp_image:
+        weight: 45
+        enabled: false
+      bp_modal:
+        weight: 46
+        enabled: false
+      bp_simple:
+        weight: 47
+        enabled: false
+      bp_tab_section:
+        weight: 49
+        enabled: false
+      bp_tabs:
+        weight: 48
+        enabled: false
+      bp_view:
+        weight: 50
+        enabled: false
+      calendar_events_list_:
+        weight: 51
+        enabled: false
+      embedded_video:
+        weight: 52
+        enabled: false
+      file_attachments:
+        weight: 53
+        enabled: false
+      file_list:
+        weight: 54
+        enabled: false
+      image_and_text_section:
+        weight: 55
+        enabled: false
+      image_banner:
+        weight: 56
+        enabled: false
+      image_gallery:
+        weight: 57
+        enabled: false
+      navigation_menu:
+        weight: 58
+        enabled: false
+      navigation_menu_link:
+        weight: 59
+        enabled: false
+      promo_card:
+        enabled: true
+        weight: 60
+      promo_cards_section:
+        weight: 61
+        enabled: false
+      recent_blog_posts:
+        weight: 62
+        enabled: false
+      recent_blog_posts_listing:
+        weight: 63
+        enabled: false
+      staff_member:
+        weight: 64
+        enabled: false
+      tile_link:
+        weight: 65
+        enabled: false
+      tile_links_section:
+        weight: 66
+        enabled: false
+field_type: entity_reference_revisions
