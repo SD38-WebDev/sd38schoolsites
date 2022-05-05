@@ -7,7 +7,32 @@ dependencies:
     - paragraphs.paragraphs_type.image_banner
   module:
     - ds
-    - imagefield_slideshow
+    - field_slideshow
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_banner_image
 id: paragraph.image_banner.default
 targetEntityType: paragraph
 bundle: image_banner
@@ -17,13 +42,31 @@ content:
     weight: 0
     label: hidden
     settings:
-      imagefield_slideshow_style: image_banner
-      imagefield_slideshow_style_effects: fade
-      imagefield_slideshow_style_pause: 'true'
-      imagefield_slideshow_transition_speed: '1000'
-      imagefield_slideshow_timeout: '4000'
-      imagefield_slideshow_pager: '1'
-      imagefield_slideshow_prev_next: 0
+      slideshow:
+        fx: fade
+        allowWrap: true
+        autoHeight: 0
+        delay: 0
+        hideNonActive: true
+        loader: 'false'
+        loop: 0
+        pauseOnHover: false
+        paused: false
+        random: false
+        reverse: false
+        speed: 500
+        startingSlide: 0
+        swipe: false
+        sync: true
+        timeout: 4000
+      slideshow_pager:
+        pager:
+          after: after
+        pager_type: thumbnails
+        controls: true
+      colorbox_image_style: null
+      image_style: ''
+      image_link: ''
     third_party_settings:
       ds:
         ds_limit: ''
@@ -33,6 +76,6 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: imagefield_slideshow_field_formatter
-    region: content
+    type: slideshow
+    region: main
 hidden: {  }
