@@ -4,10 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_banner.field_banner_image
+    - image.style.image_banner
     - paragraphs.paragraphs_type.image_banner
   module:
     - ds
-    - field_slideshow
+    - image
 third_party_settings:
   ds:
     layout:
@@ -26,8 +27,7 @@ third_party_settings:
         regions:
           main:
             wrapper: div
-            classes:
-              col-sm-12: col-sm-12
+            classes: {  }
             add_region_classes: 1
             attributes: ''
     regions:
@@ -42,40 +42,17 @@ content:
     weight: 0
     label: hidden
     settings:
-      slideshow:
-        fx: fade
-        allowWrap: true
-        autoHeight: 0
-        delay: 0
-        hideNonActive: true
-        loader: 'false'
-        loop: 0
-        pauseOnHover: false
-        paused: false
-        random: false
-        reverse: false
-        speed: 500
-        startingSlide: 0
-        swipe: false
-        sync: true
-        timeout: 4000
-      slideshow_pager:
-        pager:
-          after: after
-        pager_type: thumbnails
-        controls: true
-      colorbox_image_style: null
-      image_style: ''
+      image_style: image_banner
       image_link: ''
     third_party_settings:
       ds:
-        ds_limit: ''
+        ds_limit: '1'
         ft:
           id: default
           settings:
             lb: ''
             lb-col: false
             classes: {  }
-    type: slideshow
+    type: image
     region: main
 hidden: {  }
