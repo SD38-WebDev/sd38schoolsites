@@ -116,7 +116,7 @@
         "drupal/google_analytics": "^3.1",
         "drupal/gtranslate": "^1.14",
         "drupal/image_effects": "^3.1",
-        "drupal/imagefield_slideshow": "^2.0",
+        "drupal/imagefield_slideshow": "^1.11",
         "drupal/imagemagick": "^3.2",
         "drupal/libraries": "^3.0@beta",
         "drupal/linkit": "^6.0@beta",

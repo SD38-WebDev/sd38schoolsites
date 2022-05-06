@@ -365,6 +365,10 @@ h3 a {
   text-decoration: none;
 }
 
+small, .small {
+  font-size: .775em !important;
+}
+
 .h1, h1 {
     font-size:calc(1.375rem + 1.5vw) !important;
 }
@@ -455,7 +459,7 @@ body #header .slogan {
 }
 
 .view-id-frontpage h2 {
-	font-size: 1.5rem !important;
+	font-size: 1.35rem !important;
 }
 
 .view-id-blog_posts h2 {
@@ -890,7 +894,7 @@ body.user-logged-in .card:hover .ops-links {
   padding-bottom: 0px;
 }
 
-.paragraph>.paragraph__column .imagefield_slideshow-wrapper {
+.paragraph.paragraph--type-image-banner .imagefield_slideshow-wrapper {
   display: inline-block;
   border: 0px;
   padding: 0px;
