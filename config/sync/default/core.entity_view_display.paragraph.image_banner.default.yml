@@ -4,10 +4,35 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_banner.field_banner_image
+    - image.style.image_banner
     - paragraphs.paragraphs_type.image_banner
   module:
     - ds
-    - imagefield_slideshow
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - field_banner_image
 id: paragraph.image_banner.default
 targetEntityType: paragraph
 bundle: image_banner
@@ -17,22 +42,17 @@ content:
     weight: 0
     label: hidden
     settings:
-      imagefield_slideshow_style: image_banner
-      imagefield_slideshow_style_effects: fade
-      imagefield_slideshow_style_pause: 'true'
-      imagefield_slideshow_transition_speed: '1000'
-      imagefield_slideshow_timeout: '4000'
-      imagefield_slideshow_pager: '1'
-      imagefield_slideshow_prev_next: 0
+      image_style: image_banner
+      image_link: ''
     third_party_settings:
       ds:
-        ds_limit: ''
+        ds_limit: '1'
         ft:
           id: default
           settings:
             lb: ''
             lb-col: false
             classes: {  }
-    type: imagefield_slideshow_field_formatter
-    region: content
+    type: image
+    region: main
 hidden: {  }

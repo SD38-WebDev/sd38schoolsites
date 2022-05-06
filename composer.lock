@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "535f9e2916fe9484b93b0c449025f1bb",
+    "content-hash": "65cc0e2b36b0db3ed48eabe2f066a1cf",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2942,6 +2942,110 @@
             }
         },
         {
+            "name": "drupal/bootstrap_carousel_if",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_carousel_if.git",
+                "reference": "8.x-3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_carousel_if-8.x-3.1.zip",
+                "reference": "8.x-3.1",
+                "shasum": "651a89e99a9102b4115735c9e75a2c527b103857"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.1",
+                    "datestamp": "1633006773",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "2pha",
+                    "homepage": "https://www.drupal.org/user/364126"
+                },
+                {
+                    "name": "fgm",
+                    "homepage": "https://www.drupal.org/user/27985"
+                }
+            ],
+            "description": "Adds formatter for displaying image fields as Bootstrap Carousel.",
+            "homepage": "https://www.drupal.org/project/bootstrap_carousel_if",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_carousel_if"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_ce",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_ce.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_ce-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "dea2664a8ded010993bd484f3dc453264ee7eed0"
+            },
+            "require": {
+                "drupal/core": ">=8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1643797922",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Rajeshreeputra Pravin Dhondiba Gaikwad",
+                    "homepage": "https://www.drupal.org/u/Rajeshreeputra",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pixel Burger",
+                    "homepage": "https://www.drupal.org/u/pixel-burger",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Ganesh Suryawanshi",
+                    "homepage": "https://www.drupal.org/u/ganeshsurya11",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module allows you set a Bootstrap Carousel as a formatter of 'entity_references' field and 'image' fields.",
+            "homepage": "https://www.drupal.org/project/bootstrap_ce",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_ce",
+                "issues": "https://www.drupal.org/project/issues/bootstrap_ce"
+            }
+        },
+        {
             "name": "drupal/bootstrap_layouts",
             "version": "5.2.0",
             "source": {
@@ -5437,6 +5541,55 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_permissions",
                 "issues": "https://www.drupal.org/project/issues/field_permissions"
+            }
+        },
+        {
+            "name": "drupal/field_slideshow",
+            "version": "3.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_slideshow.git",
+                "reference": "8.x-3.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_slideshow-8.x-3.0-beta2.zip",
+                "reference": "8.x-3.0-beta2",
+                "shasum": "dd8374c54e916741181bc7c26ea6bbce09bd43cd"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-3.0-beta2",
+                    "datestamp": "1587556179",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "lamp5",
+                    "homepage": "https://www.drupal.org/u/lamp5",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a Slideshow formatter for Image fields, using JQuery Cycle plugin.",
+            "homepage": "https://www.drupal.org/project/field_slideshow",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_slideshow",
+                "issues": "https://www.drupal.org/project/issues/field_slideshow"
             }
         },
         {
@@ -14350,6 +14503,7 @@
         "drupal/feeds": 10,
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
+        "drupal/field_slideshow": 10,
         "drupal/libraries": 10,
         "drupal/linkit": 10,
         "drupal/maxlength": 5,

@@ -5,7 +5,9 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
-/web/libraries/
+/web/libraries/*
+!/web/libraries/jquery.cycle2
+!/web/libraries/jquery.cycle2/jquery.cycle2.min.js
 console/
 
 # Ignore sensitive information
