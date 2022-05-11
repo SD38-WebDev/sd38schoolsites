@@ -553,11 +553,26 @@ body #header .slogan {
 .promo-card .bs-region {
   border-radius: 0.5rem;
   overflow: hidden;
+  border: 1px solid #00000010;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.125);
 }
 
 .promo-content {
   background: #00000005;
   padding: 0.75rem;
+}
+
+.promo-content .read-more {
+  padding-top: 0.5rem;
+}
+
+.promo-content h2 {
+  font-size: 1.5rem !important;
+}
+
+.promo-content p {
+  font-size: 0.95rem !important;
+  color: #333333;
 }
 
 .promo-card a.field-group-link {
