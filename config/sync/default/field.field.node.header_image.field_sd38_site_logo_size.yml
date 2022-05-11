@@ -1,0 +1,28 @@
+uuid: 6a4bb411-4a6d-4953-9e96-e8cd0f177e52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sd38_site_logo_size
+    - node.type.header_image
+  module:
+    - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.header_image.field_sd38_site_logo_size
+field_name: field_sd38_site_logo_size
+entity_type: node
+bundle: header_image
+label: 'Site Logo Size'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: logo-sm
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,34 @@
+uuid: f9257e98-801a-4ff9-a6ff-1d476d4ae213
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_sd38_site_logo_size
+field_name: field_sd38_site_logo_size
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: logo-sm
+      label: Small
+    -
+      value: logo-md
+      label: Medium
+    -
+      value: logo-lg
+      label: Large
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

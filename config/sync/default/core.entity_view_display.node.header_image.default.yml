@@ -3,28 +3,132 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.header_image.field_display_site_name
+    - field.field.node.header_image.field_display_tagline
     - field.field.node.header_image.field_header_image
+    - field.field.node.header_image.field_header_text_colour
+    - field.field.node.header_image.field_sd38_site_logo
+    - field.field.node.header_image.field_sd38_site_logo_size
+    - field.field.node.header_image.field_sd38_site_name
+    - field.field.node.header_image.field_sd38_site_tagline
+    - image.style.header_image
+    - image.style.medium
     - node.type.header_image
   module:
+    - bg_image_formatter
+    - ds
+    - field_token_value
     - image
+    - options
     - user
 id: node.header_image.default
 targetEntityType: node
 bundle: header_image
 mode: default
 content:
-  field_header_image:
-    weight: 101
+  field_display_site_name:
+    type: boolean
+    weight: 3
+    region: content
     label: above
     settings:
-      image_style: ''
-      image_link: ''
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
-    type: image
+  field_display_tagline:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
-  links:
-    weight: 100
+  field_header_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: header_image
+      css_settings:
+        bg_image_selector: 'body #header-img-area'
+        bg_image_z_index: auto
+        bg_image_color: '#FFFFFF'
+        bg_image_x: center
+        bg_image_y: center
+        bg_image_attachment: scroll
+        bg_image_repeat: no-repeat
+        bg_image_background_size: cover
+        bg_image_gradient: ''
+        bg_image_media_query: all
+        bg_image_important: 1
+        bg_image_path_format: absolute
+        bg_image_background_size_ie8: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: bg_image_formatter
+    region: content
+  field_header_text_colour:
+    weight: 7
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: list_default
     region: content
-hidden: {  }
+  field_sd38_site_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_sd38_site_logo_size:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sd38_site_name:
+    weight: 2
+    label: hidden
+    settings:
+      wrapper: h1
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: field_token_value_text
+    region: content
+  field_sd38_site_tagline:
+    weight: 5
+    label: above
+    settings:
+      wrapper: ''
+      link: false
+    third_party_settings: {  }
+    type: field_token_value_text
+    region: content
+hidden:
+  links: true

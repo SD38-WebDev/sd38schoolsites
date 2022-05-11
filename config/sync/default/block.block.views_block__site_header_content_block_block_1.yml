@@ -1,0 +1,46 @@
+uuid: 6c848118-3582-4ac5-b790-8fdb6b50399d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.site_header_content_block
+  module:
+    - context
+    - views
+  theme:
+    - rsd_sites_barrio
+id: views_block__site_header_content_block_block_1
+theme: rsd_sites_barrio
+region: top_header
+weight: 0
+provider: null
+plugin: 'views_block:site_header_content_block-block_1'
+settings:
+  id: 'views_block:site_header_content_block-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  context:
+    id: context
+    values: ''
+    negate: null
+    context_mapping: {  }
+  context_all:
+    id: context_all
+    values: ''
+    negate: null
+    context_mapping: {  }
+  user_status:
+    id: user_status
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

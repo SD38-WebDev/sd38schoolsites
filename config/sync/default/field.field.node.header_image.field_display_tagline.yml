@@ -1,0 +1,29 @@
+uuid: 7768cd87-584e-4b22-aaa9-29a06698f125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_tagline
+    - node.type.header_image
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.header_image.field_display_tagline
+field_name: field_display_tagline
+entity_type: node
+bundle: header_image
+label: 'Display Tagline'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

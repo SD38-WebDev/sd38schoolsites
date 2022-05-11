@@ -1,0 +1,80 @@
+uuid: c4a41deb-ac78-40af-8efe-699a4f624ddc
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.header_image.field_display_site_name
+    - field.field.node.header_image.field_display_tagline
+    - field.field.node.header_image.field_header_image
+    - field.field.node.header_image.field_header_text_colour
+    - field.field.node.header_image.field_sd38_site_logo
+    - field.field.node.header_image.field_sd38_site_logo_size
+    - field.field.node.header_image.field_sd38_site_name
+    - field.field.node.header_image.field_sd38_site_tagline
+    - node.type.header_image
+  module:
+    - ds
+    - field_token_value
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: bs_2col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          left:
+            wrapper: div
+            classes:
+              col-xs-12: col-xs-12
+              col-sm-1: col-sm-1
+            add_region_classes: 0
+            attributes: ''
+          right:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ' class|col'
+    regions:
+      right:
+        - field_sd38_site_name
+id: node.header_image.teaser
+targetEntityType: node
+bundle: header_image
+mode: teaser
+content:
+  field_sd38_site_name:
+    weight: 0
+    label: hidden
+    settings:
+      wrapper: h1
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: field_token_value_text
+    region: right
+hidden:
+  field_display_site_name: true
+  field_display_tagline: true
+  field_header_image: true
+  field_header_text_colour: true
+  field_sd38_site_logo: true
+  field_sd38_site_logo_size: true
+  field_sd38_site_tagline: true
+  links: true
