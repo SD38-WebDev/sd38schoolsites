@@ -63,7 +63,7 @@ relationships:
     careerprograms: 'db:careerprograms'
     ce: 'db:ce'
     rvs: 'db:rvs'
-disk: 70000
+disk: 85000
 mounts:
     /web/files:
         source: local
