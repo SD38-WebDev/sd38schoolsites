@@ -952,6 +952,17 @@ body.user-logged-in .card:hover .ops-links {
   border-radius: 0.3125rem;
 }
 
+.paragraph.paragraph--type-image-gallery .view-image-gallery-carousel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
+.paragraph.paragraph--type-image-gallery .view-image-gallery-carousel img {
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
 .border-03125,
 .border-round-sm {
 	border-radius: 0.3125rem;

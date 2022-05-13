@@ -75,6 +75,7 @@
         "drupal/bootstrap_ce": "^2.1",
         "drupal/bootstrap_layouts": "^5.2",
         "drupal/bootstrap_paragraphs": "^2.0@beta",
+        "drupal/bootstrap_simple_carousel": "^1.63",
         "drupal/business_rules": "^2.0@beta",
         "drupal/calendar": "^1.0@alpha",
         "drupal/ckeditor_bootstrap_table": "^1.2",
