@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5f061956852876dd3fae63a3db7490c",
+    "content-hash": "0c238c41b865fde59cd5756351b91437",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5187,17 +5187,11 @@
         },
         {
             "name": "drupal/feeds",
-            "version": "3.0.0-beta1",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds.git",
-                "reference": "8.x-3.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-beta1.zip",
-                "reference": "8.x-3.0-beta1",
-                "shasum": "badc1d2ca2f386c05c4c7d793a0ee23ce035b94c"
+                "reference": "63026442df9b3890d955f5213319ea084fa5a368"
             },
             "require": {
                 "drupal/core": "^8.9 || ^9"
@@ -5208,9 +5202,12 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-3.0-beta1",
-                    "datestamp": "1645727744",
+                    "version": "8.x-3.x-dev",
+                    "datestamp": "1653575520",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -14640,7 +14637,7 @@
         "drupal/context": 10,
         "drupal/context_entity_field": 20,
         "drupal/entity_submit_redirect": 20,
-        "drupal/feeds": 10,
+        "drupal/feeds": 20,
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
         "drupal/field_slideshow": 10,
