@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c238c41b865fde59cd5756351b91437",
+    "content-hash": "244392ca9ded9711e70b96e7a0d924c6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5187,14 +5187,20 @@
         },
         {
             "name": "drupal/feeds",
-            "version": "dev-3.x",
+            "version": "3.0.0-alpha10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds.git",
-                "reference": "63026442df9b3890d955f5213319ea084fa5a368"
+                "reference": "8.x-3.0-alpha10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-alpha10.zip",
+                "reference": "8.x-3.0-alpha10",
+                "shasum": "84691c6258503c8d4afea5009dcd21bbd8292d49"
             },
             "require": {
-                "drupal/core": "^8.9 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
                 "drupal/pathauto": "^1.8",
@@ -5202,12 +5208,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-3.x-dev",
-                    "datestamp": "1653575520",
+                    "version": "8.x-3.0-alpha10",
+                    "datestamp": "1612455136",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -14637,7 +14640,6 @@
         "drupal/context": 10,
         "drupal/context_entity_field": 20,
         "drupal/entity_submit_redirect": 20,
-        "drupal/feeds": 20,
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
         "drupal/field_slideshow": 10,
