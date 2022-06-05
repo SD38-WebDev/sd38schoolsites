@@ -22,9 +22,9 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Header Image'
+name: 'Header Details'
 type: header_image
-description: 'Use <em>header images</em> to add a new background image the the website header area.'
+description: '<em>Header Details</em> is where you add a site logo, toggle the display of your site name and add a new background image the the website header area.'
 help: ''
 new_revision: true
 preview_mode: 1

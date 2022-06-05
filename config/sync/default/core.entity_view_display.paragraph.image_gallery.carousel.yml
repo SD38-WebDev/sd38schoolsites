@@ -1,9 +1,9 @@
-uuid: 95f41181-685b-43ba-99f6-433e102baeaa
+uuid: 1cc7ccd0-e1de-4399-8193-1fcb337fa616
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.1_column
+    - core.entity_view_mode.paragraph.carousel
     - field.field.paragraph.image_gallery.field_images
     - field.field.paragraph.image_gallery.field_section_content
     - field.field.paragraph.image_gallery.field_section_title
@@ -38,61 +38,21 @@ third_party_settings:
       main:
         - field_section_title
         - field_section_content
-        - field_images
-id: paragraph.image_gallery.1_column
+        - image_gallery_carousel_entity_view_1
+id: paragraph.image_gallery.carousel
 targetEntityType: paragraph
 bundle: image_gallery
-mode: 1_column
+mode: carousel
 content:
-  field_images:
-    type: entity_reference_entity_view
-    weight: 2
-    region: main
-    label: hidden
-    settings:
-      view_mode: x_large_full_width_
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow-el: ''
-            ow-cl: ''
-            ow-at: ''
-            fis: true
-            fis-el: div
-            fis-cl: 'row row-cols-1'
-            fis-at: ''
-            fi: true
-            fi-el: div
-            fi-cl: 'col mb-4'
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
   field_section_content:
-    type: text_default
     weight: 1
-    region: main
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_section_title:
-    type: string
-    weight: 0
+    type: text_default
     region: main
+  field_section_title:
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
@@ -125,6 +85,14 @@ content:
             fis: false
             fis-def-at: false
             fi-def-at: false
+    type: string
+    region: main
+  image_gallery_carousel_entity_view_1:
+    weight: 2
+    region: main
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_images: true
   paragraph_view_mode: true
   paragraphs_carousel_entity_view_1: true

@@ -1,0 +1,28 @@
+uuid: 8c365769-9bc7-47dc-94a8-ddbc875ad52d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_text_colour
+    - node.type.header_image
+  module:
+    - options
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.header_image.field_header_text_colour
+field_name: field_header_text_colour
+entity_type: node
+bundle: header_image
+label: 'Header Text Colour'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: white-text
+default_value_callback: ''
+settings: {  }
+field_type: list_string

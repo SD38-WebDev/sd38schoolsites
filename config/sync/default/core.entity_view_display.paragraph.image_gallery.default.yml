@@ -97,3 +97,4 @@ content:
     region: main
 hidden:
   paragraph_view_mode: true
+  paragraphs_carousel_entity_view_1: true

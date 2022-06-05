@@ -1,0 +1,23 @@
+uuid: 0f5f8f48-ce4f-4c34-a5e4-c507f68d0bfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - field_token_value
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_sd38_site_tagline
+field_name: field_sd38_site_tagline
+entity_type: node
+type: field_token_value
+settings: {  }
+module: field_token_value
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

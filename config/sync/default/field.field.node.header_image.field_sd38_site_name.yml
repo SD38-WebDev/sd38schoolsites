@@ -1,0 +1,30 @@
+uuid: 910b3d6e-1167-4675-9830-121c9fb23521
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sd38_site_name
+    - node.type.header_image
+  module:
+    - field_token_value
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.header_image.field_sd38_site_name
+field_name: field_sd38_site_name
+entity_type: node
+bundle: header_image
+label: 'SD38 Site Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings:
+  field_value: '[site:name]'
+  remove_empty: 1
+field_type: field_token_value

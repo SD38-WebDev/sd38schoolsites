@@ -1,0 +1,10 @@
+uuid: 0f6c3c80-dd32-41a1-a2b2-356a6a8bdde4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.carousel
+label: Carousel
+targetEntityType: paragraph
+cache: true

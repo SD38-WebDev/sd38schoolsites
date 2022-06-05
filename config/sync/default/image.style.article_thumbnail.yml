@@ -12,7 +12,7 @@ effects:
     id: image_scale
     weight: 2
     data:
-      width: 480
+      width: 600
       height: null
       upscale: true
   53428d40-4376-439a-995c-aff238707709:
@@ -21,7 +21,7 @@ effects:
     weight: 2
     data:
       width: null
-      height: 320
+      height: 400
       upscale: false
   28d9f1ac-7366-4b87-acb6-23efb27a1cad:
     uuid: 28d9f1ac-7366-4b87-acb6-23efb27a1cad
@@ -30,8 +30,8 @@ effects:
     data:
       canvas_size: exact
       exact:
-        width: '480'
-        height: '320'
+        width: '600'
+        height: '400'
         placement: center-center
         x_offset: 0
         y_offset: 0

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95df3e958d9bac8c8c1df0b72431e69b",
+    "content-hash": "244392ca9ded9711e70b96e7a0d924c6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3156,6 +3156,53 @@
             }
         },
         {
+            "name": "drupal/bootstrap_simple_carousel",
+            "version": "1.63.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_simple_carousel.git",
+                "reference": "8.x-1.63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_simple_carousel-8.x-1.63.zip",
+                "reference": "8.x-1.63",
+                "shasum": "7f7ed5cc2e8f6cab2a06bd26124e098e2e659fe3"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.63",
+                    "datestamp": "1620468449",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Dzianis Kel (asmdk)",
+                    "homepage": "https://www.drupal.org/u/asmdk",
+                    "email": "asm32dk@gmail.com",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "The module provides the simple bootstrap carousel.",
+            "homepage": "https://drupal.org/project/bootstrap_simple_carousel",
+            "support": {
+                "source": "https://cgit.drupalcode.org/bootstrap_simple_carousel",
+                "issues": "https://drupal.org/project/issues/bootstrap_simple_carousel"
+            }
+        },
+        {
             "name": "drupal/business_rules",
             "version": "2.0.0-beta1",
             "source": {
@@ -5140,20 +5187,20 @@
         },
         {
             "name": "drupal/feeds",
-            "version": "3.0.0-beta1",
+            "version": "3.0.0-alpha10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds.git",
-                "reference": "8.x-3.0-beta1"
+                "reference": "8.x-3.0-alpha10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-beta1.zip",
-                "reference": "8.x-3.0-beta1",
-                "shasum": "badc1d2ca2f386c05c4c7d793a0ee23ce035b94c"
+                "url": "https://ftp.drupal.org/files/projects/feeds-8.x-3.0-alpha10.zip",
+                "reference": "8.x-3.0-alpha10",
+                "shasum": "84691c6258503c8d4afea5009dcd21bbd8292d49"
             },
             "require": {
-                "drupal/core": "^8.9 || ^9"
+                "drupal/core": "^8.8 || ^9"
             },
             "require-dev": {
                 "drupal/pathauto": "^1.8",
@@ -5162,8 +5209,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-beta1",
-                    "datestamp": "1645727744",
+                    "version": "8.x-3.0-alpha10",
+                    "datestamp": "1612455136",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5590,6 +5637,51 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/field_slideshow",
                 "issues": "https://www.drupal.org/project/issues/field_slideshow"
+            }
+        },
+        {
+            "name": "drupal/field_token_value",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_token_value.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_token_value-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "0a4644753ba7603f3d4fc033f7d83de116aaa804"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1629160323",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "haydent",
+                    "homepage": "https://www.drupal.org/user/2763191"
+                }
+            ],
+            "description": "Provides a field allowing the value to be set using a string containing tokens.",
+            "homepage": "https://www.drupal.org/project/field_token_value",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_token_value"
             }
         },
         {
@@ -8201,6 +8293,54 @@
             "homepage": "https://www.drupal.org/project/video_embed_field",
             "support": {
                 "source": "https://git.drupalcode.org/project/video_embed_field"
+            }
+        },
+        {
+            "name": "drupal/views_base_url",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_base_url.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_base_url-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "a7ecf346feded220898807c022db177e35a3cc18"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1623153168",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "rjjakes",
+                    "homepage": "https://www.drupal.org/user/3457245"
+                },
+                {
+                    "name": "subhojit777",
+                    "homepage": "https://www.drupal.org/user/1812492"
+                }
+            ],
+            "description": "Global views field that provides site's base url",
+            "homepage": "https://www.drupal.org/project/views_base_url",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_base_url"
             }
         },
         {
@@ -14500,7 +14640,6 @@
         "drupal/context": 10,
         "drupal/context_entity_field": 20,
         "drupal/entity_submit_redirect": 20,
-        "drupal/feeds": 10,
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
         "drupal/field_slideshow": 10,
@@ -14512,6 +14651,7 @@
         "drupal/term_merge": 20,
         "drupal/theme_permission": 10,
         "drupal/twitter_block": 15,
+        "drupal/views_base_url": 10,
         "drupal/views_ical": 20,
         "drupal/views_menu_children_filter": 5,
         "drupal/views_sort_options_weight": 20,

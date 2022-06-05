@@ -1,6 +1,6 @@
 uuid: a641dce4-de61-400c-9045-a088c16b2fdc
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: rsd_sites_barrio_branding
 theme: rsd_sites_barrio
 region: top_header
-weight: -12
+weight: -11
 provider: null
 plugin: system_branding_block
 settings:

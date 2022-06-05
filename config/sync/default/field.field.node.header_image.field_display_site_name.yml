@@ -1,0 +1,29 @@
+uuid: ea3abe5f-f505-489c-8eb9-10b67227d7fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_site_name
+    - node.type.header_image
+  module:
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.header_image.field_display_site_name
+field_name: field_display_site_name
+entity_type: node
+bundle: header_image
+label: 'Display Site Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
