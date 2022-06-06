@@ -708,6 +708,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
+"https://slss.sd38.bc.ca":
+    type: upstream
+    upstream: "app:http"
+    cache:
+        enabled: true
+        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://jnburnett.{default}/":
     type: upstream
