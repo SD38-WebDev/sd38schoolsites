@@ -54,13 +54,13 @@ settings:
           items:
             - Source
   plugins:
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: default_profile
     language:
       language_list: un
     stylescombo:
       styles: ''
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default_profile
     font:
       font_names: ''
       font_sizes: ''
