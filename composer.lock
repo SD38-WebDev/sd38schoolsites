@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd42a00e932211e7bc43cf57464d1805",
+    "content-hash": "43f8ea2882e07d9c3d68bc74e66ef4a7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6073,36 +6073,30 @@
         },
         {
             "name": "drupal/google_analytics",
-            "version": "3.1.0",
+            "version": "dev-4.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_analytics.git",
-                "reference": "8.x-3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "171dcac5a67cde66201754baaa52711f45e47a3b"
+                "reference": "213aedf1fc5ab18b6221db1ee7f234f9ef97d4bd"
             },
             "require": {
-                "drupal/core": "^8.8.6|^9.0"
+                "drupal/core": "^8.9|^9.0"
             },
             "require-dev": {
                 "drupal/token": "^1.7"
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1591298584",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
                 "branch-alias": {
-                    "dev-8.x-2.x": "2.x-dev"
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "4.x-dev",
+                    "datestamp": "1655313797",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6138,7 +6132,7 @@
             "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
             "homepage": "https://www.drupal.org/project/google_analytics",
             "support": {
-                "source": "https://git.drupal.org/project/google_analytics.git",
+                "source": "https://git.drupalcode.org/project/google_analytics",
                 "issues": "https://www.drupal.org/project/issues/google_analytics"
             }
         },
@@ -14654,6 +14648,7 @@
         "drupal/feeds_tamper": 10,
         "drupal/field_group": 20,
         "drupal/field_slideshow": 10,
+        "drupal/google_analytics": 20,
         "drupal/libraries": 10,
         "drupal/linkit": 10,
         "drupal/maxlength": 5,

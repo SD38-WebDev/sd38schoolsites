@@ -115,7 +115,7 @@
         "drupal/focal_point": "^1.5",
         "drupal/fontyourface": "^3.6",
         "drupal/fullcalendar_view": "^5.1",
-        "drupal/google_analytics": "^3.1",
+        "drupal/google_analytics": "4.x-dev@dev",
         "drupal/gtranslate": "^1.14",
         "drupal/image_effects": "^3.1",
         "drupal/imagefield_slideshow": "^1.11",
@@ -197,6 +197,9 @@
           },
           "drupal/core": {
               "Move cursor to new line after image insert in CKEditor": "https://www.drupal.org/files/issues/2019-12-18/0004-Set-focus-for-chrome-after-html-insert-with-space.patch"
+          },
+          "drupal/google_analytics": {
+              "Add dependency on drupal path_alias": "https://www.drupal.org/files/issues/2021-11-08/google_analytics-3246597-3.patch"
           }
         },
         "installer-paths": {
