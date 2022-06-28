@@ -1346,7 +1346,7 @@ div.content-row .p-xl {
 		position: absolute;
 		top: 0px;
 		right: 0px;
-		border: 1px solid rgba(37, 63, 143, 0.1);
+    border: 1px solid rgba(37, 63, 143, 0.1);
 		border-radius: 4px;
 		padding: 0.25rem 1.2rem;
 		background-color: rgba(37, 63, 143, 0.05);
