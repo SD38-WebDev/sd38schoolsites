@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43f8ea2882e07d9c3d68bc74e66ef4a7",
+    "content-hash": "c5e49207c3058bdaf2a3c3cf8a93498d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -186,6 +186,55 @@
                 "source": "https://github.com/commerceguys/addressing/tree/v1.2.1"
             },
             "time": "2021-05-17T08:05:21+00:00"
+        },
+        {
+            "name": "components/jquery",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "6cf38ee1fd04b6adf8e7dda161283aa35be818c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/6cf38ee1fd04b6adf8e7dda161283aa35be818c3",
+                "reference": "6cf38ee1fd04b6adf8e7dda161283aa35be818c3",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JS Foundation and other contributors"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "support": {
+                "forum": "http://forum.jquery.com",
+                "irc": "irc://irc.freenode.org/jquery",
+                "issues": "https://github.com/jquery/jquery/issues",
+                "source": "https://github.com/jquery/jquery",
+                "wiki": "http://docs.jquery.com/"
+            },
+            "time": "2021-03-20T19:13:42+00:00"
         },
         {
             "name": "composer/installers",
@@ -2151,6 +2200,56 @@
             },
             "abandoned": "roave/better-reflection",
             "time": "2020-10-27T21:46:55+00:00"
+        },
+        {
+            "name": "drmonty/smartmenus",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrohnstock/smartmenus.git",
+                "reference": "0ae42a969723f09c6f53e90e9c8c112614856035"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrohnstock/smartmenus/zipball/0ae42a969723f09c6f53e90e9c8c112614856035",
+                "reference": "0ae42a969723f09c6f53e90e9c8c112614856035",
+                "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.7.0"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "js/*.js"
+                    ],
+                    "files": [
+                        "js/*.js",
+                        "css/*.css"
+                    ],
+                    "shim": {
+                        "deps": [
+                            "jquery"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "jQuery website menu plugin. Responsive and accessible list-based website menus that work on all devices.",
+            "homepage": "http://www.smartmenus.org",
+            "keywords": [
+                "dropdown",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/mrohnstock/smartmenus/issues",
+                "source": "https://github.com/mrohnstock/smartmenus/tree/master"
+            },
+            "time": "2017-09-18T08:01:28+00:00"
         },
         {
             "name": "drupal-ckeditor-libraries-group/font",
@@ -7542,6 +7641,62 @@
             "support": {
                 "source": "https://cgit.drupalcode.org/smart_trim",
                 "issues": "https://drupal.org/project/issues/smart_trim"
+            }
+        },
+        {
+            "name": "drupal/smartmenus",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/smartmenus.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/smartmenus-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "d7a795e3456e9dfdb1d8f0354d52410fbaff04b9"
+            },
+            "require": {
+                "drmonty/smartmenus": "1.1.0",
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "library",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1583608653",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jen Lampton",
+                    "homepage": "http://drupal.org/user/85586",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Vishwa Chikate",
+                    "homepage": "https://www.drupal.org/user/2857973",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "vishwac9",
+                    "homepage": "https://www.drupal.org/user/2857973"
+                }
+            ],
+            "description": "Responsive drop-down menus with the <a href=\"http://www.smartmenus.org/\">Smartmenus</a> jQuery plugin.",
+            "homepage": "https://www.drupal.org/project/smartmenus",
+            "support": {
+                "source": "http://cgit.drupalcode.org/smartmenus",
+                "issues": "https://www.drupal.org/project/issues/smartmenus"
             }
         },
         {

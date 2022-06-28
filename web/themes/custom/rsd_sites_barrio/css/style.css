@@ -1330,7 +1330,7 @@ div.content-row .p-xl {
 }
 
 /** Enable Navbar dropdowns on hover for desktop view - See Javascript as well **/
-@media screen and (min-width:768px) {
+@media screen and (min-width:992px) {
 	.navbar-nav .dropdown:hover>.dropdown-menu {
 		display:block;
 		margin:0
@@ -1338,7 +1338,7 @@ div.content-row .p-xl {
 }
 
 /** More CSS for mobile friendly dropdown menus **/
-@media screen and (max-width:767px) {
+@media screen and (max-width:992px) {
 	.menu--main .dropdown > a.nav-link {
 
 	}
