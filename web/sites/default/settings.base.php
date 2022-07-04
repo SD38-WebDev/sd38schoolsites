@@ -49,8 +49,8 @@ $settings['class_loader_auto_detect'] = FALSE;
 // $config_directories (pre-Drupal 8.8) and
 // $settings['config_sync_directory'] are supported
 // so it should work on any Drupal 8 or 9 version.
-if (defined('CONFIG_SYNC_DIRECTORY') && empty($config_directories[CONFIG_SYNC_DIRECTORY])) {
-  $config_directories[CONFIG_SYNC_DIRECTORY] = 'sites/default/files/sync';
+if (defined('CONFIG_SYNC_DIRECTORY') && empty($settings[CONFIG_SYNC_DIRECTORY])) {
+  $settings[CONFIG_SYNC_DIRECTORY] = 'sites/default/files/sync';
 }
 elseif (empty($settings['config_sync_directory'])) {
   $settings['config_sync_directory'] = 'sites/default/files/sync';

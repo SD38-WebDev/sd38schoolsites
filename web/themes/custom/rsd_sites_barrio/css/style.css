@@ -1330,7 +1330,7 @@ div.content-row .p-xl {
 }
 
 /** Enable Navbar dropdowns on hover for desktop view - See Javascript as well **/
-@media screen and (min-width:768px) {
+@media screen and (min-width:992px) {
 	.navbar-nav .dropdown:hover>.dropdown-menu {
 		display:block;
 		margin:0
@@ -1338,7 +1338,7 @@ div.content-row .p-xl {
 }
 
 /** More CSS for mobile friendly dropdown menus **/
-@media screen and (max-width:767px) {
+@media screen and (max-width:992px) {
 	.menu--main .dropdown > a.nav-link {
 
 	}
@@ -1346,7 +1346,7 @@ div.content-row .p-xl {
 		position: absolute;
 		top: 0px;
 		right: 0px;
-		border: 1px solid rgba(37, 63, 143, 0.1);
+    border: 1px solid rgba(37, 63, 143, 0.1);
 		border-radius: 4px;
 		padding: 0.25rem 1.2rem;
 		background-color: rgba(37, 63, 143, 0.05);
@@ -1356,6 +1356,9 @@ div.content-row .p-xl {
 		border: none;
 		box-shadow: none;
 	}
+  .dropdown-toggle::after {
+    display: none !important;
+  }
 }
 
 
