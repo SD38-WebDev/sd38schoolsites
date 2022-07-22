@@ -1,11 +1,11 @@
 id: image_link_title
 label: 'Image Link Title'
 ui_limit: ''
-properties:
-  content:
-    value: '[paragraph:field_image_link:title]'
-    format: plain_text
 type: token
 type_label: 'Token field'
 entities:
   paragraph: paragraph
+properties:
+  content:
+    value: '[paragraph:field_image_link:title]'
+    format: plain_text

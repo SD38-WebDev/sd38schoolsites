@@ -2,8 +2,8 @@ status: 1
 pattern: '[site:name] - Address Block'
 escape: false
 preserve_titles: false
-save: 0
-chunk: '50'
 dependencies:
   config:
     - block_content.type.address_block
+save: 0
+chunk: '50'

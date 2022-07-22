@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - system
-name: sidebars_on_home
 label: 'Sidebars on home'
+name: sidebars_on_home
 group: null
 description: ''
 requireAllConditions: false
@@ -13,13 +13,14 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: true
     uuid: 7d7ac16e-17da-4f4b-9047-8d73c05db144
     context_mapping: {  }
+    pages: '<front>'
 reactions:
   regions:
     id: regions
+    uuid: 94cf4743-ba16-41bc-90a3-b10785b4a1b4
     regions:
       classy: {  }
       seven: {  }
@@ -30,5 +31,4 @@ reactions:
         - sidebar_first
         - sidebar_second
     saved: false
-    uuid: 94cf4743-ba16-41bc-90a3-b10785b4a1b4
 weight: 0

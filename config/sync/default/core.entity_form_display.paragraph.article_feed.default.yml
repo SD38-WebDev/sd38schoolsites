@@ -16,32 +16,33 @@ bundle: article_feed
 mode: default
 content:
   field_referenced_tags:
+    type: entity_reference_autocomplete_tags
     weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   field_section_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_site_section:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   paragraph_view_mode:
     type: paragraph_view_mode
     weight: 1
+    region: content
     settings:
       view_modes:
         article_feed_18_posts_: article_feed_18_posts_
@@ -51,7 +52,6 @@ content:
         default: '0'
       default_view_mode: article_feed_6_posts_
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

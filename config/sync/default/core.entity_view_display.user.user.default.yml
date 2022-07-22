@@ -70,29 +70,29 @@ third_party_settings:
           id: expert
           settings:
             lb: ''
-            prefix: ''
             lbw: true
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: div
             ow-cl: mt-4
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
+            prefix: ''
+            suffix: ''
       'dynamic_block_field:user-user_feeds_block':
         plugin_id: 'dynamic_block_field:user-user_feeds_block'
         weight: 3
@@ -102,29 +102,29 @@ third_party_settings:
           id: expert
           settings:
             lb: ''
-            prefix: ''
             lbw: true
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: div
             ow-cl: mt-4
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
+            prefix: ''
+            suffix: ''
       usermail:
         plugin_id: usermail
         weight: 1
@@ -136,9 +136,9 @@ third_party_settings:
         label: above
         formatter: default
         settings:
+          link: false
           wrapper: ''
           class: ''
-          link: false
         ft:
           id: default
           settings:

@@ -82,13 +82,14 @@ third_party_settings:
     group_content_wrapper:
       children:
         - group_row
+      label: 'Content Wrapper'
       parent_name: ''
+      region: main
       weight: 0
       format_type: html_element
-      region: main
       format_settings:
-        id: ''
         classes: container
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -96,18 +97,18 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Content Wrapper'
     group_row:
       children:
         - group_image
         - group_summary_content
+      label: Row
       parent_name: group_content_wrapper
+      region: main
       weight: 16
       format_type: html_element
-      region: main
       format_settings:
-        id: ''
         classes: row
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -115,17 +116,17 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Row
     group_image:
       children:
         - field_feature_image
+      label: Image
       parent_name: group_row
+      region: main
       weight: 15
       format_type: html_element
-      region: main
       format_settings:
-        id: ''
         classes: col-sm-4
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -133,19 +134,19 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Image
     group_summary_content:
       children:
         - node_title
         - body
         - node_link
+      label: 'Summary Content'
       parent_name: group_row
+      region: main
       weight: 16
       format_type: html_element
-      region: main
       format_settings:
-        id: ''
         classes: col
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -153,25 +154,24 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: 'Summary Content'
 id: node.article.teaser
 targetEntityType: node
 bundle: article
 mode: teaser
 content:
   body:
-    weight: 14
+    type: smart_trim
     label: hidden
     settings:
       trim_length: 25
       trim_type: words
       trim_suffix: ''
-      wrap_class: trimmed
-      more_text: More
-      more_class: more-link
-      summary_handler: full
       wrap_output: false
+      wrap_class: trimmed
       more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
       trim_options:
         text: false
         trim_zero: false
@@ -183,16 +183,14 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: smart_trim
+    weight: 14
     region: main
   field_feature_image:
     type: media_thumbnail
-    weight: 0
-    region: main
     label: hidden
     settings:
-      image_style: large
       image_link: ''
+      image_style: large
     third_party_settings:
       ds:
         ft:
@@ -201,6 +199,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
+    region: main
 hidden:
   feeds_item: true
   field_article_category: true

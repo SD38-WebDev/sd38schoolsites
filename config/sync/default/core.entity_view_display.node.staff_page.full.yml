@@ -63,9 +63,9 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
+          link: false
           wrapper: h1
           class: ''
-          link: false
         ft:
           id: default
           settings:
@@ -78,11 +78,11 @@ bundle: staff_page
 mode: full
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: top
 hidden:
   field_staff_members: true

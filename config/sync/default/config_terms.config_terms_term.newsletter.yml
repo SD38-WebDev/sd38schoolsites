@@ -7,5 +7,5 @@ vid: article_terms
 label: Newsletter
 parents:
   - '0'
-description: ''
 weight: 0
+description: ''

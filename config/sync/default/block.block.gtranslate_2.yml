@@ -16,16 +16,16 @@ plugin: gtranslate_block
 settings:
   id: gtranslate_block
   label: Translate
-  provider: gtranslate
   label_display: '0'
+  provider: gtranslate
 visibility:
   request_path_exclusion:
     id: request_path_exclusion
-    pages: ''
     negate: null
     context_mapping: {  }
+    pages: ''
   view_inclusion:
     id: view_inclusion
     negate: null
-    view_inclusion: {  }
     context_mapping: {  }
+    view_inclusion: {  }

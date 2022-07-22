@@ -76,9 +76,9 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
+          link: false
           wrapper: h1
           class: ''
-          link: false
         ft:
           id: default
           settings:
@@ -91,9 +91,8 @@ bundle: calendar_event
 mode: default
 content:
   body:
-    label: above
     type: text_default
-    weight: 3
+    label: above
     settings: {  }
     third_party_settings:
       ds:
@@ -101,40 +100,41 @@ content:
           id: expert
           settings:
             lb: Details
-            prefix: ''
             lbw: true
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: ''
             ow-cl: mb-4
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 3
     region: right
   field_event_date:
-    weight: 2
+    type: smartdate_default
     label: above
     settings:
       timezone_override: ''
+      format_type: medium
       format: compact
-      time_wrapper: true
       force_chronological: false
       add_classes: false
-      format_type: medium
+      time_wrapper: true
     third_party_settings:
       ds:
         ds_limit: ''
@@ -142,76 +142,74 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
             lbw: true
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: ''
             ow-cl: mb-4
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: div
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: smartdate_default
+            prefix: ''
+            suffix: ''
+    weight: 2
     region: right
   field_event_location:
-    weight: 4
+    type: address_default
     label: above
     settings: {  }
     third_party_settings:
       address_map_link:
-        link_address: '1'
+        link_address: true
         map_link_type: apple_maps
         map_link_position: address
         map_link_text: 'Open Map'
-        map_link_new_window: '1'
+        map_link_new_window: true
       ds:
         ft:
           id: expert
           settings:
             lb: ''
-            prefix: ''
             lbw: true
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
-    type: address_default
+            prefix: ''
+            suffix: ''
+    weight: 4
     region: right
   field_feature_image:
     type: entity_reference_entity_view
-    weight: 0
-    region: left
     label: hidden
     settings:
       view_mode: x_large_full_width_
@@ -224,12 +222,14 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
+    region: left
   field_promote_to_front_page:
-    weight: 5
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 5
     region: content
 hidden:
   feeds_item: true

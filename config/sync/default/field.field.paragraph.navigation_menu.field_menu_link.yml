@@ -26,9 +26,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       navigation_menu_link: navigation_menu_link
+    negate: 0
     target_bundles_drag_drop:
       article_feed:
         weight: 30
@@ -100,8 +100,8 @@ settings:
         weight: 52
         enabled: false
       navigation_menu_link:
-        enabled: true
         weight: 53
+        enabled: true
       recent_blog_posts:
         weight: 54
         enabled: false

@@ -27,36 +27,36 @@ third_party_settings:
       children:
         - field_header_image
         - field_header_text_colour
+      label: 'Background Image'
+      region: content
       parent_name: ''
       weight: 0
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
-        formatter: closed
         required_fields: true
-      label: 'Background Image'
+        formatter: closed
     group_site_details:
       children:
         - field_display_site_name
         - field_display_tagline
         - field_sd38_site_logo
         - field_sd38_site_logo_size
+      label: 'Site Details'
+      region: content
       parent_name: ''
       weight: 1
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
-        formatter: closed
         required_fields: true
-      label: 'Site Details'
+        formatter: closed
 id: node.header_image.default
 targetEntityType: node
 bundle: header_image
@@ -69,61 +69,61 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_display_site_name:
+    type: boolean_checkbox
     weight: 16
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_display_tagline:
+    type: boolean_checkbox
     weight: 17
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_header_image:
+    type: image_focal_point
     weight: 13
+    region: content
     settings:
+      progress_indicator: throbber
       preview_image_style: large
       preview_link: true
       offsets: '50,50'
-      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_focal_point
-    region: content
   field_header_text_colour:
+    type: options_select
     weight: 14
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_sd38_site_logo:
+    type: image_image
     weight: 18
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_sd38_site_logo_size:
-    weight: 19
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 19
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_sd38_site_name:
+    type: field_token_value_default
     weight: 12
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: field_token_value_default
-    region: content
   field_sd38_site_tagline:
+    type: field_token_value_default
     weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: field_token_value_default
-    region: content
   path:
     type: path
     weight: 8
@@ -132,10 +132,10 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -145,17 +145,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 11
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -168,12 +168,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

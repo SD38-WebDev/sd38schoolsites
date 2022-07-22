@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - system
-name: user_pages
 label: 'User Pages'
+name: user_pages
 group: null
 description: ''
 requireAllConditions: false
@@ -13,13 +13,14 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: "/user\r\n/user/*"
     negate: false
     uuid: ba376b8a-fa46-4dbe-a70f-dcff6744a2ab
     context_mapping: {  }
+    pages: "/user\r\n/user/*"
 reactions:
   regions:
     id: regions
+    uuid: ec440031-099f-4b7f-8a02-3d3e615678ef
     regions:
       classy: {  }
       seven: {  }
@@ -30,5 +31,4 @@ reactions:
         - sidebar_first
         - sidebar_second
     saved: false
-    uuid: ec440031-099f-4b7f-8a02-3d3e615678ef
 weight: 0

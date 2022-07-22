@@ -2,11 +2,11 @@ uuid: c8deb404-e065-4782-a2a5-2f9952337c85
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   enforced:
     module:
       - password_policy
-  module:
-    - user
 _core:
   default_config_hash: FkcjtYqR-bTc6oZBLdP6A89u1UPfdRIV1NYQg_kkUkg
 id: user.field_pending_expire_sent

@@ -7,5 +7,5 @@ vid: article_terms
 label: 'Daily Notices'
 parents:
   - '0'
-description: ''
 weight: 0
+description: ''

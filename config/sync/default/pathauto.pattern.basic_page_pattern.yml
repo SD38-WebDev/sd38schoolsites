@@ -11,13 +11,13 @@ pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   6de56302-799c-434c-8279-27de552f6001:
     id: 'entity_bundle:node'
+    negate: false
+    uuid: 6de56302-799c-434c-8279-27de552f6001
+    context_mapping:
+      node: node
     bundles:
       calendar_page: calendar_page
       staff_page: staff_page
-    negate: false
-    context_mapping:
-      node: node
-    uuid: 6de56302-799c-434c-8279-27de552f6001
 selection_logic: and
 weight: -9
 relationships: {  }

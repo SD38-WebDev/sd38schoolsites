@@ -15,19 +15,19 @@ plugin: 'block_content:e7910635-166a-459a-8822-37e985338268'
 settings:
   id: 'block_content:e7910635-166a-459a-8822-37e985338268'
   label: 'Elementary School'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path_exclusion:
     id: request_path_exclusion
-    pages: ''
     negate: null
     context_mapping: {  }
+    pages: ''
   view_inclusion:
     id: view_inclusion
     negate: null
-    view_inclusion: {  }
     context_mapping: {  }
+    view_inclusion: {  }

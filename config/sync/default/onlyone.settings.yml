@@ -1,8 +1,8 @@
+_core:
+  default_config_hash: UoV6qv_r_-7TBFZaqKvIg8vI5QF55m-tuIR_LcmtfSw
 onlyone_node_types:
   header_image: header_image
   sidebar_note: sidebar_note
   staff_page: staff_page
 onlyone_new_menu_entry: false
 onlyone_redirect: true
-_core:
-  default_config_hash: UoV6qv_r_-7TBFZaqKvIg8vI5QF55m-tuIR_LcmtfSw

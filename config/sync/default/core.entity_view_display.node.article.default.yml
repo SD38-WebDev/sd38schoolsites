@@ -83,7 +83,6 @@ third_party_settings:
           id: expert
           settings:
             lb: Updated
-            prefix: ''
             lbw: true
             lbw-el: strong
             lbw-cl: ''
@@ -93,28 +92,29 @@ third_party_settings:
             ow-el: div
             ow-cl: 'text-muted small'
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: small
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: small
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
+            prefix: ''
+            suffix: ''
       node_title:
         plugin_id: node_title
         weight: 1
         label: hidden
         formatter: default
         settings:
+          link: false
           wrapper: h1
           class: ''
-          link: false
         ft:
           id: default
           settings:
@@ -127,15 +127,14 @@ bundle: article
 mode: default
 content:
   body:
-    weight: 2
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: right
   field_attachments:
     type: entity_reference_entity_view
-    weight: 7
     label: above
     settings:
       view_mode: default
@@ -147,42 +146,42 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
             lbw: true
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
             fis: true
             fis-el: div
             fis-cl: 'row row-cols-2  d-flex align-items-stretch mt-3'
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: div
             fi-cl: 'col mb-2'
             fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 7
     region: right
   field_content_section:
-    weight: 4
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    weight: 4
     region: right
   field_feature_image:
     type: entity_reference_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: large_480_480_
@@ -193,32 +192,33 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: div
             ow-cl: mb-3
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: div
             fi-cl: article-img
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
     region: left
   field_legacy_attachments:
-    weight: 6
+    type: file_default
     label: above
     settings:
       use_description_as_link_text: true
@@ -231,22 +231,22 @@ content:
             lb: Attachments
             lb-col: false
             classes: {  }
-    type: file_default
+    weight: 6
     region: right
   field_legacy_image_gallery:
     type: entity_reference_entity_view
-    weight: 5
     label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 5
     region: right
   links:
-    weight: 3
-    region: right
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: right
 hidden:
   feeds_item: true
   field_article_category: true

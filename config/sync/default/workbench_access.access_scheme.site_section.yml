@@ -8,8 +8,8 @@ dependencies:
     - field.field.node.page.field_site_section
     - taxonomy.vocabulary.site_blogs_sections
 id: site_section
-label: 'Site Section'
 plural_label: 'Site Sections'
+label: 'Site Section'
 scheme: taxonomy
 scheme_settings:
   vocabularies:

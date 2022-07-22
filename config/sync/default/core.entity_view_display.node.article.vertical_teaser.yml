@@ -87,21 +87,21 @@ bundle: article
 mode: vertical_teaser
 content:
   body:
-    weight: 2
+    type: smart_trim
     label: hidden
     settings:
       trim_length: 25
       trim_type: words
       trim_suffix: ''
+      wrap_output: false
       wrap_class: trimmed
       more_link: true
-      more_text: 'Read more'
       more_class: more-link
+      more_text: 'Read more'
       summary_handler: full
       trim_options:
         text: true
         trim_zero: false
-      wrap_output: false
     third_party_settings:
       ds:
         ft:
@@ -110,15 +110,14 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: smart_trim
+    weight: 2
     region: main
   field_feature_image:
     type: media_thumbnail
-    weight: 0
     label: hidden
     settings:
-      image_style: article_grid_
       image_link: content
+      image_style: article_grid_
     third_party_settings:
       ds:
         ft:
@@ -127,12 +126,13 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
     region: top
   links:
-    weight: 3
-    region: main
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: main
 hidden:
   feeds_item: true
   field_article_category: true

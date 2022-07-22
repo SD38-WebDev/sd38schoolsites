@@ -53,7 +53,6 @@ mode: image_right_uncropped_
 content:
   field_image:
     type: entity_reference_entity_view
-    weight: 2
     label: hidden
     settings:
       view_mode: x_large_full_width_
@@ -67,16 +66,17 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 2
     region: right
   field_section_content:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: left
   field_section_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -86,30 +86,30 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: h2
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: string
+            prefix: ''
+            suffix: ''
+    weight: 0
     region: left
 hidden:
   field_background_colour: true

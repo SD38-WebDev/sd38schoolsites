@@ -1,11 +1,11 @@
 id: recent_content
 label: 'Recent Site Content'
 ui_limit: ''
-properties:
-  block: 'views_block:recent_user_content-block_1'
-  use_block_title: true
-  add_block_wrappers: true
 type: block
 type_label: 'Block field'
 entities:
   user: user
+properties:
+  block: 'views_block:recent_user_content-block_1'
+  use_block_title: true
+  add_block_wrappers: true

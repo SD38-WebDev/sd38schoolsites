@@ -26,9 +26,9 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       promo_card: promo_card
+    negate: 0
     target_bundles_drag_drop:
       article_feed:
         weight: 34
@@ -109,8 +109,8 @@ settings:
         weight: 59
         enabled: false
       promo_card:
-        enabled: true
         weight: 60
+        enabled: true
       promo_cards_section:
         weight: 61
         enabled: false

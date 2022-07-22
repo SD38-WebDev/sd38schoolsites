@@ -11,12 +11,12 @@ pattern: '[node:field_site_section:entity:field_section_home_page]/[node:field_e
 selection_criteria:
   85090285-c5d4-46fe-b21f-b4aa7274e57e:
     id: 'entity_bundle:node'
-    bundles:
-      calendar_event: calendar_event
     negate: false
+    uuid: 85090285-c5d4-46fe-b21f-b4aa7274e57e
     context_mapping:
       node: node
-    uuid: 85090285-c5d4-46fe-b21f-b4aa7274e57e
+    bundles:
+      calendar_event: calendar_event
 selection_logic: and
 weight: -6
 relationships: {  }

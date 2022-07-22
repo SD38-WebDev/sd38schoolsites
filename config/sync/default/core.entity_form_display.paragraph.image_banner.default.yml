@@ -14,15 +14,15 @@ bundle: image_banner
 mode: default
 content:
   field_banner_image:
+    type: image_focal_point
     weight: 1
+    region: content
     settings:
+      progress_indicator: throbber
       preview_image_style: medium
       preview_link: true
       offsets: '50,50'
-      progress_indicator: throbber
     third_party_settings: {  }
-    type: image_focal_point
-    region: content
 hidden:
   created: true
   status: true

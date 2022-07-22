@@ -28,26 +28,26 @@ mode: default
 content:
   field_display_site_name:
     type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
     weight: 3
     region: content
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
   field_display_tagline:
-    weight: 4
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 4
     region: content
   field_header_image:
-    weight: 1
+    type: bg_image_formatter
     label: hidden
     settings:
       image_style: header_image
@@ -60,11 +60,11 @@ content:
         bg_image_attachment: scroll
         bg_image_repeat: no-repeat
         bg_image_background_size: cover
-        bg_image_gradient: ''
         bg_image_media_query: all
         bg_image_important: 1
-        bg_image_path_format: absolute
         bg_image_background_size_ie8: 0
+        bg_image_path_format: absolute
+        bg_image_gradient: ''
     third_party_settings:
       ds:
         ft:
@@ -73,21 +73,23 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: bg_image_formatter
+    weight: 1
     region: content
   field_header_text_colour:
-    weight: 7
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 7
     region: content
   field_sd38_site_logo:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: medium
       image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
     third_party_settings:
       ds:
         ft:
@@ -96,17 +98,17 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: image
+    weight: 0
     region: content
   field_sd38_site_logo_size:
-    weight: 6
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 6
     region: content
   field_sd38_site_name:
-    weight: 2
+    type: field_token_value_text
     label: hidden
     settings:
       wrapper: h1
@@ -119,16 +121,16 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: field_token_value_text
+    weight: 2
     region: content
   field_sd38_site_tagline:
-    weight: 5
+    type: field_token_value_text
     label: above
     settings:
       wrapper: ''
       link: false
     third_party_settings: {  }
-    type: field_token_value_text
+    weight: 5
     region: content
 hidden:
   links: true

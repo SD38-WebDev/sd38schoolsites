@@ -81,16 +81,16 @@ filters:
     weight: -40
     settings:
       default_view_mode: default
-      allowed_media_types:
-        audio: audio
-        file: file
-        image: image
-        remote_video: remote_video
       allowed_view_modes:
         large_480_480_: large_480_480_
         medium_220_220_: medium_220_220_
         thumbnail_100_100_: thumbnail_100_100_
         x_large_full_width_: x_large_full_width_
+      allowed_media_types:
+        audio: audio
+        file: file
+        image: image
+        remote_video: remote_video
   video_embed_wysiwyg:
     id: video_embed_wysiwyg
     provider: video_embed_wysiwyg

@@ -11,12 +11,12 @@ pattern: '[node:field_site_section:entity:field_section_home_page]/news/[node:cr
 selection_criteria:
   17209d04-2d4a-40d7-b560-9cba5ecaa067:
     id: 'entity_bundle:node'
-    bundles:
-      article: article
     negate: false
+    uuid: 17209d04-2d4a-40d7-b560-9cba5ecaa067
     context_mapping:
       node: node
-    uuid: 17209d04-2d4a-40d7-b560-9cba5ecaa067
+    bundles:
+      article: article
 selection_logic: and
 weight: -10
 relationships: {  }

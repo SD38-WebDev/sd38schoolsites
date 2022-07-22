@@ -45,11 +45,14 @@ third_party_settings:
     group_alert_type_wrapper:
       children:
         - group_news_alert_link
+      label: 'Alert Type Wrapper'
       parent_name: ''
+      region: main
       weight: 0
       format_type: html_element
-      region: main
       format_settings:
+        classes: 'news-alert [node:field_alert_type:value]'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -57,39 +60,36 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'news-alert [node:field_alert_type:value]'
-      label: 'Alert Type Wrapper'
     group_news_alert_link:
       children:
         - field_alert_title
         - body
+      label: 'News Alert Link'
       parent_name: group_alert_type_wrapper
+      region: main
       weight: 1
       format_type: link
-      region: main
       format_settings:
+        classes: ''
+        id: ''
         target: entity
         custom_uri: ''
         target_attribute: default
-        id: ''
-        classes: ''
-      label: 'News Alert Link'
 id: node.news_alert.teaser
 targetEntityType: node
 bundle: news_alert
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 3
     region: main
   field_alert_title:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -99,30 +99,30 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: h2
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: string
+            prefix: ''
+            suffix: ''
+    weight: 2
     region: main
 hidden:
   field_alert_type: true

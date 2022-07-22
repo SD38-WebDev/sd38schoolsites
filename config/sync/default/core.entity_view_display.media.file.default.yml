@@ -35,17 +35,17 @@ third_party_settings:
   field_group:
     group_link:
       children: {  }
+      label: Link
       parent_name: ''
+      region: hidden
       weight: 4
       format_type: link
-      region: hidden
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         target: field_media_file
         custom_uri: ''
         target_attribute: _blank
-      label: Link
 id: media.file.default
 targetEntityType: media
 bundle: file
@@ -53,12 +53,12 @@ mode: default
 content:
   field_media_file:
     type: file_default
-    weight: 0
-    region: main
     label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
+    weight: 0
+    region: main
 hidden:
   created: true
   name: true

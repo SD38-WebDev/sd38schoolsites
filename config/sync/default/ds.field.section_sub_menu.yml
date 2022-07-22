@@ -1,6 +1,10 @@
 id: section_sub_menu
 label: 'Section Sub Menu'
 ui_limit: ''
+type: block
+type_label: 'Block field'
+entities:
+  node: node
 properties:
   block: 'menu_block:main'
   use_block_title: false
@@ -8,16 +12,12 @@ properties:
   config:
     id: 'menu_block:main'
     label: ''
-    provider: menu_block
     label_display: visible
+    provider: menu_block
     follow: false
     follow_parent: child
     level: 2
     depth: 1
-    expand: false
     parent: 'main:'
     suggestion: section_menu
-type: block
-type_label: 'Block field'
-entities:
-  node: node
+    expand: false

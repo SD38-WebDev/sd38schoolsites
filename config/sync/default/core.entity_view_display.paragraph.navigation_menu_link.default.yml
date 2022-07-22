@@ -14,17 +14,17 @@ third_party_settings:
     group_wrapper:
       children:
         - field_link_text
+      label: Wrapper
       parent_name: ''
+      region: content
       weight: 0
       format_type: link
-      region: content
       format_settings:
+        classes: nav-link
+        id: ''
         target: field_navigation_menu_link
         custom_uri: ''
         target_attribute: default
-        id: ''
-        classes: nav-link
-      label: Wrapper
   ds:
     layout:
       id: layout_onecol
@@ -43,7 +43,7 @@ bundle: navigation_menu_link
 mode: default
 content:
   field_link_text:
-    weight: 2
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -53,7 +53,7 @@ content:
           id: reset
           settings:
             lb: ''
-    type: string
+    weight: 2
     region: content
 hidden:
   field_navigation_menu_link: true

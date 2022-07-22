@@ -36,7 +36,6 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       bp_accordion: bp_accordion
       article_feed: article_feed
@@ -49,16 +48,17 @@ settings:
       file_attachments: file_attachments
       image_banner: image_banner
       promo_cards_section: promo_cards_section
+    negate: 0
     target_bundles_drag_drop:
       article_feed:
-        enabled: true
         weight: 22
+        enabled: true
       basic_text_section:
-        enabled: true
         weight: 23
-      bp_accordion:
         enabled: true
+      bp_accordion:
         weight: 16
+        enabled: true
       bp_accordion_section:
         weight: 17
         enabled: false
@@ -102,26 +102,26 @@ settings:
         weight: 30
         enabled: false
       calendar_events_list_:
-        enabled: true
         weight: 42
+        enabled: true
       embedded_video:
-        enabled: true
         weight: 39
-      file_attachments:
         enabled: true
+      file_attachments:
         weight: 51
+        enabled: true
       file_list:
         weight: 48
         enabled: false
       image_and_text_section:
-        enabled: true
         weight: 41
+        enabled: true
       image_banner:
-        enabled: true
         weight: 52
-      image_gallery:
         enabled: true
+      image_gallery:
         weight: 40
+        enabled: true
       navigation_menu:
         weight: 51
         enabled: false
@@ -132,8 +132,8 @@ settings:
         weight: 60
         enabled: false
       promo_cards_section:
-        enabled: true
         weight: 61
+        enabled: true
       recent_blog_posts:
         weight: 52
         enabled: false
@@ -147,6 +147,6 @@ settings:
         weight: 41
         enabled: false
       tile_links_section:
-        enabled: true
         weight: 42
+        enabled: true
 field_type: entity_reference_revisions

@@ -32,54 +32,12 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: some
-        options:
-          items_per_page: 1
-          offset: 0
-      style:
-        type: default
-        options:
-          row_class: ''
-          default_row_class: false
-          uses_fields: false
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
+      title: 'Site Header Content Block'
       fields:
         field_header_text_colour:
           id: field_header_text_colour
@@ -88,6 +46,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -142,7 +101,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_header_image_1:
           id: field_header_image_1
           table: node__field_header_image
@@ -150,6 +108,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'Header Image - Used by conditional field'
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -205,7 +164,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         views_conditional_field_3:
           id: views_conditional_field_3
           table: views_conditional
@@ -213,6 +171,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_conditional_field
           label: ''
           exclude: true
           alter:
@@ -262,7 +221,6 @@ display:
           or: img-bg
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         base_url:
           id: base_url
           table: views
@@ -270,6 +228,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: base_url
           label: ''
           exclude: true
           alter:
@@ -321,7 +280,6 @@ display:
             link_fragment: ''
             link_query: ''
             link_target: ''
-          plugin_id: base_url
         field_header_image:
           id: field_header_image
           table: node__field_header_image
@@ -329,6 +287,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -383,11 +342,11 @@ display:
               bg_image_attachment: scroll
               bg_image_repeat: no-repeat
               bg_image_background_size: cover
-              bg_image_background_size_ie8: 0
-              bg_image_gradient: ''
               bg_image_media_query: all
               bg_image_important: 0
+              bg_image_background_size_ie8: 0
               bg_image_path_format: absolute
+              bg_image_gradient: ''
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -398,7 +357,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_display_site_name:
           id: field_display_site_name
           table: node__field_display_site_name
@@ -406,6 +364,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -451,8 +410,8 @@ display:
           type: boolean
           settings:
             format: yes-no
-            format_custom_true: ''
             format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -463,7 +422,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_display_tagline:
           id: field_display_tagline
           table: node__field_display_tagline
@@ -471,6 +429,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -516,8 +475,8 @@ display:
           type: boolean
           settings:
             format: yes-no
-            format_custom_true: ''
             format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -528,7 +487,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_sd38_site_logo_size:
           id: field_sd38_site_logo_size
           table: node__field_sd38_site_logo_size
@@ -536,6 +494,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -590,7 +549,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_sd38_site_name_1:
           id: field_sd38_site_name_1
           table: node__field_sd38_site_name
@@ -598,6 +556,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'SD38 Site Name - Unformatted'
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -654,7 +613,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -662,6 +620,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'OPENING DIV'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -703,7 +662,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         field_sd38_site_logo:
           id: field_sd38_site_logo
           table: node__field_sd38_site_logo
@@ -711,6 +669,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -755,8 +714,10 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: large
             image_link: ''
+            image_style: large
+            image_loading:
+              attribute: lazy
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -767,7 +728,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_sd38_site_name:
           id: field_sd38_site_name
           table: node__field_sd38_site_name
@@ -775,6 +735,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -831,7 +792,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_sd38_site_tagline:
           id: field_sd38_site_tagline
           table: node__field_sd38_site_tagline
@@ -839,6 +799,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -895,7 +856,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         views_conditional_field:
           id: views_conditional_field
           table: views_conditional
@@ -903,6 +863,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'Views Conditional - Logo'
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -952,7 +913,6 @@ display:
           or: '<div class="logo col"><a href="{{ base_url }}" title="{{ field_sd38_site_name_1 }}">{{ field_sd38_site_logo }}</a></div>'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         nothing_2:
           id: nothing_2
           table: views
@@ -960,6 +920,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'OPENING DIV- Site Name/Tagline'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1001,7 +962,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         views_conditional_field_1:
           id: views_conditional_field_1
           table: views_conditional
@@ -1009,6 +969,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'Views Conditional - Site Name'
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -1058,7 +1019,6 @@ display:
           or: '<a href="{{ base_url }}" title="{{ field_sd38_site_name_1 }}">{{ field_sd38_site_name }}</a>'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         views_conditional_field_2:
           id: views_conditional_field_2
           table: views_conditional
@@ -1066,6 +1026,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'Views Conditional - Site Tagline'
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -1115,7 +1076,6 @@ display:
           or: '{{ field_sd38_site_tagline }}'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         nothing_3:
           id: nothing_3
           table: views
@@ -1123,6 +1083,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'CLOSING DIV- Site Name/Tagline'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1164,7 +1125,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -1172,6 +1132,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'CLOSING DIV'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1213,57 +1174,99 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            header_image: header_image
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
           expose:
             label: ''
+            field_identifier: created
+          exposed: false
           granularity: second
-      title: 'Site Header Content Block'
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            header_image: header_image
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      css_class: site-header-block
       header: {  }
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
-      css_class: site-header-block
     cache_metadata:
       max-age: -1
       contexts:
@@ -1281,9 +1284,9 @@ display:
         - 'config:field.storage.node.field_sd38_site_name'
         - 'config:field.storage.node.field_sd38_site_tagline'
   block_1:
-    display_plugin: block
     id: block_1
     display_title: Block
+    display_plugin: block
     position: 1
     display_options:
       display_extenders: {  }

@@ -17,17 +17,17 @@ third_party_settings:
     group_link:
       children:
         - field_button_image
+      label: Link
       parent_name: ''
+      region: main
       weight: 0
       format_type: link
-      region: main
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         target: field_link
         custom_uri: ''
         target_attribute: _blank
-      label: Link
   ds:
     layout:
       id: bs_1col
@@ -60,40 +60,40 @@ mode: default
 content:
   field_button_image:
     type: media_thumbnail
-    weight: 2
     label: hidden
     settings:
-      image_style: large
       image_link: ''
+      image_style: large
     third_party_settings:
       ds:
         ft:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: ''
             fi-cl: ''
             fi-at: 'title="[node:field_link:title]"'
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 2
     region: main
 hidden:
   field_link: true

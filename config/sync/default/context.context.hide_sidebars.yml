@@ -4,8 +4,8 @@ status: true
 dependencies:
   module:
     - ctools
-name: hide_sidebars
 label: 'Hide Sidebars'
+name: hide_sidebars
 group: null
 description: ''
 requireAllConditions: false
@@ -13,19 +13,20 @@ disabled: false
 conditions:
   'entity_bundle:node':
     id: 'entity_bundle:node'
+    negate: false
+    uuid: 073f9f8a-4507-4061-ae1f-fc64a55e2a03
+    context_mapping:
+      node: '@node.node_route_context:node'
     bundles:
       article: article
       calendar_event: calendar_event
       news_alert: news_alert
       page: page
       staff_page: staff_page
-    negate: false
-    uuid: 073f9f8a-4507-4061-ae1f-fc64a55e2a03
-    context_mapping:
-      node: '@node.node_route_context:node'
 reactions:
   regions:
     id: regions
+    uuid: d883f907-3c51-4f18-90ef-c164fb3ae930
     regions:
       classy: {  }
       seven: {  }
@@ -36,5 +37,4 @@ reactions:
         - sidebar_first
         - sidebar_second
     saved: false
-    uuid: d883f907-3c51-4f18-90ef-c164fb3ae930
 weight: 0

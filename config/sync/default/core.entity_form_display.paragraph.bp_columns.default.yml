@@ -18,14 +18,15 @@ bundle: bp_columns
 mode: default
 content:
   bp_background:
+    type: options_select
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   bp_column_content:
     type: entity_reference_paragraphs
     weight: 3
+    region: content
     settings:
       title: 'Column Content'
       title_plural: 'Column Contents'
@@ -34,7 +35,6 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
-    region: content
   bp_header:
     type: string_textfield
     weight: 2
@@ -44,11 +44,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   bp_width:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   created: true
   status: true

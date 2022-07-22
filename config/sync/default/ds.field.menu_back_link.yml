@@ -1,6 +1,10 @@
 id: menu_back_link
 label: 'Menu Back Link'
 ui_limit: ''
+type: block
+type_label: 'Block field'
+entities:
+  node: node
 properties:
   block: 'menu_block:main'
   use_block_title: true
@@ -8,18 +12,14 @@ properties:
   config:
     id: 'menu_block:main'
     label: ''
-    provider: menu_block
     label_display: visible
+    provider: menu_block
     follow: true
     follow_parent: active
+    label_link: true
+    label_type: parent
     level: 1
     depth: 1
     expand_all_items: false
     parent: 'main:'
     suggestion: main
-    label_type: parent
-    label_link: true
-type: block
-type_label: 'Block field'
-entities:
-  node: node

@@ -19,27 +19,30 @@ third_party_settings:
     group_link_group:
       children:
         - group_wrapper
+      label: 'Link Group'
       parent_name: ''
+      region: main
       weight: 0
       format_type: link
-      region: main
       format_settings:
+        classes: flex-stretch
+        show_empty_fields: false
+        id: ''
         target: field_tile_url
         custom_uri: ''
         target_attribute: default
-        id: ''
-        classes: flex-stretch
-        show_empty_fields: false
-      label: 'Link Group'
     group_wrapper:
       children:
         - field_tile_image
         - field_link_text
+      label: Wrapper
       parent_name: group_link_group
+      region: main
       weight: 1
       format_type: html_element
-      region: main
       format_settings:
+        classes: 'wrapper [paragraph:field_tile_colour:value]'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -47,9 +50,6 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'wrapper [paragraph:field_tile_colour:value]'
-      label: Wrapper
   ds:
     layout:
       id: bs_1col
@@ -84,19 +84,18 @@ mode: 2_columns
 content:
   field_link_text:
     type: string
-    weight: 3
-    region: main
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 3
+    region: main
   field_tile_image:
     type: media_thumbnail
-    weight: 2
     label: hidden
     settings:
-      image_style: square_image_thumbnail_800x800
       image_link: ''
+      image_style: square_image_thumbnail_800x800
     third_party_settings:
       ds:
         ft:
@@ -105,6 +104,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 2
     region: main
 hidden:
   field_tile_colour: true

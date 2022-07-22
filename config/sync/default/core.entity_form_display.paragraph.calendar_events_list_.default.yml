@@ -15,22 +15,23 @@ bundle: calendar_events_list_
 mode: default
 content:
   field_section_title:
+    type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_site_section:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   paragraph_view_mode:
     type: paragraph_view_mode
     weight: 2
+    region: content
     settings:
       view_modes:
         1_column: 1_column
@@ -38,7 +39,6 @@ content:
         default: '0'
       default_view_mode: 1_column
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

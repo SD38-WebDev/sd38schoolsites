@@ -45,11 +45,14 @@ third_party_settings:
       children:
         - field_section_title
         - field_section_content
+      label: Wrapper
       parent_name: ''
+      region: main
       weight: 0
       format_type: html_element
-      region: main
       format_settings:
+        classes: '[paragraph:field_section_bgcolour:value] [paragraph:field_add_background_colour]'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -57,23 +60,20 @@ third_party_settings:
         attributes: 'style="background-color:[paragraph:field_background_colour:color]"'
         effect: none
         speed: fast
-        id: ''
-        classes: '[paragraph:field_section_bgcolour:value] [paragraph:field_add_background_colour]'
-      label: Wrapper
 id: paragraph.basic_text_section.default
 targetEntityType: paragraph
 bundle: basic_text_section
 mode: default
 content:
   field_section_content:
-    weight: 4
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 4
     region: main
   field_section_title:
-    weight: 3
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -83,30 +83,30 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: h2
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: string
+            prefix: ''
+            suffix: ''
+    weight: 3
     region: main
 hidden:
   field_add_background_colour: true

@@ -46,23 +46,21 @@ mode: teaser
 content:
   field_left_sidebar_note:
     type: text_trimmed
+    label: above
+    settings:
+      trim_length: 250
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     weight: 0
     region: main
-    label: above
-    settings:
-      trim_length: 250
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
   field_right_sidebar_note:
     type: text_trimmed
-    weight: 1
-    region: main
     label: above
     settings:
       trim_length: 250
@@ -74,6 +72,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 1
+    region: main
 hidden:
   field_note_title_left: true
   field_note_title_right: true

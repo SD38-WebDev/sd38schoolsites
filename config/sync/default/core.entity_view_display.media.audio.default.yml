@@ -42,12 +42,11 @@ content:
   field_media_audio_file:
     type: file_audio
     label: visually_hidden
-    weight: 1
     settings:
       controls: true
-      multiple_file_display_type: tags
       autoplay: false
       loop: false
+      multiple_file_display_type: tags
     third_party_settings:
       ds:
         ft:
@@ -56,11 +55,10 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 1
     region: main
   name:
     type: string
-    weight: 0
-    region: main
     label: hidden
     settings:
       link_to_entity: false
@@ -70,29 +68,31 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: strong
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: main
 hidden:
   created: true
   thumbnail: true

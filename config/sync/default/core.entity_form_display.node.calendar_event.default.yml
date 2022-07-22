@@ -28,65 +28,65 @@ third_party_settings:
       children:
         - group_event_details
         - group_event_date
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Tabs
     group_event_details:
       children:
         - title
         - field_site_section
         - field_event_date
+      label: 'Event Details'
+      region: content
       parent_name: group_tabs
       weight: 1
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Event Details'
     group_event_date:
       children:
         - field_feature_image
         - body
         - field_event_location
+      label: 'Additional Details'
+      region: content
       parent_name: group_tabs
       weight: 2
       format_type: tab
-      region: content
       format_settings:
-        description: ''
-        formatter: closed
-        required_fields: true
-        id: ''
         classes: ''
-      label: 'Additional Details'
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
     group_promotion:
       children:
         - field_promote_to_front_page
         - field_promote_to_school_calendar
         - sticky
+      label: 'Promotion Options'
+      region: content
       parent_name: ''
       weight: 1
       format_type: details_sidebar
-      region: content
       format_settings:
-        description: ''
-        open: true
-        weight: 0
-        required_fields: true
-        id: ''
         classes: ''
         show_empty_fields: false
-      label: 'Promotion Options'
+        id: ''
+        open: true
+        description: ''
+        required_fields: true
+        weight: 0
 id: node.calendar_event.default
 targetEntityType: node
 bundle: calendar_event
@@ -95,13 +95,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 19
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 4
@@ -109,57 +109,62 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_event_date:
+    type: smartdate_default
     weight: 18
+    region: content
     settings:
-      show_extra: false
-      hide_date: false
       modal: false
       default_duration: 60
-      default_duration_increments: "30\n60|1 hour\n90\n120|2 hours\ncustom"
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
+      hide_date: false
     third_party_settings:
       smart_date_recur:
         modal: true
         allowed_recur_freq_values:
+          MINUTELY: '0'
+          HOURLY: '0'
           DAILY: DAILY
           WEEKLY: WEEKLY
           MONTHLY: MONTHLY
           YEARLY: YEARLY
-          MINUTELY: '0'
-          HOURLY: '0'
-    type: smartdate_default
-    region: content
   field_event_location:
+    type: address_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: address_default
-    region: content
   field_feature_image:
+    type: media_library_widget
     weight: 18
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
   field_promote_to_front_page:
+    type: options_select
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_promote_to_school_calendar:
+    type: boolean_checkbox
     weight: 9
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_site_section:
+    type: options_select
     weight: 17
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   path:
     type: path
     weight: 5
@@ -174,17 +179,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 3
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 10
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -197,12 +202,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 2
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

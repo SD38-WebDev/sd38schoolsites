@@ -2,8 +2,8 @@ status: 1
 pattern: '[site:name] - Header Image - [node:field_header_image:entity:name]'
 escape: false
 preserve_titles: false
-save: 0
-chunk: '50'
 dependencies:
   config:
     - node.type.header_image
+save: 0
+chunk: '50'

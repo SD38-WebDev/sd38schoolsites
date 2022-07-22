@@ -29,96 +29,33 @@ base_table: node_field_data
 base_field: nid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: mini
-        options:
-          items_per_page: 6
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          col_xs: col-1
-          col_sm: col-sm-6
-          col_md: col-md-4
-          col_lg: col-lg-4
-          col_xl: col-xl-4
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: vertical_teaser
       fields:
         title:
           id: title
           table: node_field_data
           field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: title
+          plugin_id: field
           label: ''
+          exclude: false
           alter:
             alter_text: false
             make_link: false
             absolute: false
-            trim: false
             word_boundary: false
             ellipsis: false
             strip_tags: false
+            trim: false
             html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exclude: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -128,9 +65,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -148,6 +89,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -205,35 +149,42 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 6
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
           expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         created:
           id: created
@@ -242,27 +193,15 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
           entity_type: node
           entity_field: created
           plugin_id: date
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships:
-        field_content_section:
-          id: field_content_section
-          table: node__field_content_section
-          field: field_content_section
-          relationship: none
-          group_type: group
-          admin_label: 'field_content_section: Paragraph'
-          required: false
-          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
       arguments:
         tid:
           id: tid
@@ -271,6 +210,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           default_action: default
           exception:
             value: all
@@ -285,8 +225,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -300,7 +240,6 @@ display:
           add_table: true
           require_value: false
           reduce_duplicates: true
-          plugin_id: taxonomy_index_tid
         tid_1:
           id: tid_1
           table: taxonomy_index
@@ -308,6 +247,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           default_action: default
           exception:
             value: all
@@ -322,8 +262,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -337,10 +277,71 @@ display:
           add_table: true
           require_value: false
           reduce_duplicates: true
-          plugin_id: taxonomy_index_tid
-      display_extenders: {  }
-      group_by: true
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            article: article
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          col_xs: col-1
+          col_sm: col-sm-6
+          col_md: col-md-4
+          col_lg: col-lg-4
+          col_xl: col-xl-4
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: vertical_teaser
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships:
+        field_content_section:
+          id: field_content_section
+          table: node__field_content_section
+          field: field_content_section
+          relationship: none
+          group_type: group
+          admin_label: 'field_content_section: Paragraph'
+          plugin_id: standard
+          required: false
       use_ajax: true
+      group_by: true
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -352,47 +353,11 @@ display:
         - user.permissions
       tags: {  }
   entity_view_1:
-    display_plugin: entity_view
     id: entity_view_1
     display_title: 'Blog Feed EVA - 6 posts'
+    display_plugin: entity_view
     position: 1
     display_options:
-      display_extenders: {  }
-      entity_type: paragraph
-      bundles:
-        - article_feed
-      argument_mode: token
-      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
-      display_description: ''
-      defaults:
-        sorts: true
-        style: false
-        row: false
-        fields: false
-        relationships: false
-        pager: false
-        filters: false
-        filter_groups: false
-        use_ajax: false
-        empty: false
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: mb-4
-          default_row_class: true
-          col_xs: col-12
-          col_sm: col-sm-6
-          col_md: col-md-6
-          col_lg: col-lg-4
-          col_xl: col-xl-4
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
       fields:
         nid:
           id: nid
@@ -401,6 +366,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -458,9 +426,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         view_node_1:
           id: view_node_1
           table: node
@@ -468,6 +433,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -512,8 +479,6 @@ display:
           text: view
           output_url_as_text: true
           absolute: false
-          entity_type: node
-          plugin_id: entity_link
         field_feature_image:
           id: field_feature_image
           table: node__field_feature_image
@@ -521,6 +486,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -565,8 +531,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -577,7 +543,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_images:
           id: field_images
           table: paragraph__field_images
@@ -585,6 +550,7 @@ display:
           relationship: field_content_section
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -629,8 +595,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -641,7 +607,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -649,6 +614,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -690,7 +656,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         views_conditional_field:
           id: views_conditional_field
           table: views_conditional
@@ -698,6 +663,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -747,7 +713,6 @@ display:
           or: '{{ field_feature_image }}'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         nothing_4:
           id: nothing_4
           table: views
@@ -755,6 +720,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -796,7 +762,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         title:
           id: title
           table: node_field_data
@@ -804,6 +769,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -859,9 +827,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         created:
           id: created
           table: node_field_data
@@ -869,6 +834,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: Posted
           exclude: false
           alter:
@@ -926,9 +894,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         body:
           id: body
           table: node__body
@@ -936,6 +901,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -986,8 +952,8 @@ display:
             wrap_output: false
             wrap_class: trimmed
             more_link: false
-            more_text: More
             more_class: more-link
+            more_text: More
             summary_handler: full
             trim_options:
               text: true
@@ -1009,7 +975,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-          plugin_id: field
         nothing_5:
           id: nothing_5
           table: views
@@ -1017,6 +982,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1058,7 +1024,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -1066,6 +1031,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1107,37 +1073,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      relationships:
-        field_content_section:
-          id: field_content_section
-          table: node__field_content_section
-          field: field_content_section
-          relationship: none
-          group_type: group
-          admin_label: 'field_content_section: Paragraph'
-          required: false
-          plugin_id: standard
-        reverse__taxonomy_term__field_section_home_page:
-          id: reverse__taxonomy_term__field_section_home_page
-          table: node_field_data
-          field: reverse__taxonomy_term__field_section_home_page
-          relationship: none
-          group_type: group
-          admin_label: field_section_home_page
-          required: false
-          entity_type: node
-          plugin_id: entity_reverse
       pager:
         type: mini
         options:
-          items_per_page: 6
           offset: 0
-          id: 0
+          items_per_page: 6
           total_pages: null
+          id: 0
           tags:
-            previous: ‹‹
             next: ››
+            previous: ‹‹
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -1146,37 +1091,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      use_ajax: true
       empty:
         area_text_custom:
           id: area_text_custom
@@ -1185,10 +1099,97 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
           plugin_id: text_custom
+          empty: true
+          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
+          tokenize: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            article: article
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: mb-4
+          default_row_class: true
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: col-md-6
+          col_lg: col-lg-4
+          col_xl: col-xl-4
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        empty: false
+        use_ajax: false
+        pager: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: true
+        filters: false
+        filter_groups: false
+      relationships:
+        field_content_section:
+          id: field_content_section
+          table: node__field_content_section
+          field: field_content_section
+          relationship: none
+          group_type: group
+          admin_label: 'field_content_section: Paragraph'
+          plugin_id: standard
+          required: false
+        reverse__taxonomy_term__field_section_home_page:
+          id: reverse__taxonomy_term__field_section_home_page
+          table: node_field_data
+          field: reverse__taxonomy_term__field_section_home_page
+          relationship: none
+          group_type: group
+          admin_label: field_section_home_page
+          entity_type: node
+          plugin_id: entity_reverse
+          required: false
+      use_ajax: true
+      display_description: ''
+      display_extenders: {  }
+      entity_type: paragraph
+      bundles:
+        - article_feed
+      argument_mode: token
+      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1203,69 +1204,33 @@ display:
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
   entity_view_2:
-    display_plugin: entity_view
     id: entity_view_2
     display_title: 'Blog Feed EVA - Listing'
+    display_plugin: entity_view
     position: 2
     display_options:
-      display_extenders: {  }
-      display_description: ''
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: article-post
-          default_row_class: true
-          col_xs: col-12
-          col_sm: col-sm-12
-          col_md: col-md-12
-          col_lg: col-lg-12
-          col_xl: col-xl-12
-      defaults:
-        style: false
-        row: false
-        css_class: false
-        fields: false
-        pager: false
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
-      entity_type: paragraph
-      bundles:
-        - recent_blog_posts_listing
-      argument_mode: token
-      default_argument: '[paragraph:field_site_section:entity:tid]'
-      css_class: col
       fields:
         title:
           id: title
           table: node_field_data
           field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: title
+          plugin_id: field
           label: ''
+          exclude: false
           alter:
             alter_text: false
             make_link: false
             absolute: false
-            trim: false
             word_boundary: false
             ellipsis: false
             strip_tags: false
+            trim: false
             html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exclude: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -1275,9 +1240,13 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1295,6 +1264,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: Published
           exclude: false
           alter:
@@ -1352,14 +1324,43 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
       pager:
         type: some
         options:
-          items_per_page: 6
           offset: 0
+          items_per_page: 6
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: article-post
+          default_row_class: true
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-12
+          col_lg: col-lg-12
+          col_xl: col-xl-12
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        css_class: false
+        pager: false
+        style: false
+        row: false
+        fields: false
+      css_class: col
+      display_description: ''
+      display_extenders: {  }
+      entity_type: paragraph
+      bundles:
+        - recent_blog_posts_listing
+      argument_mode: token
+      default_argument: '[paragraph:field_site_section:entity:tid]'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1370,47 +1371,11 @@ display:
         - user.permissions
       tags: {  }
   entity_view_3:
-    display_plugin: entity_view
     id: entity_view_3
     display_title: 'Blog Feed EVA - 18 posts'
+    display_plugin: entity_view
     position: 1
     display_options:
-      display_extenders: {  }
-      entity_type: paragraph
-      bundles:
-        - article_feed
-      argument_mode: token
-      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
-      display_description: ''
-      defaults:
-        sorts: true
-        style: false
-        row: false
-        fields: false
-        relationships: false
-        pager: false
-        filters: false
-        filter_groups: false
-        use_ajax: false
-        empty: false
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: mb-4
-          default_row_class: true
-          col_xs: col-12
-          col_sm: col-sm-6
-          col_md: col-md-4
-          col_lg: col-lg-4
-          col_xl: col-xl-4
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
       fields:
         nid:
           id: nid
@@ -1419,6 +1384,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1476,9 +1444,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         view_node_1:
           id: view_node_1
           table: node
@@ -1486,6 +1451,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -1530,8 +1497,6 @@ display:
           text: view
           output_url_as_text: true
           absolute: false
-          entity_type: node
-          plugin_id: entity_link
         field_feature_image:
           id: field_feature_image
           table: node__field_feature_image
@@ -1539,6 +1504,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1583,8 +1549,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -1595,7 +1561,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_images:
           id: field_images
           table: paragraph__field_images
@@ -1603,6 +1568,7 @@ display:
           relationship: field_content_section
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -1647,8 +1613,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -1659,7 +1625,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -1667,6 +1632,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1708,7 +1674,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         views_conditional_field:
           id: views_conditional_field
           table: views_conditional
@@ -1716,6 +1681,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -1765,7 +1731,6 @@ display:
           or: '{{ field_feature_image }}'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         nothing_4:
           id: nothing_4
           table: views
@@ -1773,6 +1738,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -1814,7 +1780,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         title:
           id: title
           table: node_field_data
@@ -1822,6 +1787,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -1877,9 +1845,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         created:
           id: created
           table: node_field_data
@@ -1887,6 +1852,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: Posted
           exclude: false
           alter:
@@ -1944,9 +1912,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         body:
           id: body
           table: node__body
@@ -1954,6 +1919,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2004,8 +1970,8 @@ display:
             wrap_output: false
             wrap_class: trimmed
             more_link: false
-            more_text: More
             more_class: more-link
+            more_text: More
             summary_handler: full
             trim_options:
               text: true
@@ -2027,7 +1993,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-          plugin_id: field
         nothing_5:
           id: nothing_5
           table: views
@@ -2035,6 +2000,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -2076,7 +2042,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -2084,6 +2049,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -2125,37 +2091,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      relationships:
-        field_content_section:
-          id: field_content_section
-          table: node__field_content_section
-          field: field_content_section
-          relationship: none
-          group_type: group
-          admin_label: 'field_content_section: Paragraph'
-          required: false
-          plugin_id: standard
-        reverse__taxonomy_term__field_section_home_page:
-          id: reverse__taxonomy_term__field_section_home_page
-          table: node_field_data
-          field: reverse__taxonomy_term__field_section_home_page
-          relationship: none
-          group_type: group
-          admin_label: field_section_home_page
-          required: false
-          entity_type: node
-          plugin_id: entity_reverse
       pager:
         type: mini
         options:
-          items_per_page: 18
           offset: 0
-          id: 0
+          items_per_page: 18
           total_pages: null
+          id: 0
           tags:
-            previous: ‹‹
             next: ››
+            previous: ‹‹
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -2164,37 +2109,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      use_ajax: true
       empty:
         area_text_custom:
           id: area_text_custom
@@ -2203,55 +2117,44 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
           plugin_id: text_custom
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_feature_image'
-        - 'config:field.storage.paragraph.field_images'
-  entity_view_4:
-    display_plugin: entity_view
-    id: entity_view_4
-    display_title: 'Blog Feed EVA - 18 posts (Grouped by MonthYear)'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      entity_type: paragraph
-      bundles:
-        - article_feed
-      argument_mode: token
-      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
-      display_description: ''
-      defaults:
-        sorts: true
-        style: false
-        row: false
-        fields: false
-        relationships: false
-        pager: false
-        filters: false
-        filter_groups: false
-        use_ajax: false
-        empty: false
+          empty: true
+          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
+          tokenize: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            article: article
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: views_bootstrap_grid
         options:
-          grouping:
-            -
-              field: created_1
-              rendered: true
-              rendered_strip: false
+          grouping: {  }
           row_class: mb-4
           default_row_class: true
           col_xs: col-12
@@ -2266,6 +2169,64 @@ display:
           inline: {  }
           separator: ''
           hide_empty: false
+      defaults:
+        empty: false
+        use_ajax: false
+        pager: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: true
+        filters: false
+        filter_groups: false
+      relationships:
+        field_content_section:
+          id: field_content_section
+          table: node__field_content_section
+          field: field_content_section
+          relationship: none
+          group_type: group
+          admin_label: 'field_content_section: Paragraph'
+          plugin_id: standard
+          required: false
+        reverse__taxonomy_term__field_section_home_page:
+          id: reverse__taxonomy_term__field_section_home_page
+          table: node_field_data
+          field: reverse__taxonomy_term__field_section_home_page
+          relationship: none
+          group_type: group
+          admin_label: field_section_home_page
+          entity_type: node
+          plugin_id: entity_reverse
+          required: false
+      use_ajax: true
+      display_description: ''
+      display_extenders: {  }
+      entity_type: paragraph
+      bundles:
+        - article_feed
+      argument_mode: token
+      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_feature_image'
+        - 'config:field.storage.paragraph.field_images'
+  entity_view_4:
+    id: entity_view_4
+    display_title: 'Blog Feed EVA - 18 posts (Grouped by MonthYear)'
+    display_plugin: entity_view
+    position: 1
+    display_options:
       fields:
         created_1:
           id: created_1
@@ -2274,6 +2235,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2331,9 +2295,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         nid:
           id: nid
           table: node_field_data
@@ -2341,6 +2302,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2398,9 +2362,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         view_node_1:
           id: view_node_1
           table: node
@@ -2408,6 +2369,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -2452,8 +2415,6 @@ display:
           text: view
           output_url_as_text: true
           absolute: false
-          entity_type: node
-          plugin_id: entity_link
         field_feature_image:
           id: field_feature_image
           table: node__field_feature_image
@@ -2461,6 +2422,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2505,8 +2467,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2517,7 +2479,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_images:
           id: field_images
           table: paragraph__field_images
@@ -2525,6 +2486,7 @@ display:
           relationship: field_content_section
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2569,8 +2531,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -2581,7 +2543,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -2589,6 +2550,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -2630,7 +2592,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         views_conditional_field:
           id: views_conditional_field
           table: views_conditional
@@ -2638,6 +2599,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -2687,7 +2649,6 @@ display:
           or: '{{ field_feature_image }}'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         nothing_4:
           id: nothing_4
           table: views
@@ -2695,6 +2656,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -2736,7 +2698,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         title:
           id: title
           table: node_field_data
@@ -2744,6 +2705,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -2799,9 +2763,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         created:
           id: created
           table: node_field_data
@@ -2809,6 +2770,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: Posted
           exclude: false
           alter:
@@ -2866,9 +2830,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         body:
           id: body
           table: node__body
@@ -2876,6 +2837,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -2926,8 +2888,8 @@ display:
             wrap_output: false
             wrap_class: trimmed
             more_link: false
-            more_text: More
             more_class: more-link
+            more_text: More
             summary_handler: full
             trim_options:
               text: true
@@ -2949,7 +2911,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-          plugin_id: field
         nothing_5:
           id: nothing_5
           table: views
@@ -2957,6 +2918,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -2998,7 +2960,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -3006,6 +2967,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -3047,37 +3009,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      relationships:
-        field_content_section:
-          id: field_content_section
-          table: node__field_content_section
-          field: field_content_section
-          relationship: none
-          group_type: group
-          admin_label: 'field_content_section: Paragraph'
-          required: false
-          plugin_id: standard
-        reverse__taxonomy_term__field_section_home_page:
-          id: reverse__taxonomy_term__field_section_home_page
-          table: node_field_data
-          field: reverse__taxonomy_term__field_section_home_page
-          relationship: none
-          group_type: group
-          admin_label: field_section_home_page
-          required: false
-          entity_type: node
-          plugin_id: entity_reverse
       pager:
         type: mini
         options:
-          items_per_page: 18
           offset: 0
-          id: 0
+          items_per_page: 18
           total_pages: null
+          id: 0
           tags:
-            previous: ‹‹
             next: ››
+            previous: ‹‹
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -3086,37 +3027,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      use_ajax: true
       empty:
         area_text_custom:
           id: area_text_custom
@@ -3125,10 +3035,101 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
           plugin_id: text_custom
+          empty: true
+          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
+          tokenize: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            article: article
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping:
+            -
+              field: created_1
+              rendered: true
+              rendered_strip: false
+          row_class: mb-4
+          default_row_class: true
+          col_xs: col-12
+          col_sm: col-sm-6
+          col_md: col-md-4
+          col_lg: col-lg-4
+          col_xl: col-xl-4
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        empty: false
+        use_ajax: false
+        pager: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: true
+        filters: false
+        filter_groups: false
+      relationships:
+        field_content_section:
+          id: field_content_section
+          table: node__field_content_section
+          field: field_content_section
+          relationship: none
+          group_type: group
+          admin_label: 'field_content_section: Paragraph'
+          plugin_id: standard
+          required: false
+        reverse__taxonomy_term__field_section_home_page:
+          id: reverse__taxonomy_term__field_section_home_page
+          table: node_field_data
+          field: reverse__taxonomy_term__field_section_home_page
+          relationship: none
+          group_type: group
+          admin_label: field_section_home_page
+          entity_type: node
+          plugin_id: entity_reverse
+          required: false
+      use_ajax: true
+      display_description: ''
+      display_extenders: {  }
+      entity_type: paragraph
+      bundles:
+        - article_feed
+      argument_mode: token
+      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
     cache_metadata:
       max-age: -1
       contexts:
@@ -3143,47 +3144,11 @@ display:
         - 'config:field.storage.node.field_feature_image'
         - 'config:field.storage.paragraph.field_images'
   entity_view_5:
-    display_plugin: entity_view
     id: entity_view_5
     display_title: 'Blog Feed EVA - 6 posts (Column)'
+    display_plugin: entity_view
     position: 1
     display_options:
-      display_extenders: {  }
-      entity_type: paragraph
-      bundles:
-        - article_feed
-      argument_mode: token
-      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
-      display_description: ''
-      defaults:
-        sorts: true
-        style: false
-        row: false
-        fields: false
-        relationships: false
-        pager: false
-        filters: false
-        filter_groups: false
-        use_ajax: false
-        empty: false
-      style:
-        type: views_bootstrap_grid
-        options:
-          grouping: {  }
-          row_class: mb-4
-          default_row_class: true
-          col_xs: col-12
-          col_sm: col-sm-12
-          col_md: col-md-12
-          col_lg: col-lg-12
-          col_xl: col-xl-12
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
       fields:
         nid:
           id: nid
@@ -3192,6 +3157,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3249,9 +3217,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
         view_node_1:
           id: view_node_1
           table: node
@@ -3259,6 +3224,8 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          plugin_id: entity_link
           label: ''
           exclude: true
           alter:
@@ -3303,8 +3270,6 @@ display:
           text: view
           output_url_as_text: true
           absolute: false
-          entity_type: node
-          plugin_id: entity_link
         field_feature_image:
           id: field_feature_image
           table: node__field_feature_image
@@ -3312,6 +3277,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3356,8 +3322,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: article_thumbnail
             image_link: ''
+            image_style: article_thumbnail
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -3368,7 +3334,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_images:
           id: field_images
           table: paragraph__field_images
@@ -3376,6 +3341,7 @@ display:
           relationship: field_content_section
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -3420,8 +3386,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: square_image_thumbnail_220x220
             image_link: ''
+            image_style: square_image_thumbnail_220x220
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -3432,7 +3398,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         nothing:
           id: nothing
           table: views
@@ -3440,6 +3405,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -3481,7 +3447,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         views_conditional_field:
           id: views_conditional_field
           table: views_conditional
@@ -3489,6 +3454,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: views_conditional_field
           label: ''
           exclude: false
           alter:
@@ -3538,7 +3504,6 @@ display:
           or: '{{ field_feature_image }}'
           or_translate: 1
           strip_tags: 0
-          plugin_id: views_conditional_field
         nothing_4:
           id: nothing_4
           table: views
@@ -3546,6 +3511,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Opening'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -3587,7 +3553,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         title:
           id: title
           table: node_field_data
@@ -3595,6 +3560,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -3650,9 +3618,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         created:
           id: created
           table: node_field_data
@@ -3660,6 +3625,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: Posted
           exclude: false
           alter:
@@ -3717,9 +3685,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         body:
           id: body
           table: node__body
@@ -3727,6 +3692,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -3777,8 +3743,8 @@ display:
             wrap_output: false
             wrap_class: trimmed
             more_link: true
-            more_text: 'Read more…'
             more_class: more-link
+            more_text: 'Read more…'
             summary_handler: full
             trim_options:
               text: true
@@ -3800,7 +3766,6 @@ display:
           format_plural_string: !!binary MQNAY291bnQ=
           prefix: ''
           suffix: ''
-          plugin_id: field
         nothing_5:
           id: nothing_5
           table: views
@@ -3808,6 +3773,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Second Column Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -3849,7 +3815,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
         nothing_1:
           id: nothing_1
           table: views
@@ -3857,6 +3822,7 @@ display:
           relationship: none
           group_type: group
           admin_label: 'HTML Markup - Closing'
+          plugin_id: custom
           label: ''
           exclude: false
           alter:
@@ -3898,37 +3864,16 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-          plugin_id: custom
-      relationships:
-        field_content_section:
-          id: field_content_section
-          table: node__field_content_section
-          field: field_content_section
-          relationship: none
-          group_type: group
-          admin_label: 'field_content_section: Paragraph'
-          required: false
-          plugin_id: standard
-        reverse__taxonomy_term__field_section_home_page:
-          id: reverse__taxonomy_term__field_section_home_page
-          table: node_field_data
-          field: reverse__taxonomy_term__field_section_home_page
-          relationship: none
-          group_type: group
-          admin_label: field_section_home_page
-          required: false
-          entity_type: node
-          plugin_id: entity_reverse
       pager:
         type: mini
         options:
-          items_per_page: 6
           offset: 0
-          id: 0
+          items_per_page: 6
           total_pages: null
+          id: 0
           tags:
-            previous: ‹‹
             next: ››
+            previous: ‹‹
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -3937,37 +3882,6 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      use_ajax: true
       empty:
         area_text_custom:
           id: area_text_custom
@@ -3976,10 +3890,97 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
           plugin_id: text_custom
+          empty: true
+          content: '<div class="col bg-theme border-0625 p-4">No articles have been published yet.</div>'
+          tokenize: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            article: article
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: mb-4
+          default_row_class: true
+          col_xs: col-12
+          col_sm: col-sm-12
+          col_md: col-md-12
+          col_lg: col-lg-12
+          col_xl: col-xl-12
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        empty: false
+        use_ajax: false
+        pager: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: true
+        filters: false
+        filter_groups: false
+      relationships:
+        field_content_section:
+          id: field_content_section
+          table: node__field_content_section
+          field: field_content_section
+          relationship: none
+          group_type: group
+          admin_label: 'field_content_section: Paragraph'
+          plugin_id: standard
+          required: false
+        reverse__taxonomy_term__field_section_home_page:
+          id: reverse__taxonomy_term__field_section_home_page
+          table: node_field_data
+          field: reverse__taxonomy_term__field_section_home_page
+          relationship: none
+          group_type: group
+          admin_label: field_section_home_page
+          entity_type: node
+          plugin_id: entity_reverse
+          required: false
+      use_ajax: true
+      display_description: ''
+      display_extenders: {  }
+      entity_type: paragraph
+      bundles:
+        - article_feed
+      argument_mode: token
+      default_argument: '[paragraph:field_site_section:entity:tid]/[paragraph:field_referenced_tags:entity:tid]'
     cache_metadata:
       max-age: -1
       contexts:

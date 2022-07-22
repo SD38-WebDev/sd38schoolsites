@@ -1,7 +1,9 @@
 uuid: b3945eaf-e361-440c-853c-fd141f85d466
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webform
 id: webform_editor
 label: 'Webform Editor'
 weight: -7

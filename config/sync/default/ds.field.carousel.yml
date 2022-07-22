@@ -1,6 +1,10 @@
 id: carousel
 label: Carousel
 ui_limit: ''
+type: block
+type_label: 'Block field'
+entities:
+  node: node
 properties:
   block: 'views_block:carousel-block_1'
   use_block_title: true
@@ -8,11 +12,7 @@ properties:
   config:
     id: 'views_block:carousel-block_1'
     label: ''
-    provider: views
     label_display: visible
+    provider: views
     views_label: ''
     items_per_page: none
-type: block
-type_label: 'Block field'
-entities:
-  node: node
