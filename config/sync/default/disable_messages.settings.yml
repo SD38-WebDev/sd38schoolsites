@@ -6,12 +6,14 @@ disable_messages_filter_by_page: 0
 disable_messages_page_filter_paths: ''
 disable_messages_enable_debug: '0'
 disable_messages_debug_visible_div: '0'
-disable_messages_ignore_patterns: "^.*strict warning.*\\.\r\n^.*Notice.*\\.\r\n^.*There are security updates available.*\\.\r\n^.*There is a security update available for your version of Drupal.*\\."
+disable_messages_ignore_patterns: "^.*strict warning.*\\.\r\n^.*Notice.*\\.\r\n^.*There are security updates available.*\\.\r\n^.*There is a security update available for your version of Drupal.*\\.\r\n^.*Warning: imagecreatefrompng.*\\."
 disable_messages_enable_permissions: '0'
 disable_messages_ignore_exclude: '0'
 disable_messages_ignore_case: '1'
+disable_messages_strip_html_tags: '0'
 disable_messages_ignore_regex:
   - '/^^.*strict warning.*\.$/i'
   - '/^^.*Notice.*\.$/i'
   - '/^^.*There are security updates available.*\.$/i'
   - '/^^.*There is a security update available for your version of Drupal.*\.$/i'
+  - '/^^.*Warning: imagecreatefrompng.*\.$/i'
