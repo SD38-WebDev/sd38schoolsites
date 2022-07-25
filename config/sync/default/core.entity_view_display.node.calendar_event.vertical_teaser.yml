@@ -75,9 +75,9 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
+          link: false
           wrapper: h1
           class: ''
-          link: false
         ft:
           id: default
           settings:
@@ -90,62 +90,62 @@ bundle: calendar_event
 mode: vertical_teaser
 content:
   body:
-    label: hidden
     type: smart_trim
-    weight: 3
+    label: hidden
     settings:
       trim_length: 25
       trim_type: words
       trim_suffix: ''
+      wrap_output: false
       wrap_class: trimmed
       more_link: true
-      more_text: 'Read more'
       more_class: more-link
+      more_text: 'Read more'
       summary_handler: full
       trim_options:
         text: true
         trim_zero: false
-      wrap_output: false
     third_party_settings:
       ds:
         ft:
           id: expert
           settings:
             lb: Details
-            prefix: ''
+            lbw: false
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: mb-4
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: div
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 3
     region: main
   field_event_date:
-    weight: 2
+    type: smartdate_default
     label: hidden
     settings:
       timezone_override: ''
+      format_type: medium
       format: compact
-      time_wrapper: true
       force_chronological: false
       add_classes: false
-      format_type: medium
+      time_wrapper: true
     third_party_settings:
       ds:
         ds_limit: ''
@@ -153,39 +153,37 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: h2
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: strong
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: smartdate_default
+            prefix: ''
+            suffix: ''
+    weight: 2
     region: main
   field_feature_image:
     type: media_thumbnail
-    weight: 0
-    region: top
     label: hidden
     settings:
-      image_style: article_thumbnail
       image_link: content
+      image_style: article_thumbnail
     third_party_settings:
       ds:
         ft:
@@ -194,6 +192,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
+    region: top
 hidden:
   feeds_item: true
   field_event_location: true

@@ -11,8 +11,8 @@ dependencies:
     - feeds_ical
     - node
     - smart_date
-id: calendar_feed_v2
 label: 'Calendar Feed v2'
+id: calendar_feed_v2
 description: ''
 help: ''
 import_period: -1
@@ -27,20 +27,20 @@ parser: feeds_ical
 parser_configuration: {  }
 processor: 'entity:node'
 processor_configuration:
+  values:
+    type: calendar_event
   langcode: en
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 1
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: calendar_event
 custom_sources:
   import_uuid:
-    label: 'Import UUID'
     value: 'Import UUID'
+    label: 'Import UUID'
     machine_name: import_uuid
 mappings:
   -
@@ -54,17 +54,17 @@ mappings:
     target: title
     map:
       value: summary
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: feeds_item
     map:
       url: 'parent:source'
       guid: uid
+    settings: {  }
     unique:
       guid: '1'
-    settings: {  }
   -
     target: body
     map:

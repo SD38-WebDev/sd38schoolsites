@@ -2,8 +2,8 @@ uuid: 2e216423-591c-42d9-827d-e6e0f2260ad2
 langcode: en
 status: true
 dependencies: {  }
-name: views_pages
 label: 'Views Pages'
+name: views_pages
 group: null
 description: ''
 requireAllConditions: false
@@ -13,12 +13,13 @@ conditions:
     id: view_inclusion
     negate: null
     uuid: 602358de-62fc-4acb-9e31-11ff8e93a043
+    context_mapping: {  }
     view_inclusion:
       view-calendar-page_1: view-calendar-page_1
-    context_mapping: {  }
 reactions:
   regions:
     id: regions
+    uuid: e70a9163-0ece-481e-becc-496f46670f61
     regions:
       classy: {  }
       seven: {  }
@@ -29,5 +30,4 @@ reactions:
         - sidebar_first
         - sidebar_second
     saved: false
-    uuid: e70a9163-0ece-481e-becc-496f46670f61
 weight: 0

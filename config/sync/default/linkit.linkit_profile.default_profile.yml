@@ -4,15 +4,15 @@ status: true
 dependencies:
   module:
     - node
-id: default_profile
 label: 'Default Profile'
+id: default_profile
 description: ''
 matchers:
   df4eb3c2-7ab7-4851-846a-b477b93c5aa4:
-    uuid: df4eb3c2-7ab7-4851-846a-b477b93c5aa4
     id: 'entity:node'
-    weight: 0
+    uuid: df4eb3c2-7ab7-4851-846a-b477b93c5aa4
     settings:
+      metadata: '<strong>Updated:</strong> [node:changed] <strong>Node ID:</strong> [node:nid]'
       bundles:
         article: article
         calendar_event: calendar_event
@@ -20,14 +20,13 @@ matchers:
         page: page
         staff_page: staff_page
       group_by_bundle: true
-      include_unpublished: true
       substitution_type: canonical
-      metadata: '<strong>Updated:</strong> [node:changed] <strong>Node ID:</strong> [node:nid]'
       limit: 100
-  d9e27838-571a-4993-8bf7-8c8e48cee3b2:
-    uuid: d9e27838-571a-4993-8bf7-8c8e48cee3b2
-    id: 'entity:media'
+      include_unpublished: true
     weight: 0
+  d9e27838-571a-4993-8bf7-8c8e48cee3b2:
+    id: 'entity:media'
+    uuid: d9e27838-571a-4993-8bf7-8c8e48cee3b2
     settings:
       metadata: '<strong>Updated:</strong> [media:changed] <strong>Node ID:</strong> [media:mid]'
       bundles:
@@ -35,3 +34,4 @@ matchers:
       group_by_bundle: true
       substitution_type: media
       limit: 100
+    weight: 0

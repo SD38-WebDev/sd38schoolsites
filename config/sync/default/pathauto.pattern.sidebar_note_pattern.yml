@@ -11,12 +11,12 @@ pattern: '[random:hash:sha512]'
 selection_criteria:
   8bd1f46f-adbb-44e8-b955-90ed38bc6668:
     id: 'entity_bundle:node'
-    bundles:
-      sidebar_note: sidebar_note
     negate: false
+    uuid: 8bd1f46f-adbb-44e8-b955-90ed38bc6668
     context_mapping:
       node: node
-    uuid: 8bd1f46f-adbb-44e8-b955-90ed38bc6668
+    bundles:
+      sidebar_note: sidebar_note
 selection_logic: and
 weight: -5
 relationships: {  }

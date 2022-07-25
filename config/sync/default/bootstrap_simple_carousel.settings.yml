@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: Iq06zFv9v9Ep8H4T1hTpIdCHlMN-pczHBohX2ByoIK8
 bootstrap_simple_carousel:
   interval: 3000
   wrap: 1
@@ -7,5 +9,3 @@ bootstrap_simple_carousel:
   assets: 0
   image_type: {  }
   image_style: {  }
-_core:
-  default_config_hash: Iq06zFv9v9Ep8H4T1hTpIdCHlMN-pczHBohX2ByoIK8

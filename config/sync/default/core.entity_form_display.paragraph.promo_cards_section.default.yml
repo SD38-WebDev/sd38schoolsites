@@ -16,63 +16,64 @@ third_party_settings:
       children:
         - group_section_content
         - group_promo_cards
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        direction: vertical
-        width_breakpoint: 640
-        id: ''
         classes: ''
         show_empty_fields: false
-      label: Tabs
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
     group_section_content:
       children:
         - field_section_title
         - field_columns
+      label: 'Section Content'
+      region: content
       parent_name: group_tabs
       weight: 6
       format_type: tab
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
-        description: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Section Content'
     group_promo_cards:
       children:
         - field_promo_cards
+      label: 'Promo Cards'
+      region: content
       parent_name: group_tabs
       weight: 7
       format_type: tab
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
-        description: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Promo Cards'
 id: paragraph.promo_cards_section.default
 targetEntityType: paragraph
 bundle: promo_cards_section
 mode: default
 content:
   field_columns:
+    type: number
     weight: 4
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_promo_cards:
     type: paragraphs
     weight: 3
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -88,15 +89,14 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_section_title:
+    type: string_textfield
     weight: 3
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true

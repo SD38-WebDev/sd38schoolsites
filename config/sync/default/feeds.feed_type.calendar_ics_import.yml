@@ -15,19 +15,19 @@ third_party_settings:
   feeds_tamper:
     tampers:
       7d41cf63-f6aa-4ed6-be9d-5da59647daad:
+        uuid: 7d41cf63-f6aa-4ed6-be9d-5da59647daad
         plugin: strtotime
         source: event_date_start
         weight: 0
         label: 'String to Unix Timestamp'
-        uuid: 7d41cf63-f6aa-4ed6-be9d-5da59647daad
       e448ec28-c621-4aba-9bad-6d143604e672:
+        uuid: e448ec28-c621-4aba-9bad-6d143604e672
         plugin: strtotime
         source: event_date_end
         weight: 0
         label: 'String to Unix Timestamp'
-        uuid: e448ec28-c621-4aba-9bad-6d143604e672
-id: calendar_ics_import
 label: 'Calendar ICS Import'
+id: calendar_ics_import
 description: ''
 help: ''
 import_period: -1
@@ -45,65 +45,65 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:node'
 processor_configuration:
+  values:
+    type: calendar_event
   langcode: en
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: true
   owner_id: 0
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: calendar_event
 custom_sources:
   title:
-    label: title
     value: title
+    label: title
     machine_name: title
   event_date_start:
-    label: 'event date start'
     value: 'event date start'
+    label: 'event date start'
     machine_name: event_date_start
   event_date_end:
-    label: 'event date end'
     value: 'event date end'
+    label: 'event date end'
     machine_name: event_date_end
   body:
-    label: body
     value: body
+    label: body
     machine_name: body
   nid:
-    label: nid
     value: nid
+    label: nid
     machine_name: nid
   created:
-    label: created
     value: created
+    label: created
     machine_name: created
   status:
-    label: status
     value: status
+    label: status
     machine_name: status
   sticky:
-    label: sticky
     value: sticky
+    label: sticky
     machine_name: sticky
   import_uuid:
-    label: 'Import UUID'
     value: 'Import UUID'
+    label: 'Import UUID'
     machine_name: import_uuid
   summary:
-    label: summary
     value: summary
+    label: summary
     machine_name: summary
 mappings:
   -
     target: title
     map:
       value: title
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_event_date
     map:
@@ -142,7 +142,7 @@ mappings:
     target: field_import_uuid
     map:
       value: import_uuid
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

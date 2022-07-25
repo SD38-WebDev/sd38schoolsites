@@ -49,28 +49,32 @@ third_party_settings:
       children:
         - field_image
         - group_container
+      label: 'Promo URL'
       parent_name: ''
+      region: main
       weight: 0
       format_type: link
-      region: main
       format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
         target: field_promo_url
         custom_uri: ''
         target_attribute: default
-        id: ''
-        classes: ''
-        show_empty_fields: false
-      label: 'Promo URL'
     group_container:
       children:
         - field_promo_title
         - field_promo_text
         - field_promo_url
+      label: Container
       parent_name: group_promo_url
+      region: main
       weight: 22
       format_type: html_element
-      region: main
       format_settings:
+        classes: 'promo-content pt-2'
+        show_empty_fields: false
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -78,21 +82,17 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'promo-content pt-2'
-        show_empty_fields: false
-      label: Container
 id: paragraph.promo_card.default
 targetEntityType: paragraph
 bundle: promo_card
 mode: default
 content:
   field_image:
-    weight: 21
+    type: media_thumbnail
     label: hidden
     settings:
-      image_style: promo_image_16_9_ratio_
       image_link: ''
+      image_style: promo_image_16_9_ratio_
     third_party_settings:
       ds:
         ds_limit: ''
@@ -100,40 +100,40 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
             ow: true
             ow-el: div
             ow-cl: ''
             ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
             fis-def-at: false
             fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
             fi-def-at: false
-    type: media_thumbnail
+            prefix: ''
+            suffix: ''
+    weight: 21
     region: main
   field_promo_text:
-    weight: 23
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 23
     region: main
   field_promo_title:
-    weight: 22
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -143,33 +143,33 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: H2
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: string
+            prefix: ''
+            suffix: ''
+    weight: 22
     region: main
   field_promo_url:
-    weight: 24
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -183,29 +183,29 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: ''
             fi-cl: read-more
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: link
+            prefix: ''
+            suffix: ''
+    weight: 24
     region: main
 hidden: {  }

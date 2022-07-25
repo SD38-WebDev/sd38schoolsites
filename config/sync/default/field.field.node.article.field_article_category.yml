@@ -24,7 +24,7 @@ default_value_callback: ''
 settings:
   handler: 'default:config_terms_term'
   handler_settings:
+    target_vocab: article_terms
     target_bundles: null
     auto_create: false
-    target_vocab: article_terms
 field_type: entity_reference

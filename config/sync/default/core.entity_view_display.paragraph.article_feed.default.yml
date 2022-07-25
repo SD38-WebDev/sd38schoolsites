@@ -42,12 +42,12 @@ bundle: article_feed
 mode: default
 content:
   article_feed_entity_view_1:
-    weight: 1
-    region: main
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: main
   field_section_title:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
@@ -57,30 +57,30 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: h2
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
-    type: string
+            prefix: ''
+            suffix: ''
+    weight: 0
     region: main
 hidden:
   article_feed_entity_view_3: true

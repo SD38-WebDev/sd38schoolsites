@@ -1,11 +1,11 @@
 id: url_title_field
 label: 'URL Title Field'
 ui_limit: ''
-properties:
-  content:
-    value: '[paragraph:field_tile_url:title]'
-    format: plain_text
 type: token
 type_label: 'Token field'
 entities:
   paragraph: paragraph
+properties:
+  content:
+    value: '[paragraph:field_tile_url:title]'
+    format: plain_text

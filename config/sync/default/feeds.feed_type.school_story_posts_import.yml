@@ -20,599 +20,599 @@ third_party_settings:
       52bf1a79-4578-41cc-b8b5-1cc88b248fa1:
         separator: ','
         limit: null
+        uuid: 52bf1a79-4578-41cc-b8b5-1cc88b248fa1
         plugin: explode
         source: attachments
         weight: 0
         label: Explode
-        uuid: 52bf1a79-4578-41cc-b8b5-1cc88b248fa1
       7a8bbaa4-603b-4d75-ab00-22b76ef92985:
         separator: ','
         limit: null
+        uuid: 7a8bbaa4-603b-4d75-ab00-22b76ef92985
         plugin: explode
         source: attachment_names
         weight: 0
         label: Explode
-        uuid: 7a8bbaa4-603b-4d75-ab00-22b76ef92985
       6071e036-f8de-499b-8eb3-f30d9723ae72:
         character: ''
         side: trim
+        uuid: 6071e036-f8de-499b-8eb3-f30d9723ae72
         plugin: trim
         source: attachments
         weight: 1
         label: 'Characters to trim'
-        uuid: 6071e036-f8de-499b-8eb3-f30d9723ae72
       b231c46b-2553-4cde-8474-5a91ac4b67be:
         character: ''
         side: trim
+        uuid: b231c46b-2553-4cde-8474-5a91ac4b67be
         plugin: trim
         source: attachment_names
         weight: 1
         label: 'Characters to trim'
-        uuid: b231c46b-2553-4cde-8474-5a91ac4b67be
       f4b0c9da-ce49-447d-a937-10baef1f244d:
         find: https
         replace: http
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: f4b0c9da-ce49-447d-a937-10baef1f244d
         plugin: find_replace
         source: body
         weight: 0
         label: 'Find replace https to http'
-        word_boundaries: false
-        uuid: f4b0c9da-ce49-447d-a937-10baef1f244d
       bbb82d59-c8c6-4a39-a8e1-33c8e763ba0d:
         find: 'http://anderson.sd38.bc.ca/sites/anderson.sd38.bc.ca/files'
         replace: /files/anderson/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: bbb82d59-c8c6-4a39-a8e1-33c8e763ba0d
         plugin: find_replace
         source: body
         weight: 1
         label: 'Find replace'
-        word_boundaries: false
-        uuid: bbb82d59-c8c6-4a39-a8e1-33c8e763ba0d
       4c31fbde-b12a-43c7-a654-c3cf3ff13310:
         find: 'http://blair.sd38.bc.ca/sites/blair.sd38.bc.ca/files'
         replace: /files/blair/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 4c31fbde-b12a-43c7-a654-c3cf3ff13310
         plugin: find_replace
         source: body
         weight: 2
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 4c31fbde-b12a-43c7-a654-c3cf3ff13310
       687a510e-a7d1-4b62-a9d2-53e03dfd284a:
         find: 'http://blundell.sd38.bc.ca/sites/blundell.sd38.bc.ca/files'
         replace: /files/blundell/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 687a510e-a7d1-4b62-a9d2-53e03dfd284a
         plugin: find_replace
         source: body
         weight: 3
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 687a510e-a7d1-4b62-a9d2-53e03dfd284a
       2e6e2e9b-f175-4896-b43c-0712643a1446:
         find: 'http://boyd.sd38.bc.ca/sites/boyd.sd38.bc.ca/files'
         replace: /files/boyd/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 2e6e2e9b-f175-4896-b43c-0712643a1446
         plugin: find_replace
         source: body
         weight: 4
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 2e6e2e9b-f175-4896-b43c-0712643a1446
       222dacba-e24c-4ad6-a5a9-03f59e576540:
         find: 'http://bridge.sd38.bc.ca/sites/bridge.sd38.bc.ca/files'
         replace: /files/bridge/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 222dacba-e24c-4ad6-a5a9-03f59e576540
         plugin: find_replace
         source: body
         weight: 5
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 222dacba-e24c-4ad6-a5a9-03f59e576540
       e72b3657-7987-47d4-a350-3d4cd643dbb0:
         find: 'http://brighouse.sd38.bc.ca/sites/brighouse.sd38.bc.ca/files'
         replace: /files/brighouse/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: e72b3657-7987-47d4-a350-3d4cd643dbb0
         plugin: find_replace
         source: body
         weight: 6
         label: 'Find replace'
-        word_boundaries: false
-        uuid: e72b3657-7987-47d4-a350-3d4cd643dbb0
       f0270ae0-948a-48e1-ad23-6e59c5d3f0e5:
         find: 'http://jnburnett.sd38.bc.ca/sites/jnburnett.sd38.bc.ca/files'
         replace: /files/jnburnett/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: f0270ae0-948a-48e1-ad23-6e59c5d3f0e5
         plugin: find_replace
         source: body
         weight: 7
         label: 'Find replace'
-        word_boundaries: false
-        uuid: f0270ae0-948a-48e1-ad23-6e59c5d3f0e5
       86a354ca-5181-46be-97cc-87498ea4e820:
         find: 'http://byng.sd38.bc.ca/sites/byng.sd38.bc.ca/files'
         replace: /files/byng/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 86a354ca-5181-46be-97cc-87498ea4e820
         plugin: find_replace
         source: body
         weight: 8
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 86a354ca-5181-46be-97cc-87498ea4e820
       7b9e614d-da33-4e81-8ee4-948215b8b4bd:
         find: 'http://hjcambie.sd38.bc.ca/sites/hjcambie.sd38.bc.ca/files'
         replace: /files/cambie/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 7b9e614d-da33-4e81-8ee4-948215b8b4bd
         plugin: find_replace
         source: body
         weight: 9
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 7b9e614d-da33-4e81-8ee4-948215b8b4bd
       28a12f3e-f200-4791-9bfe-b4dd6a998e32:
         find: 'http://cook.sd38.bc.ca/sites/cook.sd38.bc.ca/files'
         replace: /files/cook/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 28a12f3e-f200-4791-9bfe-b4dd6a998e32
         plugin: find_replace
         source: body
         weight: 10
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 28a12f3e-f200-4791-9bfe-b4dd6a998e32
       707222d6-bc03-4786-8269-c5fe3fa09960:
         find: 'http://debeck.sd38.bc.ca/sites/debeck.sd38.bc.ca/files'
         replace: /files/debeck/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 707222d6-bc03-4786-8269-c5fe3fa09960
         plugin: find_replace
         source: body
         weight: 11
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 707222d6-bc03-4786-8269-c5fe3fa09960
       ac7f8b0d-0c73-44a8-81cd-98e02842e941:
         find: 'http://diefenbaker.sd38.bc.ca/sites/diefenbaker.sd38.bc.ca/files'
         replace: /files/diefenbaker/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: ac7f8b0d-0c73-44a8-81cd-98e02842e941
         plugin: find_replace
         source: body
         weight: 12
         label: 'Find replace'
-        word_boundaries: false
-        uuid: ac7f8b0d-0c73-44a8-81cd-98e02842e941
       61b0d55b-2dc8-47a7-8516-b7a182686ebd:
         find: 'http://dixon.sd38.bc.ca/sites/dixon.sd38.bc.ca/files'
         replace: /files/dixon/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 61b0d55b-2dc8-47a7-8516-b7a182686ebd
         plugin: find_replace
         source: body
         weight: 13
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 61b0d55b-2dc8-47a7-8516-b7a182686ebd
       aadff535-6e29-41a4-83bb-eda3930b3be2:
         find: 'http://errington.sd38.bc.ca/sites/errington.sd38.bc.ca/files'
         replace: /files/errington/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: aadff535-6e29-41a4-83bb-eda3930b3be2
         plugin: find_replace
         source: body
         weight: 14
         label: 'Find replace'
-        word_boundaries: false
-        uuid: aadff535-6e29-41a4-83bb-eda3930b3be2
       83c9850e-2785-4bee-bbcc-3852ea95e2ba:
         find: 'http://ferris.sd38.bc.ca/sites/ferris.sd38.bc.ca/files'
         replace: /files/ferris/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 83c9850e-2785-4bee-bbcc-3852ea95e2ba
         plugin: find_replace
         source: body
         weight: 15
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 83c9850e-2785-4bee-bbcc-3852ea95e2ba
       f4b471c4-c8c7-4d27-adbe-8381ee93050f:
         find: 'http://gardencity.sd38.bc.ca/sites/gardencity.sd38.bc.ca/files'
         replace: /files/gardencity/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: f4b471c4-c8c7-4d27-adbe-8381ee93050f
         plugin: find_replace
         source: body
         weight: 16
         label: 'Find replace'
-        word_boundaries: false
-        uuid: f4b471c4-c8c7-4d27-adbe-8381ee93050f
       1e7b77fd-2d72-421a-890d-750fd574d9e7:
         find: 'http://currie.sd38.bc.ca/sites/currie.sd38.bc.ca/files'
         replace: /files/currie/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 1e7b77fd-2d72-421a-890d-750fd574d9e7
         plugin: find_replace
         source: body
         weight: 17
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 1e7b77fd-2d72-421a-890d-750fd574d9e7
       3da968dc-1f0d-434d-928e-f1c24537cbc5:
         find: 'http://gilmore.sd38.bc.ca/sites/gilmore.sd38.bc.ca/files'
         replace: /files/gilmore/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 3da968dc-1f0d-434d-928e-f1c24537cbc5
         plugin: find_replace
         source: body
         weight: 18
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 3da968dc-1f0d-434d-928e-f1c24537cbc5
       aea9828c-cfb1-4b55-905d-52dd4fdd32a7:
         find: 'http://grauer.sd38.bc.ca/sites/grauer.sd38.bc.ca/files'
         replace: /files/grauer/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: aea9828c-cfb1-4b55-905d-52dd4fdd32a7
         plugin: find_replace
         source: body
         weight: 19
         label: 'Find replace'
-        word_boundaries: false
-        uuid: aea9828c-cfb1-4b55-905d-52dd4fdd32a7
       bcfe646e-ba66-47ce-96db-d899f18a932d:
         find: 'http://hamilton.sd38.bc.ca/sites/hamilton.sd38.bc.ca/files'
         replace: /files/hamilton/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: bcfe646e-ba66-47ce-96db-d899f18a932d
         plugin: find_replace
         source: body
         weight: 20
         label: 'Find replace'
-        word_boundaries: false
-        uuid: bcfe646e-ba66-47ce-96db-d899f18a932d
       e100cd6b-80ed-4f5b-99d3-8b59dccb5868:
         find: 'http://homma.sd38.bc.ca/sites/homma.sd38.bc.ca/files'
         replace: /files/homma/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: e100cd6b-80ed-4f5b-99d3-8b59dccb5868
         plugin: find_replace
         source: body
         weight: 21
         label: 'Find replace'
-        word_boundaries: false
-        uuid: e100cd6b-80ed-4f5b-99d3-8b59dccb5868
       922da68f-9d8f-490e-a797-82aedc1cf8e1:
         find: 'http://kidd.sd38.bc.ca/sites/kidd.sd38.bc.ca/files'
         replace: /files/kidd/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 922da68f-9d8f-490e-a797-82aedc1cf8e1
         plugin: find_replace
         source: body
         weight: 22
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 922da68f-9d8f-490e-a797-82aedc1cf8e1
       d57852a3-97bc-4db0-a92c-7fbf7d6b2caf:
         find: 'http://kingswood.sd38.bc.ca/sites/kingswood.sd38.bc.ca/files'
         replace: /files/kingswood/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: d57852a3-97bc-4db0-a92c-7fbf7d6b2caf
         plugin: find_replace
         source: body
         weight: 23
         label: 'Find replace'
-        word_boundaries: false
-        uuid: d57852a3-97bc-4db0-a92c-7fbf7d6b2caf
       82fdca1b-3d27-41a8-b243-7aadcbe3ef38:
         find: 'http://lee.sd38.bc.ca/sites/lee.sd38.bc.ca/files'
         replace: /files/lee/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 82fdca1b-3d27-41a8-b243-7aadcbe3ef38
         plugin: find_replace
         source: body
         weight: 24
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 82fdca1b-3d27-41a8-b243-7aadcbe3ef38
       c75b9963-653f-48f2-a0bd-6b194279b5fd:
         find: 'http://macneill.sd38.bc.ca/sites/macneill.sd38.bc.ca/files'
         replace: /files/macneill/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: c75b9963-653f-48f2-a0bd-6b194279b5fd
         plugin: find_replace
         source: body
         weight: 25
         label: 'Find replace'
-        word_boundaries: false
-        uuid: c75b9963-653f-48f2-a0bd-6b194279b5fd
       442fcbfc-f002-47aa-b150-a18790f2a524:
         find: 'http://maplelane.sd38.bc.ca/sites/maplelane.sd38.bc.ca/files'
         replace: /files/maplelane/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 442fcbfc-f002-47aa-b150-a18790f2a524
         plugin: find_replace
         source: body
         weight: 26
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 442fcbfc-f002-47aa-b150-a18790f2a524
       22e27616-eba0-497d-bf82-c29db72a4f7c:
         find: 'http://mckay.sd38.bc.ca/sites/mckay.sd38.bc.ca/files'
         replace: /files/mckay/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 22e27616-eba0-497d-bf82-c29db72a4f7c
         plugin: find_replace
         source: body
         weight: 27
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 22e27616-eba0-497d-bf82-c29db72a4f7c
       abdd3ee9-0ae3-4c70-a6e2-41535ed7fdf9:
         find: 'http://mckinney.sd38.bc.ca/sites/mckinney.sd38.bc.ca/files'
         replace: /files/mckinney/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: abdd3ee9-0ae3-4c70-a6e2-41535ed7fdf9
         plugin: find_replace
         source: body
         weight: 28
         label: 'Find replace'
-        word_boundaries: false
-        uuid: abdd3ee9-0ae3-4c70-a6e2-41535ed7fdf9
       f2c879d2-1558-4650-a2a0-beda775d897a:
         find: 'http://mcmath.sd38.bc.ca/sites/mcmath.sd38.bc.ca/files'
         replace: /files/mcmath/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: f2c879d2-1558-4650-a2a0-beda775d897a
         plugin: find_replace
         source: body
         weight: 29
         label: 'Find replace'
-        word_boundaries: false
-        uuid: f2c879d2-1558-4650-a2a0-beda775d897a
       dd088172-032c-4248-bf67-ec6b196a41aa:
         find: 'http://mcnair.sd38.bc.ca/sites/mcnair.sd38.bc.ca/files'
         replace: /files/mcnair/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: dd088172-032c-4248-bf67-ec6b196a41aa
         plugin: find_replace
         source: body
         weight: 30
         label: 'Find replace'
-        word_boundaries: false
-        uuid: dd088172-032c-4248-bf67-ec6b196a41aa
       7759cd89-1dc2-450e-94f5-eef7e2e758d9:
         find: 'http://mcneely.sd38.bc.ca/sites/mcneely.sd38.bc.ca/files'
         replace: /files/mcneely/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 7759cd89-1dc2-450e-94f5-eef7e2e758d9
         plugin: find_replace
         source: body
         weight: 31
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 7759cd89-1dc2-450e-94f5-eef7e2e758d9
       96a29c27-ee5d-4062-aa99-b08785796fa2:
         find: 'http://mcroberts.sd38.bc.ca/sites/mcroberts.sd38.bc.ca/files'
         replace: /files/mcroberts/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 96a29c27-ee5d-4062-aa99-b08785796fa2
         plugin: find_replace
         source: body
         weight: 32
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 96a29c27-ee5d-4062-aa99-b08785796fa2
       23bd0202-8201-43ae-91c2-c41c71408cd1:
         find: 'http://mitchell.sd38.bc.ca/sites/mitchell.sd38.bc.ca/files'
         replace: /files/mitchell/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 23bd0202-8201-43ae-91c2-c41c71408cd1
         plugin: find_replace
         source: body
         weight: 33
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 23bd0202-8201-43ae-91c2-c41c71408cd1
       a7708631-dc5a-486a-baa2-379482c798b1:
         find: 'http://palmer.sd38.bc.ca/sites/palmer.sd38.bc.ca/files'
         replace: /files/palmer/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: a7708631-dc5a-486a-baa2-379482c798b1
         plugin: find_replace
         source: body
         weight: 34
         label: 'Find replace'
-        word_boundaries: false
-        uuid: a7708631-dc5a-486a-baa2-379482c798b1
       c093483b-fa13-44d9-8f5a-1853db33dbe7:
         find: 'http://quilchena.sd38.bc.ca/sites/quilchena.sd38.bc.ca/files'
         replace: /files/quilchena/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: c093483b-fa13-44d9-8f5a-1853db33dbe7
         plugin: find_replace
         source: body
         weight: 35
         label: 'Find replace'
-        word_boundaries: false
-        uuid: c093483b-fa13-44d9-8f5a-1853db33dbe7
       13e8b67b-eea8-4568-b556-0b4085e9383e:
         find: 'http://rhs.sd38.bc.ca/sites/rhs.sd38.bc.ca/files'
         replace: /files/rhs/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 13e8b67b-eea8-4568-b556-0b4085e9383e
         plugin: find_replace
         source: body
         weight: 36
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 13e8b67b-eea8-4568-b556-0b4085e9383e
       09a3b912-7801-4892-a0b2-4e329b88c258:
         find: 'http://spulukwuks.sd38.bc.ca/sites/spulukwuks.sd38.bc.ca/files'
         replace: /files/spulukwuks/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 09a3b912-7801-4892-a0b2-4e329b88c258
         plugin: find_replace
         source: body
         weight: 37
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 09a3b912-7801-4892-a0b2-4e329b88c258
       6663a735-2546-4076-a0e5-4d497b6d23c3:
         find: 'http://steves.sd38.bc.ca/sites/steves.sd38.bc.ca/files'
         replace: /files/steves/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 6663a735-2546-4076-a0e5-4d497b6d23c3
         plugin: find_replace
         source: body
         weight: 38
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 6663a735-2546-4076-a0e5-4d497b6d23c3
       0a0ada6e-4244-4f02-a6a6-065a4e20f1e7:
         find: 'http://slss.sd38.bc.ca/sites/slss.sd38.bc.ca/files'
         replace: /files/slss/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 0a0ada6e-4244-4f02-a6a6-065a4e20f1e7
         plugin: find_replace
         source: body
         weight: 39
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 0a0ada6e-4244-4f02-a6a6-065a4e20f1e7
       0f40d974-79c9-48d7-a41f-0726d1fa90d5:
         find: 'http://tait.sd38.bc.ca/sites/tait.sd38.bc.ca/files'
         replace: /files/tait/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 0f40d974-79c9-48d7-a41f-0726d1fa90d5
         plugin: find_replace
         source: body
         weight: 40
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 0f40d974-79c9-48d7-a41f-0726d1fa90d5
       43b39325-967c-4129-923d-b191e6561bf3:
         find: 'http://thompson.sd38.bc.ca/sites/thompson.sd38.bc.ca/files'
         replace: /files/thompson/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 43b39325-967c-4129-923d-b191e6561bf3
         plugin: find_replace
         source: body
         weight: 41
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 43b39325-967c-4129-923d-b191e6561bf3
       cbc56127-e05c-4709-8289-c2fff356ae26:
         find: 'http://tomsett.sd38.bc.ca/sites/tomsett.sd38.bc.ca/files'
         replace: /files/tomsett/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: cbc56127-e05c-4709-8289-c2fff356ae26
         plugin: find_replace
         source: body
         weight: 42
         label: 'Find replace'
-        word_boundaries: false
-        uuid: cbc56127-e05c-4709-8289-c2fff356ae26
       cfc218f8-c859-4231-b776-20a193ccc020:
         find: 'http://westwind.sd38.bc.ca/sites/westwind.sd38.bc.ca/files'
         replace: /files/westwind/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: cfc218f8-c859-4231-b776-20a193ccc020
         plugin: find_replace
         source: body
         weight: 43
         label: 'Find replace'
-        word_boundaries: false
-        uuid: cfc218f8-c859-4231-b776-20a193ccc020
       79c9967f-36e2-4313-9951-604ec16f2d9a:
         find: 'http://whiteside.sd38.bc.ca/sites/whiteside.sd38.bc.ca/files'
         replace: /files/whiteside/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 79c9967f-36e2-4313-9951-604ec16f2d9a
         plugin: find_replace
         source: body
         weight: 44
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 79c9967f-36e2-4313-9951-604ec16f2d9a
       fa15cfa6-6c10-44df-93e2-3c1bee27a097:
         find: 'http://woodward.sd38.bc.ca/sites/woodward.sd38.bc.ca/files'
         replace: /files/woodward/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: fa15cfa6-6c10-44df-93e2-3c1bee27a097
         plugin: find_replace
         source: body
         weight: 45
         label: 'Find replace'
-        word_boundaries: false
-        uuid: fa15cfa6-6c10-44df-93e2-3c1bee27a097
       c70c8c07-fa6f-4e77-bff1-85f2ef57db00:
         find: 'http://wowk.sd38.bc.ca/sites/wowk.sd38.bc.ca/files'
         replace: /files/wowk/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: c70c8c07-fa6f-4e77-bff1-85f2ef57db00
         plugin: find_replace
         source: body
         weight: 46
         label: 'Find replace'
-        word_boundaries: false
-        uuid: c70c8c07-fa6f-4e77-bff1-85f2ef57db00
       19c4930f-9442-4d8d-9be9-514a25e50f9a:
         find: 'http://talmey.sd38.bc.ca/sites/talmey.sd38.bc.ca/files'
         replace: /files/talmey/archive
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 19c4930f-9442-4d8d-9be9-514a25e50f9a
         plugin: find_replace
         source: body
         weight: 47
         label: 'Find replace'
-        word_boundaries: false
-        uuid: 19c4930f-9442-4d8d-9be9-514a25e50f9a
       4c14a8dd-1866-401c-bc34-3dbe862707f0:
         find: 'http://'
         replace: 'https://'
         case_sensitive: false
+        word_boundaries: false
         whole: false
+        uuid: 4c14a8dd-1866-401c-bc34-3dbe862707f0
         plugin: find_replace
         source: body
         weight: 48
         label: 'Find replace http to https'
-        word_boundaries: false
-        uuid: 4c14a8dd-1866-401c-bc34-3dbe862707f0
       456e6099-d057-46fd-9237-91dabe13b895:
         allowed_tags: ''
+        uuid: 456e6099-d057-46fd-9237-91dabe13b895
         plugin: strip_tags
         source: image_gallery_new
         weight: 0
         label: 'Strip tags'
-        uuid: 456e6099-d057-46fd-9237-91dabe13b895
       976b215c-44cf-430b-9a58-1b8052e1e723:
         separator: ','
         limit: null
+        uuid: 976b215c-44cf-430b-9a58-1b8052e1e723
         plugin: explode
         source: image_gallery_new
         weight: 1
         label: Explode
-        uuid: 976b215c-44cf-430b-9a58-1b8052e1e723
       366ccf64-88b5-4481-b7a1-57604a4f8178:
         character: ''
         side: trim
+        uuid: 366ccf64-88b5-4481-b7a1-57604a4f8178
         plugin: trim
         source: image_gallery_new
         weight: 2
         label: 'Characters to trim'
-        uuid: 366ccf64-88b5-4481-b7a1-57604a4f8178
-id: school_story_posts_import
 label: 'School Story Posts Import'
+id: school_story_posts_import
 description: ''
 help: ''
 import_period: -1
@@ -630,77 +630,77 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:node'
 processor_configuration:
+  values:
+    type: article
   langcode: en
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: true
   owner_id: 0
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: article
 custom_sources:
   title:
-    label: title
     value: title
+    label: title
     machine_name: title
   nid:
-    label: Nid
     value: Nid
+    label: Nid
     machine_name: nid
   school_story_category:
-    label: 'School Story Category'
     value: 'School Story Category'
+    label: 'School Story Category'
     machine_name: school_story_category
   body:
-    label: body
     value: body
+    label: body
     machine_name: body
   summary:
-    label: summary
     value: summary
+    label: summary
     machine_name: summary
   feature_image:
-    label: 'feature image'
     value: 'feature image'
+    label: 'feature image'
     machine_name: feature_image
   gallery_image:
-    label: 'Gallery Image'
     value: 'Gallery Image'
+    label: 'Gallery Image'
     machine_name: gallery_image
   our_school_story:
-    label: 'Our School Story'
     value: 'Our School Story'
+    label: 'Our School Story'
     machine_name: our_school_story
   created:
-    label: created
     value: created
+    label: created
     machine_name: created
   attachments:
-    label: Attachments
     value: Attachments
+    label: Attachments
     machine_name: attachments
   attachment_names:
-    label: 'Attachment Names'
     value: 'Attachment Names'
+    label: 'Attachment Names'
     machine_name: attachment_names
   import_uuid:
-    label: 'Import UUID'
     value: 'Import UUID'
+    label: 'Import UUID'
     machine_name: import_uuid
   image_gallery_new:
-    label: 'Image Gallery NEW'
     value: 'Image Gallery NEW'
+    label: 'Image Gallery NEW'
     machine_name: image_gallery_new
 mappings:
   -
     target: title
     map:
       value: title
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_tags
     map:
@@ -764,7 +764,7 @@ mappings:
     target: field_import_uuid
     map:
       value: import_uuid
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'

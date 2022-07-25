@@ -57,44 +57,44 @@ bundle: image_and_text_section
 mode: background_image
 content:
   field_background_colour:
-    weight: 0
+    type: color_field_formatter_text
     label: above
     settings:
       format: hex
       opacity: true
     third_party_settings: {  }
-    type: color_field_formatter_text
+    weight: 0
     region: left
   field_image:
     type: entity_reference_entity_view
-    weight: 3
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 3
     region: left
   field_section_content:
-    weight: 2
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 2
     region: left
   field_section_title:
-    weight: 1
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: left
   paragraph_view_mode:
     type: paragraph_view_mode
-    weight: 0
-    region: left
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: left
 hidden:
   field_section_bgcolour: true

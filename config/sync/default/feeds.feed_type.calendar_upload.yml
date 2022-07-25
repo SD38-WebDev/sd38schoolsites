@@ -11,8 +11,8 @@ dependencies:
     - feeds_ical
     - node
     - smart_date
-id: calendar_upload
 label: 'Calendar Upload'
+id: calendar_upload
 description: ''
 help: ''
 import_period: -1
@@ -24,25 +24,25 @@ parser: feeds_ical
 parser_configuration: {  }
 processor: 'entity:node'
 processor_configuration:
+  values:
+    type: calendar_event
   langcode: en
   update_existing: 2
   update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: true
   owner_id: 0
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: calendar_event
 custom_sources: {  }
 mappings:
   -
     target: title
     map:
       value: summary
-    unique: {  }
     settings:
       language: null
+    unique: {  }
   -
     target: field_event_date
     map:
@@ -63,6 +63,6 @@ mappings:
     map:
       url: 'parent:source'
       guid: uid
+    settings: {  }
     unique:
       guid: '1'
-    settings: {  }

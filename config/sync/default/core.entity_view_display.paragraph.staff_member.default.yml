@@ -66,81 +66,79 @@ mode: default
 content:
   field_division:
     type: number_unformatted
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     weight: 3
     region: main
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_email:
-    weight: 9
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 9
     region: main
   field_external_sites:
     type: link_separate
-    weight: 4
-    region: main
     label: above
     settings:
       trim_length: 80
-      rel: ''
-      target: ''
       url_only: false
       url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
+    weight: 4
+    region: main
   field_first_name:
     type: smart_trim
-    weight: 1
-    region: main
     label: hidden
     settings:
       trim_length: 1
       trim_type: chars
       trim_suffix: ''
-      wrap_class: trimmed
-      more_text: More
-      more_class: more-link
       wrap_output: false
+      wrap_class: trimmed
       more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
       trim_options:
         text: false
         trim_zero: false
-      summary_handler: full
     third_party_settings:
       ds:
         ft:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: span
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: span
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: main
   field_last_name:
     type: string
-    weight: 2
-    region: main
     label: hidden
     settings:
       link_to_entity: false
@@ -150,59 +148,59 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: span
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 2
+    region: main
   field_name_title:
-    weight: 10
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 10
     region: main
   field_phone:
-    weight: 8
+    type: telephone_link
     label: above
     settings:
       title: ''
     third_party_settings: {  }
-    type: telephone_link
+    weight: 8
     region: main
   field_staff_grade_department:
     type: entity_reference_rss_category
-    weight: 5
-    region: main
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: main
   field_staff_photo:
     type: media_thumbnail
-    weight: 0
-    region: main
     label: hidden
     settings:
-      image_style: square_image_thumbnail_480x480
       image_link: ''
+      image_style: square_image_thumbnail_480x480
     third_party_settings:
       ds:
         ft:
@@ -211,21 +209,23 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    weight: 0
+    region: main
   field_staff_position:
     type: entity_reference_rss_category
-    weight: 6
-    region: main
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 6
+    region: main
   field_trim_first_name:
-    weight: 7
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 7
     region: main
 hidden: {  }

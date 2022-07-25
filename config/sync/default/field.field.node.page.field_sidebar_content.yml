@@ -30,23 +30,23 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       bp_accordion: bp_accordion
       basic_text_section: basic_text_section
       calendar_events_list_: calendar_events_list_
       recent_blog_posts_listing: recent_blog_posts_listing
       social_media_links_section: social_media_links_section
+    negate: 0
     target_bundles_drag_drop:
       article_feed:
         weight: 24
         enabled: false
       basic_text_section:
-        enabled: true
         weight: 25
-      bp_accordion:
         enabled: true
+      bp_accordion:
         weight: 16
+        enabled: true
       bp_accordion_section:
         weight: 17
         enabled: false
@@ -90,8 +90,8 @@ settings:
         weight: 30
         enabled: false
       calendar_events_list_:
-        enabled: true
         weight: 42
+        enabled: true
       embedded_video:
         weight: 41
         enabled: false
@@ -126,14 +126,14 @@ settings:
         weight: 48
         enabled: false
       recent_blog_posts_listing:
-        enabled: true
         weight: 49
+        enabled: true
       social_media_links:
         weight: 66
         enabled: false
       social_media_links_section:
-        enabled: true
         weight: 67
+        enabled: true
       staff_member:
         weight: 44
         enabled: false

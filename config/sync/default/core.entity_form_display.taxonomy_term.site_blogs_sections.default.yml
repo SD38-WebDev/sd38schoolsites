@@ -12,33 +12,33 @@ third_party_settings:
     group_for_site_admin_only:
       children:
         - name
+      label: 'For Site Admin Only'
+      region: content
       parent_name: ''
       weight: 1
       format_type: details_sidebar
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         open: false
+        description: ''
         required_fields: true
         weight: 0
-      label: 'For Site Admin Only'
 id: taxonomy_term.site_blogs_sections.default
 targetEntityType: taxonomy_term
 bundle: site_blogs_sections
 mode: default
 content:
   field_section_home_page:
+    type: entity_reference_autocomplete_tags
     weight: 0
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-    region: content
   name:
     type: string_textfield
     weight: 2
@@ -49,10 +49,10 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 3
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   description: true

@@ -1,11 +1,11 @@
 id: user_feeds_block
 label: 'User Feeds Block'
 ui_limit: ''
-properties:
-  block: 'views_block:feeds-block_1'
-  use_block_title: true
-  add_block_wrappers: false
 type: block
 type_label: 'Block field'
 entities:
   user: user
+properties:
+  block: 'views_block:feeds-block_1'
+  use_block_title: true
+  add_block_wrappers: false

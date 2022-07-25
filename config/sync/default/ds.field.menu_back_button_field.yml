@@ -1,11 +1,11 @@
 id: menu_back_button_field
 label: 'Menu Back Button Field'
 ui_limit: ''
-properties:
-  content:
-    value: "<p><a href=\"[node:menu-link:parent:url]\">[node:menu-link:parent:title]</a></p>\r\n"
-    format: full_html
 type: token
 type_label: 'Token field'
 entities:
   node: node
+properties:
+  content:
+    value: "<p><a href=\"[node:menu-link:parent:url]\">[node:menu-link:parent:title]</a></p>\r\n"
+    format: full_html

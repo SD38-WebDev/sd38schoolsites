@@ -20,63 +20,63 @@ third_party_settings:
         - group_section_content
         - group_images
         - group_layout_settings
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         direction: vertical
         width_breakpoint: 640
-      label: Tabs
     group_layout_settings:
       children:
         - paragraph_view_mode
+      label: 'Layout Settings'
+      region: content
       parent_name: group_tabs
       weight: 6
       format_type: tab
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
-        description: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Layout Settings'
     group_section_content:
       children:
         - field_section_title
         - field_section_content
+      label: 'Section Content'
+      region: content
       parent_name: group_tabs
       weight: 4
       format_type: tab
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
-        description: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Section Content'
     group_images:
       children:
         - field_images
+      label: Images
+      region: content
       parent_name: group_tabs
       weight: 5
       format_type: tab
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
-        description: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Images
 id: paragraph.image_gallery.default
 targetEntityType: paragraph
 bundle: image_gallery
@@ -85,29 +85,30 @@ content:
   field_images:
     type: media_library_widget
     weight: 13
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_section_content:
+    type: text_textarea
     weight: 10
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_section_title:
+    type: string_textfield
     weight: 9
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   paragraph_view_mode:
     type: paragraph_view_mode
     weight: 11
+    region: content
     settings:
       view_modes:
         1_column: 1_column
@@ -120,7 +121,6 @@ content:
         default: '0'
       default_view_mode: 4_columns
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   status: true

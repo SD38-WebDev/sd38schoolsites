@@ -1,7 +1,28 @@
 uuid: d9864ce5-6971-4a97-bc41-16b05d4b4074
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.article
+    - node.type.calendar_event
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - filter
+    - media
+    - node
+    - scheduler
+    - search
+    - system
+    - taxonomy
+    - toolbar
+    - workbench_access
 id: section_editor
 label: 'Section Editor'
 weight: -8

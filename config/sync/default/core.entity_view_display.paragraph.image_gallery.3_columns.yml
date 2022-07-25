@@ -46,8 +46,6 @@ mode: 3_columns
 content:
   field_images:
     type: entity_reference_entity_view
-    weight: 2
-    region: main
     label: hidden
     settings:
       view_mode: square_large_480x480_
@@ -59,40 +57,40 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
             fis: true
             fis-el: div
             fis-cl: 'row row-cols-3'
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: div
             fi-cl: 'col mb-4'
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 2
+    region: main
   field_section_content:
     type: text_default
-    weight: 1
-    region: main
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: main
   field_section_title:
     type: string
-    weight: 0
-    region: main
     label: hidden
     settings:
       link_to_entity: false
@@ -102,29 +100,31 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
             fis-el: ''
             fis-cl: ''
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: h2
             fi-cl: ''
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: main
 hidden:
   paragraph_view_mode: true
   paragraphs_carousel_entity_view_1: true

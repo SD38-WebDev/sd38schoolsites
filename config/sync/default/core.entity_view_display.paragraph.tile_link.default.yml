@@ -17,31 +17,31 @@ bundle: tile_link
 mode: default
 content:
   field_link_text:
-    weight: 5
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_tile_colour:
-    weight: 4
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 4
     region: content
   field_tile_image:
     type: entity_reference_entity_view
-    weight: 2
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_tile_url:
-    weight: 3
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -50,6 +50,6 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
 hidden: {  }

@@ -2,8 +2,8 @@ uuid: a26fb977-3a37-4915-9005-0bcf2fee6c1d
 langcode: en
 status: true
 dependencies: {  }
-name: has_header_image
 label: 'Has Header Image'
+name: has_header_image
 group: null
 description: ''
 requireAllConditions: false
@@ -11,8 +11,8 @@ disabled: false
 conditions:
   view_inclusion:
     id: view_inclusion
-    view_inclusion: {  }
     negate: false
     uuid: eb113413-1347-468e-a8ad-f35d91143496
+    view_inclusion: {  }
 reactions: {  }
 weight: 0

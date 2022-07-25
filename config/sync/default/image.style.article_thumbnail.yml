@@ -29,6 +29,7 @@ effects:
     weight: 3
     data:
       canvas_size: exact
+      canvas_color: '#FFFFFFFF'
       exact:
         width: '600'
         height: '400'
@@ -40,4 +41,3 @@ effects:
         right: 0
         top: 0
         bottom: 0
-      canvas_color: '#FFFFFFFF'

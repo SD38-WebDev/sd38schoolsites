@@ -1,11 +1,11 @@
 id: navigation_menu_link_text
 label: 'Navigation Menu Link Text'
 ui_limit: ''
-properties:
-  content:
-    value: '[paragraph:field_menu_link:title]'
-    format: plain_text
 type: token
 type_label: 'Token field'
 entities:
   paragraph: paragraph
+properties:
+  content:
+    value: '[paragraph:field_menu_link:title]'
+    format: plain_text

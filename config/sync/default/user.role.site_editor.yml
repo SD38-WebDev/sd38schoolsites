@@ -1,7 +1,49 @@
 uuid: ed4345b5-7768-4547-aa46-a342bd9375f3
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.article
+    - node.type.calendar_event
+    - node.type.calendar_page
+    - node.type.header_image
+    - node.type.home_page_button
+    - node.type.news_alert
+    - node.type.newsletter
+    - node.type.page
+    - node.type.sidebar_note
+    - node.type.staff_page
+    - taxonomy.vocabulary.site_blogs_sections
+    - taxonomy.vocabulary.staff_grades_departments
+    - taxonomy.vocabulary.staff_positions
+    - taxonomy.vocabulary.tags
+  module:
+    - block
+    - block_permissions
+    - contextual
+    - ds_switch_view_mode
+    - feeds
+    - field_permissions
+    - filter
+    - media
+    - node
+    - quickedit
+    - scheduler
+    - search
+    - smart_date_recur
+    - system
+    - taxonomy
+    - term_merge
+    - theme_permission
+    - toolbar
+    - update
+    - workbench_access
 id: site_editor
 label: 'Site Editor'
 weight: -4
@@ -151,3 +193,4 @@ permissions:
   - 'view sidebar_note revisions'
   - 'view staff_page revisions'
   - 'view the administration theme'
+  - 'view update notifications'

@@ -38,7 +38,7 @@ bundle: image_banner
 mode: default
 content:
   field_banner_image:
-    weight: 0
+    type: imagefield_slideshow_field_formatter
     label: hidden
     settings:
       imagefield_slideshow_style: image_banner
@@ -57,6 +57,6 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: imagefield_slideshow_field_formatter
+    weight: 0
     region: main
 hidden: {  }

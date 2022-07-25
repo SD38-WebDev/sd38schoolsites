@@ -1,7 +1,12 @@
 uuid: 35141702-480d-484d-b7de-de4a8d123eb0
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+  module:
+    - taxonomy
+    - term_merge
 id: blogging_role
 label: 'Blogging Role'
 weight: -6

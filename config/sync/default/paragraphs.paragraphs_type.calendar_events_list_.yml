@@ -6,8 +6,8 @@ dependencies:
     - paragraph_view_mode
 third_party_settings:
   paragraph_view_mode:
-    label: 'Calendar Display'
     enabled: true
+    label: 'Calendar Display'
 id: calendar_events_list_
 label: 'Calendar Events (List)'
 icon_uuid: null

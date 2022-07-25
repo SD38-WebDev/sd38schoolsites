@@ -29,193 +29,193 @@ third_party_settings:
         - group_division
         - group_grade_department
         - group_links
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Tabs
     group_name:
       children:
         - field_name_title
         - field_first_name
         - field_last_name
         - field_trim_first_name
+      label: Name
+      region: content
       parent_name: group_tabs
       weight: 1
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Name
     group_position_details:
       children:
         - field_staff_position
+      label: 'Position Details'
+      region: content
       parent_name: group_tabs
       weight: 3
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Position Details'
     group_links:
       children:
         - field_external_sites
+      label: Links
+      region: content
       parent_name: group_tabs
       weight: 6
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Links
     group_photo:
       children: {  }
+      label: Photo
+      region: hidden
       parent_name: ''
       weight: 2
       format_type: tab
-      region: hidden
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Photo
     group_division:
       children:
         - field_division
+      label: Division
+      region: content
       parent_name: group_tabs
       weight: 4
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Division
     group_grade_department:
       children:
         - field_staff_grade_department
+      label: Grade/Department
+      region: content
       parent_name: group_tabs
       weight: 5
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Grade/Department
     group_contact_details:
       children:
         - field_email
         - field_phone
+      label: 'Contact Details'
+      region: content
       parent_name: group_tabs
       weight: 2
       format_type: tab
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
-        description: 'These settings are optional.'
         formatter: closed
+        description: 'These settings are optional.'
         required_fields: true
-      label: 'Contact Details'
 id: paragraph.staff_member.default
 targetEntityType: paragraph
 bundle: staff_member
 mode: default
 content:
   field_division:
-    weight: 5
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
+    weight: 5
     region: content
-  field_email:
-    weight: 9
     settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_email:
     type: email_default
+    weight: 9
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   field_external_sites:
+    type: link_default
     weight: 5
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_first_name:
+    type: string_textfield
     weight: 12
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_last_name:
+    type: string_textfield
     weight: 13
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_name_title:
+    type: options_select
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_phone:
+    type: telephone_default
     weight: 10
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: telephone_default
-    region: content
   field_staff_grade_department:
+    type: options_select
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_staff_position:
+    type: options_select
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_trim_first_name:
+    type: boolean_checkbox
     weight: 14
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
 hidden:
   created: true
   field_staff_photo: true

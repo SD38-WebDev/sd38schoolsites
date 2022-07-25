@@ -28,89 +28,89 @@ third_party_settings:
         - group_content_sections
         - group_page_sidebar
         - group_legacy
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Tabs
     group_basic_content:
       children:
         - title
         - field_site_section
         - body
+      label: 'Basic Content'
+      region: content
       parent_name: group_tabs
       weight: 14
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Basic Content'
     group_content_sections:
       children:
         - field_content_section
+      label: 'Content Sections'
+      region: content
       parent_name: group_tabs
       weight: 15
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Content Sections'
     group_page_sidebar:
       children:
         - field_sidebar_content
+      label: 'Page Sidebar'
+      region: content
       parent_name: group_tabs
       weight: 16
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Page Sidebar'
     group_legacy:
       children:
         - field_feature_image
         - field_legacy_attachments
+      label: Legacy
+      region: content
       parent_name: group_tabs
       weight: 17
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: Legacy
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
   body:
+    type: text_textarea_with_summary
     weight: 3
+    region: content
     settings:
       rows: 9
-      placeholder: ''
       summary_rows: 3
+      placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
   created:
     type: datetime_timestamp
     weight: 2
@@ -120,6 +120,7 @@ content:
   field_content_section:
     type: paragraphs
     weight: 15
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -135,24 +136,24 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_feature_image:
+    type: media_library_widget
     weight: 28
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
   field_legacy_attachments:
+    type: file_generic
     weight: 29
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_sidebar_content:
     type: paragraphs
     weight: 13
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -168,13 +169,12 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: '0'
     third_party_settings: {  }
-    region: content
   field_site_section:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   path:
     type: path
     weight: 6
@@ -183,10 +183,10 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 3
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
@@ -201,17 +201,17 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 9
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -224,12 +224,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default

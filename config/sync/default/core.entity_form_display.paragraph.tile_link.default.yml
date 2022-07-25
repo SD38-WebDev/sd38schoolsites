@@ -19,54 +19,56 @@ third_party_settings:
       children:
         - group_tile_details
         - group_tile_image
+      label: Tabs
+      region: content
       parent_name: ''
       weight: 0
       format_type: tabs
-      region: content
       format_settings:
-        direction: horizontal
-        width_breakpoint: 640
-        id: ''
         classes: ''
         show_empty_fields: false
-      label: Tabs
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
     group_tile_image:
       children:
         - field_tile_image
+      label: 'Tile Image'
+      region: content
       parent_name: group_tabs
       weight: 3
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Tile Image'
     group_tile_details:
       children:
         - field_tile_url
         - field_link_text
         - field_tile_colour
+      label: 'Tile Details'
+      region: content
       parent_name: group_tabs
       weight: 2
       format_type: tab
-      region: content
       format_settings:
-        id: ''
         classes: ''
-        description: ''
+        id: ''
         formatter: closed
+        description: ''
         required_fields: true
-      label: 'Tile Details'
 id: paragraph.tile_link.default
 targetEntityType: paragraph
 bundle: tile_link
 mode: default
 content:
   field_link_text:
+    type: string_textfield
     weight: 4
+    region: content
     settings:
       size: 50
       placeholder: ''
@@ -74,8 +76,6 @@ content:
       maxlength:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
-    type: string_textfield
-    region: content
   field_tile_colour:
     type: options_select
     weight: 5

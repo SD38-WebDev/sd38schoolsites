@@ -22,23 +22,23 @@ bundle: address_block
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 5
     region: content
   field_address:
-    weight: 0
+    type: address_default
     label: hidden
     settings: {  }
     third_party_settings:
       address_map_link:
-        link_address: '1'
+        link_address: true
         map_link_type: apple_maps
         map_link_position: address
         map_link_text: 'Get directions'
-        map_link_new_window: 0
+        map_link_new_window: false
       ds:
         ft:
           id: default
@@ -46,34 +46,34 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: address_default
+    weight: 0
     region: content
   field_early_warning_line:
-    weight: 3
+    type: telephone_link
     label: inline
     settings:
       title: ''
     third_party_settings: {  }
-    type: telephone_link
+    weight: 3
     region: content
   field_fax:
-    weight: 1
+    type: telephone_link
     label: inline
     settings:
       title: ''
     third_party_settings: {  }
-    type: telephone_link
+    weight: 1
     region: content
   field_phone:
-    weight: 2
+    type: telephone_link
     label: inline
     settings:
       title: ''
     third_party_settings: {  }
-    type: telephone_link
+    weight: 2
     region: content
   field_school_email_address:
-    weight: 4
+    type: email_mailto
     label: hidden
     settings: {  }
     third_party_settings:
@@ -84,6 +84,6 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: email_mailto
+    weight: 4
     region: content
 hidden: {  }

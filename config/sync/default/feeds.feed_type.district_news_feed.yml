@@ -17,11 +17,11 @@ third_party_settings:
     tampers:
       f5add57d-0077-4bf8-b18a-6f84e62b4941:
         invert: false
+        uuid: f5add57d-0077-4bf8-b18a-6f84e62b4941
         plugin: required
         source: destination
         weight: 0
         label: Required
-        uuid: f5add57d-0077-4bf8-b18a-6f84e62b4941
       b3f1fd1f-cd6c-4ccb-8d12-27102da6d9b4:
         words: ''
         word_boundaries: false
@@ -32,52 +32,52 @@ third_party_settings:
           - ''
         regex: false
         function: mb_stripos
+        uuid: b3f1fd1f-cd6c-4ccb-8d12-27102da6d9b4
         plugin: keyword_filter
         source: destination
         weight: 1
         label: 'Keyword filter'
-        uuid: b3f1fd1f-cd6c-4ccb-8d12-27102da6d9b4
       f78cf59e-ac9b-4786-83ea-2ad22f024f6b:
         separator: ','
         limit: null
+        uuid: f78cf59e-ac9b-4786-83ea-2ad22f024f6b
         plugin: explode
         source: destination
         weight: 2
         label: Explode
-        uuid: f78cf59e-ac9b-4786-83ea-2ad22f024f6b
       9494f4f9-e249-4acc-b0a1-63e493fe26fa:
         character: ''
         side: trim
+        uuid: 9494f4f9-e249-4acc-b0a1-63e493fe26fa
         plugin: trim
         source: destination
         weight: 3
         label: 'Characters to trim'
-        uuid: 9494f4f9-e249-4acc-b0a1-63e493fe26fa
       1d1e2e3b-1d05-46a9-8940-a9b60d2e4e0b:
         glue: ','
+        uuid: 1d1e2e3b-1d05-46a9-8940-a9b60d2e4e0b
         plugin: implode
         source: destination
         weight: 4
         label: Implode
-        uuid: 1d1e2e3b-1d05-46a9-8940-a9b60d2e4e0b
       ba8fe080-4d22-4431-b5fe-c0d1604338ed:
         separator: ','
         limit: null
+        uuid: ba8fe080-4d22-4431-b5fe-c0d1604338ed
         plugin: explode
         source: attachments
         weight: 0
         label: Explode
-        uuid: ba8fe080-4d22-4431-b5fe-c0d1604338ed
       6760177a-e675-4e08-964e-c4cbb13e49cd:
         character: ''
         side: trim
+        uuid: 6760177a-e675-4e08-964e-c4cbb13e49cd
         plugin: trim
         source: attachments
         weight: 1
         label: 'Characters to trim'
-        uuid: 6760177a-e675-4e08-964e-c4cbb13e49cd
-id: district_news_feed
 label: 'District News Feed'
+id: district_news_feed
 description: ''
 help: ''
 import_period: 0
@@ -95,61 +95,61 @@ parser_configuration:
   line_limit: 100
 processor: 'entity:node'
 processor_configuration:
+  values:
+    type: article
   langcode: en
   update_existing: 2
   update_non_existent: _delete
+  skip_hash_check: false
+  authorize: true
   expire: -1
   owner_feed_author: false
   owner_id: 1
-  authorize: true
-  skip_hash_check: false
-  values:
-    type: article
 custom_sources:
   title:
-    label: title
     value: title
+    label: title
     machine_name: title
   body:
-    label: body
     value: body
+    label: body
     machine_name: body
   summary:
-    label: summary
     value: summary
+    label: summary
     machine_name: summary
   destination:
-    label: destination
     value: destination
+    label: destination
     machine_name: destination
   status:
-    label: status
     value: status
+    label: status
     machine_name: status
   sticky:
-    label: sticky
     value: sticky
+    label: sticky
     machine_name: sticky
   import_uuid:
-    label: 'Import UUID'
     value: 'Import UUID'
+    label: 'Import UUID'
     machine_name: import_uuid
   feature_image:
-    label: 'feature image'
     value: 'feature image'
+    label: 'feature image'
     machine_name: feature_image
   attachments:
-    label: Attachments
     value: Attachments
+    label: Attachments
     machine_name: attachments
 mappings:
   -
     target: title
     map:
       value: title
-    unique: {  }
     settings:
       language: ''
+    unique: {  }
   -
     target: body
     map:
@@ -180,10 +180,10 @@ mappings:
     target: field_import_uuid
     map:
       value: import_uuid
-    unique:
-      value: '1'
     settings:
       language: null
+    unique:
+      value: '1'
   -
     target: field_feature_image
     map:

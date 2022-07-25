@@ -1,11 +1,11 @@
 id: site_sections_admin_block
 label: 'Site Sections Admin Block'
 ui_limit: ''
-properties:
-  block: 'views_block:site_sections-block_1'
-  use_block_title: true
-  add_block_wrappers: false
 type: block
 type_label: 'Block field'
 entities:
   user: user
+properties:
+  block: 'views_block:site_sections-block_1'
+  use_block_title: true
+  add_block_wrappers: false

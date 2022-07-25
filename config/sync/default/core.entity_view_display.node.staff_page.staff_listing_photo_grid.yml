@@ -59,9 +59,9 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
+          link: false
           wrapper: h1
           class: ''
-          link: false
         ft:
           id: default
           settings:
@@ -74,16 +74,14 @@ bundle: staff_page
 mode: staff_listing_photo_grid
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: top
   field_staff_members:
     type: entity_reference_revisions_entity_view
-    weight: 2
-    region: main
     label: hidden
     settings:
       view_mode: staff_member
@@ -95,28 +93,30 @@ content:
           id: expert
           settings:
             lb: ''
-            prefix: ''
+            lbw: false
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
+            lb-col: false
+            ow: false
             ow-el: ''
             ow-cl: ''
             ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
             fis: true
             fis-el: div
             fis-cl: 'row row-cols-6 d-flex justify-content-center'
             fis-at: ''
+            fis-def-at: false
             fi: true
             fi-el: div
             fi-cl: 'col mb-4'
             fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
             fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 2
+    region: main
 hidden:
   links: true

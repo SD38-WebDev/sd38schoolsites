@@ -16,8 +16,8 @@ bundle: image
 mode: default
 content:
   field_media_image:
+    type: colorbox
     label: visually_hidden
-    weight: 0
     settings:
       colorbox_node_style: large
       colorbox_node_style_first: ''
@@ -34,7 +34,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: colorbox
+    weight: 0
     region: content
 hidden:
   created: true

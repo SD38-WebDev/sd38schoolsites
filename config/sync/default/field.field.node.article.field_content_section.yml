@@ -27,10 +27,10 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       embedded_video: embedded_video
       image_gallery: image_gallery
+    negate: 0
     target_bundles_drag_drop:
       article_feed:
         weight: 27
@@ -87,14 +87,14 @@ settings:
         weight: 44
         enabled: false
       embedded_video:
-        enabled: true
         weight: 45
+        enabled: true
       image_and_text_section:
         weight: 46
         enabled: false
       image_gallery:
-        enabled: true
         weight: 47
+        enabled: true
       recent_blog_posts:
         weight: 48
         enabled: false

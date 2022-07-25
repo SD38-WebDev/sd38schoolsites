@@ -1,6 +1,10 @@
 id: section_menu_block
 label: 'Section Menu Block'
 ui_limit: ''
+type: block
+type_label: 'Block field'
+entities:
+  node: node
 properties:
   block: 'menu_block:main'
   use_block_title: false
@@ -8,18 +12,14 @@ properties:
   config:
     id: 'menu_block:main'
     label: ''
-    provider: menu_block
     label_display: visible
+    provider: menu_block
     follow: true
     follow_parent: child
+    label_link: false
+    label_type: parent
     level: 1
     depth: 1
     expand_all_items: false
     parent: 'main:'
     suggestion: section_menu
-    label_type: parent
-    label_link: false
-type: block
-type_label: 'Block field'
-entities:
-  node: node
