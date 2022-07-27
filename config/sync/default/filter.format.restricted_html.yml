@@ -1,12 +1,10 @@
 uuid: 535a7b02-2fba-4d3e-9074-280b359815d8
 langcode: en
 status: true
-dependencies:
-  module:
-    - media
+dependencies: {  }
 name: 'Restricted HTML'
 format: restricted_html
-weight: 0
+weight: -8
 filters:
   filter_autop:
     id: filter_autop
@@ -30,12 +28,3 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
-  media_embed:
-    id: media_embed
-    provider: media
-    status: false
-    weight: 100
-    settings:
-      default_view_mode: default
-      allowed_view_modes: {  }
-      allowed_media_types: {  }

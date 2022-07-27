@@ -26,6 +26,7 @@ module:
   color: 0
   color_field: 0
   colorbox: 0
+  colorbutton: 0
   config: 0
   config_filter: 0
   config_ignore: 0
@@ -95,6 +96,7 @@ module:
   onlyone: 0
   options: 0
   page_cache: 0
+  panelbutton: 0
   paragraph_view_mode: 0
   paragraphs_edit: 0
   password_policy_character_types: 0

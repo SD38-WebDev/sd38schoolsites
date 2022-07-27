@@ -85,16 +85,17 @@ third_party_settings:
       children:
         - field_feature_image
         - field_legacy_attachments
-      label: Legacy
+      label: 'Legacy Settings'
       region: content
       parent_name: group_tabs
       weight: 17
       format_type: tab
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
         formatter: closed
-        description: ''
+        description: '<b>***** IMPORTANT NOTE: These legacy settings were included to help facilitate the website migration that took place during the 2021/22 school year. These settings will be removed in a future website software update. Please use the ''Content Sections'' to add attachments or images to this page. *****</b><br><br>'
         required_fields: true
 id: node.page.default
 targetEntityType: node
@@ -234,6 +235,11 @@ content:
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
