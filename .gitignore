@@ -8,6 +8,8 @@
 /web/libraries/*
 !/web/libraries/jquery.cycle2
 !/web/libraries/jquery.cycle2/jquery.cycle2.min.js
+!/web/libraries/colorbutton
+!/web/libraries/panelbutton
 console/
 
 # Ignore sensitive information

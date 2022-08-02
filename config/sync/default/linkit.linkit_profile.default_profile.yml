@@ -22,8 +22,8 @@ matchers:
       group_by_bundle: true
       substitution_type: canonical
       limit: 100
-      include_unpublished: true
-    weight: 0
+      include_unpublished: false
+    weight: -9
   d9e27838-571a-4993-8bf7-8c8e48cee3b2:
     id: 'entity:media'
     uuid: d9e27838-571a-4993-8bf7-8c8e48cee3b2
@@ -34,4 +34,4 @@ matchers:
       group_by_bundle: true
       substitution_type: media
       limit: 100
-    weight: 0
+    weight: -10

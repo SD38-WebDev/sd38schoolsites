@@ -15,11 +15,15 @@ settings:
         -
           name: Formatting
           items:
+            - Font
+            - FontSize
             - Bold
             - Italic
-            - FontSize
             - Underline
             - Strike
+            - BGColor
+            - TextColor
+            - Blockquote
             - RemoveFormat
         -
           name: Alignment
@@ -41,7 +45,6 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
             - DrupalImage
             - DrupalMediaLibrary
             - Table
@@ -64,6 +67,8 @@ settings:
     font:
       font_names: ''
       font_sizes: ''
+    colorbutton:
+      colors: ''
     video_embed:
       defaults:
         children:
