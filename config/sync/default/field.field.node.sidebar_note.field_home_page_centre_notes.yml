@@ -1,0 +1,26 @@
+uuid: a62404ec-64f3-43d7-bffa-984882429bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_page_centre_notes
+    - node.type.sidebar_note
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.sidebar_note.field_home_page_centre_notes
+field_name: field_home_page_centre_notes
+entity_type: node
+bundle: sidebar_note
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

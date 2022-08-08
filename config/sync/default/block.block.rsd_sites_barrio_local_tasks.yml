@@ -9,7 +9,7 @@ _core:
 id: rsd_sites_barrio_local_tasks
 theme: rsd_sites_barrio
 region: content
-weight: -10
+weight: -12
 provider: null
 plugin: local_tasks_block
 settings:

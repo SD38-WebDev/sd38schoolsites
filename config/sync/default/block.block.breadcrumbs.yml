@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - context
-    - ctools
+    - node
     - system
   theme:
     - rsd_sites_barrio
@@ -20,16 +20,6 @@ settings:
   label_display: '0'
   provider: system
 visibility:
-  request_path_exclusion:
-    id: request_path_exclusion
-    negate: true
-    context_mapping: {  }
-    pages: ''
-  view_inclusion:
-    id: view_inclusion
-    negate: false
-    context_mapping: {  }
-    view_inclusion: {  }
   'entity_bundle:node':
     id: 'entity_bundle:node'
     negate: true

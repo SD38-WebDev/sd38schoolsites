@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.sidebar_note.field_home_page_centre_notes
     - field.field.node.sidebar_note.field_left_sidebar_note
     - field.field.node.sidebar_note.field_note_title_left
     - field.field.node.sidebar_note.field_note_title_right
@@ -39,11 +40,19 @@ third_party_settings:
         - field_left_sidebar_note
         - field_note_title_right
         - field_right_sidebar_note
+        - field_home_page_centre_notes
 id: node.sidebar_note.default
 targetEntityType: node
 bundle: sidebar_note
 mode: default
 content:
+  field_home_page_centre_notes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: main
   field_left_sidebar_note:
     type: text_default
     label: hidden

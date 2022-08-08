@@ -22,7 +22,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Quicklink (Home Page Button)'
+name: 'Quick Link (Home Page Buttons)'
 type: home_page_button
 description: 'These appear as sidebar buttons on the site home page.'
 help: ''

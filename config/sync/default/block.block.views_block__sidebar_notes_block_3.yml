@@ -1,38 +1,35 @@
-uuid: b36db17f-8186-4565-bce8-2e5915a3e9dd
+uuid: 7a3ec0a9-196c-45b3-ae6d-f2e6d02c29d6
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - views.view.sidebar_notes
   module:
     - context
-    - system
+    - views
   theme:
     - rsd_sites_barrio
-id: mainnavigation
+id: views_block__sidebar_notes_block_3
 theme: rsd_sites_barrio
-region: primary_menu
-weight: 0
+region: content
+weight: -9
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'views_block:sidebar_notes-block_3'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'views_block:sidebar_notes-block_3'
+  label: ''
   label_display: '0'
-  provider: system
-  level: 1
-  depth: 2
-  expand_all_items: false
+  provider: views
+  views_label: ''
+  items_per_page: none
 visibility:
-  context_all:
-    id: context_all
-    negate: null
-    context_mapping: {  }
-    values: ''
   context:
     id: context
     negate: null
-    context_mapping: {  }
+    values: ''
+  context_all:
+    id: context_all
+    negate: null
     values: ''
   user_status:
     id: user_status
