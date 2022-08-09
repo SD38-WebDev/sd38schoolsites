@@ -41,7 +41,6 @@ db:
             - elementary
             - woodward
             - wowk
-            - training
             - boyd
             - hjcambie
             - macneill
@@ -208,10 +207,6 @@ db:
                 default_schema: wowk
                 privileges:
                     wowk: admin
-            training:
-                default_schema: training
-                privileges:
-                    training: admin
             boyd:
                 default_schema: boyd
                 privileges:
