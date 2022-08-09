@@ -6,6 +6,7 @@ dependencies:
     - views.view.sidebar_notes
   module:
     - context
+    - system
     - views
   theme:
     - rsd_sites_barrio
@@ -42,3 +43,7 @@ visibility:
       own_page_true: '0'
       field_value: '0'
     user_fields: uid
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
