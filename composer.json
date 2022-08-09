@@ -107,7 +107,7 @@
         "drupal/feeds": "3.0-alpha10",
         "drupal/feeds_ical": "^1.2",
         "drupal/feeds_tamper": "^2.0@beta",
-        "drupal/field_group": "3.x-dev@dev",
+        "drupal/field_group": "^3.2",
         "drupal/field_group_link": "^3.0",
         "drupal/field_permissions": "^1.2",
         "drupal/field_slideshow": "^3.0@beta",
@@ -197,6 +197,9 @@
           },
           "drupal/core": {
               "Move cursor to new line after image insert in CKEditor": "https://www.drupal.org/files/issues/2021-07-19/3090661-16-ckeditor-insert-space-after-image.patch"
+          },
+          "drupal/field_group": {
+              "Allow token to be used in attributes and classes for HTML elements": "https://www.drupal.org/files/issues/2020-07-03/2961885-13.patch"
           }
         },
         "installer-paths": {
