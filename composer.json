@@ -146,7 +146,7 @@
         "drupal/taxonomy_manager": "^2.0",
         "drupal/term_merge": "1.x-dev@dev",
         "drupal/theme_permission": "^2.0@beta",
-        "drupal/token": "1.9",
+        "drupal/token": "^1.10",
         "drupal/twitter_block": "^3.0@alpha",
         "drupal/unpublished_paragraphs": "^1.2",
         "drupal/upgrade_status": "^3.11",
