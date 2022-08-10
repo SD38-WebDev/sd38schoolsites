@@ -604,22 +604,6 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://training.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
-
-"https://training.sd38.bc.ca":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
-
 "https://boyd.{default}/":
     type: upstream
     upstream: "app:http"
@@ -771,7 +755,6 @@
         enabled: true
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
-
 
 "https://careerprograms.{default}/":
     type: upstream

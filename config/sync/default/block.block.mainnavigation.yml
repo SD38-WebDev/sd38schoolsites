@@ -24,16 +24,6 @@ settings:
   depth: 2
   expand_all_items: false
 visibility:
-  request_path_exclusion:
-    id: request_path_exclusion
-    negate: true
-    context_mapping: {  }
-    pages: ''
-  view_inclusion:
-    id: view_inclusion
-    negate: false
-    context_mapping: {  }
-    view_inclusion: {  }
   context_all:
     id: context_all
     negate: null

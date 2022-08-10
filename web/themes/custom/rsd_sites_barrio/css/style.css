@@ -348,6 +348,19 @@ footer.site-footer {
 	margin: 0px;
 }
 
+.sidebar .block {
+	margin: 0px;
+}
+
+.block-views-blocksidebar-notes-block-1,
+.block-views-blocksidebar-notes-block-2 {
+  padding: 0px 15px !important;
+}
+
+.block-views-blocksidebar-notes-block-3 .views-row {
+  margin-bottom: 15px;
+}
+
 /* #block-views-block-header-image-block-1 {
   position: absolute;
   top: 20px;

@@ -49,7 +49,6 @@ relationships:
     elementary: 'db:elementary'
     woodward: 'db:woodward'
     wowk: 'db:wowk'
-    training: 'db:training'
     boyd: 'db:boyd'
     hjcambie: 'db:hjcambie'
     macneill: 'db:macneill'

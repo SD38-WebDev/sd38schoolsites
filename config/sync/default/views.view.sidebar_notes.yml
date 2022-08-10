@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.home_page_centre_notes
     - core.entity_view_mode.node.sidebar_note_left
     - core.entity_view_mode.node.sidebar_note_right
     - field.storage.node.field_left_sidebar_note
@@ -13,7 +14,7 @@ dependencies:
     - smart_trim
     - user
 id: sidebar_notes
-label: 'Sidebar Notes'
+label: 'Home Page Sidebar Notes'
 module: views
 description: ''
 tag: ''
@@ -26,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Sidebar Notes'
+      title: 'Home Page Sidebar Notes'
       fields:
         field_right_sidebar_note:
           id: field_right_sidebar_note
@@ -174,7 +175,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: sidebar_note_left
+          view_mode: home_page_centre_notes
       query:
         type: views_query
         options:
@@ -184,6 +185,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: sidebar-notes-block
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -196,7 +198,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_right_sidebar_note'
-        - 'config_split_state:field.storage.node.field_right_sidebar_note'
   block_1:
     id: block_1
     display_title: 'Left Sidebar Block'
@@ -307,7 +308,17 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: sidebar_note_left
       defaults:
+        style: false
+        row: false
         fields: false
         filters: false
         filter_groups: false
@@ -324,7 +335,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_left_sidebar_note'
-        - 'config_split_state:field.storage.node.field_left_sidebar_note'
   block_2:
     id: block_2
     display_title: 'Right Sidebar Block'
@@ -492,4 +502,31 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_right_sidebar_note'
-        - 'config_split_state:field.storage.node.field_right_sidebar_note'
+  block_3:
+    id: block_3
+    display_title: 'Centre Area Notes'
+    display_plugin: block
+    position: 3
+    display_options:
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: home_page_centre_notes
+      defaults:
+        style: false
+        row: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_right_sidebar_note'

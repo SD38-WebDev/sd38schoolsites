@@ -41,13 +41,14 @@ third_party_settings:
       weight: 20
       format_type: html_element
       format_settings:
-        classes: 'wrapper [paragraph:field_tile_colour:value]'
+        classes: wrapper
+        show_empty_fields: false
         id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        attributes: ''
+        attributes: 'class="[paragraph:field_tile_colour:value]"'
         effect: none
         speed: fast
   ds:
@@ -96,6 +97,8 @@ content:
     settings:
       image_link: ''
       image_style: square_image_thumbnail_480x480
+      image_loading:
+        attribute: lazy
     third_party_settings:
       ds:
         ft:

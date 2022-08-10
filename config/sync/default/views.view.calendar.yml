@@ -520,7 +520,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
-        - 'config_split_state:field.storage.node.field_event_date'
   block_1:
     id: block_1
     display_title: 'Calendar Block'
@@ -875,7 +874,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<a class=\"btn btn-primary\" role=\"button\" href=\"webcal://[site:url-brief]/calendar-feed.ics\"><i class=\"bi bi-calendar-plus\"></i><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-calendar-plus\" viewBox=\"0 0 16 16\">\r\n  <path d=\"M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z\"></path>\r\n  <path d=\"M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z\"></path>\r\n</svg> Subscribe to our calendar</a>\r\n<br><br>\r\n<div class=\"small text-muted\">\r\n<b>Notes:</b>\r\n<ul>\r\n<li>The school calendar and calendar feed will display events going back one year.</li>\r\n<li>If you're on a computer, simply right click the subcription button, copy the feed link and you can then manually add the feed to your favorite calendar application.</li>\r\n</ul>\r\n</div>"
+            value: "<a class=\"btn btn-sm btn-light\" role=\"button\" href=\"webcal://[site:url-brief]/calendar-feed.ics\"><i class=\"bi bi-calendar-plus\"></i><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-calendar-plus\" viewBox=\"0 0 16 16\">\r\n  <path d=\"M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z\"></path>\r\n  <path d=\"M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z\"></path>\r\n</svg> Subscribe to our calendar</a>\r\n<br><br>\r\n<div class=\"small text-muted\">\r\n<b>Notes:</b>\r\n<ul>\r\n<li>The school calendar and calendar feed will display events going back one year.</li>\r\n<li>If you're on a computer, simply right click the subcription button, copy the feed link and you can then manually add the feed to your favorite calendar application.</li>\r\n</ul>\r\n</div>"
             format: full_html
           tokenize: false
       display_extenders: {  }
@@ -890,7 +889,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
-        - 'config_split_state:field.storage.node.field_event_date'
   block_2:
     id: block_2
     display_title: 'Calendar Block (without times)'
@@ -1262,7 +1260,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
-        - 'config_split_state:field.storage.node.field_event_date'
   ical_1:
     id: ical_1
     display_title: 'iCal display'
@@ -1801,7 +1798,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
-        - 'config_split_state:field.storage.node.field_event_date'
   page_1:
     id: page_1
     display_title: Page
@@ -1830,4 +1826,3 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_event_date'
-        - 'config_split_state:field.storage.node.field_event_date'
