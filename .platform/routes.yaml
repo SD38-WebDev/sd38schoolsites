@@ -4,7 +4,13 @@
 # to be processed by Platform.sh.
 
 
-
+# "https://blundell.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://blundell.sd38.bc.ca":
     type: upstream
@@ -14,13 +20,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://bridge.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://bridge.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://bridge.sd38.bc.ca":
     type: upstream
@@ -30,13 +36,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://brighouse.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://brighouse.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://brighouse.sd38.bc.ca":
     type: upstream
@@ -46,13 +52,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://byng.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://byng.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://byng.sd38.bc.ca":
     type: upstream
@@ -62,13 +68,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://cook.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://cook.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://cook.sd38.bc.ca":
     type: upstream
@@ -78,13 +84,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://debeck.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://debeck.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://debeck.sd38.bc.ca":
     type: upstream
@@ -94,13 +100,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://diefenbaker.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://diefenbaker.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://diefenbaker.sd38.bc.ca":
     type: upstream
@@ -110,13 +116,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://dixon.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://dixon.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://dixon.sd38.bc.ca":
     type: upstream
@@ -126,13 +132,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://errington.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://errington.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://errington.sd38.bc.ca":
     type: upstream
@@ -142,13 +148,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://ferris.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://ferris.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://ferris.sd38.bc.ca":
     type: upstream
@@ -158,13 +164,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://gardencity.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://gardencity.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://gardencity.sd38.bc.ca":
     type: upstream
@@ -174,13 +180,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://currie.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://currie.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://currie.sd38.bc.ca":
     type: upstream
@@ -190,13 +196,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://gilmore.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://gilmore.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://gilmore.sd38.bc.ca":
     type: upstream
@@ -206,13 +212,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://grauer.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://grauer.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://grauer.sd38.bc.ca":
     type: upstream
@@ -222,13 +228,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://hamilton.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://hamilton.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://hamilton.sd38.bc.ca":
     type: upstream
@@ -238,13 +244,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://homma.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://homma.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://homma.sd38.bc.ca":
     type: upstream
@@ -254,13 +260,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://kidd.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://kidd.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://kidd.sd38.bc.ca":
     type: upstream
@@ -270,13 +276,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://kingswood.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://kingswood.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://kingswood.sd38.bc.ca":
     type: upstream
@@ -286,13 +292,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://lee.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://lee.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://lee.sd38.bc.ca":
     type: upstream
@@ -302,13 +308,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://maplelane.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://maplelane.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://maplelane.sd38.bc.ca":
     type: upstream
@@ -318,13 +324,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mckay.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mckay.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mckay.sd38.bc.ca":
     type: upstream
@@ -334,13 +340,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mckinney.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mckinney.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mckinney.sd38.bc.ca":
     type: upstream
@@ -350,13 +356,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mcneely.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mcneely.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mcneely.sd38.bc.ca":
     type: upstream
@@ -366,13 +372,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mitchell.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mitchell.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mitchell.sd38.bc.ca":
     type: upstream
@@ -382,13 +388,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://quilchena.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://quilchena.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://quilchena.sd38.bc.ca":
     type: upstream
@@ -398,13 +404,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://spulukwuks.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://spulukwuks.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://spulukwuks.sd38.bc.ca":
     type: upstream
@@ -414,13 +420,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://steves.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://steves.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://steves.sd38.bc.ca":
     type: upstream
@@ -430,13 +436,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://tait.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://tait.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://tait.sd38.bc.ca":
     type: upstream
@@ -446,13 +452,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://talmey.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://talmey.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://talmey.sd38.bc.ca":
     type: upstream
@@ -462,13 +468,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://thompson.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://thompson.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://thompson.sd38.bc.ca":
     type: upstream
@@ -478,13 +484,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://tomsett.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://tomsett.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://tomsett.sd38.bc.ca":
     type: upstream
@@ -494,13 +500,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://westwind.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://westwind.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://westwind.sd38.bc.ca":
     type: upstream
@@ -510,13 +516,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://whiteside.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://whiteside.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://whiteside.sd38.bc.ca":
     type: upstream
@@ -526,13 +532,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://anderson.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://anderson.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://anderson.sd38.bc.ca":
     type: upstream
@@ -542,13 +548,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://blair.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://blair.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://blair.sd38.bc.ca":
     type: upstream
@@ -558,21 +564,21 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://elementary.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://elementary.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://woodward.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://woodward.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://woodward.sd38.bc.ca":
     type: upstream
@@ -582,13 +588,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://wowk.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://wowk.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://wowk.sd38.bc.ca":
     type: upstream
@@ -598,13 +604,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://boyd.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://boyd.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://boyd.sd38.bc.ca":
     type: upstream
@@ -614,13 +620,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://hjcambie.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://hjcambie.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://hjcambie.sd38.bc.ca":
     type: upstream
@@ -630,13 +636,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://macneill.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://macneill.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://macneill.sd38.bc.ca":
     type: upstream
@@ -646,13 +652,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mcmath.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mcmath.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mcmath.sd38.bc.ca":
     type: upstream
@@ -662,13 +668,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mcnair.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mcnair.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mcnair.sd38.bc.ca":
     type: upstream
@@ -678,13 +684,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://mcroberts.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://mcroberts.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://mcroberts.sd38.bc.ca":
     type: upstream
@@ -694,13 +700,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://palmer.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://palmer.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://palmer.sd38.bc.ca":
     type: upstream
@@ -710,13 +716,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://slss.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://slss.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://slss.sd38.bc.ca":
     type: upstream
@@ -726,13 +732,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://jnburnett.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://jnburnett.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://jnburnett.sd38.bc.ca":
     type: upstream
@@ -742,13 +748,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://rhs.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://rhs.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://careerprograms.{default}/":
     type: upstream
@@ -758,13 +764,13 @@
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
-"https://ce.{default}/":
-    type: upstream
-    upstream: "app:http"
-    cache:
-        enabled: true
-        # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
-        cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
+# "https://ce.{default}/":
+#     type: upstream
+#     upstream: "app:http"
+#     cache:
+#         enabled: true
+#         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
+#         cookies: ['/^SS?ESS/', '/^Drupal.visitor/']
 
 "https://ce.sd38.bc.ca/":
     type: upstream
