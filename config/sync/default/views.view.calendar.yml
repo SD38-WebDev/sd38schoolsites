@@ -165,7 +165,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 500
+          items_per_page: 100
       exposed_form:
         type: basic
         options:
@@ -196,20 +196,18 @@ display:
           content: '<div class="row"><div class="col bg-light text-center text-muted rounded p-4"><small>No events scheduled at this time.</small></div></div>'
           tokenize: false
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
           plugin_id: date
-          order: DESC
+          order: ASC
           expose:
             label: ''
-            field_identifier: created
+            field_identifier: ''
           exposed: false
           granularity: second
       arguments: {  }
@@ -610,7 +608,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-6 months'
+            value: '-3 months'
             type: offset
           group: 1
           exposed: false
@@ -820,7 +818,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-6 months'
+            value: '-3 months'
             type: offset
           group: 2
           exposed: false
@@ -979,7 +977,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 year'
+            value: '-3 months'
             type: offset
           group: 1
           exposed: false
@@ -1189,7 +1187,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 year'
+            value: '-3 months'
             type: offset
           group: 2
           exposed: false
@@ -1447,7 +1445,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: '500'
+          items_per_page: '50'
           offset: '0'
       displays:
         block_1: block_1
@@ -1539,7 +1537,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 year'
+            value: '-1 month'
             type: offset
           group: 1
           exposed: false
@@ -1749,7 +1747,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 year'
+            value: '-1 month'
             type: offset
           group: 2
           exposed: false
