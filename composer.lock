@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a55a52877ce51f2290755763b6255d1f",
+    "content-hash": "bcc7258a61f0b68d45995d1de6e4a6df",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7547,20 +7547,20 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.4.3",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.4.3"
+                "reference": "3.6.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.4.3.zip",
-                "reference": "3.4.3",
-                "shasum": "802f21abc5c1848b04b88169cd63e0980ed5ec85"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-3.6.1.zip",
+                "reference": "3.6.1",
+                "shasum": "a2ce55f5e38d046143881839f5ba0e6dcb49e823"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
+                "drupal/core": "^9 || ^10",
                 "php": ">=7.1",
                 "simshaun/recurr": "^4"
             },
@@ -7570,8 +7570,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.4.3",
-                    "datestamp": "1634467244",
+                    "version": "3.6.1",
+                    "datestamp": "1661631736",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7591,10 +7591,6 @@
                 {
                     "name": "mandclu",
                     "homepage": "https://www.drupal.org/user/52136"
-                },
-                {
-                    "name": "mparker17",
-                    "homepage": "https://www.drupal.org/user/536298"
                 },
                 {
                     "name": "stefan.korn",

@@ -6,12 +6,16 @@ dependencies:
     - field.storage.node.field_event_date
     - node.type.calendar_event
   module:
+    - required_api
     - smart_date
     - smart_date_recur
 third_party_settings:
   smart_date_recur:
-    allow_recurring: true
+    allow_recurring: false
     month_limit: 12
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
 id: node.calendar_event.field_event_date
 field_name: field_event_date
 entity_type: node
