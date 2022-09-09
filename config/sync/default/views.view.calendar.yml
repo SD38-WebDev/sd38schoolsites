@@ -165,7 +165,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 100
+          items_per_page: 200
       exposed_form:
         type: basic
         options:
@@ -608,7 +608,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-3 months'
+            value: '-1 month'
             type: offset
           group: 1
           exposed: false
@@ -818,7 +818,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-3 months'
+            value: '-1 month'
             type: offset
           group: 2
           exposed: false
@@ -977,7 +977,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-3 months'
+            value: '-1 month'
             type: offset
           group: 1
           exposed: false
@@ -1187,7 +1187,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-3 months'
+            value: '-1 month'
             type: offset
           group: 2
           exposed: false
@@ -1445,7 +1445,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: '50'
+          items_per_page: '200'
           offset: '0'
       displays:
         block_1: block_1
@@ -1537,7 +1537,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 month'
+            value: '-1 week'
             type: offset
           group: 1
           exposed: false
@@ -1747,7 +1747,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 month'
+            value: '-1 week'
             type: offset
           group: 2
           exposed: false
