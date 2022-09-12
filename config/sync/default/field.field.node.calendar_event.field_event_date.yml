@@ -11,7 +11,7 @@ dependencies:
     - smart_date_recur
 third_party_settings:
   smart_date_recur:
-    allow_recurring: false
+    allow_recurring: true
     month_limit: 12
   required_api:
     required_plugin: default

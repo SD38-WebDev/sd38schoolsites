@@ -1,0 +1,16 @@
+uuid: a0eeb2e9-ece9-4c79-9c5c-8c53afb7c551
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.date_format.long
+_core:
+  default_config_hash: zx_IJn4SosQt8RbdEHFJSrxMvuMTTGiSgVioy1porhY
+id: default_interpreter
+label: 'Default Interpreter'
+plugin: rl
+settings:
+  show_start_date: true
+  show_until: true
+  date_format: long
+  show_infinite: true

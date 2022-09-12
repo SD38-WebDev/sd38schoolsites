@@ -107,7 +107,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: '{{ field_event_date__rrule }}'
             make_link: false
             path: ''
             absolute: false
@@ -144,13 +144,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
+          click_sort_column: rrule
           type: smartdate_default
           settings:
             timezone_override: America/Vancouver
             format: default
             force_chronological: false
             add_classes: false
+            time_wrapper: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -165,7 +166,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 200
+          items_per_page: 250
       exposed_form:
         type: basic
         options:
@@ -505,6 +506,7 @@ display:
           query_tags: {  }
       relationships: {  }
       css_class: ''
+      group_by: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -608,7 +610,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 month'
+            value: '-3 months'
             type: offset
           group: 1
           exposed: false
@@ -818,7 +820,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 month'
+            value: '-3 months'
             type: offset
           group: 2
           exposed: false
@@ -857,9 +859,11 @@ display:
           1: AND
           2: AND
       defaults:
+        group_by: false
         filters: false
         filter_groups: false
         footer: false
+      group_by: true
       display_description: ''
       footer:
         area:
@@ -977,7 +981,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 month'
+            value: '-3 months'
             type: offset
           group: 1
           exposed: false
@@ -1187,7 +1191,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-1 month'
+            value: '-3 months'
             type: offset
           group: 2
           exposed: false
@@ -1445,7 +1449,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: '200'
+          items_per_page: '400'
           offset: '0'
       displays:
         block_1: block_1
