@@ -6,8 +6,6 @@ dependencies:
     - field.storage.node.field_site_section
     - node.type.article
     - taxonomy.vocabulary.site_blogs_sections
-  content:
-    - 'taxonomy_term:site_blogs_sections:341f3e1a-2882-4aed-a884-fd606fb26352'
   module:
     - required_api
 third_party_settings:
@@ -29,9 +27,7 @@ label: 'Site Section'
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    target_uuid: 341f3e1a-2882-4aed-a884-fd606fb26352
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
