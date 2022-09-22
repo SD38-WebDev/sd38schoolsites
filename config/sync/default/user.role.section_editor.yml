@@ -48,6 +48,7 @@ permissions:
   - 'delete own image media'
   - 'delete own page content'
   - 'delete own remote_video media'
+  - 'edit any article content'
   - 'edit own article content'
   - 'edit own audio media'
   - 'edit own calendar_event content'

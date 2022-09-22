@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_site_section
     - node.type.article
     - taxonomy.vocabulary.site_blogs_sections
+  content:
+    - 'taxonomy_term:site_blogs_sections:341f3e1a-2882-4aed-a884-fd606fb26352'
   module:
     - required_api
 third_party_settings:
@@ -14,6 +16,9 @@ third_party_settings:
     required_plugin_options:
       section_editor: section_editor
       anonymous: 0
+      webform_editor: 0
+      blogging_role: 0
+      site_menu_editor: 0
       site_editor: 0
       administrator: 0
 id: node.article.field_site_section
@@ -24,7 +29,9 @@ label: 'Site Section'
 description: ''
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    target_uuid: 341f3e1a-2882-4aed-a884-fd606fb26352
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
