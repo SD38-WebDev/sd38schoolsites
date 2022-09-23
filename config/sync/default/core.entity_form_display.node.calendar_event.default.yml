@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.calendar_event.field_import_uuid
     - field.field.node.calendar_event.field_promote_to_front_page
     - field.field.node.calendar_event.field_promote_to_school_calendar
+    - field.field.node.calendar_event.field_recurring_dates
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
   module:
@@ -216,11 +217,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   feeds_item: true
   field_import_uuid: true
+  field_recurring_dates: true
   promote: true

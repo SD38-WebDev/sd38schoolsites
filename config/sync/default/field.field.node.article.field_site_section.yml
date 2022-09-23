@@ -14,6 +14,9 @@ third_party_settings:
     required_plugin_options:
       section_editor: section_editor
       anonymous: 0
+      webform_editor: 0
+      blogging_role: 0
+      site_menu_editor: 0
       site_editor: 0
       administrator: 0
 id: node.article.field_site_section

@@ -1,21 +1,22 @@
-uuid: 5f93e717-ce28-45f7-ab25-54f66f9e8e91
+uuid: b40c2653-b4cc-48ab-a535-ea1d69217397
 langcode: en
 status: true
 dependencies:
   module:
+    - date_recur
     - field_permissions
     - node
-    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_site_section
-field_name: field_site_section
+id: node.field_recurring_dates
+field_name: field_recurring_dates
 entity_type: node
-type: entity_reference
+type: date_recur
 settings:
-  target_type: taxonomy_term
-module: core
+  datetime_type: datetime
+  rrule_max_length: 256
+module: date_recur
 locked: false
 cardinality: 1
 translatable: true
