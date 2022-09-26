@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.date_format.medium
     - field.field.node.calendar_event.body
     - field.field.node.calendar_event.feeds_item
     - field.field.node.calendar_event.field_event_date
@@ -12,13 +11,11 @@ dependencies:
     - field.field.node.calendar_event.field_import_uuid
     - field.field.node.calendar_event.field_promote_to_front_page
     - field.field.node.calendar_event.field_promote_to_school_calendar
-    - field.field.node.calendar_event.field_recurring_dates
     - field.field.node.calendar_event.field_site_section
     - node.type.calendar_event
   module:
     - address
     - address_map_link
-    - date_recur
     - ds
     - options
     - smart_date_recur
@@ -240,21 +237,6 @@ content:
     third_party_settings: {  }
     weight: 5
     region: top
-  field_recurring_dates:
-    type: date_recur_basic_formatter
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-      separator: '-'
-      show_next: 5
-      count_per_item: true
-      occurrence_format_type: medium
-      same_end_date_format_type: medium
-      interpreter: null
-    third_party_settings: {  }
-    weight: 6
-    region: content
 hidden:
   feeds_item: true
   field_import_uuid: true

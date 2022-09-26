@@ -39,7 +39,6 @@ module:
   contextual: 0
   crop: 0
   ctools: 0
-  date_recur: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
