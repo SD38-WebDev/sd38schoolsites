@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4a5b5d01d3b9955234eceb4b8e37806",
+    "content-hash": "8a924702448ee6af869bdca6eb3d105d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4643,23 +4643,23 @@
         },
         {
             "name": "drupal/date_recur",
-            "version": "dev-3.x",
+            "version": "dev-3.1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/date_recur.git",
-                "reference": "71627d3527837d311667b224671dc8301658e096"
+                "reference": "1dde209e1a4e8c510629c07944fe23dc394b33db"
             },
             "require": {
                 "drupal/core": "^9",
-                "php": ">=7.3",
+                "php": ">=7.4 <8.1",
                 "rlanvin/php-rrule": "1.*"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "dev-master",
                 "drupal/coder": "^8.3",
                 "drupal/token": "^1.5",
-                "mglaman/phpstan-drupal": "^0.12",
-                "phpstan/phpstan": "^0.12",
+                "mglaman/phpstan-drupal": "^1",
+                "phpstan/phpstan": "^1",
                 "phpstan/phpstan-deprecation-rules": "*"
             },
             "suggest": {
@@ -4668,11 +4668,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-3.x": "3.x-dev"
+                    "dev-3.1.x": "3.1.x-dev"
                 },
                 "drupal": {
-                    "version": "3.x-dev",
-                    "datestamp": "1614745196",
+                    "version": "3.1.0-rc1+4-dev",
+                    "datestamp": "1643469798",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5453,17 +5453,17 @@
         },
         {
             "name": "drupal/feeds_ical",
-            "version": "1.2.0",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/feeds_ical.git",
-                "reference": "8.x-1.2"
+                "reference": "2.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/feeds_ical-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "efb2e0bf211f6a2f5dce521f789d9b76405d574f"
+                "url": "https://ftp.drupal.org/files/projects/feeds_ical-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "c4b0bb23e62f950081fd2a177c1dba210d6f76e9"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5473,8 +5473,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1634404962",
+                    "version": "2.0.3",
+                    "datestamp": "1637780685",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -15375,6 +15375,7 @@
         "drupal/config_split": 5,
         "drupal/context": 10,
         "drupal/context_entity_field": 20,
+        "drupal/date_recur": 20,
         "drupal/entity_submit_redirect": 20,
         "drupal/feeds_tamper": 10,
         "drupal/field_slideshow": 10,
