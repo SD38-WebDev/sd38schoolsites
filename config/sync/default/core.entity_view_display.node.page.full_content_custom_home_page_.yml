@@ -31,7 +31,7 @@ third_party_settings:
           wrapper: div
           classes: {  }
           add_layout_class: 0
-          attributes: ' id|carousel-home, class|row justify-content-center'
+          attributes: 'id|custom-home, class|row justify-content-center'
         regions:
           top:
             wrapper: div
@@ -133,9 +133,9 @@ content:
             lbw-cl: ''
             lbw-at: ''
             lb-col: false
-            ow: false
+            ow: true
             ow-el: ''
-            ow-cl: ''
+            ow-cl: mt-5
             ow-at: ''
             ow-def-at: false
             ow-def-cl: false

@@ -2010,7 +2010,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class=""><div class="wrapper border-0625"><div class="row">'
+            text: '<div class=""><div class="wrapper"><div class="row d-flex">'
             make_link: false
             path: ''
             absolute: false
@@ -2059,7 +2059,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<div class="col-12 col-md-4 d-none d-sm-none d-md-block"><div class="article-img"><a href="{{ view_node_1 }}" title="{{ title_1 }}">{{ field_feature_image }}</a></div></div>'
+            text: '<div class="col-12 col-md-3  article-img d-none d-sm-none d-md-block"><div class="article-img"><a href="{{ view_node_1 }}" title="{{ title_1 }}">{{ field_feature_image }}</a></div></div>'
             make_link: false
             path: ''
             absolute: false
@@ -2101,6 +2101,8 @@ display:
           settings:
             image_link: ''
             image_style: article_thumbnail
+            image_loading:
+              attribute: lazy
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2123,7 +2125,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<div class="col-12 col-md-4"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
+            text: '<div class="col-12 col-md-3 article-img"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
             make_link: false
             path: ''
             absolute: false
@@ -2165,6 +2167,8 @@ display:
           settings:
             image_link: ''
             image_style: article_thumbnail
+            image_loading:
+              attribute: lazy
           group_column: entity_id
           group_columns: {  }
           group_rows: true
@@ -2301,7 +2305,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col\">\r\n{{ field_section_home_page }}\r\n{{ title }}\r\n{{ field_event_date }}\r\n<div class=\"small\">\r\n</div>\r\n</div>"
+            text: "<div class=\"col article-text\">\r\n{{ field_section_home_page }}\r\n{{ title }}\r\n{{ field_event_date }}\r\n<div class=\"small\">\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

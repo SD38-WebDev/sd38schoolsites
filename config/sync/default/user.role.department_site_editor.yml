@@ -1,0 +1,21 @@
+uuid: 4d81704f-3a3f-4ebe-8ad2-200eeccc91e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carousel_item
+  module:
+    - node
+id: department_site_editor
+label: 'Department Site Editor'
+weight: -4
+is_admin: null
+permissions:
+  - 'create carousel_item content'
+  - 'delete any carousel_item content'
+  - 'delete carousel_item revisions'
+  - 'delete own carousel_item content'
+  - 'edit any carousel_item content'
+  - 'edit own carousel_item content'
+  - 'revert carousel_item revisions'
+  - 'view carousel_item revisions'
