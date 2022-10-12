@@ -83,12 +83,16 @@
           <div class="container">
           {% endif %}
               {{ page.secondary_menu }}
-              {{ page.top_header }}
-              {% if page.top_header_form %}
-                <div class="form-inline navbar-form float-right">
-                  {{ page.top_header_form }}
-                </div>
-              {% endif %}
+							<div class="row">
+								<div class="col-12 col-lg-9">
+              		{{ page.top_header }}
+								</div>
+								{% if page.top_header_form %}
+								<div class="col-12 col-lg-3">
+              		{{ page.top_header_form }}
+								</div>
+								{% endif %}
+							</div>
           {% if container_navbar %}
           </div>
           {% endif %}

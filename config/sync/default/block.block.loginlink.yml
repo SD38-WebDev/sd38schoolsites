@@ -1,0 +1,45 @@
+uuid: fbe14c8c-64b0-4b65-b47c-e31e68f37ad9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:defe6de0-a4d0-483c-b1d0-0549e026c649'
+  module:
+    - block_content
+    - context
+  theme:
+    - rsd_sites_barrio
+id: loginlink
+theme: rsd_sites_barrio
+region: top_header_form
+weight: 0
+provider: null
+plugin: 'block_content:defe6de0-a4d0-483c-b1d0-0549e026c649'
+settings:
+  id: 'block_content:defe6de0-a4d0-483c-b1d0-0549e026c649'
+  label: 'Login Link'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  context:
+    id: context
+    negate: null
+    values: ''
+  context_all:
+    id: context_all
+    negate: null
+    values: ''
+  user_status:
+    id: user_status
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    user_status:
+      viewing_profile: '0'
+      logged_viewing_profile: '0'
+      own_page_true: '0'
+      field_value: '0'
+    user_fields: uid
