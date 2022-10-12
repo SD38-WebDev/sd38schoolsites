@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.sidebar_note.field_note_title_left
     - field.field.node.sidebar_note.field_note_title_right
     - field.field.node.sidebar_note.field_right_sidebar_note
+    - field.field.node.sidebar_note.field_site_header_notes
     - node.type.sidebar_note
   module:
     - ds
@@ -119,4 +120,5 @@ hidden:
   field_home_page_centre_notes: true
   field_left_sidebar_note: true
   field_note_title_left: true
+  field_site_header_notes: true
   links: true

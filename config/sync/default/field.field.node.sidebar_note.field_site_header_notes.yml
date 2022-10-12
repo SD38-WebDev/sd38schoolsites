@@ -1,0 +1,26 @@
+uuid: 85555ad9-46ee-4fcd-9f1b-5caff9e49146
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_site_header_notes
+    - node.type.sidebar_note
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.sidebar_note.field_site_header_notes
+field_name: field_site_header_notes
+entity_type: node
+bundle: sidebar_note
+label: Note
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
