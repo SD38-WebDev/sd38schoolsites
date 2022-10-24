@@ -400,7 +400,7 @@ display:
           pause: 1
           use_caption: 1
           wrap: 1
-          effect: slide
+          effect: 'slide carousel-fade'
           image: field_carousel_image
           title: title
           description: field_body
