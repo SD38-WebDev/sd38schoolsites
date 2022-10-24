@@ -1,0 +1,14 @@
+uuid: 206a293d-ca61-4ff9-a5b2-d43bc401b0fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.department_site_editor
+  module:
+    - user
+id: user_remove_role_action.department_site_editor
+label: 'Remove the Department Site Editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: department_site_editor

@@ -1,0 +1,10 @@
+uuid: 80d0234e-9ef3-4159-9f4e-fd85d402e1bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.site_header_notes
+label: 'Site Header Notes'
+targetEntityType: node
+cache: true

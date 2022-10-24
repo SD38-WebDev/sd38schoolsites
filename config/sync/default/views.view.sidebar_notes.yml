@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.home_page_centre_notes
     - core.entity_view_mode.node.sidebar_note_left
     - core.entity_view_mode.node.sidebar_note_right
+    - core.entity_view_mode.node.site_header_notes
     - field.storage.node.field_left_sidebar_note
     - field.storage.node.field_right_sidebar_note
     - node.type.sidebar_note
@@ -516,6 +517,34 @@ display:
         options:
           relationship: none
           view_mode: home_page_centre_notes
+      defaults:
+        style: false
+        row: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_right_sidebar_note'
+  block_4:
+    id: block_4
+    display_title: 'Site Header Notes'
+    display_plugin: block
+    position: 3
+    display_options:
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: site_header_notes
       defaults:
         style: false
         row: false

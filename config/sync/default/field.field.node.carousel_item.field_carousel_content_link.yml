@@ -1,0 +1,28 @@
+uuid: 4a6016c8-37e3-4720-8885-da378c6970db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carousel_content_link
+    - node.type.carousel_item
+  module:
+    - link
+    - required_api
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.carousel_item.field_carousel_content_link
+field_name: field_carousel_content_link
+entity_type: node
+bundle: carousel_item
+label: 'Content Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

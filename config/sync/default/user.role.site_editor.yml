@@ -46,7 +46,7 @@ dependencies:
     - workbench_access
 id: site_editor
 label: 'Site Editor'
-weight: -4
+weight: -3
 is_admin: null
 permissions:
   - 'access content overview'

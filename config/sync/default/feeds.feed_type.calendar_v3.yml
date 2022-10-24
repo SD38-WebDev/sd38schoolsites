@@ -1,10 +1,8 @@
-uuid: d7ed00c0-94c8-46d8-89a5-9ca77db00f04
+uuid: e8345938-fe46-4c12-b227-9961db95aa3f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.calendar_event.body
-    - field.field.node.calendar_event.feeds_item
     - field.field.node.calendar_event.field_event_date
     - node.type.calendar_event
   module:
@@ -15,8 +13,8 @@ dependencies:
 third_party_settings:
   feeds_tamper:
     tampers: {  }
-label: 'Calendar Feed v2'
-id: calendar_feed_v2
+label: 'Calendar V3'
+id: calendar_v3
 description: ''
 help: ''
 import_period: -1
@@ -37,40 +35,20 @@ processor_configuration:
   authorize: true
   expire: -1
   owner_feed_author: true
-  owner_id: 1
-custom_sources:
-  import_uuid:
-    value: 'Import UUID'
-    label: 'Import UUID'
-    machine_name: import_uuid
+  owner_id: 0
+custom_sources: {  }
 mappings:
+  -
+    target: title
+    map:
+      value: summary
+    settings:
+      language: ''
+    unique: {  }
   -
     target: field_event_date
     map:
       value: dtstart
       end_value: dtend
     settings:
-      language: null
-  -
-    target: title
-    map:
-      value: summary
-    settings:
-      language: null
-    unique: {  }
-  -
-    target: feeds_item
-    map:
-      url: 'parent:source'
-      guid: uid
-    settings: {  }
-    unique:
-      guid: '1'
-  -
-    target: body
-    map:
-      value: description
-      summary: ''
-    settings:
-      language: null
-      format: plain_text
+      language: ''

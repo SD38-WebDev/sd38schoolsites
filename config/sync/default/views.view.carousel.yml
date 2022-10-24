@@ -3,14 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - field.storage.node.field_feature_image
+    - field.storage.node.field_body
+    - field.storage.node.field_carousel_content_link
+    - field.storage.node.field_carousel_image
     - image.style.carousel_image
-    - node.type.article
+    - node.type.carousel_item
   module:
-    - media
+    - image
+    - link
     - node
-    - smart_trim
+    - text
     - user
     - views_bootstrap
 id: carousel
@@ -29,6 +31,73 @@ display:
     display_options:
       title: Carousel
       fields:
+        field_carousel_content_link:
+          id: field_carousel_content_link
+          table: node__field_carousel_content_link
+          field: field_carousel_content_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: '{{ field_carousel_content_link__uri }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: null
+            url_only: true
+            url_plain: true
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -42,19 +111,37 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
+            alter_text: true
+            text: '<a href="{{ field_carousel_content_link }}" title="{{ title }}">{{ title }}</a>'
             make_link: false
+            path: ''
             absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
             word_boundary: false
             ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
             strip_tags: false
             trim: false
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -65,7 +152,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -76,10 +163,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_feature_image:
-          id: field_feature_image
-          table: node__field_feature_image
-          field: field_feature_image
+        field_carousel_image:
+          id: field_carousel_image
+          table: node__field_carousel_image
+          field: field_carousel_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -126,11 +213,13 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: image
           settings:
-            image_link: content
+            image_link: ''
             image_style: carousel_image
-          group_column: target_id
+            image_loading:
+              attribute: lazy
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -140,10 +229,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        body:
-          id: body
-          table: node__body
-          field: body
+        field_body:
+          id: field_body
+          table: node__field_body
+          field: field_body
           relationship: none
           group_type: group
           admin_label: ''
@@ -190,20 +279,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: smart_trim
-          settings:
-            trim_length: 30
-            trim_type: words
-            trim_suffix: …
-            wrap_output: false
-            wrap_class: trimmed
-            more_link: false
-            more_class: more-link
-            more_text: 'Read more'
-            summary_handler: full
-            trim_options:
-              text: true
-              trim_zero: false
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -273,14 +350,44 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          operator: in
           value:
-            article: article
+            carousel_item: carousel_item
+          group: 1
+          exposed: false
           expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
             operator_limit_selection: false
             operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: views_bootstrap_carousel
         options:
@@ -294,9 +401,9 @@ display:
           use_caption: 1
           wrap: 1
           effect: 'slide carousel-fade'
-          image: field_feature_image
+          image: field_carousel_image
           title: title
-          description: body
+          description: field_body
       row:
         type: fields
       query:
@@ -319,8 +426,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_feature_image'
+        - 'config:field.storage.node.field_body'
+        - 'config:field.storage.node.field_carousel_content_link'
+        - 'config:field.storage.node.field_carousel_image'
   block_1:
     id: block_1
     display_title: Block
@@ -336,5 +444,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_feature_image'
+        - 'config:field.storage.node.field_body'
+        - 'config:field.storage.node.field_carousel_content_link'
+        - 'config:field.storage.node.field_carousel_image'

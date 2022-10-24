@@ -1,0 +1,26 @@
+uuid: 1f936876-e71a-43f6-aa4b-7b22ac95d9fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.carousel_item
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.carousel_item.field_body
+field_name: field_body
+entity_type: node
+bundle: carousel_item
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

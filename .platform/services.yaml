@@ -55,6 +55,7 @@ db:
             - ce
             - rvs
             - training
+            - stationstretch
         endpoints:
             blundell:
                 default_schema: blundell
@@ -264,5 +265,9 @@ db:
                 default_schema: training
                 privileges:
                     training: admin
+            stationstretch:
+                default_schema: stationstretch
+                privileges:
+                    stationstretch: admin
 cache:
     type: 'redis:6.0'

@@ -40,14 +40,33 @@ third_party_settings:
         - username
         - usermail
         - 'dynamic_block_field:user-site_sections_admin_block'
-        - 'dynamic_block_field:user-user_feeds_block'
       right:
         - 'dynamic_block_field:user-recent_content'
         - 'dynamic_block_field:user-recent_user_content'
     fields:
+      usermail:
+        plugin_id: usermail
+        weight: 1
+        label: above
+        formatter: default
+      username:
+        plugin_id: username
+        weight: 0
+        label: above
+        formatter: default
+        settings:
+          link: false
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
       'dynamic_block_field:user-recent_content':
         plugin_id: 'dynamic_block_field:user-recent_content'
-        weight: 4
+        weight: 3
         label: hidden
         formatter: default
         ft:
@@ -58,7 +77,7 @@ third_party_settings:
             classes: {  }
       'dynamic_block_field:user-recent_user_content':
         plugin_id: 'dynamic_block_field:user-recent_user_content'
-        weight: 5
+        weight: 4
         label: hidden
         formatter: default
       'dynamic_block_field:user-site_sections_admin_block':
@@ -93,58 +112,6 @@ third_party_settings:
             fi-def-at: false
             prefix: ''
             suffix: ''
-      'dynamic_block_field:user-user_feeds_block':
-        plugin_id: 'dynamic_block_field:user-user_feeds_block'
-        weight: 3
-        label: above
-        formatter: default
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            lbw: true
-            lbw-el: h2
-            lbw-cl: ''
-            lbw-at: ''
-            lb-col: false
-            ow: true
-            ow-el: div
-            ow-cl: mt-4
-            ow-at: ''
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fis-def-at: false
-            fi: false
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            fi-def-at: false
-            prefix: ''
-            suffix: ''
-      usermail:
-        plugin_id: usermail
-        weight: 1
-        label: above
-        formatter: default
-      username:
-        plugin_id: username
-        weight: 0
-        label: above
-        formatter: default
-        settings:
-          link: false
-          wrapper: ''
-          class: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
 id: user.user.default
 targetEntityType: user
 bundle: user

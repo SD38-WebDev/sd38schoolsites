@@ -1,0 +1,55 @@
+uuid: f993a738-789b-416f-bac0-9c7a83ccb4c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.carousel_item.field_body
+    - field.field.node.carousel_item.field_carousel_content_link
+    - field.field.node.carousel_item.field_carousel_image
+    - node.type.carousel_item
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.carousel_item.default
+targetEntityType: node
+bundle: carousel_item
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_carousel_content_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_carousel_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,14 @@
+uuid: d415b681-f49a-4223-b16c-4f65d9d1f855
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.department_site_editor
+  module:
+    - user
+id: user_add_role_action.department_site_editor
+label: 'Add the Department Site Editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: department_site_editor
