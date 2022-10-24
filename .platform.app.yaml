@@ -63,6 +63,7 @@ relationships:
     ce: 'db:ce'
     rvs: 'db:rvs'
     training: 'db:training'
+    stationstretch: 'db:stationstretch'
 disk: 85000
 mounts:
     /web/files:
