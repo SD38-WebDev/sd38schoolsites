@@ -36,21 +36,7 @@ settings:
           name: Tools
           items:
             - Source
-  plugins:
-    language:
-      language_list: un
-    stylescombo:
-      styles: ''
-    font:
-      font_names: ''
-      font_sizes: ''
-    video_embed:
-      defaults:
-        children:
-          autoplay: true
-          responsive: true
-          width: '854'
-          height: '480'
+  plugins: {  }
 image_upload:
   status: false
   scheme: public
