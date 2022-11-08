@@ -1,0 +1,18 @@
+<?php
+
+function sd38_mediabyuser_views_pre_render($view) {
+  // Only doing this for media library widget view.
+  if ($view->id() === 'media_library') {
+    $current_user = \Drupal::currentUser();
+    $result = [];
+
+    // Display only media authored by the current user.
+    foreach ($view->result as $key => $row) {
+      $entity = $row->_entity;
+      if ($entity->getOwnerId() == $current_user->id()) {
+        $result[$key] = $row;
+      }
+    }
+    $view->result = $result;
+  }
+}

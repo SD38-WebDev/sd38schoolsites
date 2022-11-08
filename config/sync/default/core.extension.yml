@@ -110,6 +110,7 @@ module:
   required_api: 0
   required_by_role: 0
   scheduler: 0
+  sd38_mediabyuser: 0
   sd38_sitelinks: 0
   search: 0
   serialization: 0

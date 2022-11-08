@@ -229,43 +229,7 @@ display:
             label: 'Name (Z-A)'
             field_identifier: name_1
           exposed: true
-      arguments:
-        uid:
-          id: uid
-          table: media_field_revision
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: media
-          entity_field: uid
-          plugin_id: numeric
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
+      arguments: {  }
       filters:
         status:
           id: status
@@ -1005,42 +969,6 @@ display:
           path_case: none
           transform_dash: false
           break_phrase: false
-        uid:
-          id: uid
-          table: media_field_revision
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: media
-          entity_field: uid
-          plugin_id: numeric
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
       filters:
         status:
           id: status
@@ -1205,7 +1133,6 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
-        - user
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.audio.default'
@@ -1340,42 +1267,6 @@ display:
           path_case: none
           transform_dash: false
           break_phrase: false
-        uid:
-          id: uid
-          table: media_field_revision
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: media
-          entity_field: uid
-          plugin_id: numeric
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
       filters:
         status:
           id: status
@@ -1548,6 +1439,5 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
-        - user
         - user.permissions
       tags: {  }
