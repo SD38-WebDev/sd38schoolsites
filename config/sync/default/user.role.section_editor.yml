@@ -29,7 +29,6 @@ weight: -8
 is_admin: null
 permissions:
   - 'access content overview'
-  - 'access media overview'
   - 'access toolbar'
   - 'create article content'
   - 'create audio media'
