@@ -1143,6 +1143,19 @@ video {
 	line-height: 1.15rem;
 }
 
+.tile-link a,
+.tile-link a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.tile-link .paragraph--view-mode-icon-text {
+	text-align: left;
+	font-size: 1rem;
+	line-height: 1.15rem;
+  color: black;
+}
+
 .tile-link .wrapper {
   border-radius: 0.3125rem;
 }
@@ -1162,12 +1175,6 @@ video {
 
 .tile-link:hover .wrapper {
 	box-shadow: 0px 1px 15px #b24244;
-}
-
-.tile-link a,
-.tile-link a:hover {
-	color: white !important;
-	text-decoration: none;
 }
 
 .tile-link .wrapper.bg-sd38bluelagoon {background-color:#1d84c3;}

@@ -1,0 +1,10 @@
+uuid: eecbbd14-b34a-4d4b-870c-7dc282274ef1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.icon_text
+label: 'Icon & Text'
+targetEntityType: paragraph
+cache: true

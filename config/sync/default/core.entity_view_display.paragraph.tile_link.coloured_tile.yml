@@ -1,21 +1,48 @@
-uuid: 25aa94cd-4964-4c13-aed3-1560921fc358
+uuid: 0bdb6916-9ab7-4344-acad-e216f62e4864
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.2_columns
+    - core.entity_view_mode.paragraph.coloured_tile
     - field.field.paragraph.tile_link.field_link_text
     - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
     - field.field.paragraph.tile_link.paragraph_view_mode
-    - image.style.square_image_thumbnail_800x800
+    - image.style.large
     - paragraphs.paragraphs_type.tile_link
   module:
     - ds
     - field_group
     - media
 third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - group_link_group
+        - group_wrapper
+        - field_tile_image
+        - field_link_text
   field_group:
     group_link_group:
       children:
@@ -26,7 +53,7 @@ third_party_settings:
       weight: 0
       format_type: link
       format_settings:
-        classes: flex-stretch
+        classes: ''
         show_empty_fields: false
         id: ''
         target: field_tile_url
@@ -52,37 +79,10 @@ third_party_settings:
         attributes: 'class="[paragraph:field_tile_colour:value]"'
         effect: none
         speed: fast
-  ds:
-    layout:
-      id: bs_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        layout:
-          wrapper: div
-          classes:
-            row: row
-          add_layout_class: 1
-          attributes: ''
-        regions:
-          main:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: class|flex-stretch
-    regions:
-      main:
-        - group_link_group
-        - group_wrapper
-        - field_tile_image
-        - field_link_text
-id: paragraph.tile_link.2_columns
+id: paragraph.tile_link.coloured_tile
 targetEntityType: paragraph
 bundle: tile_link
-mode: 2_columns
+mode: coloured_tile
 content:
   field_link_text:
     type: string
@@ -90,14 +90,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: main
   field_tile_image:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
-      image_style: square_image_thumbnail_800x800
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings:
@@ -108,7 +108,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    weight: 2
+    weight: 3
     region: main
 hidden:
   field_tile_colour: true
