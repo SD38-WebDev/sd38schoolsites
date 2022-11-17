@@ -1189,24 +1189,7 @@ video {
 .tile-link .wrapper.bg-plum {background-color:#593662;}
 .tile-link .wrapper.bg-slate {background-color:#4e4e4e;}
 
-.tile-link:hover .wrapper.bg-sd38bluelagoon {box-shadow: 0px 1px 15px #1d84c3;}
-.tile-link:hover .wrapper.bg-sd38royalblue {box-shadow: 0px 1px 15px #4486a3;}
-.tile-link:hover .wrapper.bg-sd38tealsky {box-shadow: 0px 1px 15px #1daac3;}
-.tile-link:hover .wrapper.bg-sd38oceangreen {box-shadow: 0px 1px 15px #32ae71;}
-.tile-link:hover .wrapper.bg-sd38sagegreen {box-shadow: 0px 1px 15px #50976f;}
-.tile-link:hover .wrapper.bg-sd38limegreen {box-shadow: 0px 1px 15px #80b52b;}
-.tile-link:hover .wrapper.bg-sd38golden {box-shadow: 0px 1px 15px #c3a61d;}
-.tile-link:hover .wrapper.bg-sd38burntorange {box-shadow: 0px 1px 15px #d47823;}
-.tile-link:hover .wrapper.bg-sd38earthbrown {box-shadow: 0px 1px 15px #b1754c;}
-.tile-link:hover .wrapper.bg-sd38crimson {box-shadow: 0px 1px 15px #b24244;}
-.tile-link:hover .wrapper.bg-sd38tangerine {box-shadow: 0px 1px 15px #f77700;}
-.tile-link:hover .wrapper.bg-sd38boysenberry {box-shadow: 0px 1px 15px #a83755;}
-.tile-link:hover .wrapper.bg-sd38purplegrape {box-shadow: 0px 1px 15px #8236a9;}
-.tile-link:hover .wrapper.bg-sd38subduedblue {box-shadow: 0px 1px 15px #4e7591;}
-.tile-link:hover .wrapper.bg-firehouse {box-shadow: 0px 1px 15px #cd2d2d;}
-.tile-link:hover .wrapper.bg-ice {box-shadow: 0px 1px 15px #c2c4c5;}
-.tile-link:hover .wrapper.bg-plum {box-shadow: 0px 1px 15px #593662;}
-.tile-link:hover .wrapper.bg-slate {box-shadow: 0px 1px 15px #4e4e4e;}
+.tile-link:hover .wrapper {box-shadow: 0px 1px 15px #00000060;}
 
 /* .content-section {border: 1px solid purple;}
 .content-section .d-flex {border: 1px solid green;} */
