@@ -318,6 +318,10 @@ body #navbar-main .sf-menu li a {
 	font-size: 0.95rem;
 }
 
+#navbar-main a {
+  text-decoration: none;
+}
+
 #navbar-main a.nav-link {
 	color: #777777;
 }
