@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.promo_cards_section.field_columns
+    - field.field.paragraph.promo_cards_section.field_hide_link_text
     - field.field.paragraph.promo_cards_section.field_promo_cards
     - field.field.paragraph.promo_cards_section.field_section_title
     - paragraphs.paragraphs_type.promo_cards_section
@@ -31,6 +32,7 @@ third_party_settings:
       children:
         - field_section_title
         - field_columns
+        - field_hide_link_text
       label: 'Section Content'
       region: content
       parent_name: group_tabs
@@ -69,6 +71,13 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_hide_link_text:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_promo_cards:
     type: paragraphs

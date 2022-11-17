@@ -583,6 +583,10 @@ body #header .slogan {
   border-radius: 0.5rem;
 }
 
+#custom-home .view-id-carousel .carousel-caption a {
+  color: #ffffff;
+}
+
 #custom-home .carousel .carousel-item img {
 	overflow: hidden;
 	border-radius: 0.5rem;
@@ -617,6 +621,10 @@ body #header .slogan {
 .promo-card a.field-group-link {
   color: black !important;
   text-decoration: none;
+}
+
+.content-section .hl-yes .promo-card .promo-content {
+  display: none;
 }
 
 /** General Purpose Styles **/

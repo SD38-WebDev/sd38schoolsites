@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.promo_cards_section.field_columns
+    - field.field.paragraph.promo_cards_section.field_hide_link_text
     - field.field.paragraph.promo_cards_section.field_promo_cards
     - field.field.paragraph.promo_cards_section.field_section_title
     - paragraphs.paragraphs_type.promo_cards_section
@@ -23,7 +24,7 @@ third_party_settings:
           wrapper: div
           classes:
             row: row
-          add_layout_class: 1
+          add_layout_class: 0
           attributes: ''
         regions:
           main:
@@ -31,7 +32,7 @@ third_party_settings:
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 1
-            attributes: ''
+            attributes: ' class|hl-[paragraph:field_hide_link_text]'
     regions:
       main:
         - field_section_title
@@ -117,3 +118,4 @@ content:
     region: main
 hidden:
   field_columns: true
+  field_hide_link_text: true
