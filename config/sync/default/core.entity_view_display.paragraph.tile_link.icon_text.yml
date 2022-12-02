@@ -81,7 +81,7 @@ third_party_settings:
       weight: 8
       format_type: html_element
       format_settings:
-        classes: col-8
+        classes: col
         show_empty_fields: false
         id: ''
         element: div
