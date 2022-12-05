@@ -1,0 +1,7 @@
+name: SD38 Media by User
+description: Customizes the Media library to display content by user.
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+core_version_requirement: ^8 || ^9

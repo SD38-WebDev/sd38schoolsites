@@ -1,55 +1,94 @@
-uuid: 25aa94cd-4964-4c13-aed3-1560921fc358
+uuid: ec4188ee-eecc-4fd0-917a-23a79bccce95
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.2_columns
+    - core.entity_view_mode.paragraph.icon_text
     - field.field.paragraph.tile_link.field_link_text
     - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
     - field.field.paragraph.tile_link.paragraph_view_mode
-    - image.style.square_image_thumbnail_800x800
+    - image.style.square_image_thumbnail_220x220
     - paragraphs.paragraphs_type.tile_link
   module:
     - ds
     - field_group
     - media
+    - smart_trim
 third_party_settings:
   field_group:
-    group_link_group:
+    group_row:
       children:
-        - group_wrapper
-      label: 'Link Group'
-      parent_name: ''
+        - group_icon_column
+        - group_text_column
+      label: Row
+      parent_name: group_link
       region: main
-      weight: 0
-      format_type: link
-      format_settings:
-        classes: flex-stretch
-        show_empty_fields: false
-        id: ''
-        target: field_tile_url
-        custom_uri: ''
-        target_attribute: default
-    group_wrapper:
-      children:
-        - field_tile_image
-        - field_link_text
-      label: Wrapper
-      parent_name: group_link_group
-      region: main
-      weight: 1
+      weight: 6
       format_type: html_element
       format_settings:
-        classes: wrapper
+        classes: 'row align-items-center'
         show_empty_fields: false
         id: ''
         element: div
         show_label: false
         label_element: h3
         label_element_classes: ''
-        attributes: 'class="[paragraph:field_tile_colour:value]"'
+        attributes: ''
+        effect: none
+        speed: fast
+    group_icon_column:
+      children:
+        - field_tile_image
+      label: 'Icon Column'
+      parent_name: group_row
+      region: main
+      weight: 7
+      format_type: html_element
+      format_settings:
+        classes: col-4
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_link:
+      children:
+        - group_row
+      label: Link
+      parent_name: ''
+      region: main
+      weight: 0
+      format_type: link
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        target: field_tile_url
+        custom_uri: ''
+        target_attribute: default
+    group_text_column:
+      children:
+        - field_link_text
+      label: 'Text Column'
+      parent_name: group_row
+      region: main
+      weight: 8
+      format_type: html_element
+      format_settings:
+        classes: col
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
         effect: none
         speed: fast
   ds:
@@ -72,32 +111,43 @@ third_party_settings:
             classes:
               col-sm-12: col-sm-12
             add_region_classes: 1
-            attributes: class|flex-stretch
+            attributes: ''
     regions:
       main:
-        - group_link_group
-        - group_wrapper
+        - group_link
         - field_tile_image
         - field_link_text
-id: paragraph.tile_link.2_columns
+        - group_row
+        - group_icon_column
+        - group_text_column
+id: paragraph.tile_link.icon_text
 targetEntityType: paragraph
 bundle: tile_link
-mode: 2_columns
+mode: icon_text
 content:
   field_link_text:
-    type: string
+    type: smart_trim
     label: hidden
     settings:
-      link_to_entity: false
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 0
     region: main
   field_tile_image:
     type: media_thumbnail
     label: hidden
     settings:
       image_link: ''
-      image_style: square_image_thumbnail_800x800
+      image_style: square_image_thumbnail_220x220
       image_loading:
         attribute: lazy
     third_party_settings:
@@ -108,7 +158,7 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    weight: 2
+    weight: 0
     region: main
 hidden:
   field_tile_colour: true

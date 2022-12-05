@@ -1,0 +1,10 @@
+uuid: defcbf2c-a0cb-43ea-9250-898c759d3941
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.coloured_tile
+label: 'Coloured Tile'
+targetEntityType: paragraph
+cache: true

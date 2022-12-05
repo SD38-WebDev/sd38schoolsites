@@ -93,6 +93,8 @@ content:
     settings:
       image_link: ''
       image_style: promo_image_16_9_ratio_
+      image_loading:
+        attribute: lazy
     third_party_settings:
       ds:
         ds_limit: ''

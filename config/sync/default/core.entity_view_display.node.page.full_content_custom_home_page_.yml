@@ -41,14 +41,12 @@ third_party_settings:
             attributes: class|col-12
           top_left:
             wrapper: div
-            classes:
-              col-sm-6: col-sm-6
+            classes: {  }
             add_region_classes: 1
             attributes: class|col-lg-8
           top_right:
             wrapper: div
-            classes:
-              col-sm-6: col-sm-6
+            classes: {  }
             add_region_classes: 1
             attributes: class|col-lg-4
           middle:

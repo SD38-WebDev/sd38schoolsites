@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
+    - field.field.paragraph.tile_link.paragraph_view_mode
     - paragraphs.paragraphs_type.tile_link
   module:
     - link
@@ -52,4 +53,5 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-hidden: {  }
+hidden:
+  paragraph_view_mode: true

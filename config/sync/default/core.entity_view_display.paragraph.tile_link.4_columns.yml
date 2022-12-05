@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
+    - field.field.paragraph.tile_link.paragraph_view_mode
     - image.style.square_image_thumbnail_480x480
     - paragraphs.paragraphs_type.tile_link
   module:
@@ -112,3 +113,4 @@ content:
 hidden:
   field_tile_colour: true
   field_tile_url: true
+  paragraph_view_mode: true

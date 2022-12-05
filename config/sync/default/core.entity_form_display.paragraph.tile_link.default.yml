@@ -7,12 +7,14 @@ dependencies:
     - field.field.paragraph.tile_link.field_tile_colour
     - field.field.paragraph.tile_link.field_tile_image
     - field.field.paragraph.tile_link.field_tile_url
+    - field.field.paragraph.tile_link.paragraph_view_mode
     - paragraphs.paragraphs_type.tile_link
   module:
     - field_group
     - link
     - maxlength
     - media_library
+    - paragraph_view_mode
 third_party_settings:
   field_group:
     group_tabs:
@@ -96,6 +98,23 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: -100
+    region: content
+    settings:
+      view_modes:
+        coloured_tile: coloured_tile
+        icon_text: icon_text
+        default: '0'
+        1_column: '0'
+        2_columns: '0'
+        3_columns: '0'
+        4_columns: '0'
+        5_columns: '0'
+        6_columns: '0'
+      default_view_mode: coloured_tile
     third_party_settings: {  }
 hidden:
   created: true
