@@ -32,6 +32,7 @@ dependencies:
     - field_permissions
     - filter
     - media
+    - menu_link_attributes
     - node
     - quickedit
     - scheduler
@@ -173,6 +174,7 @@ permissions:
   - 'update any media'
   - 'update calendar_upload feeds'
   - 'update media'
+  - 'use menu link attributes'
   - 'use text format basic_html'
   - 'use text format full_html'
   - 'use workbench access'

@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.carousel_item
   module:
+    - menu_link_attributes
     - node
 id: department_site_editor
 label: 'Department Site Editor'
@@ -18,4 +19,5 @@ permissions:
   - 'edit any carousel_item content'
   - 'edit own carousel_item content'
   - 'revert carousel_item revisions'
+  - 'use menu link attributes'
   - 'view carousel_item revisions'
