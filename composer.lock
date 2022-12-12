@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a52f121341a67e0f4748f3b617fad2da",
+    "content-hash": "7b575eaa1fd6c3852aa8269c8fb64278",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7857,6 +7857,55 @@
             }
         },
         {
+            "name": "drupal/simple_image_rotate",
+            "version": "dev-2.1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/simple_image_rotate.git",
+                "reference": "94e2400e7f0c2e5b2d687b598f198f4aed3669ee"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.1.x": "2.1.x-dev"
+                },
+                "drupal": {
+                    "version": "2.1.1+1-dev",
+                    "datestamp": "1648556442",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "afagioli",
+                    "homepage": "https://www.drupal.org/user/50680"
+                },
+                {
+                    "name": "khoomy",
+                    "homepage": "https://www.drupal.org/user/135921"
+                },
+                {
+                    "name": "leevh",
+                    "homepage": "https://www.drupal.org/user/426580"
+                }
+            ],
+            "description": "Simple image rotation",
+            "homepage": "https://www.drupal.org/project/simple_image_rotate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/simple_image_rotate"
+            }
+        },
+        {
             "name": "drupal/smart_date",
             "version": "3.6.1",
             "source": {
@@ -15579,6 +15628,7 @@
         "drupal/google_analytics": 20,
         "drupal/libraries": 10,
         "drupal/linkit": 10,
+        "drupal/simple_image_rotate": 20,
         "drupal/tabtamer": 10,
         "drupal/term_merge": 20,
         "drupal/theme_permission": 10,
