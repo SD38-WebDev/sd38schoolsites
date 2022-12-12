@@ -116,6 +116,7 @@ module:
   sd38_sitelinks: 0
   search: 0
   serialization: 0
+  simple_image_rotate: 0
   smart_date: 0
   smart_date_recur: 0
   smart_trim: 0
