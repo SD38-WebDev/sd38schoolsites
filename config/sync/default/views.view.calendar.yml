@@ -166,7 +166,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 250
+          items_per_page: 500
       exposed_form:
         type: basic
         options:
@@ -1515,7 +1515,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: '400'
+          items_per_page: '500'
           offset: '0'
       displays:
         block_1: block_1
