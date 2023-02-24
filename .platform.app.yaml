@@ -64,7 +64,7 @@ relationships:
     rvs: 'db:rvs'
     training: 'db:training'
     stationstretch: 'db:stationstretch'
-disk: 85000
+disk: 105000
 mounts:
     /web/files:
         source: local
