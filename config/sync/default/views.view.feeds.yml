@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - feeds.feed_type.calendar_upload
+    - feeds.feed_type.calendar_v3
   module:
     - feeds
     - user
@@ -324,7 +324,7 @@ display:
           plugin_id: bundle
           operator: in
           value:
-            calendar_upload: calendar_upload
+            calendar_v3: calendar_v3
           group: 1
           exposed: false
           expose:
