@@ -13,7 +13,7 @@ dependencies:
 third_party_settings:
   feeds_tamper:
     tampers: {  }
-label: 'Calendar V3'
+label: 'Calendar Upload v3'
 id: calendar_v3
 description: ''
 help: ''
