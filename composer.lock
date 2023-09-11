@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b575eaa1fd6c3852aa8269c8fb64278",
+    "content-hash": "f574e7c7d7a9cc2355720ed568cfdaa9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7907,17 +7907,17 @@
         },
         {
             "name": "drupal/smart_date",
-            "version": "3.6.1",
+            "version": "3.7.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_date.git",
-                "reference": "3.6.1"
+                "reference": "3.7.0-rc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_date-3.6.1.zip",
-                "reference": "3.6.1",
-                "shasum": "a2ce55f5e38d046143881839f5ba0e6dcb49e823"
+                "url": "https://ftp.drupal.org/files/projects/smart_date-3.7.0-rc1.zip",
+                "reference": "3.7.0-rc1",
+                "shasum": "a408f29d1442e71bdf8a516ea1a823f081f6b042"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
@@ -7930,11 +7930,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.6.1",
-                    "datestamp": "1661631736",
+                    "version": "3.7.0-rc1",
+                    "datestamp": "1673618928",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 },
                 "drush": {
@@ -8611,29 +8611,29 @@
         },
         {
             "name": "drupal/twitter_block",
-            "version": "3.0.0-alpha1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/twitter_block.git",
-                "reference": "8.x-3.0-alpha1"
+                "reference": "8.x-3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/twitter_block-8.x-3.0-alpha1.zip",
-                "reference": "8.x-3.0-alpha1",
-                "shasum": "1ca5c6e30cda07b633273916bc0c3206e3928d81"
+                "url": "https://ftp.drupal.org/files/projects/twitter_block-8.x-3.0.zip",
+                "reference": "8.x-3.0",
+                "shasum": "a107030de1f2ac6c714a5ee8ac76ea6ee024e55f"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9"
+                "drupal/core": "^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-alpha1",
-                    "datestamp": "1603037906",
+                    "version": "8.x-3.0",
+                    "datestamp": "1674772208",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -8643,24 +8643,28 @@
             ],
             "authors": [
                 {
-                    "name": "Devin Carlson",
-                    "homepage": "https://www.drupal.org/user/290182"
-                },
-                {
-                    "name": "ZenDoodles",
-                    "homepage": "https://www.drupal.org/user/226976"
-                },
-                {
                     "name": "cweagans",
                     "homepage": "https://www.drupal.org/user/404732"
+                },
+                {
+                    "name": "Devin Carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
                 },
                 {
                     "name": "naveenvalecha",
                     "homepage": "https://www.drupal.org/user/2665733"
                 },
                 {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
+                },
+                {
                     "name": "subhojit777",
                     "homepage": "https://www.drupal.org/user/1812492"
+                },
+                {
+                    "name": "ZenDoodles",
+                    "homepage": "https://www.drupal.org/user/226976"
                 }
             ],
             "description": "Provides configurable blocks for a Twitter feed.",
@@ -15632,7 +15636,6 @@
         "drupal/tabtamer": 10,
         "drupal/term_merge": 20,
         "drupal/theme_permission": 10,
-        "drupal/twitter_block": 15,
         "drupal/views_base_url": 10,
         "drupal/views_ical": 20,
         "drupal/views_menu_children_filter": 5,
