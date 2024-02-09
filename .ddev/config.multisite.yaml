@@ -1,0 +1,12 @@
+additional_hostnames:
+  - dev
+  - schooldev
+  - trainingdev
+hooks:
+  post-start:
+  - exec: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS dev; GRANT ALL ON dev.* to 'db'@'%';"
+    service: db
+  - exec: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS schooldev; GRANT ALL ON schooldev.* to 'db'@'%';"
+    service: db
+  - exec: mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS trainingdev; GRANT ALL ON trainingdev.* to 'db'@'%';"
+    service: db
