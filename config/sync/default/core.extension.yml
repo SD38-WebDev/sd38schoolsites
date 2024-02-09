@@ -64,6 +64,7 @@ module:
   field_token_value: 0
   field_ui: 0
   file: 0
+  file_delete: 0
   file_mdm: 0
   file_mdm_exif: 0
   file_mdm_font: 0
