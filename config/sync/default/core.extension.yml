@@ -146,6 +146,7 @@ module:
   video_embed_wysiwyg: 0
   views_base_url: 0
   views_bootstrap: 0
+  views_bulk_operations: 0
   views_conditional: 0
   views_ical: 0
   views_menu_children_filter: 0
