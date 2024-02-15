@@ -77,9 +77,9 @@ display:
           batch: true
           batch_size: 10
           form_step: true
-          buttons: false
+          buttons: true
           action_title: Action
-          clear_on_exposed: true
+          clear_on_exposed: false
           force_selection_info: false
           selected_actions:
             -
