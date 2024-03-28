@@ -2,8 +2,6 @@ uuid: 4774bfd1-da95-42f5-adc9-b6f1762ffe40
 langcode: en
 status: true
 dependencies:
-  module:
-    - context
   theme:
     - seven
 id: seven_secondary_local_tasks
@@ -19,14 +17,4 @@ settings:
   provider: core
   primary: false
   secondary: true
-visibility:
-  request_path_exclusion:
-    id: request_path_exclusion
-    negate: null
-    context_mapping: {  }
-    pages: ''
-  view_inclusion:
-    id: view_inclusion
-    negate: null
-    context_mapping: {  }
-    view_inclusion: {  }
+visibility: {  }

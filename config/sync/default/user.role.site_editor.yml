@@ -34,7 +34,6 @@ dependencies:
     - media
     - menu_link_attributes
     - node
-    - quickedit
     - scheduler
     - search
     - smart_date_recur
@@ -53,7 +52,6 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access feed overview'
-  - 'access in-place editing'
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
