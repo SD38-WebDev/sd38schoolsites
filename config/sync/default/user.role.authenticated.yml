@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - google_analytics
     - media
     - search
     - system
@@ -15,6 +14,5 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
-  - 'opt-in or out of google analytics tracking'
   - 'search content'
   - 'view media'
