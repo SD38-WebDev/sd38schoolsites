@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9648fabcc8026a72bebdc280d02cde44",
+    "content-hash": "fa5d87883b821665867fd053743ff1aa",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1658,6 +1658,54 @@
                 "source": "https://github.com/ckeditor/ckeditor4/tree/master/plugins/font"
             },
             "time": "2022-01-25T09:28:39+00:00"
+        },
+        {
+            "name": "drupal/a11y",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/a11y.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/a11y-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "c744abb7ffdb0d42f5d18cc5529ac038897f1dce"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1651149071",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "btopro",
+                    "homepage": "https://www.drupal.org/user/24286"
+                },
+                {
+                    "name": "dcimorra",
+                    "homepage": "https://www.drupal.org/user/3623423"
+                }
+            ],
+            "description": "Provides accessibility enhancements useful for any website",
+            "homepage": "https://www.drupal.org/project/a11y",
+            "support": {
+                "source": "https://git.drupalcode.org/project/a11y"
+            }
         },
         {
             "name": "drupal/address",
@@ -5195,71 +5243,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/fullcalendar_view",
                 "issues": "http://drupal.org/project/issues/fullcalendar_view"
-            }
-        },
-        {
-            "name": "drupal/google_analytics",
-            "version": "dev-4.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/google_analytics.git",
-                "reference": "9fb1ffda77d20c80469fa27c5dd522346a0be182"
-            },
-            "require": {
-                "drupal/core": "^8.9|^9.0"
-            },
-            "require-dev": {
-                "drupal/token": "^1.7"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
-                "drupal": {
-                    "version": "4.x-dev",
-                    "datestamp": "1656521888",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/49388/committers"
-                },
-                {
-                    "name": "budda",
-                    "homepage": "https://www.drupal.org/user/13164"
-                },
-                {
-                    "name": "ixismark",
-                    "homepage": "https://www.drupal.org/user/3632333"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "pfaocle",
-                    "homepage": "https://www.drupal.org/user/9740"
-                },
-                {
-                    "name": "roberto.rivera.ixis",
-                    "homepage": "https://www.drupal.org/user/3632325"
-                }
-            ],
-            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
-            "homepage": "https://www.drupal.org/project/google_analytics",
-            "support": {
-                "source": "https://git.drupalcode.org/project/google_analytics",
-                "issues": "https://www.drupal.org/project/issues/google_analytics"
             }
         },
         {
@@ -14023,11 +14006,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/a11y": 10,
         "drupal/bootstrap_paragraphs": 10,
         "drupal/context": 5,
         "drupal/entity_submit_redirect": 20,
         "drupal/field_slideshow": 10,
-        "drupal/google_analytics": 20,
         "drupal/libraries": 10,
         "drupal/linkit": 10,
         "drupal/simple_image_rotate": 20,
