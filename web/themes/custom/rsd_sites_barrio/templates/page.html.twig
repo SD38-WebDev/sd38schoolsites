@@ -137,33 +137,32 @@
               <div class="sidebar_first sidebar col-lg-3 order-2 order-lg-1" id="sidebar_first">
                 <aside class="section" role="complementary">
 
-                          <!-- Accessibility Modal -->
-<div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="accessibilityModalLabel">Accessibility Settings</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        {{ page.accessibility_dropdown }}
-        <p><a href="https://sd38.bc.ca/accessibility" target="_blank">Learn more</a> about how the Richmond School District supports accessibility.</p>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+                  <!-- Accessibility Modal -->
+                  <div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="accessibilityModalLabel">Accessibility Settings</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-12">
+                          {{ page.accessibility_dropdown }}
+                          <p><a href="https://sd38.bc.ca/accessibility" target="_blank">Learn more</a> about how the Richmond School District supports accessibility.</p>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                   {{ page.sidebar_first }}
                 </aside>
@@ -172,8 +171,7 @@
             {% if page.sidebar_second %}
               <div class="sidebar_second sidebar col-lg-3 order-3 order-sm-3" id="sidebar_second">
                 <aside class="section" role="complementary">
-                                  <div id="accessibility-btn"><button class="btn btn-sm btn-primary" data-target="#accessibilityModal" data-toggle="modal" type="button"><span class="gear">⚙</span> Accessibility Settings</button></div>
-
+                  <div id="accessibility-btn"><button class="btn btn-sm btn-primary" data-target="#accessibilityModal" data-toggle="modal" type="button"><span class="gear">⚙</span> Accessibility Settings</button></div>
 
                   {{ page.sidebar_second }}
 
