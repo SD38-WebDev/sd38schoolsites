@@ -8,8 +8,8 @@ dependencies:
     - rsd_sites_barrio
 id: socialmedialinks
 theme: rsd_sites_barrio
-region: sidebar_first
-weight: -12
+region: sidebar_second
+weight: -13
 provider: null
 plugin: social_media_links_block
 settings:
