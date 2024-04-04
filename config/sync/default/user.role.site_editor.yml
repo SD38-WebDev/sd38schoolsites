@@ -58,7 +58,6 @@ permissions:
   - 'administer blocks'
   - 'administer blocks provided by gtranslate'
   - 'administer blocks provided by social_media_links'
-  - 'administer blocks provided by twitter_block'
   - 'administer menu'
   - 'administer nodes'
   - 'administer site configuration'
