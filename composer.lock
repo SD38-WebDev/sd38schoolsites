@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa5d87883b821665867fd053743ff1aa",
+    "content-hash": "6c9d01c5290e0ef36cf4d135a2af3750",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6952,29 +6952,26 @@
         },
         {
             "name": "drupal/social_media_links",
-            "version": "2.9.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_media_links.git",
-                "reference": "8.x-2.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.9.zip",
-                "reference": "8.x-2.9",
-                "shasum": "d73ea6199b48e11e57fe8a2aeb2afbf3c295704a"
+                "reference": "23287a49fdf984c4826f51d39fa26e607c4a460a"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-2.9",
-                    "datestamp": "1665768361",
+                    "version": "8.x-2.9+6-dev",
+                    "datestamp": "1710424941",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -14014,6 +14011,7 @@
         "drupal/libraries": 10,
         "drupal/linkit": 10,
         "drupal/simple_image_rotate": 20,
+        "drupal/social_media_links": 20,
         "drupal/tabtamer": 10,
         "drupal/tamper": 15,
         "drupal/term_merge": 10,
