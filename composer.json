@@ -130,6 +130,7 @@
         "drupal/paragraphs_edit": "^3.0",
         "drupal/password_policy": "^4.0",
         "drupal/pathauto": "^1.12",
+        "drupal/protected_pages": "^1.6",
         "drupal/redirect": "^1.9",
         "drupal/required_api": "^2.0",
         "drupal/required_by_role": "^1.2",

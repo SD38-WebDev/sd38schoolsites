@@ -17,3 +17,4 @@ ignored_config_entities:
   - 'block.block.*addressblock'
   - feeds.feed_type.testfeed.third_party_settings.feeds_tamper.tampers.d67d064d-d19e-405b-bab0-a3015dd96f4f
   - 'feeds.feed_type.testfeed.third_party_settings.feeds_tamper.tampers.d67d064d-d19e-405b-bab0-a3015dd96f4f.*'
+  - 'user.role.anonymous:permissions'
