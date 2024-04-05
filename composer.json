@@ -89,6 +89,7 @@
         "drupal/core-recommended": "9.5.11",
         "drupal/crop": "^2.3",
         "drupal/ctools": "^3.14",
+        "drupal/customerror": "^1.0@beta",
         "drupal/dbug": "^2.1",
         "drupal/disable_messages": "^2.1",
         "drupal/display_field_copy": "^2.1",

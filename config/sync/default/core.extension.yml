@@ -40,6 +40,7 @@ module:
   contextual: 0
   crop: 0
   ctools: 0
+  customerror: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -109,7 +110,6 @@ module:
   password_policy_username: 0
   path: 0
   path_alias: 0
-  protected_pages: 0
   redirect: 0
   required_api: 0
   required_by_role: 0
