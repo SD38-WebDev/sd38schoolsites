@@ -1,18 +1,19 @@
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+mode: simple
 ignored_config_entities:
-  - system.site
-  - color.theme.rsd_sites_barrio
-  - color.theme.rsd_sites_barrio.logo
-  - 'webform.webform.*'
-  - system.theme.global
-  - google_analytics.settings
-  - block.block.socialmedialinks
-  - 'block.block.socialmedialinks.*'
-  - 'block.block.socialmedialinks*'
+  - 'block.block.*addressblock'
   - block.block.addressblock
   - 'block.block.addressblock.*'
-  - 'block.block.*addressblock'
+  - block.block.socialmedialinks
+  - 'block.block.socialmedialinks*'
+  - 'block.block.socialmedialinks.*'
+  - color.theme.rsd_sites_barrio
+  - color.theme.rsd_sites_barrio.logo
   - feeds.feed_type.testfeed.third_party_settings.feeds_tamper.tampers.d67d064d-d19e-405b-bab0-a3015dd96f4f
   - 'feeds.feed_type.testfeed.third_party_settings.feeds_tamper.tampers.d67d064d-d19e-405b-bab0-a3015dd96f4f.*'
+  - google_analytics.settings
+  - system.site
+  - system.theme.global
   - 'user.role.anonymous:permissions'
+  - 'webform.webform.*'

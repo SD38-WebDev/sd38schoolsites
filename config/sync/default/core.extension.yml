@@ -52,8 +52,8 @@ module:
   easy_breadcrumb: 0
   editor: 0
   editor_advanced_link: 0
+  entity_redirect: 0
   entity_reference_revisions: 0
-  entity_submit_redirect: 0
   eva: 0
   feeds: 0
   feeds_ical: 0
@@ -62,7 +62,6 @@ module:
   field_group: 0
   field_group_link: 0
   field_permissions: 0
-  field_slideshow: 0
   field_token_value: 0
   field_ui: 0
   file: 0
