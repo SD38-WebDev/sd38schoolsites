@@ -115,7 +115,7 @@
         "drupal/fullcalendar_view": "^5.1",
         "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^2.0",
-        "drupal/gtranslate": "^1.15",
+        "drupal/gtranslate": "^3.0",
         "drupal/honeypot": "^2.1",
         "drupal/image_effects": "^3.4",
         "drupal/imagefield_slideshow": "^2.0",
