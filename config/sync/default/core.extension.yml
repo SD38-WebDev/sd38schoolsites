@@ -54,6 +54,7 @@ module:
   editor_advanced_link: 0
   entity_redirect: 0
   entity_reference_revisions: 0
+  entity_submit_redirect: 0
   eva: 0
   feeds: 0
   feeds_ical: 0
