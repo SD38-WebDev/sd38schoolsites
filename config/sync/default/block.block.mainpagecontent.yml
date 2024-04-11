@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - context
     - system
   theme:
     - rsd_sites_barrio
@@ -18,14 +17,4 @@ settings:
   label: 'Main page content'
   label_display: '0'
   provider: system
-visibility:
-  request_path_exclusion:
-    id: request_path_exclusion
-    negate: null
-    context_mapping: {  }
-    pages: ''
-  view_inclusion:
-    id: view_inclusion
-    negate: null
-    context_mapping: {  }
-    view_inclusion: {  }
+visibility: {  }

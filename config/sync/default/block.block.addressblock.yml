@@ -2,8 +2,6 @@ uuid: 82229bdd-5264-49fe-b186-10d2f738fea9
 langcode: en
 status: true
 dependencies:
-  module:
-    - context
   theme:
     - rsd_sites_barrio
 id: addressblock
@@ -20,14 +18,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path_exclusion:
-    id: request_path_exclusion
-    negate: null
-    context_mapping: {  }
-    pages: ''
-  view_inclusion:
-    id: view_inclusion
-    negate: null
-    context_mapping: {  }
-    view_inclusion: {  }
+visibility: {  }

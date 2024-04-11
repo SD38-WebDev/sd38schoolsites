@@ -14,7 +14,7 @@ settings:
   case_sensitive: false
   is_ascii: false
 module: paragraph_view_mode
-locked: true
+locked: false
 cardinality: 1
 translatable: true
 indexes: {  }

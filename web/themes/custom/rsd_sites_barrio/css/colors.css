@@ -114,13 +114,13 @@ body.page-user-login #main-wrapper {
 }
 
 #page-wrapper .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #007bff !important;
+  border-color: #007bff !important;
 }
 
 #page-wrapper .btn-primary:hover,
 #page-wrapper .btn-primary:focus {
-  background-color: #0256b1;
+  background-color: #0256b1 !important;
 }
 
 body,

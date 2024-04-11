@@ -18,6 +18,23 @@
 }
 
 /************/
+/** Accessibility Settings **/
+/************/
+
+#accessibility-btn {
+  padding: 15px 15px 0px 15px;
+}
+
+#accessibility-btn .btn {
+  font-weight: bold;
+}
+
+#accessibility-btn .gear {
+  font-size: 1.3rem;
+  line-height: 1rem;
+}
+
+/************/
 /** Layout **/
 /************/
 
@@ -375,7 +392,7 @@ footer.site-footer {
 
 .block-views-blocksidebar-notes-block-1,
 .block-views-blocksidebar-notes-block-2 {
-  padding: 0px 15px !important;
+  padding: 15px 15px 0px 15px !important;
 }
 
 .block-views-blocksidebar-notes-block-3 .views-row {
@@ -778,10 +795,9 @@ img.align-center {
 .view-id-frontpage .view-content .wrapper {
   padding: 0.75rem;
   background: white;
-  border: 1px solid rgba(0,0,0,0.0625);
-  margin-bottom: 1.75rem;
+  border: 1px solid rgba(0,0,0,.12);
+  margin-bottom: 1rem;
   width: 100%;
-  box-shadow: 0px 8px 10px rgba(0,0,0,0.0625);
   border-radius: 0.5rem;
 }
 

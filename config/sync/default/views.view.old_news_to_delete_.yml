@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.article
-    - node.type.page
     - system.menu.admin
     - taxonomy.vocabulary.site_blogs_sections
   module:
@@ -81,9 +80,10 @@ display:
           batch: true
           batch_size: 10
           form_step: true
-          buttons: false
+          ajax_loader: false
+          buttons: true
           action_title: Action
-          clear_on_exposed: true
+          clear_on_exposed: false
           force_selection_info: false
           selected_actions:
             6:
@@ -413,7 +413,6 @@ display:
           operator: in
           value:
             article: article
-            page: page
           group: 1
           exposed: true
           expose:
@@ -427,7 +426,7 @@ display:
             identifier: type
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -465,7 +464,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '-12 months'
+            value: '-18 months'
             type: offset
           group: 1
           exposed: true

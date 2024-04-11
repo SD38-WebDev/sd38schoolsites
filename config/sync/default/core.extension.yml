@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  a11y: 0
   address: 0
   address_map_link: 0
   admin_toolbar: 0
@@ -39,6 +40,7 @@ module:
   contextual: 0
   crop: 0
   ctools: 0
+  customerror: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -50,6 +52,7 @@ module:
   easy_breadcrumb: 0
   editor: 0
   editor_advanced_link: 0
+  entity_redirect: 0
   entity_reference_revisions: 0
   entity_submit_redirect: 0
   eva: 0
@@ -77,6 +80,7 @@ module:
   gtranslate: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   image_effects: 0
   imagefield_slideshow: 0
@@ -107,8 +111,6 @@ module:
   password_policy_username: 0
   path: 0
   path_alias: 0
-  quickedit: 0
-  rdf: 0
   redirect: 0
   required_api: 0
   required_by_role: 0

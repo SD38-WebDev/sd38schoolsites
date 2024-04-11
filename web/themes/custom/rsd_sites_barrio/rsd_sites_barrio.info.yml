@@ -1,8 +1,7 @@
 name: Richmond School District School Sites Template
 type: theme
 description: 'Theme for Richmond School District school and program websites.'
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9.4 || ^10
 base theme: bootstrap_barrio
 
 libraries:
@@ -32,6 +31,8 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
+  accessibility_dropdown: 'Accessibility Dropdown'
+
 
 libraries-override:
   bootstrap_barrio/global-styling:

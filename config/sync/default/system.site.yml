@@ -6,8 +6,8 @@ name: 'Development School Site'
 mail: webdev@sd38.bc.ca
 slogan: 'Training & Development Site'
 page:
-  403: ''
-  404: ''
+  403: /customerror/403
+  404: /customerror/404
   front: /node
 admin_compact_mode: false
 weight_select_max: 100

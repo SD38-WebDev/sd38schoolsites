@@ -1,5 +1,5 @@
 name: app
-type: 'php:8.0'
+type: 'php:8.1'
 dependencies:
     php:
         composer/composer: ^2
@@ -65,7 +65,7 @@ relationships:
     training: 'db:training'
     stationstretch: 'db:stationstretch'
     rdpa: 'db:rdpa'
-disk: 113000
+disk: 103000
 mounts:
     /web/files:
         source: local

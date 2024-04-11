@@ -1,0 +1,26 @@
+uuid: a76084a3-7dd3-468e-8832-b92ce6777f0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - a11y
+  theme:
+    - rsd_sites_barrio
+id: a11y
+theme: rsd_sites_barrio
+region: accessibility_dropdown
+weight: -14
+provider: null
+plugin: a11y_block
+settings:
+  id: a11y_block
+  label: A11y
+  label_display: '0'
+  provider: a11y
+  plugins:
+    opendyslexic: opendyslexic
+    contrast: contrast
+    invert: invert
+    textsize: textsize
+  wrapper_classes: ''
+visibility: {  }
