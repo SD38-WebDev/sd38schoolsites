@@ -2,7 +2,10 @@ uuid: 648b9d04-abe7-47a3-9a51-ff02f2942b54
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
+    - filter
     - google_analytics
     - media
     - search
@@ -17,4 +20,5 @@ permissions:
   - 'access content'
   - 'opt-in or out of google analytics tracking'
   - 'search content'
+  - 'use text format webform_default'
   - 'view media'

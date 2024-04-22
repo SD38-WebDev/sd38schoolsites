@@ -159,6 +159,7 @@ module:
   views_year_filter: 0
   viewsreference: 0
   webform: 0
+  webform_location_places: 0
   webform_templates: 0
   webform_ui: 0
   workbench_access: 0
