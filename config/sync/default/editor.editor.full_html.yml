@@ -60,6 +60,8 @@ settings:
     drupallink:
       linkit_enabled: true
       linkit_profile: default_profile
+    blockimagepaste:
+      block_image_paste_enabled: true
     font:
       font_names: "Arial|Arial\r\nGeorgia|Georgia\r\nTimes New Roman|Times New Roman\r\nVerdana|Verdana"
       font_sizes: ''
