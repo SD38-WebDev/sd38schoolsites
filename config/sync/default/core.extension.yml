@@ -22,6 +22,7 @@ module:
   bootstrap_simple_carousel: 0
   breakpoint: 0
   ckeditor: 0
+  ckeditor_blockimagepaste: 0
   ckeditor_bootstrap_table: 0
   ckeditor_font: 0
   color: 0
@@ -100,6 +101,7 @@ module:
   menu_ui: 0
   mysql: 0
   node: 0
+  node_revision_delete: 0
   onlyone: 0
   options: 0
   page_cache: 0

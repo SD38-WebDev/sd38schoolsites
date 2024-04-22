@@ -36,7 +36,12 @@ settings:
           name: Tools
           items:
             - Source
-  plugins: {  }
+  plugins:
+    drupallink:
+      linkit_enabled: false
+      linkit_profile: ''
+    blockimagepaste:
+      block_image_paste_enabled: true
 image_upload:
   status: false
   scheme: public
