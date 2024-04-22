@@ -167,7 +167,7 @@
         "drupal/views_sort_options_weight": "^2.1",
         "drupal/views_year_filter": "^2.1",
         "drupal/viewsreference": "^2.0@beta",
-        "drupal/webform": "6.2.x-dev@dev",
+        "drupal/webform": "^6.2",
         "drupal/workbench_access": "^2.0",
         "drush/drush": "11.*",
         "onlyextart/colorbox": "9999999-dev",
