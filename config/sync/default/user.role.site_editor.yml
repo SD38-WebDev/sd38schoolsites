@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - feeds.feed_type.calendar_v3
     - filter.format.basic_html
     - filter.format.full_html
     - media.type.audio
