@@ -65,7 +65,7 @@ relationships:
     training: 'db:training'
     stationstretch: 'db:stationstretch'
     rdpa: 'db:rdpa'
-disk: 103000
+disk: 105000
 mounts:
     /web/files:
         source: local
