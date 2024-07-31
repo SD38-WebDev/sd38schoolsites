@@ -1,0 +1,22 @@
+uuid: 7b38f8ab-7c07-4f3b-a548-eaa4c94e7685
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: news_alerts
+label: 'News Alerts'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  6364ca1a-53d5-463b-ab3b-924f97e43011:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6364ca1a-53d5-463b-ab3b-924f97e43011
+    context_mapping:
+      node: node
+    bundles:
+      news_alert: news_alert
+selection_logic: and
+weight: -5
+relationships: {  }
