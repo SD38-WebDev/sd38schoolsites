@@ -3,13 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: square_image_thumbnail_800x800
-label: 'Square Image Thumbnail (800x800)'
+label: 'Square Image Thumbnail (750x750)'
 effects:
   46fc6d41-9dc4-4578-a625-56acb8f6f903:
     uuid: 46fc6d41-9dc4-4578-a625-56acb8f6f903
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 800
-      height: 800
+      width: 750
+      height: 750
       anchor: center-center
