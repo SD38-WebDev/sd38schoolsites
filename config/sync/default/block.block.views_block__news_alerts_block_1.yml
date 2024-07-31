@@ -27,4 +27,4 @@ visibility:
     id: request_path
     negate: true
     context_mapping: {  }
-    pages: '/user/*'
+    pages: "/user/*\r\n/news-alert*"
