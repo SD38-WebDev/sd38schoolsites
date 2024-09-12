@@ -408,13 +408,13 @@ display:
             trim_suffix: …
             wrap_output: false
             wrap_class: trimmed
-            more_link: false
-            more_class: more-link
-            more_text: More
             summary_handler: full
             trim_options:
               text: true
               trim_zero: false
+            more_link: false
+            more_class: more-link
+            more_text: More
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -708,10 +708,10 @@ display:
           condition: em
           equalto: ''
           then: '{{ field_images }}'
-          then_translate: 1
+          then_translate: true
           or: ''
-          or_translate: 1
-          strip_tags: 0
+          or_translate: true
+          strip_tags: false
         views_conditional_field_1:
           id: views_conditional_field_1
           table: views_conditional
@@ -765,10 +765,10 @@ display:
           condition: nem
           equalto: ''
           then: '<div class="col-12 col-md-4"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
-          then_translate: 1
+          then_translate: true
           or: ''
-          or_translate: 1
-          strip_tags: 0
+          or_translate: true
+          strip_tags: false
         nothing_3:
           id: nothing_3
           table: views
@@ -1928,13 +1928,13 @@ display:
             trim_suffix: …
             wrap_output: false
             wrap_class: trimmed
-            more_link: false
-            more_class: more-link
-            more_text: More
             summary_handler: full
             trim_options:
               text: true
               trim_zero: false
+            more_link: false
+            more_class: more-link
+            more_text: More
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -2232,10 +2232,10 @@ display:
           condition: em
           equalto: ''
           then: '{{ field_images }}'
-          then_translate: 1
+          then_translate: true
           or: ''
-          or_translate: 1
-          strip_tags: 0
+          or_translate: true
+          strip_tags: false
         views_conditional_field_1:
           id: views_conditional_field_1
           table: views_conditional
@@ -2289,10 +2289,10 @@ display:
           condition: nem
           equalto: ''
           then: '<div class="col-12 col-md-4"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
-          then_translate: 1
+          then_translate: true
           or: ''
-          or_translate: 1
-          strip_tags: 0
+          or_translate: true
+          strip_tags: false
         nothing_3:
           id: nothing_3
           table: views
