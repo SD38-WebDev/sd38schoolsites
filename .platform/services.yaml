@@ -56,7 +56,6 @@ db:
             - rvs
             - training
             - stationstretch
-            - rdpa
         endpoints:
             blundell:
                 default_schema: blundell
@@ -270,9 +269,5 @@ db:
                 default_schema: stationstretch
                 privileges:
                     stationstretch: admin
-            rdpa:
-                default_schema: rdpa
-                privileges:
-                    rdpa: admin
 cache:
     type: 'redis:6.0'
