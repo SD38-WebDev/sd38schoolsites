@@ -1,0 +1,26 @@
+uuid: 2adc6a8d-803c-43a0-b22c-e7bd782cbe8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_area
+    - node.type.quick_link_district
+  module:
+    - required_api
+    - text
+third_party_settings:
+  required_api:
+    required_plugin: default
+    required_plugin_options: 0
+id: node.quick_link_district.field_content_area
+field_name: field_content_area
+entity_type: node
+bundle: quick_link_district
+label: 'Content Area'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

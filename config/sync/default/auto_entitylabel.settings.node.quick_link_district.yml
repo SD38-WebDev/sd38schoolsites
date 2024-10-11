@@ -1,0 +1,9 @@
+status: 0
+pattern: '[node:field_link:title] – Button'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.quick_link_district
