@@ -5,6 +5,7 @@ dependencies:
   module:
     - entity_redirect
     - menu_ui
+    - node_revision_delete
     - scheduler
 third_party_settings:
   menu_ui:
@@ -45,7 +46,24 @@ third_party_settings:
         destination: default
         url: ''
         external: ''
-name: 'Quick Link (Home Page Buttons)'
+  node_revision_delete:
+    amount:
+      status: false
+      settings:
+        amount: 0
+    created:
+      status: false
+      settings:
+        age: 1
+    drafts:
+      status: false
+      settings:
+        age: 1
+    only_drafts:
+      status: false
+      settings:
+        age: 0
+name: 'Quick Link'
 type: home_page_button
 description: 'These appear as sidebar buttons on the site home page.'
 help: ''

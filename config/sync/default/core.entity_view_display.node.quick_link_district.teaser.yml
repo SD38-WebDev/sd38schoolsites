@@ -1,0 +1,22 @@
+uuid: d76b3ba2-008f-45d4-83a8-0d4c6d09a00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quick_link_district.field_content_area
+    - node.type.quick_link_district
+  module:
+    - user
+id: node.quick_link_district.teaser
+targetEntityType: node
+bundle: quick_link_district
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content_area: true

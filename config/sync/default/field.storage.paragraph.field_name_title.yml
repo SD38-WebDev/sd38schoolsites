@@ -38,6 +38,9 @@ settings:
     -
       value: Dr.
       label: Dr.
+    -
+      value: Mx.
+      label: Mx.
   allowed_values_function: ''
 module: options
 locked: false

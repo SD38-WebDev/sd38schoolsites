@@ -1,0 +1,28 @@
+uuid: a61fa9f3-7be6-49f3-99d8-49cfafa4c401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quick_link_district.field_content_area
+    - node.type.quick_link_district
+  module:
+    - text
+    - user
+id: node.quick_link_district.default
+targetEntityType: node
+bundle: quick_link_district
+mode: default
+content:
+  field_content_area:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

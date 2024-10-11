@@ -1,20 +1,20 @@
-uuid: eac20cf4-0061-4c1f-9b85-3ac5aaf1d66b
+uuid: b90cbcf4-4b53-43d6-9ac9-223e5d40098f
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
-    - link
     - node
+    - text
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_link
-field_name: field_link
+id: node.field_content_area
+field_name: field_content_area
 entity_type: node
-type: link
+type: text_long
 settings: {  }
-module: link
+module: text
 locked: false
 cardinality: 1
 translatable: true

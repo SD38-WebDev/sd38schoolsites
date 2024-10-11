@@ -386,10 +386,6 @@ footer.site-footer {
 	margin: 0px;
 }
 
-.sidebar .block {
-	margin: 0px;
-}
-
 .block-views-blocksidebar-notes-block-1,
 .block-views-blocksidebar-notes-block-2 {
   padding: 15px 15px 0px 15px !important;
@@ -934,18 +930,32 @@ body.user-logged-in .card:hover .ops-links {
 /** Quicklinks - Home Page Buttons **/
 /************************************/
 
-.view-home-page-buttons .node--type-home-page-button {
+.sidebar .block#block-views-block-district-quick-links-block-1,
+.sidebar .block#block-views-block-home-page-buttons-block-1 {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0px 15px;
+  margin: 0px;
+}
+
+.view-home-page-buttons .node--type-home-page-button,
+.district-quick-links .views-row img {
   margin-bottom: 0.75rem;
 }
 
-.view-home-page-buttons .node--type-home-page-button img {
-  border-radius: 0.3125rem;
+.view-home-page-buttons .node--type-home-page-button img,
+.district-quick-links .views-row img {
+  border-radius: 0.75rem;
 }
 
-.view-home-page-buttons .node--type-home-page-button img:hover {
+.view-home-page-buttons .node--type-home-page-button img:hover,
+.district-quick-links .views-row img:hover {
   box-shadow: 0px 1px 4px #bbb;
 }
 
+.district-quick-links p {
+  margin-bottom: 0 !important;
+}
 
 /* Paragraph Styling */
 
