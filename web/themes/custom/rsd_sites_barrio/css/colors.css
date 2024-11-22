@@ -56,6 +56,10 @@ body.page-user-login #main-wrapper {
   color: #0071b3;
 }
 
+.view-id-upcoming_events li .page-link {
+  background-color: #0071b3;
+}
+
 #main-wrapper a:hover,
 #main-wrapper a:focus,
 #main-wrapper .link:hover,

@@ -1556,6 +1556,19 @@ body.sidebars-disabled-both section.section div.layout .col-3 div.field--name-bo
 /** Misc. Views Styles **/
 /************************/
 
+.view-id-upcoming_events li.hide-this {
+  display: none;
+}
+
+.view-id-upcoming_events li .page-link {
+  line-height: 1;
+}
+
+.view-id-upcoming_events li .arrow-btn {
+  fill: #fff;
+  path: #fff;
+}
+
 .views-listing .shaded-rows li,
 .view-section-calendar .event,
 .view-article-feed .article-post {
