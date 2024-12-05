@@ -101,6 +101,7 @@
         "drupal/entity_redirect": "^2.2",
         "drupal/entity_reference_revisions": "^1.11",
         "drupal/entity_submit_redirect": "^1.1",
+        "drupal/entity_usage": "^2.0@beta",
         "drupal/eva": "^3.0",
         "drupal/feeds": "^3.0@beta",
         "drupal/feeds_ical": "^2.2",
