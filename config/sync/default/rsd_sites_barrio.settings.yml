@@ -128,3 +128,6 @@ bootstrap_barrio_region_width_footer_fifth: 0
 bootstrap_barrio_breadcrumb_divider: ''
 bootstrap_barrio_button_type: primary
 bootstrap_barrio_float_label: 0
+bootstrap_barrio_region_clean_accessibility_dropdown: 0
+bootstrap_barrio_region_width_accessibility_dropdown: 0
+bootstrap_barrio_region_class_accessibility_dropdown: row
