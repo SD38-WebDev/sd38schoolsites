@@ -37,6 +37,7 @@ dependencies:
     - node
     - scheduler
     - search
+    - simple_image_rotate
     - smart_date_recur
     - system
     - taxonomy
@@ -166,6 +167,7 @@ permissions:
   - 'revert page revisions'
   - 'revert sidebar_note revisions'
   - 'revert staff_page revisions'
+  - 'rotate images'
   - 'schedule publishing of nodes'
   - 'search content'
   - 'unlock calendar_v3 feeds'

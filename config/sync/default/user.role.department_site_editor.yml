@@ -7,6 +7,7 @@ dependencies:
   module:
     - menu_link_attributes
     - node
+    - simple_image_rotate
 id: department_site_editor
 label: 'Department Site Editor'
 weight: -4
@@ -19,5 +20,6 @@ permissions:
   - 'edit any carousel_item content'
   - 'edit own carousel_item content'
   - 'revert carousel_item revisions'
+  - 'rotate images'
   - 'use menu link attributes'
   - 'view carousel_item revisions'
