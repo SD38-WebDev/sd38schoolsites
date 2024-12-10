@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - ds_switch_view_mode
+    - simple_image_rotate
     - system
 id: site_menu_editor
 label: 'Site Menu Editor'
@@ -12,3 +13,4 @@ is_admin: null
 permissions:
   - 'administer menu'
   - 'ds switch page'
+  - 'rotate images'

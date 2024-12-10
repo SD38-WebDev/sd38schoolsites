@@ -7,12 +7,12 @@ dependencies:
 id: news_alerts
 label: 'News Alerts'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: 'news-alert-[node:title]'
 selection_criteria:
-  6364ca1a-53d5-463b-ab3b-924f97e43011:
+  7cff5971-d517-48bb-a04c-80e246ba986b:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 6364ca1a-53d5-463b-ab3b-924f97e43011
+    uuid: 7cff5971-d517-48bb-a04c-80e246ba986b
     context_mapping:
       node: node
     bundles:

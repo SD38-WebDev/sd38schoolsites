@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.news_alert.body
+    - field.field.node.news_alert.field_alert_redirect
     - field.field.node.news_alert.field_alert_title
     - field.field.node.news_alert.field_alert_type
     - node.type.news_alert
   module:
     - ds
+    - link
     - text
     - user
 third_party_settings:
@@ -50,6 +52,18 @@ content:
     third_party_settings: {  }
     weight: 1
     region: main
+  field_alert_redirect:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_alert_title:
     type: string
     label: hidden

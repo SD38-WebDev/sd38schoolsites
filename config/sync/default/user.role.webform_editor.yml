@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - simple_image_rotate
     - webform
 id: webform_editor
 label: 'Webform Editor'
@@ -21,5 +22,6 @@ permissions:
   - 'edit any webform'
   - 'edit own webform'
   - 'edit own webform submission'
+  - 'rotate images'
   - 'view any webform submission'
   - 'view own webform submission'

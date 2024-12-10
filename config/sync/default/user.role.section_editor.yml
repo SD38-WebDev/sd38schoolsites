@@ -19,6 +19,7 @@ dependencies:
     - node
     - scheduler
     - search
+    - simple_image_rotate
     - system
     - taxonomy
     - toolbar
@@ -58,6 +59,7 @@ permissions:
   - 'edit own image media'
   - 'edit own page content'
   - 'edit own remote_video media'
+  - 'rotate images'
   - 'schedule publishing of nodes'
   - 'search content'
   - 'update media'

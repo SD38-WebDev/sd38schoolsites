@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news_alert.body
+    - field.field.node.news_alert.field_alert_redirect
     - field.field.node.news_alert.field_alert_title
     - field.field.node.news_alert.field_alert_type
     - node.type.news_alert
@@ -38,13 +39,53 @@ third_party_settings:
     regions:
       main:
         - group_alert_type_wrapper
-        - group_news_alert_link
         - field_alert_title
         - body
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'Read more'
+          'link class': ''
+          wrapper: ''
+          class: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: span
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
   field_group:
     group_alert_type_wrapper:
       children:
-        - group_news_alert_link
+        - field_alert_title
+        - body
+        - node_link
       label: 'Alert Type Wrapper'
       parent_name: ''
       region: main
@@ -60,21 +101,6 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-    group_news_alert_link:
-      children:
-        - field_alert_title
-        - body
-      label: 'News Alert Link'
-      parent_name: group_alert_type_wrapper
-      region: main
-      weight: 1
-      format_type: link
-      format_settings:
-        classes: ''
-        id: ''
-        target: entity
-        custom_uri: ''
-        target_attribute: default
 id: node.news_alert.teaser
 targetEntityType: node
 bundle: news_alert
@@ -85,7 +111,35 @@ content:
     label: hidden
     settings:
       trim_length: 600
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: span
+            ow-cl: ''
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
     weight: 3
     region: main
   field_alert_title:
@@ -125,5 +179,6 @@ content:
     weight: 2
     region: main
 hidden:
+  field_alert_redirect: true
   field_alert_type: true
   links: true

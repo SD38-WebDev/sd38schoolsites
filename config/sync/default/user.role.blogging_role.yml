@@ -5,6 +5,7 @@ dependencies:
   config:
     - taxonomy.vocabulary.tags
   module:
+    - simple_image_rotate
     - taxonomy
     - term_merge
 id: blogging_role
@@ -17,3 +18,4 @@ permissions:
   - 'delete terms in tags'
   - 'edit terms in tags'
   - 'merge taxonomy terms'
+  - 'rotate images'

@@ -1,9 +1,9 @@
 status: 1
-pattern: '[node:content-type] - [node:created]'
+pattern: '[node:field_alert_title]'
 escape: false
 preserve_titles: false
+save: true
+chunk: 50
 dependencies:
   config:
     - node.type.news_alert
-save: 0
-chunk: '50'

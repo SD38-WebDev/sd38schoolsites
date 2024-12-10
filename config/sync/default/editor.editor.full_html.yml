@@ -71,7 +71,7 @@ image_upload:
   status: true
   scheme: public
   directory: inline-images
-  max_size: ''
+  max_size: '10'
   max_dimensions:
-    width: null
-    height: null
+    width: 1200
+    height: 1200
