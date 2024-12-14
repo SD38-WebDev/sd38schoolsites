@@ -8,10 +8,13 @@ dependencies:
   module:
     - image
     - required_api
+    - simple_image_rotate
 third_party_settings:
   required_api:
     required_plugin: default
     required_plugin_options: 0
+  simple_image_rotate:
+    enable_rotate: 0
 id: node.header_image.field_sd38_site_logo
 field_name: field_sd38_site_logo
 entity_type: node
@@ -27,7 +30,7 @@ settings:
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  max_filesize: '5 MB'
   max_resolution: 600x600
   min_resolution: ''
   alt_field: true
