@@ -31,6 +31,7 @@ dependencies:
     - ds_switch_view_mode
     - feeds
     - field_permissions
+    - file
     - filter
     - media
     - menu_link_attributes
@@ -54,6 +55,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access feed overview'
+  - 'access files overview'
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
