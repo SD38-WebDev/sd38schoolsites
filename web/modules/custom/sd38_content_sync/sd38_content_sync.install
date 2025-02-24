@@ -1,0 +1,25 @@
+<?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+function sd38_content_sync_update_9001() {
+  $content_types = \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->loadMultiple();
+
+  foreach ($content_types as $type) {
+    if (in_array($type, ['page', 'article', 'news_alert']) &&
+      !FieldStorageConfig::loadByName('node','field_content_synced')) {
+
+      $field = FieldStorageConfig::create([
+        'field_name'  => 'field_content_synced',
+        'entity_type' => 'node',
+        'type'        => 'boolean',
+        'cardinality' => 1,
+        'label'       => 'Is it District node',
+      ]);
+      $field->save();
+    }
+  }
+}
