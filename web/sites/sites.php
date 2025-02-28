@@ -58,7 +58,7 @@
  $sites['dev.ddev.site'] = 'dev';
  $sites['schooldev.ddev.site'] = 'schooldev';
  $sites['trainingdev.ddev.site'] = 'trainingdev';
-
+ $sites['bridge.sd38districtwebsite.docksal.site'] = 'bridge';
 
 $platformsh = new \Platformsh\ConfigReader\Config();
 

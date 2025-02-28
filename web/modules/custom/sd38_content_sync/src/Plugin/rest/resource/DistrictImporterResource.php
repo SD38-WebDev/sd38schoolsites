@@ -85,8 +85,8 @@ class DistrictImporterResource extends ResourceBase {
     $queue = \Drupal::service('queue')->get('preprocess_importer_queue_worker');
 
     $queue->createItem([
-      'bundle' => $data->bundle,
-      'nid' => $data->nid
+      'bundle' => $data['bundle'],
+      'nid' => $data['nid']
     ]);
 
     return new ResourceResponse(['message' => 'Added to queue.'], 200);

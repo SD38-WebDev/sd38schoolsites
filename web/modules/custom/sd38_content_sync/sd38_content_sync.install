@@ -3,13 +3,17 @@
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 
-function sd38_content_sync_update_9001() {
+/**
+ * Add a ContentSynced field.
+ */
+function sd38_content_sync_update_9002() {
   $content_types = \Drupal::entityTypeManager()
     ->getStorage('node_type')
     ->loadMultiple();
 
   foreach ($content_types as $type) {
-    if (in_array($type, ['page', 'article', 'news_alert']) &&
+
+    if (in_array($type->id(), ['page', 'article', 'news_alert']) &&
       !FieldStorageConfig::loadByName('node','field_content_synced')) {
 
       $field = FieldStorageConfig::create([
