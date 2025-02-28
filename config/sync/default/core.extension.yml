@@ -10,6 +10,7 @@ module:
   automated_cron: 0
   background_image_formatter: 0
   backup_migrate: 0
+  basic_auth: 0
   bg_image_formatter: 0
   big_pipe: 0
   block: 0
@@ -114,10 +115,14 @@ module:
   password_policy_username: 0
   path: 0
   path_alias: 0
+  queue_ui: 0
   redirect: 0
   required_api: 0
   required_by_role: 0
+  rest: 0
+  restui: 0
   scheduler: 0
+  sd38_content_sync: 0
   sd38_mediabyuser: 0
   sd38_sitelinks: 0
   search: 0
