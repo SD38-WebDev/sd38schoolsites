@@ -134,7 +134,8 @@
         "drupal/node_revision_delete": "^2.0@RC",
         "drupal/o365": "^5.0",
         "drupal/onlyone": "^2.0",
-        "drupal/openid_connect": "^1.4",
+        "drupal/openid_connect": "^2.0",
+        "drupal/openid_connect_windows_aad": "^2.0@beta",
         "drupal/panelbutton": "^1.5",
         "drupal/paragraph_view_mode": "^3.1",
         "drupal/paragraphs": "^1.17",
@@ -160,7 +161,7 @@
         "drupal/taxonomy_manager": "^2.0",
         "drupal/term_merge": "^2.0@beta",
         "drupal/term_reference_change": "^2.0@beta",
-        "drupal/theme_permission": "^2.0",
+        "drupal/theme_permission": "2.0.0",
         "drupal/token": "^1.13",
         "drupal/twitter_block": "^3.0",
         "drupal/unpublished_paragraphs": "^1.4",
@@ -212,6 +213,9 @@
           },
           "drupal/field_slideshow": {
               "Fix for Drupal 10": "https://www.drupal.org/files/issues/2023-03-23/compatiblity-fixes-3341466-3.patch"
+          },
+          "drupal/openid_connect_windows_aad": {
+              "3400940: Warning: Undefined array key \"end_session_endpoint\" since 3322786": "https://www.drupal.org/files/issues/2023-11-11/3400940-03.patch"
           }
         },
         "installer-paths": {
