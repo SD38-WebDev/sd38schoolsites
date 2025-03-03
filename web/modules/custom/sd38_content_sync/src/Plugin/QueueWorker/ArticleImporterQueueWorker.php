@@ -136,7 +136,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     // Search for an existing node by product code.
     $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
       ->accessCheck(FALSE)
-      ->condition('field_district_id', $data['nid']);
+      ->condition('field_district_id', $data['field_district_id']);
     $nids = $query->execute();
 
     if (!empty($nids)) {
@@ -150,6 +150,8 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         'type' => $data['bundle'],
         'title' => $data['title'],
       ]);
+      $node->set('field_district_id', $data['field_district_id']);
+      $node->enforceIsNew();
     }
 
     $node->set("title", $data['title']);
@@ -265,7 +267,6 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         break;
     }
 
-    $node->enforceIsNew();
     $node->save();
   }
 }
