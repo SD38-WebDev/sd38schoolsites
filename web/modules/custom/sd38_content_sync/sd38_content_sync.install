@@ -6,7 +6,7 @@ use Drupal\field\Entity\FieldStorageConfig;
 /**
  * Add a ContentSynced field.
  */
-function sd38_content_sync_update_9002() {
+function sd38_content_sync_install() {
   $content_types = \Drupal::entityTypeManager()
     ->getStorage('node_type')
     ->loadMultiple();
@@ -25,18 +25,9 @@ function sd38_content_sync_update_9002() {
       ]);
       $field->save();
     }
-  }
-}
-
-function sd38_content_sync_update_9003() {
-  $content_types = \Drupal::entityTypeManager()
-    ->getStorage('node_type')
-    ->loadMultiple();
-
-  foreach ($content_types as $type) {
 
     if (in_array($type->id(), ['page', 'article', 'news_alert']) &&
-      !FieldStorageConfig::loadByName('node','field_content_synced')) {
+      !FieldStorageConfig::loadByName('node','field_district_id')) {
 
       $field = FieldStorageConfig::create([
         'field_name'  => 'field_district_id',

@@ -132,7 +132,25 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    * {@inheritdoc}
    */
   public function processItem($data) {
-    $node = $this->entityTypeManager->getStorage('node')->create(["type" => $data['bundle']]);
+
+    // Search for an existing node by product code.
+    $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      ->accessCheck(FALSE)
+      ->condition('field_district_id', $data['nid']);
+    $nids = $query->execute();
+
+    if (!empty($nids)) {
+      // Load the existing node and update it.
+      $nid = reset($nids);
+      $node = Node::load($nid);
+    }
+    else {
+      // Create a new node.
+      $node = Node::create([
+        'type' => $data['bundle'],
+        'title' => $data['title'],
+      ]);
+    }
 
     $node->set("title", $data['title']);
     $node->set("status", 1);
@@ -154,10 +172,8 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           ]);
         }
 
-
         if (!empty($data['field_feature_image'])) {
           $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
-
           // Create the media entity.
           $media = $this->entityTypeManager->getStorage('media')->create([
             'bundle' => 'image',
@@ -248,7 +264,6 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         }
         break;
     }
-
 
     $node->enforceIsNew();
     $node->save();
