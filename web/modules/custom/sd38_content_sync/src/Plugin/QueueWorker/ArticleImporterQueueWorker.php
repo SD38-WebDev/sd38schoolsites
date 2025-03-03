@@ -100,7 +100,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       $response = $this->httpClient->get('http://sd38districtwebsite.docksal.site'. $url, ['stream' => TRUE]);
       $image_data = $response->getBody()->getContents();
 
-      $dir = 'public://2025-02';
+      $dir = dirname($uri);
 
       // Prepare the directory using the file_system service (Create directory if it doesn't exist).
       $this->fileSystem->prepareDirectory($dir, FileSystemInterface::CREATE_DIRECTORY);
@@ -154,19 +154,6 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           ]);
         }
 
-        // Accordion
-        //Article Feed
-        //Basic Text Section
-        //Embedded Video
-        //Image Gallery
-        //Media and Text Section
-        //Calendar Events (List)
-        //Tile Links Section
-        //File Attachments
-        //Image Banner
-        //Promo Cards Section
-
-        //$node->set("field_feature_page", $data['field_feature_page']);
 
         if (!empty($data['field_feature_image'])) {
           $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
@@ -194,20 +181,16 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           $node->set('field_page_thumbnail_image', $field_feature_image);
         }
 
-        /*if (!empty($data['field_image_gallery'])) {
-          $images = [];
-          foreach ($data['field_image_gallery'] as $incomingAttachment) {
-            $images[] = $this->preprocessFile($incomingAttachment['url']['url'], $incomingAttachment['url']['uri']);
-          }
-          $node->set('field_image_gallery', $images);
-        }*/
-
         break;
       case 'news_alert':
-          //field_alert_redirect
+          //field_alert_redirect - ?
           $node->set("field_alert_title", $data['title']);
           $node->set("field_alert_type", $data['field_alert_type']);
-          $node->set("summary", $data['field_news_alert_description']);
+          $node->set("body", [
+            'value' => $data['field_news_alert_description'],
+            'summary' => $data['field_news_alert_description'],
+            'format' => 'full_html',
+          ]);
 
         break;
       case 'article':

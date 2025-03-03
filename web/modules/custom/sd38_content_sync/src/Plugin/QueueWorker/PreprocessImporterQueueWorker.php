@@ -34,7 +34,7 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
   const API_QUERY_PARAMETERS = [
     'article' => '?include=field_attachments.field_media_file,field_image,field_carousel_image,field_embedded_articles,field_image_gallery,field_page_assignment,field_tags&fields[file--file,media--file]=uri,url',
     'page' => '?include=field_image,field_content_section,field_image_gallery,field_page_thumbnail_image&fields[file--file,media--file]=uri,url',
-    'news_alert' => '?',
+    'news_alert' => '?include=',
   ];
 
   const DISTRICT_URL = 'http://sd38districtwebsite.docksal.site';
@@ -114,7 +114,8 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
       'changed' => $attributes['changed'],
       'path' => $attributes['path']['alias'],
       'body' => $attributes['body']['value'],
-      'bundle' => $data['bundle']
+      'bundle' => $data['bundle'],
+      'field_district_id' => $data['nid']
     ];
 
     switch ($data['bundle']) {
