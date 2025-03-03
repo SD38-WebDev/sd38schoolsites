@@ -1,0 +1,19 @@
+uuid: e616888f-c5c9-47c9-9027-0f7604c51bdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_id
+    - node.type.article
+id: node.article.field_district_id
+field_name: field_district_id
+entity_type: node
+bundle: article
+label: '38 District School'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
