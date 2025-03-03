@@ -40,3 +40,4 @@ segment_display_limit: null
 truncator_mode: true
 truncator_length: 32
 truncator_dots: true
+segment_display_minimum: 1

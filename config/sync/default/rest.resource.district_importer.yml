@@ -1,0 +1,18 @@
+uuid: 3645cd56-240c-4afb-a30e-f83a8b54a185
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - sd38_content_sync
+    - serialization
+id: district_importer
+plugin_id: district_importer
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth
