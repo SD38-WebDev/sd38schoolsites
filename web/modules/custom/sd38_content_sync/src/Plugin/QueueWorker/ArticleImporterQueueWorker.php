@@ -2,6 +2,7 @@
 
 namespace Drupal\sd38_content_sync\Plugin\QueueWorker;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\file\Entity\File;
@@ -12,6 +13,8 @@ use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\media\Entity\Media;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use \GuzzleHttp\ClientInterface;
+use \Drupal\file\FileRepositoryInterface;
 
 /**
  * Processes Importing Queue.
@@ -36,6 +39,13 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
   public $fileSystem;
 
+  /**
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   *
+   * The Config Factory.
+   *
+   */
+  protected $configFactory;
 
   /**
    * Constructs a \Drupal\Component\Plugin\PluginBase object.
@@ -54,9 +64,11 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    *   The HTTP Client service.
    * @param FileSystemInterface $fileSystem
    *   The HTTP Client service.
+   * @param ConfigFactoryInterface $configFactory
+   *    The HTTP Client service.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, $entityTypeManager,
-  $httpClient, $fileRepository, $fileSystem) {
+    ClientInterface $httpClient, FileRepositoryInterface $fileRepository, FileSystemInterface $fileSystem, ConfigFactoryInterface $configFactory) {
     $this->configuration = $configuration;
     $this->pluginId = $plugin_id;
     $this->pluginDefinition = $plugin_definition;
@@ -64,6 +76,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     $this->httpClient = $httpClient;
     $this->fileRepository = $fileRepository;
     $this->fileSystem = $fileSystem;
+    $this->configFactory = $configFactory;
   }
 
 
@@ -78,8 +91,8 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       $container->get('entity_type.manager'),
       $container->get('http_client'),
       $container->get('file.repository'),
-      $container->get('file_system')
-
+      $container->get('file_system'),
+      $container->get('config.factory')
     );
   }
 
@@ -96,8 +109,11 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
   protected function downloadFile($url, $uri) {
     try {
+      $config = $this->configFactory->get('sd38_content_sync.settings');
+      $districtUrl = $config->get('d38_district_url') ?? '';
+
       // Download the image from the URL.
-      $response = $this->httpClient->get('http://sd38districtwebsite.docksal.site'. $url, ['stream' => TRUE]);
+      $response = $this->httpClient->get($districtUrl . $url, ['stream' => TRUE]);
       $image_data = $response->getBody()->getContents();
 
       $dir = dirname($uri);
