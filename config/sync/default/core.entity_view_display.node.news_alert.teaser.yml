@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news_alert.field_alert_redirect
     - field.field.node.news_alert.field_alert_title
     - field.field.node.news_alert.field_alert_type
+    - field.field.node.news_alert.field_district_id
     - node.type.news_alert
   module:
     - ds
@@ -181,4 +182,5 @@ content:
 hidden:
   field_alert_redirect: true
   field_alert_type: true
+  field_district_id: true
   links: true
