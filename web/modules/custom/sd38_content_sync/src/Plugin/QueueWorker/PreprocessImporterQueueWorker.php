@@ -149,7 +149,7 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
       case 'news_alert':
         $preparedData['field_alert_type'] = $attributes['field_alert_type'];
         $preparedData['field_news_alert_description'] = $attributes['field_news_alert_description'];
-        $preparedData['field_content_link'] = $attributes['field_content_link'];
+        $preparedData['field_content_link'] = !empty($attributes['field_content_link']) ? $attributes['field_content_link']['url'] : '';
         break;
     }
 

@@ -201,10 +201,11 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
         break;
       case 'news_alert':
-          //field_alert_redirect - ?
           $node->set("field_alert_title", $data['title']);
           $node->set("field_alert_type", $data['field_alert_type']);
-          $node->set("body", [
+          $node->set("field_alert_redirect", $data['field_content_link']);
+
+        $node->set("body", [
             'value' => $data['field_news_alert_description'],
             'summary' => $data['field_news_alert_description'],
             'format' => 'full_html',
