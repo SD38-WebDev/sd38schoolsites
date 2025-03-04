@@ -33,12 +33,11 @@ class SettingsForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state, Request $request = NULL) {
     $config = $this->config('sd38_content_sync.settings');
 
-    $form['autosave_time_interval'] = [
-      '#title' => $this->t('Autosave time interval (sec)'),
+    $form['d38_district_url'] = [
+      '#title' => $this->t('D38 District URL'),
       '#type' => 'textfield',
-      '#default_value' => $config->get('autosave_time_interval'),
+      '#default_value' => $config->get('d38_district_url') ?? ''
     ];
-
     return parent::buildForm($form, $form_state);
   }
 
