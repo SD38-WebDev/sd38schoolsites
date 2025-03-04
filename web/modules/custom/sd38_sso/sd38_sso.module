@@ -1,18 +1,20 @@
 <?php
 
+use Drupal\user\UserInterface;
+
 /**
  * Implements hook_openid_connect_userinfo_alter().
  */
 function sd38_sso_openid_connect_userinfo_alter(array &$userinfo, array $context) {
-  if ($context['plugin_id'] != OPENID_PROVIDER) {
+  if ($context['plugin_id'] != 'windows_aad') {
     return;
   }
 
   // Get additional user data.
-  $userinfo['groups'] = $userinfo['groups'] ?? $context['user_data']['groups'];
-  $userinfo['email'] = $userinfo['email'] ?? $context['user_data']['ssoEmailAddress'];
-  $userinfo['firstName'] = $userinfo['firstName'] ?? $context['user_data']['firstName'];
-  $userinfo['lastName'] = $userinfo['lastName'] ?? $context['user_data']['lastName'];
+  //$userinfo['groups'] = $userinfo['groups'] ?? $context['user_data']['groups'];
+  $userinfo['email'] = $userinfo['email'] ?? $context['user_data']['upn'];
+  $userinfo['given_name'] = $userinfo['given_name'] ?? $context['user_data']['given_name'];
+  $userinfo['family_name'] = $userinfo['family_name'] ?? $context['user_data']['family_name'];
 
   \Drupal::logger('openid_userinfo')->warning(json_encode($userinfo));
 }
@@ -22,11 +24,14 @@ function sd38_sso_openid_connect_userinfo_alter(array &$userinfo, array $context
  */
 function sd38_sso_openid_connect_userinfo_save(UserInterface $account, array $context) {
   // Set AzureAD users data.
-  if ($context['plugin_id'] != OPENID_PROVIDER) {
+  if ($context['plugin_id'] != 'windows_aad') {
     return;
   }
+  $userinfo = $context['userinfo'];
 
-  $name = $context['userinfo']['name'] ?? NULL;
+  // Fill the user values manually, since the mapping does not work properly.
+  $account->set('name', $userinfo['name']);
+  $account->set('mail', $userinfo['email']);
 
   \Drupal::logger('openid_context')->warning(json_encode($context));
 }

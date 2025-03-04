@@ -214,8 +214,13 @@
           "drupal/field_slideshow": {
               "Fix for Drupal 10": "https://www.drupal.org/files/issues/2023-03-23/compatiblity-fixes-3341466-3.patch"
           },
+          "drupal/openid_connect": {
+            "3332759: Use getRedirectUrl() method when building authorize query string": "https://www.drupal.org/files/issues/2023-01-11/openid-connect-use-getredirecturl.patch",
+            "3355330: Trying to access array offset on value of type null": "https://git.drupalcode.org/project/openid_connect/-/merge_requests/82.diff"
+          },
           "drupal/openid_connect_windows_aad": {
-              "3400940: Warning: Undefined array key \"end_session_endpoint\" since 3322786": "https://www.drupal.org/files/issues/2023-11-11/3400940-03.patch"
+              "3400940: Warning: Undefined array key \"end_session_endpoint\" since 3322786": "https://www.drupal.org/files/issues/2023-11-11/3400940-03.patch",
+              "3124961: Enforce HTTPS": "https://git.drupalcode.org/project/openid_connect_windows_aad/-/merge_requests/26.patch"
           }
         },
         "installer-paths": {
