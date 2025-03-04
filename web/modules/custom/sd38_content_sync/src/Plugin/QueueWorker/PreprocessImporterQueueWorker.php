@@ -30,7 +30,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class PreprocessImporterQueueWorker extends QueueWorkerBase implements ContainerFactoryPluginInterface {
 
-
   const API_QUERY_PARAMETERS = [
     'article' => '?include=field_attachments.field_media_file,field_image,field_carousel_image,field_embedded_articles,field_image_gallery,field_page_assignment,field_tags&fields[file--file,media--file]=uri,url',
     'page' => '?include=field_image,field_content_section,field_image_gallery,field_page_thumbnail_image&fields[file--file,media--file]=uri,url',
@@ -104,7 +103,9 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
     $preparedData = [];
     $api = self::DISTRICT_URL . '/jsonapi/node/' . $data['bundle'] . self::API_QUERY_PARAMETERS[$data['bundle']];
     $item = $this->getNode($api . '&filter[nid]=' . $data['nid']);
+
     list($jsonapi, $files) = $item;
+
     $item = $jsonapi['data'][0];
 
     $attributes = $item['attributes'];

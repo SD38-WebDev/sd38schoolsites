@@ -134,7 +134,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
   public function processItem($data) {
 
     // Search for an existing node by product code.
-    $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+    $query = $this->entityTypeManager->getStorage('node')->getQuery()
       ->accessCheck(FALSE)
       ->condition('field_district_id', $data['field_district_id']);
     $nids = $query->execute();
@@ -174,7 +174,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           ]);
         }
 
-        if (!empty($data['field_feature_image'])) {
+        if (!empty($data['field_feature_image']) && !empty($data['field_feature_image']['url']['url'])) {
           $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
           // Create the media entity.
           $media = $this->entityTypeManager->getStorage('media')->create([
@@ -244,7 +244,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           }
           $node->set('field_attachments', $attachments);
         }
-        if (!empty($data['field_feature_image'])) {
+        if (!empty($data['field_feature_image']) && !empty($data['field_feature_image']['url']['url'])) {
           $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
 
           // Create the media entity.
