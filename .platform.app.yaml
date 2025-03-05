@@ -133,3 +133,11 @@ crons:
     drupal:
         spec: '*/19 * * * *'
         cmd: 'cd web ; drush core-cron'
+    drush-queue-importer-preprocess:
+      spec: '*/2 * * * *'
+      commands:
+        start: '../drush/drush-multisite queue-run preprocess_importer_queue_worker'
+    drush-queue-importer-article:
+      spec: '*/3 * * * *'
+      commands:
+        start: '../drush/drush-multisite queue-run article_importer_queue_worker'

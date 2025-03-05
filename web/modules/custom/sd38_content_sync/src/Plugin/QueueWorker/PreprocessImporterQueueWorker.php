@@ -2,21 +2,12 @@
 
 namespace Drupal\sd38_content_sync\Plugin\QueueWorker;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\File\FileUrlGenerator;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
-use Drupal\Core\Queue\QueueWorkerInterface;
-use Drupal\file\Entity\File;
-use Drupal\file\FileInterface;
-use Drupal\node\Entity\Node;
 use Drupal\sd38_content_sync\ImporterPreprocessManager;
-use Drupal\taxonomy\Entity\Term;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\RequestException;
-use GuzzleHttp\Exception\ServerException;
-use Drupal\Core\File\FileSystemInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -36,22 +27,35 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
     'news_alert' => '?include=',
   ];
 
-  const DISTRICT_URL = 'http://sd38districtwebsite.docksal.site';
-
-
+  /**
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
   protected $em;
 
+  /**
+   * @var \Drupal\sd38_content_sync\ImporterPreprocessManager
+   */
   protected $preprocessManager;
 
   /**
-   * Creates a new NodePublishBase object.
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   *
+   * The Config Factory.
+   *
+   */
+  protected $configFactory;
+
+  /**
+   * Creates a new PreprocessImporterQueueWorker object.
    */
   public function __construct(
     EntityTypeManagerInterface $em,
-    ImporterPreprocessManager $preprocess_manager
+    ImporterPreprocessManager $preprocess_manager,
+    ConfigFactoryInterface $configFactory
   ) {
     $this->em = $em;
     $this->preprocessManager = $preprocess_manager;
+    $this->configFactory = $configFactory;
   }
 
   /**
@@ -60,14 +64,15 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $container->get('entity_type.manager'),
-      $container->get('sd38_content_sync.preprocess_manager')
+      $container->get('sd38_content_sync.preprocess_manager'),
+      $container->get('config.factory')
     );
   }
 
   public function getNode($apiUrl) {
     $client = \Drupal::httpClient();
     try {
-      $response = $client->get($apiUrl);
+      $response = $client->get($apiUrl, ['verify' => FALSE]);
       $data = json_decode($response->getBody()->getContents(), TRUE);
       $files = [];
       $attachments = $data['included'];
@@ -99,12 +104,13 @@ class PreprocessImporterQueueWorker extends QueueWorkerBase implements Container
 
 
   public function retrieveData($data) {
+    $config = $this->configFactory->get('sd38_content_sync.settings');
+    $districtUrl = $config->get('d38_district_url') ?? '';
 
-    $preparedData = [];
-    $api = self::DISTRICT_URL . '/jsonapi/node/' . $data['bundle'] . self::API_QUERY_PARAMETERS[$data['bundle']];
+    $api = $districtUrl . '/jsonapi/node/' . $data['bundle'] . self::API_QUERY_PARAMETERS[$data['bundle']];
     $item = $this->getNode($api . '&filter[nid]=' . $data['nid']);
 
-    list($jsonapi, $files) = $item;
+    [$jsonapi, $files] = $item;
 
     $item = $jsonapi['data'][0];
 

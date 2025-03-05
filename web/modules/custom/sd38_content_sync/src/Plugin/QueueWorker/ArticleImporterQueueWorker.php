@@ -4,14 +4,12 @@ namespace Drupal\sd38_content_sync\Plugin\QueueWorker;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\file\Entity\File;
 use Drupal\file\FileInterface;
-use Drupal\node\Entity\Node;
 use Drupal\Core\Queue\QueueWorkerBase;
 use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\File\FileSystemInterface;
-use Drupal\media\Entity\Media;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use \GuzzleHttp\ClientInterface;
 use \Drupal\file\FileRepositoryInterface;
@@ -33,10 +31,19 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    */
   public $entityTypeManager;
 
+  /**
+   * @var \GuzzleHttp\ClientInterface
+   */
   public $httpClient;
 
+  /**
+   * @var \Drupal\file\FileRepositoryInterface
+   */
   public $fileRepository;
 
+  /**
+   * @var \Drupal\Core\File\FileSystemInterface
+   */
   public $fileSystem;
 
   /**
@@ -48,7 +55,17 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
   protected $configFactory;
 
   /**
-   * Constructs a \Drupal\Component\Plugin\PluginBase object.
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $nodeStorage;
+
+  /**
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $mediaStorage;
+
+  /**
+   * Constructs a ArticleImporterQueueWorker object.
    *
    * @param array $configuration
    *   A configuration array containing information about the plugin instance.
@@ -61,14 +78,22 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    * @param \GuzzleHttp\ClientInterface $httpClient
    *   The HTTP Client service.
    * @param \Drupal\file\FileRepositoryInterface $fileRepository
-   *   The HTTP Client service.
+   *   File repository.
    * @param FileSystemInterface $fileSystem
-   *   The HTTP Client service.
+   *   File System service.
    * @param ConfigFactoryInterface $configFactory
-   *    The HTTP Client service.
+   *    Config Factory.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, $entityTypeManager,
-    ClientInterface $httpClient, FileRepositoryInterface $fileRepository, FileSystemInterface $fileSystem, ConfigFactoryInterface $configFactory) {
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    EntityTypeManagerInterface $entityTypeManager,
+    ClientInterface $httpClient,
+    FileRepositoryInterface $fileRepository,
+    FileSystemInterface $fileSystem,
+    ConfigFactoryInterface $configFactory
+  ) {
     $this->configuration = $configuration;
     $this->pluginId = $plugin_id;
     $this->pluginDefinition = $plugin_definition;
@@ -77,8 +102,10 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     $this->fileRepository = $fileRepository;
     $this->fileSystem = $fileSystem;
     $this->configFactory = $configFactory;
-  }
 
+    $this->nodeStorage = $this->entityTypeManager->getStorage('node');
+    $this->mediaStorage = $this->entityTypeManager->getStorage('media');
+  }
 
   /**
    * {@inheritdoc}
@@ -106,14 +133,13 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    *   The file entity if the image was downloaded and saved successfully,
    *   or FALSE otherwise.
    */
-
   protected function downloadFile($url, $uri) {
     try {
       $config = $this->configFactory->get('sd38_content_sync.settings');
       $districtUrl = $config->get('d38_district_url') ?? '';
 
       // Download the image from the URL.
-      $response = $this->httpClient->get($districtUrl . $url, ['stream' => TRUE]);
+      $response = $this->httpClient->get($districtUrl . $url, ['stream' => TRUE, 'verify' => FALSE]);
       $image_data = $response->getBody()->getContents();
 
       $dir = dirname($uri);
@@ -148,9 +174,8 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    * {@inheritdoc}
    */
   public function processItem($data) {
-
-    // Search for an existing node by product code.
-    $query = $this->entityTypeManager->getStorage('node')->getQuery()
+    // Search for an existing node by an ID from district site.
+    $query = $this->nodeStorage->getQuery()
       ->accessCheck(FALSE)
       ->condition('field_district_id', $data['field_district_id']);
     $nids = $query->execute();
@@ -158,11 +183,11 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     if (!empty($nids)) {
       // Load the existing node and update it.
       $nid = reset($nids);
-      $node = Node::load($nid);
+      $node = $this->nodeStorage->load($nid);
     }
     else {
       // Create a new node.
-      $node = Node::create([
+      $node = $this->nodeStorage->create([
         'type' => $data['bundle'],
         'title' => $data['title'],
       ]);
@@ -170,21 +195,21 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       $node->enforceIsNew();
     }
 
-    $node->set("title", $data['title']);
-    $node->set("status", 1);
-    $node->set("uid", 1);
+    $node->set('title', $data['title']);
+    $node->set('status', 1);
+    $node->set('uid', 1);
 
     $createdDateTime = new DrupalDateTime($data['created'], new \DateTimeZone('UTC'));
     $changedDateTime = new DrupalDateTime($data['changed'], new \DateTimeZone('UTC'));
 
-    $node->set("created", $createdDateTime->getTimestamp());
-    $node->set("changed", $changedDateTime->getTimestamp());
-    $node->set("path", $data['path']);
+    $node->set('created', $createdDateTime->getTimestamp());
+    $node->set('changed', $changedDateTime->getTimestamp());
+    $node->set('path', $data['path']);
 
     switch($data['bundle']) {
       case 'page':
         if (!empty($data['body'])){
-          $node->set("body", [
+          $node->set('body', [
             'value' => $data['body'],
             'format' => 'full_html',
           ]);
@@ -193,7 +218,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         if (!empty($data['field_feature_image']) && !empty($data['field_feature_image']['url']['url'])) {
           $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
           // Create the media entity.
-          $media = $this->entityTypeManager->getStorage('media')->create([
+          $media = $this->mediaStorage->create([
             'bundle' => 'image',
             'name' =>  $file->getFilename(),
             'uid' => 1,
@@ -217,21 +242,21 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
         break;
       case 'news_alert':
-          $node->set("field_alert_title", $data['title']);
-          $node->set("field_alert_type", $data['field_alert_type']);
-          $node->set("field_alert_redirect", $data['field_content_link']);
+        $node->set('field_alert_title', $data['title']);
+        $node->set('field_alert_type', $data['field_alert_type']);
+        $node->set('field_alert_redirect', $data['field_content_link']);
 
-        $node->set("body", [
-            'value' => $data['field_news_alert_description'],
-            'summary' => $data['field_news_alert_description'],
-            'format' => 'full_html',
-          ]);
+        $node->set('body', [
+          'value' => $data['field_news_alert_description'],
+          'summary' => $data['field_news_alert_description'],
+          'format' => 'full_html',
+        ]);
 
         break;
       case 'article':
 
         if (!empty($data['body'])){
-          $node->set("body", [
+          $node->set('body', [
             'value' => $data['body'],
             'format' => 'full_html',
           ]);
@@ -244,7 +269,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
             $file = $this->downloadFile($incomingAttachment['url']['url'], $incomingAttachment['url']['uri']);
 
             // Create the media entity.
-            $media = $this->entityTypeManager->getStorage('media')->create([
+            $media = $this->mediaStorage->create([
               'bundle' => 'file',
               'name' =>  $file->getFilename(),
               'uid' => 1,
@@ -265,7 +290,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
 
           // Create the media entity.
-          $media = $this->entityTypeManager->getStorage('media')->create([
+          $media = $this->mediaStorage->create([
             'bundle' => 'image',
             'name' =>  $file->getFilename(),
             'uid' => 1,

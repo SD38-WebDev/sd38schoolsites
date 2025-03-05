@@ -53,15 +53,17 @@ class SettingsForm extends ConfigFormBase {
       'form_id',
       'op'
     ];
+    $config = $this->config('sd38_content_sync.settings');
     foreach ($values as $name => $value) {
       if (!in_array($name, $ignored_values)) {
         if (isset($value['value'])) {
           $value = $value['value'];
         }
-        $this->config('sd38_content_sync.settings')
-          ->set($name, $value);
+
+        $config->set($name, $value);
       }
     }
-    $this->config('sd38_content_sync.settings')->save();
+    $config->save();
+    parent::submitForm($form, $form_state);
   }
 }
