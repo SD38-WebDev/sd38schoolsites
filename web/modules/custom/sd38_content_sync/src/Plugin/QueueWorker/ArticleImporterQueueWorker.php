@@ -31,6 +31,22 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     'news_alert' => '?include=',
   ];
 
+ const PARAGRAPHS_MAPPING = [
+      'basic_text_section' => [
+        'field_bg' => 'field_add_background_colour',
+        'field_bgcolour' => 'field_background_colour',
+        'field_section_content' => 'field_section_content',
+        'field_section_title' => 'field_section_title',
+      ],
+      'image_gallery' => [
+        'paragraph_view_mode' => 'paragraph_view_mode',
+        'field_images' => 'field_images',
+        'field_section_content' => 'field_section_content',
+        'field_section_title' => 'field_section_title',
+      ]
+    ];
+
+
   /**
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
@@ -184,7 +200,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       'created' => $attributes['created'],
       'changed' => $attributes['changed'],
       'path' => $attributes['path']['alias'],
-      'body' => $attributes['body']['value'],
+      'body' => !empty($attributes['body']) ? $attributes['body']['value'] : '',
       'bundle' => $data['bundle'],
       'field_district_id' => $data['nid']
     ];
@@ -202,7 +218,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         break;
 
       case 'page':
-        $preparedData['field_body_2'] = $attributes['field_body_2']['value'];
+        $preparedData['field_body_2'] = !empty($attributes['field_body_2']) ? $attributes['field_body_2']['value'] : '';
         $preparedData['field_feature_page'] = $attributes['field_feature_page'];
         if (!empty($jsonapi['data'][0]['relationships']['field_image_gallery']['data'])) {
           $preparedData['field_image_gallery'] = array_map(function($item) use ($files) {
@@ -213,6 +229,22 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         $preparedData['field_feature_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_image']['data']['id']]];
         if (!empty($jsonapi['data'][0]['relationships']['field_page_thumbnail_image']['data'])) {
           $preparedData['field_page_thumbnail_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_page_thumbnail_image']['data']['id']]];
+        }
+        if (!empty($jsonapi['data'][0]['relationships']['field_content_section'])) {
+          $preparedData['field_content_section'] = [];
+          foreach ($jsonapi['data'][0]['relationships']['field_content_section']['data'] as $fieldContentSectionItem) {
+            $prgfId = $fieldContentSectionItem['id'];
+            $prgfType = $fieldContentSectionItem['type'];
+            foreach ($jsonapi['included'] as $includedItem) {
+              if ($includedItem['id'] == $prgfId) {
+                $preparedData['field_content_section'][] = [
+                  'id' => $prgfId,
+                  'type' => $prgfType,
+                  'attributes' => $includedItem['attributes'],
+                ];
+              }
+            }
+          }
         }
         break;
 
@@ -266,6 +298,49 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     return FALSE;
   }
 
+  /**
+   *
+   * Create the Paragraph Entity.
+   *
+   * @param $prgfData
+   *
+   * @return array
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   */
+  protected function createParagraphs($prgfData) {
+    $bundle = str_replace('paragraph--', '', $prgfData['type']);
+    $prgfEntity = $this->entityTypeManager->getStorage('paragraph')->create([
+      'type' => $bundle,
+    ]);
+    $mapping = self::PARAGRAPHS_MAPPING[$bundle];
+
+    foreach ($mapping as $districtFieldName => $schoolFieldName) {
+      if (array_key_exists($districtFieldName, $prgfData['attributes']) &&
+        in_array($districtFieldName, $prgfData['attributes'])) {
+        $prgfEntity->set($schoolFieldName, $prgfData['attributes'][$districtFieldName]);
+      }
+    }
+
+    if ($bundle == 'image_gallery') {
+
+      if (array_key_exists('included', $prgfData)) {
+        foreach ($prgfData['included'] as $includedItems) {
+          if ($includedItems['type'] == 'paragraph--image_gallery') {
+            //$includedItems['relationships']['field_images'];
+          }
+        }
+      }
+
+    }
+    $prgfEntity->save();
+    return [
+      'target_id' => $prgfEntity->id(),
+      'target_revision_id' => $prgfEntity->getRevisionId(),
+    ];
+  }
+
   protected function preprocessFile($url, $uri) {
     $file = $this->downloadFile($url, $uri);
     return [
@@ -290,16 +365,16 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       // Load the existing node and update it.
       $nid = reset($nids);
       $node = $this->nodeStorage->load($nid);
+      $node->delete();
     }
-    else {
-      // Create a new node.
-      $node = $this->nodeStorage->create([
-        'type' => $data['bundle'],
-        'title' => $data['title'],
-      ]);
-      $node->set('field_district_id', $data['field_district_id']);
-      $node->enforceIsNew();
-    }
+
+    // Create a new node.
+    $node = $this->nodeStorage->create([
+      'type' => $data['bundle'],
+      'title' => $data['title'],
+    ]);
+    $node->set('field_district_id', $data['field_district_id']);
+    $node->enforceIsNew();
 
     $node->set('title', $data['title']);
     $node->set('status', 1);
@@ -314,6 +389,8 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
     switch($data['bundle']) {
       case 'page':
+
+        $contentSectionField = [];
         if (!empty($data['body'])){
           $node->set('body', [
             'value' => $data['body'],
@@ -322,28 +399,29 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         }
 
         if (!empty($data['field_feature_image']) && !empty($data['field_feature_image']['url']['url'])) {
-          $file = $this->downloadFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
-          // Create the media entity.
-          $media = $this->mediaStorage->create([
-            'bundle' => 'image',
-            'name' =>  $file->getFilename(),
-            'uid' => 1,
-            'status' => 1,
-            'field_media_image' => [
-              'target_id' => $file->id(),
-            ],
-          ]);
-          $media->save();
 
-          $field_feature_image = [
-            'target_id' => $media->id(),
-          ];
-          $node->set('field_feature_image', $field_feature_image);
+          $prgfEntity = $this->entityTypeManager->getStorage('paragraph')->create([
+            'type' => 'image_banner',
+          ]);
+          $file = $this->preprocessFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
+          $prgfEntity->set('field_banner_image', $file);
+          $prgfEntity->save();
+          $contentSectionField[] = ['target_id' => $prgfEntity->id(), 'target_revision_id' => $prgfEntity->getRevisionId()];
+          $node->set('field_content_section', $contentSectionField);
         }
 
         if (!empty($data['field_page_thumbnail_image'])) {
           $field_feature_image = $this->preprocessFile($data['field_page_thumbnail_image']['url']['url'], $data['field_page_thumbnail_image']['url']['uri']);
           $node->set('field_page_thumbnail_image', $field_feature_image);
+        }
+
+        if (!empty($data['field_content_section'])) {
+          foreach ($data['field_content_section'] as $contentSection) {
+            if (!empty($contentSection)) {
+              $contentSectionField[] = $this->createParagraphs($contentSection);
+            }
+          }
+          $node->set('field_content_section', $contentSectionField);
         }
 
         break;

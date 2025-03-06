@@ -1,4 +1,0 @@
-services:
-  sd38_content_sync.preprocess_manager:
-    class: Drupal\sd38_content_sync\ImporterPreprocessManager
-    arguments: ["@entity_type.manager"]
