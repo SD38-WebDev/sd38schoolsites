@@ -6,6 +6,7 @@ dependencies:
 runtime:
     extensions:
         - redis
+        - sodium
 variables:
     php:
         memory_limit: 3072M
