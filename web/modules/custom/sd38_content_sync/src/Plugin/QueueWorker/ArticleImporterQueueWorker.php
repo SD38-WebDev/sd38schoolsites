@@ -383,6 +383,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    */
   public function processItem($rawJsonApidata) {
 
+    $theNodeNeedsToBeUpdated = FALSE;
     $data = $this->retrieveData($rawJsonApidata);
 
     // Search for an existing node by an ID from district site.
@@ -395,6 +396,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       // Load the existing node and update it.
       $nid = reset($nids);
       $node = $this->nodeStorage->load($nid);
+      $theNodeNeedsToBeUpdated = TRUE;
     }
     else {
       // Create a new node.
@@ -437,20 +439,33 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           $prgfEntity->set('field_banner_image', $file);
           $prgfEntity->save();
           $contentSectionField[] = ['target_id' => $prgfEntity->id(), 'target_revision_id' => $prgfEntity->getRevisionId()];
-          $node->set('field_content_section', $contentSectionField);
         }
 
         if (!empty($data['field_page_thumbnail_image'])) {
+          if ($theNodeNeedsToBeUpdated) {
+            $node->field_page_thumbnail_image->getEntity()->delete();
+          }
           $field_feature_image = $this->preprocessFile($data['field_page_thumbnail_image']['url']['url'], $data['field_page_thumbnail_image']['url']['uri']);
           $node->set('field_page_thumbnail_image', $field_feature_image);
         }
 
         if (!empty($data['field_content_section'])) {
+          if ($theNodeNeedsToBeUpdated) {
+            $oldPrgfs = $node->field_content_section->getValue();
+            foreach ($oldPrgfs as $oldPrgfId) {
+              $oldPrgf = $this->entityTypeManager->getStorage('paragraph')->load($oldPrgfId['target_id']);
+              if ($oldPrgf) {
+                $oldPrgf->delete();
+              }
+            }
+          }
           foreach ($data['field_content_section'] as $contentSection) {
             if (!empty($contentSection['attributes'])) {
               $contentSectionField[] = $this->createParagraphs($contentSection['attributes']);
             }
           }
+        }
+        if (!empty($contentSectionField)) {
           $node->set('field_content_section', $contentSectionField);
         }
 
