@@ -132,6 +132,11 @@ content:
             suffix: ''
     weight: 0
     region: main
+  image_gallery_carousel_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   paragraph_view_mode: true
   paragraphs_carousel_entity_view_1: true

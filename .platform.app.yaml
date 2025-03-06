@@ -6,6 +6,7 @@ dependencies:
 runtime:
     extensions:
         - redis
+        - sodium
 variables:
     php:
         memory_limit: 3072M
@@ -133,3 +134,7 @@ crons:
     drupal:
         spec: '*/19 * * * *'
         cmd: 'cd web ; drush core-cron'
+    drush-queue-importer-article:
+      spec: '*/3 * * * *'
+      commands:
+        start: '../drush/drush-multisite queue-run article_importer_queue_worker'

@@ -1,0 +1,87 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeForm;
+
+/**
+ * Implements hook_cron().
+ */
+function sd38_content_sync_cron() {
+
+  $queue = \Drupal::service('queue')->get('article_importer_queue_worker');
+  $queue_worker = \Drupal::service('plugin.manager.queue_worker')
+    ->createInstance('article_importer_queue_worker');
+
+  if ($item = $queue->claimItem()) {
+    try {
+      $queue_worker->processItem($item->data);
+      $queue->deleteItem($item);
+    }
+    catch (Exception $e) {
+      $queue->releaseItem($item);
+      watchdog_exception('sd38_content_sync', $e);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function sd38_content_sync_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $mainContentTypes = [
+    'article',
+    'page',
+    'news_alert',
+  ];
+  $entityForms = [];
+  foreach ($mainContentTypes as $entityName) {
+    $entityForms[] = 'node_' . $entityName . '_form';
+    $entityForms[] = 'node_' . $entityName . '_edit_form';
+
+  };
+
+  if (in_array($form_id, $entityForms)) {
+    /** @var \Drupal\Core\Entity\EntityForm $form_object */
+    $form_object = $form_state->getFormObject();
+    $form['field_district_id'] = [
+      '#access' => FALSE,
+    ];
+    if ($form_object instanceof NodeForm) {
+      $entity = $form_object->getEntity();
+      if (!empty($entity->field_district_id->value)) {
+        $fields = [
+          'title',
+          'status'
+        ];
+        switch ($entity->bundle()) {
+          case 'article':
+            $fields = array_merge($fields, [
+              'title',
+              'body',
+              'field_attachments',
+              'field_feature_image',
+            ]);
+            break;
+          case 'page':
+            $fields = array_merge($fields, [
+              'body',
+              'field_feature_image',
+              'field_page_thumbnail_image',
+            ]);
+            break;
+          case 'news_alert':
+            $fields = array_merge($fields, [
+              'body',
+              'field_alert_title',
+              'field_alert_type',
+              'field_alert_redirect',
+            ]);
+            break;
+        }
+        foreach ($fields as $fieldName) {
+          $form[$fieldName]['#disabled'] = 'disabled';
+        }
+      }
+    }
+  }
+}

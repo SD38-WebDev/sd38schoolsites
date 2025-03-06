@@ -1,0 +1,19 @@
+uuid: 7cf038e6-d0f1-4de2-a1fa-e2a77a770581
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_id
+    - node.type.news_alert
+id: node.news_alert.field_district_id
+field_name: field_district_id
+entity_type: node
+bundle: news_alert
+label: 'District Node ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

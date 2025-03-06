@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.field_article_category
     - field.field.node.article.field_attachments
     - field.field.node.article.field_content_section
+    - field.field.node.article.field_district_id
     - field.field.node.article.field_district_news_destination
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_import_uuid
@@ -152,6 +153,14 @@ content:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: '0'
+    third_party_settings: {  }
+  field_district_id:
+    type: text_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_feature_image:
     type: media_library_widget
