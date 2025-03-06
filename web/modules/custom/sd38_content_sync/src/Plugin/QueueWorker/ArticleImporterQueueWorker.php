@@ -87,6 +87,11 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    */
   protected $mediaStorage;
 
+  /**
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $paragraphStorage;
+
   protected $jsonApi;
   protected $files;
 
@@ -131,6 +136,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
     $this->nodeStorage = $this->entityTypeManager->getStorage('node');
     $this->mediaStorage = $this->entityTypeManager->getStorage('media');
+    $this->paragraphStorage = $this->entityTypeManager->getStorage('paragraph');
   }
 
   /**
@@ -327,7 +333,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
   protected function createParagraphs($prgfData) {
 
     $bundle = str_replace('paragraph--', '', $prgfData['type']);
-    $prgfEntity = $this->entityTypeManager->getStorage('paragraph')->create([
+    $prgfEntity = $this->paragraphStorage->create([
       'type' => $bundle,
     ]);
     $mapping = self::PARAGRAPHS_MAPPING[$bundle];
@@ -400,7 +406,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     }
     else {
       // Create a new node.
-      $node = Node::create([
+      $node = $this->nodeStorage->create([
         'type' => $data['bundle'],
         'title' => $data['title'],
       ]);
@@ -432,7 +438,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
         if (!empty($data['field_feature_image']) && !empty($data['field_feature_image']['url']['url'])) {
 
-          $prgfEntity = $this->entityTypeManager->getStorage('paragraph')->create([
+          $prgfEntity = $this->paragraphStorage->create([
             'type' => 'image_banner',
           ]);
           $file = $this->preprocessFile($data['field_feature_image']['url']['url'], $data['field_feature_image']['url']['uri']);
@@ -453,7 +459,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
           if ($theNodeNeedsToBeUpdated) {
             $oldPrgfs = $node->field_content_section->getValue();
             foreach ($oldPrgfs as $oldPrgfId) {
-              $oldPrgf = $this->entityTypeManager->getStorage('paragraph')->load($oldPrgfId['target_id']);
+              $oldPrgf = $this->paragraphStorage->load($oldPrgfId['target_id']);
               if ($oldPrgf) {
                 $oldPrgf->delete();
               }
