@@ -8,21 +8,6 @@ use Drupal\node\NodeForm;
  */
 function sd38_content_sync_cron() {
 
-  $queue = \Drupal::service('queue')->get('preprocess_importer_queue_worker');
-  $queue_worker = \Drupal::service('plugin.manager.queue_worker')
-    ->createInstance('preprocess_importer_queue_worker');
-
-  if ($item = $queue->claimItem()) {
-    try {
-      $queue_worker->processItem($item->data);
-      $queue->deleteItem($item);
-    }
-    catch (Exception $e) {
-      $queue->releaseItem($item);
-      watchdog_exception('sd38_content_sync', $e);
-    }
-  }
-
   $queue = \Drupal::service('queue')->get('article_importer_queue_worker');
   $queue_worker = \Drupal::service('plugin.manager.queue_worker')
     ->createInstance('article_importer_queue_worker');

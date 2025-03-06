@@ -78,11 +78,12 @@ class DistrictImporterResource extends ResourceBase {
   public function post(Request $request) {
 
     $data = json_decode($request->getContent(), TRUE);
+
     if (!$data) {
       return new ResourceResponse(['error' => 'Invalid JSON'], 400);
     }
 
-    $queue = \Drupal::service('queue')->get('preprocess_importer_queue_worker');
+    $queue = \Drupal::service('queue')->get('article_importer_queue_worker');
 
     $queue->createItem([
       'bundle' => $data['bundle'],
