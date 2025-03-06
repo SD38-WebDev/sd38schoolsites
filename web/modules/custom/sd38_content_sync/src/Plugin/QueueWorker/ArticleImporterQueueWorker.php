@@ -8,6 +8,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\file\FileInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
+use Drupal\node\Entity\Node;
 use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\File\FileSystemInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -27,7 +28,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
   const API_QUERY_PARAMETERS = [
     'article' => '?include=field_attachments.field_media_file,field_image,field_carousel_image,field_embedded_articles,field_image_gallery,field_page_assignment,field_tags&fields[file--file,media--file]=uri,url',
-    'page' => '?include=field_image,field_content_section,field_image_gallery,field_page_thumbnail_image&fields[file--file,media--file]=uri,url',
+    'page' => '?include=field_content_section.field_images.field_media_image,field_image,field_content_section,field_image_gallery,field_page_thumbnail_image&fields[file--file,media--file,media--image]=uri,url',
     'news_alert' => '?include=',
   ];
 
@@ -85,6 +86,9 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    * @var \Drupal\Core\Entity\EntityStorageInterface
    */
   protected $mediaStorage;
+
+  protected $jsonApi;
+  protected $files;
 
   /**
    * Constructs a ArticleImporterQueueWorker object.
@@ -167,9 +171,17 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
             $fileDetailsItem = reset($fileDetails);
             $files[$attachment['id']] =  ['url' => $fileDetailsItem['attributes']['uri']['url'], 'uri' => $fileDetailsItem['attributes']['uri']['value']];
           }
+          elseif ($attachment['type'] == "media--image") {
+            $fileId = $attachment['relationships']['field_media_image']['data']['id'];
+
+            $fileDetails = array_filter($attachments, function($item) use ($fileId) {
+              return $item['id'] == $fileId;
+            });
+            $fileDetailsItem = reset($fileDetails);
+            $files[$attachment['id']] =  ['url' => $fileDetailsItem['attributes']['uri']['url'], 'uri' => $fileDetailsItem['attributes']['uri']['value']];
+          }
         }
       }
-
       return [$data, $files];
     }
     catch (RequestException $e) {
@@ -191,6 +203,9 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
     $item = $this->getNode($api . '&filter[nid]=' . $data['nid']);
 
     [$jsonapi, $files] = $item;
+
+    $this->jsonApi = $jsonapi;
+    $this->files = $files;
 
     $item = $jsonapi['data'][0];
 
@@ -240,7 +255,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
                 $preparedData['field_content_section'][] = [
                   'id' => $prgfId,
                   'type' => $prgfType,
-                  'attributes' => $includedItem['attributes'],
+                  'attributes' => $includedItem,
                 ];
               }
             }
@@ -310,6 +325,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
   protected function createParagraphs($prgfData) {
+
     $bundle = str_replace('paragraph--', '', $prgfData['type']);
     $prgfEntity = $this->entityTypeManager->getStorage('paragraph')->create([
       'type' => $bundle,
@@ -325,15 +341,29 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
     if ($bundle == 'image_gallery') {
 
-      if (array_key_exists('included', $prgfData)) {
-        foreach ($prgfData['included'] as $includedItems) {
-          if ($includedItems['type'] == 'paragraph--image_gallery') {
-            //$includedItems['relationships']['field_images'];
-          }
+      $images = [];
+      if (array_key_exists('relationships', $prgfData)) {
+        $files = $this->files;
+        foreach ($prgfData['relationships']['field_images']['data'] as $item) {
+          $file = $this->downloadFile($files[$item['id']]['url'], $files[$item['id']]['uri']);
+
+          // Create the media entity.
+          $media = $this->mediaStorage->create([
+            'bundle' => 'file',
+            'name' =>  $file->getFilename(),
+            'uid' => 1,
+            'status' => 1,
+            'field_media_file' => [
+              'target_id' => $file->id(),
+            ],
+          ]);
+          $media->save();
+          $images[] = ['target_id' => $media->id()];
         }
       }
-
+      $prgfEntity->set('field_images', $images);
     }
+
     $prgfEntity->save();
     return [
       'target_id' => $prgfEntity->id(),
@@ -365,16 +395,16 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       // Load the existing node and update it.
       $nid = reset($nids);
       $node = $this->nodeStorage->load($nid);
-      $node->delete();
     }
-
-    // Create a new node.
-    $node = $this->nodeStorage->create([
-      'type' => $data['bundle'],
-      'title' => $data['title'],
-    ]);
-    $node->set('field_district_id', $data['field_district_id']);
-    $node->enforceIsNew();
+    else {
+      // Create a new node.
+      $node = Node::create([
+        'type' => $data['bundle'],
+        'title' => $data['title'],
+      ]);
+      $node->set('field_district_id', $data['field_district_id']);
+      $node->enforceIsNew();
+    }
 
     $node->set('title', $data['title']);
     $node->set('status', 1);
@@ -391,7 +421,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       case 'page':
 
         $contentSectionField = [];
-        if (!empty($data['body'])){
+        if (!empty($data['body'])) {
           $node->set('body', [
             'value' => $data['body'],
             'format' => 'full_html',
@@ -417,8 +447,8 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
         if (!empty($data['field_content_section'])) {
           foreach ($data['field_content_section'] as $contentSection) {
-            if (!empty($contentSection)) {
-              $contentSectionField[] = $this->createParagraphs($contentSection);
+            if (!empty($contentSection['attributes'])) {
+              $contentSectionField[] = $this->createParagraphs($contentSection['attributes']);
             }
           }
           $node->set('field_content_section', $contentSectionField);
