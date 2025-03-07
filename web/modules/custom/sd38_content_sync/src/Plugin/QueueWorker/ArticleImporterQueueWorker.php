@@ -235,7 +235,9 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
             return $item;
           }, $jsonapi['data'][0]['relationships']['field_attachments']['data']);
         }
-        $preparedData['field_feature_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_image']['data']['id']]];
+        if (!empty($jsonapi['data'][0]['relationships']['field_image']['data']['id'])) {
+          $preparedData['field_feature_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_image']['data']['id']]];
+        }
         break;
 
       case 'page':
@@ -247,7 +249,9 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
             return $item;
           }, $jsonapi['data'][0]['relationships']['field_image_gallery']['data']);
         }
-        $preparedData['field_feature_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_image']['data']['id']]];
+        if (!empty($jsonapi['data'][0]['relationships']['field_image']['data']['id'])) {
+          $preparedData['field_feature_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_image']['data']['id']]];
+        }
         if (!empty($jsonapi['data'][0]['relationships']['field_page_thumbnail_image']['data'])) {
           $preparedData['field_page_thumbnail_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_page_thumbnail_image']['data']['id']]];
         }

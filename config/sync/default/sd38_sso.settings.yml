@@ -1,1 +1,13 @@
-site_azure_groups: 'Bridge Group, Super Admins'
+site_azure_groups: 'Principals, Vice-Principals, Admin Assistants'
+site_azure_roles:
+  site_editor: site_editor
+  anonymous: null
+  authenticated: null
+  section_editor: null
+  webform_editor: null
+  blogging_role: null
+  site_menu_editor: null
+  department_site_editor: null
+  administrator: null
+  rest: null
+site_codes: "anderson|205\r\nblair|208\r\nblundell|210\r\nbridge|220\r\nbrighouse|230\r\nbyng|240\r\ncook|250\r\ndebeck|270\r\ndiefenbaker|280\r\ndixon|290\r\nerrington|310\r\nferris|320\r\ngardencity|330\r\ncurrie|350\r\ngilmore|360\r\ngrauer|370\r\nhamilton|380\r\nhomma|395\r\nkidd|400\r\nkingswood|420\r\nlee|430\r\nmaplelane|440\r\nmckay|450\r\nmckinney|460\r\nmcneely|465\r\nmitchell|470\r\nquilchena|480\r\nspulukwuks|515\r\nstationstretch|100\r\nHorizon|85\r\nsteves|20\r\ntait|530\r\ntalmey|535\r\nthompson|540\r\ntomsett|550\r\nwestwind|560\r\nwhiteside|570\r\nwoodward|580\r\nwowk|590\r\nboyd|10\r\njnburnett|20\r\nhjcambie|130\r\nmacneill|52\r\nmcmath|55\r\nmcnair|60\r\nmcroberts|70\r\npalmer|80\r\nrvs|611\r\nrhs|90\r\nslss|125"

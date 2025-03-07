@@ -137,4 +137,4 @@ crons:
     drush-queue-importer-article:
       spec: '*/3 * * * *'
       commands:
-        start: '../drush/drush-multisite queue-run article_importer_queue_worker'
+        start: 'cd drush ; drush-multisite queue-run article_importer_queue_worker'

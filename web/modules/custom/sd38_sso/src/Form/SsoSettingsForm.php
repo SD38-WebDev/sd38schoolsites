@@ -4,6 +4,7 @@ namespace Drupal\sd38_sso\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\Role;
 
 /**
  * Configure SSO integration settings.
@@ -33,8 +34,27 @@ class SsoSettingsForm extends ConfigFormBase {
     $form['site_azure_groups'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Azure Group'),
-      '#default_value' => $config->get('site_azure_groups'),
-      '#description' => $this->t('Comma-separated groups from Azure Entra ID that give access to the site.'),
+      '#default_value' => $config->get('site_azure_groups') ?? '',
+      '#description' => $this->t('Comma-separated groups from Azure Entra ID that give access to the site.<br/>
+        Full Group Name will be "Current Site Code + Position".
+      '),
+    ];
+
+    $form['site_azure_roles'] = [
+      '#type' => 'checkboxes',
+      '#title' => $this->t('Assigned Roles'),
+      '#options' => array_map(function (Role $role) {
+        return $role->label();
+      }, Role::loadMultiple()),
+      '#default_value' => $config->get('site_azure_roles') ?? [],
+      '#description' => $this->t('Roles that will be assigned to the user on login.'),
+    ];
+
+    $form['site_codes'] = [
+      '#title' => $this->t('Site Codes'),
+      '#type' => 'textarea',
+      '#description' => $this->t('Enter site codes in "site_alias|code" format, one in a row.'),
+      '#default_value' => $config->get('site_codes') ?? ''
     ];
 
     return parent::buildForm($form, $form_state);
