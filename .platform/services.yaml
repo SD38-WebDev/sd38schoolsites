@@ -1,6 +1,6 @@
 db:
     type: 'mariadb:10.4'
-    disk: 60000
+    disk: 80000
     configuration:
         schemas:
             - blundell
