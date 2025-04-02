@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\user\UserInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_openid_connect_userinfo_alter().
@@ -97,4 +98,12 @@ function sd38_sso_openid_connect_pre_authorize($account, array $context) {
   }
 
   return TRUE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for openid_connect_login_form.
+ */
+function sd38_sso_form_openid_connect_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['openid_connect_client_windows_aad_login']['#value'] = t('Log in with your SD38 account');
+  $form['openid_connect_client_windows_aad_login']['#attributes']['class'][] = 'd-block mx-auto';
 }
