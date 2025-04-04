@@ -1,0 +1,17 @@
+uuid: ec0c657a-d26f-4eb3-b680-b965ba97c9a9
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/sync/local
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list:
+  - sd38_content_sync.settings

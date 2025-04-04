@@ -79,7 +79,7 @@
         "drupal/ckeditor_font": "^1.4",
         "drupal/color": "^1.0",
         "drupal/color_field": "^3.0",
-        "drupal/colorbox": "^2.0",
+        "drupal/colorbox": "2.0.2",
         "drupal/colorbutton": "^1.5",
         "drupal/config_filter": "^2.6",
         "drupal/config_ignore": "^3.2",

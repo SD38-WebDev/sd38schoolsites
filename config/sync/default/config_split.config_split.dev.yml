@@ -1,0 +1,17 @@
+uuid: 73cd717f-fd4e-4423-a871-b515330e6071
+langcode: en
+status: false
+dependencies: {  }
+id: dev
+label: Dev
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/sync/dev
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list:
+  - sd38_content_sync.settings
