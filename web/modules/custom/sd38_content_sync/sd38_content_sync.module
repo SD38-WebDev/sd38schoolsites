@@ -51,12 +51,10 @@ function sd38_content_sync_form_alter(&$form, FormStateInterface $form_state, $f
       if (!empty($entity->field_district_id->value)) {
         $fields = [
           'title',
-          'status'
         ];
         switch ($entity->bundle()) {
           case 'article':
             $fields = array_merge($fields, [
-              'title',
               'body',
               'field_attachments',
               'field_feature_image',
