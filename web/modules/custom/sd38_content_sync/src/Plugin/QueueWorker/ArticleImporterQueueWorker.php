@@ -238,6 +238,12 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
         if (!empty($jsonapi['data'][0]['relationships']['field_image']['data']['id'])) {
           $preparedData['field_feature_image'] = ['url' =>  $files[$jsonapi['data'][0]['relationships']['field_image']['data']['id']]];
         }
+        if (!empty($jsonapi['data'][0]['relationships']['field_image_gallery']['data'])) {
+          $preparedData['field_image_gallery'] = array_map(function($item) use ($files) {
+            $item['url'] = $files[$item['id']];
+            return $item;
+          }, $jsonapi['data'][0]['relationships']['field_image_gallery']['data']);
+        }
         break;
 
       case 'page':
@@ -493,14 +499,12 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
         break;
       case 'article':
-
         if (!empty($data['body'])){
           $node->set('body', [
             'value' => $data['body'],
             'format' => 'full_html',
           ]);
         }
-
         if (!empty($data['field_attachments'])) {
           $attachments = [];
           foreach ($data['field_attachments'] as $incomingAttachment) {
@@ -544,6 +548,46 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
             'target_id' => $media->id(),
           ];
           $node->set('field_feature_image', $field_feature_image);
+        }
+
+        if (!empty($data['field_image_gallery'])) {
+          if ($theNodeNeedsToBeUpdated) {
+            $oldPrgfs = $node->field_content_section->getValue();
+            foreach ($oldPrgfs as $oldPrgfId) {
+              $oldPrgf = $this->paragraphStorage->load($oldPrgfId['target_id']);
+              if ($oldPrgf) {
+                $oldPrgf->delete();
+              }
+            }
+          }
+
+          $prgfEntity = $this->paragraphStorage->create([
+            'type' => 'image_gallery',
+          ]);
+          foreach ($data['field_image_gallery'] as $item) {
+            $file = $this->downloadFile($item['url']['url'], $item['url']['uri']);
+
+            // Create the media entity.
+            $media = $this->mediaStorage->create([
+              'bundle' => 'image',
+              'name' => $file->getFilename(),
+              'uid' => 1,
+              'status' => 1,
+              'field_media_image' => [
+                'target_id' => $file->id(),
+              ],
+            ]);
+            $media->save();
+            $images[] = ['target_id' => $media->id()];
+          }
+
+          $prgfEntity->set('field_images', $images);
+          $prgfEntity->save();
+
+          $node->set('field_content_section', [[
+            'target_id' => $prgfEntity->id(),
+            'target_revision_id' => $prgfEntity->getRevisionId(),
+          ]]);
         }
         break;
     }
