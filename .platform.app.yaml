@@ -138,3 +138,7 @@ crons:
       spec: '*/3 * * * *'
       commands:
         start: 'cd web ; ../drush/drush-multisite queue-run article_importer_queue_worker'
+    drush-queue-unpublisher:
+      spec: '*/3 * * * *'
+      commands:
+        start: 'cd web ; ../drush/drush-multisite queue-run unpublisher_queue_worker'
