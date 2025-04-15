@@ -7,6 +7,7 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - rest.resource.district_importer
+    - rest.resource.district_unpublisher
   module:
     - media
     - rest
@@ -20,3 +21,4 @@ permissions:
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'restful post district_importer'
+  - 'restful post district_unpublisher'
