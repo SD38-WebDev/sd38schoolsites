@@ -165,11 +165,11 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       $password = $config->get('d38_rest_password') ?? '';
 
       $response = $client->get($apiUrl, [
+        'auth' => [$username, $password], // Basic Authentication
         'verify' => FALSE,
         'headers' => [
             'Accept' => 'application/json',
-            'Content-Type' => 'application/json',
-            'Authorization' => 'Basic ' . $username . ':' . $password
+            'Content-Type' => 'application/json'
           ]
         ]
       );
