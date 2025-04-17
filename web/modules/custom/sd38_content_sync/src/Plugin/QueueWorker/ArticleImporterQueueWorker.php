@@ -158,9 +158,23 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
 
   public function getNode($apiUrl) {
     $client = \Drupal::httpClient();
+    $config = $this->configFactory->get('sd38_content_sync.settings');
+
     try {
-      $response = $client->get($apiUrl, ['verify' => FALSE]);
+      $username = $config->get('d38_rest_username') ?? '';
+      $password = $config->get('d38_rest_password') ?? '';
+
+      $response = $client->get($apiUrl, [
+        'auth' => [$username, $password], // Basic Authentication
+        'verify' => FALSE,
+        'headers' => [
+            'Accept' => 'application/json',
+            'Content-Type' => 'application/json'
+          ]
+        ]
+      );
       $data = json_decode($response->getBody()->getContents(), TRUE);
+
       $files = [];
       if (array_key_exists('included', $data)) {
         $attachments = $data['included'];

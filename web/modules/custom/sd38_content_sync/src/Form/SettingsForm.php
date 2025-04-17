@@ -38,6 +38,21 @@ class SettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#default_value' => $config->get('d38_district_url') ?? ''
     ];
+
+    $form['d38_rest_username'] = [
+      '#title' => $this->t('D38 Rest Username on District'),
+      '#type' => 'textfield',
+      '#description' => $this->t('Enter a rest username'),
+      '#default_value' => $config->get('d38_rest_username') ?? ''
+    ];
+
+    $form['d38_rest_password'] = [
+      '#title' => $this->t('D38 Rest Password on District'),
+      '#type' => 'textfield',
+      '#description' => $this->t('Enter a rest password'),
+      '#default_value' => $config->get('d38_rest_password') ?? ''
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 

@@ -148,8 +148,7 @@ class UnpublisherQueueWorker extends QueueWorkerBase implements ContainerFactory
       // Load the existing node and update it.
       $nid = reset($nids);
       $node = $this->nodeStorage->load($nid);
-      $node->set('status', 0);
-      $node->save();
+      $node->delete();
     }
   }
 }
