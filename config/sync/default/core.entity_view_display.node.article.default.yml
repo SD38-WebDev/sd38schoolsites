@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.field_article_category
     - field.field.node.article.field_attachments
     - field.field.node.article.field_content_section
+    - field.field.node.article.field_district_id
     - field.field.node.article.field_district_news_destination
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_import_uuid
@@ -250,6 +251,7 @@ content:
 hidden:
   feeds_item: true
   field_article_category: true
+  field_district_id: true
   field_district_news_destination: true
   field_import_uuid: true
   field_promote_to_front_page: true

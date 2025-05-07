@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_article_category
     - field.field.node.article.field_attachments
     - field.field.node.article.field_content_section
+    - field.field.node.article.field_district_id
     - field.field.node.article.field_district_news_destination
     - field.field.node.article.field_feature_image
     - field.field.node.article.field_import_uuid
@@ -210,6 +211,7 @@ hidden:
   field_article_category: true
   field_attachments: true
   field_content_section: true
+  field_district_id: true
   field_district_news_destination: true
   field_import_uuid: true
   field_legacy_attachments: true

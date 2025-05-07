@@ -70,45 +70,50 @@
 #}
 
 {% block head %}
-<div id="district-branding">
-		<div class="container">
-			<div class="row">
-				<div class="col-6"><a href="https://sd38.bc.ca" target="_blank"><div class="district-logo">District Logo</div></a></div><div class="col-6"><div class="district-statement">Slogan</div></div>
-				</div>
-			</div>
-		</div>
-        {% if page.top_header %}
-          <div class="container">
-					<div class="row justify-content-center">
-					<div class="col-12 col-md-9 col-lg-6">
-              {{ page.top_header }}
-          </div>
-					</div>
-					</div>
-        {% endif %}
+  <div id="district-branding">
+    <div class="container">
+      <div class="row">
+        <div class="col-6"><a href="https://sd38.bc.ca" target="_blank">
+            <div class="district-logo">District Logo</div>
+          </a></div>
+        <div class="col-6">
+          <div class="district-statement">Slogan</div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block content %}
-        <div id="main" class="{{ container }}">
-          <div class="row row-offcanvas row-offcanvas-left clearfix justify-content-center">
-              <main class="main-content col-12 col-md-9 col-lg-6">
-							<div class="shadow-lg p-3 mb-5 bg-white rounded">
-                <section class="section">
-                  <a id="main-content" tabindex="-1"></a>
-                  {{ page.content }}
-                </section>
-								</div>
-              </main>
-          </div>
+  <div id="main" class="{{ container }}">
+    <div
+      class="row row-offcanvas row-offcanvas-left clearfix justify-content-center">
+      <main class="main-content col-12 col-md-9 col-lg-6">
+        <div class="shadow-lg p-5 mt-5 bg-white rounded">
+          {% if page.top_header %}
+            <div class="mb-5 text-center">
+              {{ page.top_header }}
+            </div>
+          {% endif %}
+
+          <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+
+            {{ page.content }}
+
+          </section>
         </div>
+      </main>
+    </div>
+  </div>
 {% endblock %}
 
 {% block footer %}
-				<div class="{{ container }}">
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
-        </div>
+  <div class="{{ container }}">
+    {% if page.footer_fifth %}
+      <div class="site-footer__bottom">
+        {{ page.footer_fifth }}
+      </div>
+    {% endif %}
+  </div>
 {% endblock %}

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
+    - field.field.node.page.field_district_id
     - field.field.node.page.field_feature_image
     - field.field.node.page.field_import_uuid
     - field.field.node.page.field_legacy_attachments
@@ -236,6 +237,7 @@ content:
     region: right
 hidden:
   feeds_item: true
+  field_district_id: true
   field_import_uuid: true
   field_site_section: true
   links: true

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.feeds_item
     - field.field.node.page.field_content_section
+    - field.field.node.page.field_district_id
     - field.field.node.page.field_feature_image
     - field.field.node.page.field_import_uuid
     - field.field.node.page.field_legacy_attachments
@@ -136,6 +137,14 @@ content:
         add_above: '0'
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_district_id:
+    type: text_textfield
+    weight: 51
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_feature_image:
     type: media_library_widget
