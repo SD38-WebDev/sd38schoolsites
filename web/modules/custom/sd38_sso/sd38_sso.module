@@ -1,0 +1,109 @@
+<?php
+
+use Drupal\user\UserInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_openid_connect_userinfo_alter().
+ */
+function sd38_sso_openid_connect_userinfo_alter(array &$userinfo, array $context) {
+  if ($context['plugin_id'] != 'windows_aad') {
+    return;
+  }
+
+  // Get additional user data.
+  if (empty($userinfo['groups']) && !empty($context['userinfo']['groups'])) {
+    $userinfo['groups'] = $context['userinfo']['groups'];
+  }
+  $userinfo['email'] = $userinfo['email'] ?? $context['user_data']['upn'];
+  $userinfo['given_name'] = $userinfo['given_name'] ?? $context['user_data']['given_name'];
+  $userinfo['family_name'] = $userinfo['family_name'] ?? $context['user_data']['family_name'];
+
+  \Drupal::logger('openid_userinfo')->warning(json_encode($userinfo));
+}
+
+/**
+ * Implements hook_openid_connect_userinfo_save()
+ */
+function sd38_sso_openid_connect_userinfo_save(UserInterface $account, array $context) {
+  // Set AzureAD users data.
+  if ($context['plugin_id'] != 'windows_aad') {
+    return;
+  }
+  $userinfo = $context['userinfo'];
+
+  // Fill the user values manually, since the mapping does not work properly.
+  $account->set('name', $userinfo['name']);
+  $account->set('mail', $userinfo['email']);
+  $account->set('field_first_name', $userinfo['given_name']);
+  $account->set('field_last_name', $userinfo['family_name']);
+
+  $ssoRoles = \Drupal::config('sd38_sso.settings')->get('site_azure_roles');
+  foreach ($ssoRoles as $role) {
+    if ($role) {
+      $account->addRole($role);
+    }
+  }
+
+  \Drupal::logger('openid_context')->warning(json_encode($context));
+}
+
+/**
+ * Implements hook_openid_connect_pre_authorize().
+ */
+function sd38_sso_openid_connect_pre_authorize($account, array $context) {
+  $ssoSettings = \Drupal::config('sd38_sso.settings');
+  $azureGroups = $ssoSettings->get('site_azure_groups');
+  $ssoGroups = array_map('trim', explode(',', $azureGroups));
+
+  if (empty($ssoGroups)) {
+    return TRUE;
+  }
+
+  $siteCodes = $ssoSettings->get('site_codes') ?? '';
+  $lines = array_map('trim', explode("\n", trim($siteCodes)));
+
+  $codes = [];
+  if (empty($lines)) {
+    return TRUE;
+  }
+  foreach ($lines as $line) {
+    if (empty($line)) {
+      continue;
+    }
+    [$site, $code] = array_map('trim', explode('|', $line));
+    $codes[$site] = $code;
+  }
+
+  if (empty($context['userinfo']['groups'])) {
+    return FALSE;
+  }
+
+  $sitePath = \Drupal::getContainer()->getParameter('site.path');
+  $sitePath = explode('/', $sitePath);
+  $currentSite = $sitePath[1];
+  if (empty($currentSite)) {
+    $currentSite = 'default';
+  }
+
+  $ssoCodeGroups = [];
+  foreach ($ssoGroups as $group) {
+    $ssoCodeGroups[] = $codes[$currentSite] . ' ' . $group;
+  }
+
+  if (!array_intersect($context['userinfo']['groups'], $ssoCodeGroups)) {
+    $noAccessErr = t('You do not have permission to access this system. Please contact your SSO administrator for access.');
+    \Drupal::messenger()->addError($noAccessErr);
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for openid_connect_login_form.
+ */
+function sd38_sso_form_openid_connect_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['openid_connect_client_windows_aad_login']['#value'] = t('Log in with your SD38 account');
+  $form['openid_connect_client_windows_aad_login']['#attributes']['class'][] = 'd-block mx-auto';
+}

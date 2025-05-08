@@ -174,3 +174,13 @@ foreach ($platformsh->variables() as $name => $value) {
       break;
   }
 }
+
+// Run Config Split on the different environments.
+if (isset($platformsh->branch)) {
+  if ($platformsh->branch == 'dev' ) {
+    $config["config_split.config_split.dev"]["status"] = TRUE;
+  }
+}
+else {
+  $config["config_split.config_split.local"]["status"] = TRUE;
+}

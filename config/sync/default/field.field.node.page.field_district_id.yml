@@ -1,0 +1,19 @@
+uuid: 56c26c6c-b7bc-42a1-a183-b5db51081157
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_district_id
+    - node.type.page
+id: node.page.field_district_id
+field_name: field_district_id
+entity_type: node
+bundle: page
+label: 'District Node ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

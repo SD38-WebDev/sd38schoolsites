@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{{ attach_library('bootstrap_barrio/form') }}
+
+<div class="p-5">
+  <div class="collapse" id="drupal-login-form">
+    <form{{ attributes }}>
+      {{ children }}
+    </form>
+  </div>
+
+  <div class="container login-form-footer">
+    <div class="text-center">
+      <button class="btn btn-outline-primary" data-toggle="collapse" href="#drupal-login-form" role="button" aria-expanded="false" aria-controls="drupal-login-form">
+        {{ 'Log in with your Drupal account'|t }}
+      </button>
+    </div>
+  </div>
+</div>

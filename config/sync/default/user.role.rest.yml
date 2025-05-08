@@ -1,0 +1,24 @@
+uuid: 11428af7-f96f-4bfd-bdee-6cc6985a971d
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - rest.resource.district_importer
+    - rest.resource.district_unpublisher
+  module:
+    - media
+    - rest
+id: rest
+label: REST
+weight: -1
+is_admin: null
+permissions:
+  - 'delete any media'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own remote_video media'
+  - 'restful post district_importer'
+  - 'restful post district_unpublisher'

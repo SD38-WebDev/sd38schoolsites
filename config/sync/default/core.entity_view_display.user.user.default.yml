@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
     - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_password_expiration
     - field.field.user.user.field_pending_expire_sent
@@ -38,6 +40,8 @@ third_party_settings:
     regions:
       left:
         - username
+        - field_first_name
+        - field_last_name
         - usermail
         - 'dynamic_block_field:user-site_sections_admin_block'
         - 'dynamic_block_field:user-user_feeds_block'
@@ -45,29 +49,9 @@ third_party_settings:
         - 'dynamic_block_field:user-recent_content'
         - 'dynamic_block_field:user-recent_user_content'
     fields:
-      usermail:
-        plugin_id: usermail
-        weight: 1
-        label: above
-        formatter: default
-      username:
-        plugin_id: username
-        weight: 0
-        label: above
-        formatter: default
-        settings:
-          link: false
-          wrapper: ''
-          class: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
       'dynamic_block_field:user-recent_content':
         plugin_id: 'dynamic_block_field:user-recent_content'
-        weight: 4
+        weight: 6
         label: hidden
         formatter: default
         ft:
@@ -78,12 +62,12 @@ third_party_settings:
             classes: {  }
       'dynamic_block_field:user-recent_user_content':
         plugin_id: 'dynamic_block_field:user-recent_user_content'
-        weight: 5
+        weight: 7
         label: hidden
         formatter: default
       'dynamic_block_field:user-site_sections_admin_block':
         plugin_id: 'dynamic_block_field:user-site_sections_admin_block'
-        weight: 2
+        weight: 4
         label: above
         formatter: default
         ft:
@@ -115,7 +99,7 @@ third_party_settings:
             suffix: ''
       'dynamic_block_field:user-user_feeds_block':
         plugin_id: 'dynamic_block_field:user-user_feeds_block'
-        weight: 3
+        weight: 5
         label: above
         formatter: default
         ft:
@@ -145,11 +129,47 @@ third_party_settings:
             fi-def-at: false
             prefix: ''
             suffix: ''
+      username:
+        plugin_id: username
+        weight: 0
+        label: above
+        formatter: default
+        settings:
+          link: false
+          wrapper: ''
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+      usermail:
+        plugin_id: usermail
+        weight: 3
+        label: above
+        formatter: default
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
-content: {  }
+content:
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: left
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: left
 hidden:
   field_last_password_reset: true
   field_password_expiration: true
