@@ -1,14 +1,14 @@
-uuid: 2ec8d091-a3cd-4995-961e-63bd7520da0f
+uuid: 02950b5b-b3f9-48f1-a4ab-0cff19d28914
 langcode: en
 status: true
 dependencies:
   theme:
-    - stark
+    - gin
 _core:
-  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
-id: stark_page_title
-theme: stark
-region: content
+  default_config_hash: HLQY2xgby8K3vN_98hiOSasOhm9pdCsH234-s0duJ8Q
+id: gin_page_title
+theme: gin
+region: header
 weight: -30
 provider: null
 plugin: page_title_block

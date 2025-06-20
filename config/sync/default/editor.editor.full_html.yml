@@ -36,7 +36,6 @@ settings:
       - drupalInsertImage
       - drupalMedia
       - insertTable
-      - '-'
       - heading
       - '|'
       - fullScreen
