@@ -26,7 +26,7 @@
                 "type": "drupal-module",
                 "source": {
                     "type": "git",
-                    "url": "git@git.drupal.org:issue/a11y-3364136.git",
+                    "url": "https://git.drupalcode.org/issue/a11y-3364136.git",
                     "reference": "3364136-drupal-10-update"
                 }
             }
@@ -39,7 +39,7 @@
                 "type": "drupal-module",
                 "source": {
                     "type": "git",
-                    "url": "git@git.drupal.org:issue/entity_submit_redirect-3353587.git",
+                    "url": "https://git.drupalcode.org/issue/entity_submit_redirect-3353587.git",
                     "reference": "8.x-1.x"
                 }
             }
@@ -52,7 +52,7 @@
                 "type": "drupal-module",
                 "source": {
                     "type": "git",
-                    "url": "git@git.drupal.org:issue/field_slideshow-3341466.git",
+                    "url": "https://git.drupalcode.org/issue/field_slideshow-3341466.git",
                     "reference": "3341466-drupal-10-compatibility"
                 }
             }

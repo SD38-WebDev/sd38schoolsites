@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04fcad4773fd017eaaa0c9ab3b62c7b6",
+    "content-hash": "38e8cccc60844382724053d7aa4cd11c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2086,7 +2086,7 @@
             "version": "dev-custom",
             "source": {
                 "type": "git",
-                "url": "git@git.drupal.org:issue/a11y-3364136.git",
+                "url": "https://git.drupalcode.org/issue/a11y-3364136.git",
                 "reference": "3364136-drupal-10-update"
             },
             "type": "drupal-module"
@@ -5262,7 +5262,7 @@
             "version": "dev-custom",
             "source": {
                 "type": "git",
-                "url": "git@git.drupal.org:issue/entity_submit_redirect-3353587.git",
+                "url": "https://git.drupalcode.org/issue/entity_submit_redirect-3353587.git",
                 "reference": "8.x-1.x"
             },
             "type": "drupal-module"
@@ -5889,7 +5889,7 @@
             "version": "dev-custom",
             "source": {
                 "type": "git",
-                "url": "git@git.drupal.org:issue/field_slideshow-3341466.git",
+                "url": "https://git.drupalcode.org/issue/field_slideshow-3341466.git",
                 "reference": "3341466-drupal-10-compatibility"
             },
             "type": "drupal-module"
