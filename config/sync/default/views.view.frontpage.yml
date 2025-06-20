@@ -484,7 +484,7 @@ display:
           field: nothing
           relationship: none
           group_type: group
-          admin_label: 'Opening DIV''s'
+          admin_label: "Opening DIV's"
           plugin_id: custom
           label: ''
           exclude: false
@@ -824,7 +824,7 @@ display:
           field: nothing
           relationship: none
           group_type: group
-          admin_label: 'Closing DIV''s'
+          admin_label: "Closing DIV's"
           plugin_id: custom
           label: ''
           exclude: false
@@ -1541,7 +1541,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -2004,7 +2003,7 @@ display:
           field: nothing
           relationship: none
           group_type: group
-          admin_label: 'Opening DIV''s'
+          admin_label: "Opening DIV's"
           plugin_id: custom
           label: ''
           exclude: false
@@ -2348,7 +2347,7 @@ display:
           field: nothing
           relationship: none
           group_type: group
-          admin_label: 'Closing DIV''s'
+          admin_label: "Closing DIV's"
           plugin_id: custom
           label: ''
           exclude: false
@@ -2401,7 +2400,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -2423,7 +2421,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

@@ -26,6 +26,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - block
+    - block_content
     - block_permissions
     - contextual
     - ds_switch_view_mode
@@ -53,6 +54,7 @@ label: 'Site Editor'
 weight: -3
 is_admin: null
 permissions:
+  - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access feed overview'
@@ -60,6 +62,8 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'administer blocks provided by gtranslate'
   - 'administer blocks provided by social_media_links'
@@ -104,7 +108,8 @@ permissions:
   - 'delete article revisions'
   - 'delete calendar_event revisions'
   - 'delete calendar_v3 feeds'
-  - 'delete files'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete header_image revisions'
   - 'delete home_page_button revisions'
   - 'delete media'
@@ -113,6 +118,7 @@ permissions:
   - 'delete own audio media'
   - 'delete own calendar_event content'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own header_image content'
   - 'delete own home_page_button content'
   - 'delete own image media'

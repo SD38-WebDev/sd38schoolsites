@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.article_feed_6_posts_
 label: 'Article Feed (6 Posts)'
+description: ''
 targetEntityType: paragraph
 cache: true

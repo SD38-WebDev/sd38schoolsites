@@ -1,5 +1,5 @@
 db:
-    type: 'mariadb:10.4'
+    type: 'mariadb:10.11'
     disk: 80000
     configuration:
         schemas:

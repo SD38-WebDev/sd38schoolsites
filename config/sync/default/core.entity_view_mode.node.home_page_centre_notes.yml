@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.home_page_centre_notes
 label: 'Home Page Centre Notes'
+description: ''
 targetEntityType: node
 cache: true

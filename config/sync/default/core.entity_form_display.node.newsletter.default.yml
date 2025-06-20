@@ -10,7 +10,6 @@ dependencies:
     - datetime
     - media_library
     - path
-    - scheduler
 id: node.newsletter.default
 targetEntityType: node
 bundle: newsletter
@@ -47,12 +46,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 9
-    region: content
-    settings: {  }
     third_party_settings: {  }
   scheduler_settings:
     weight: 7
@@ -91,10 +84,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 10
+  url_redirects:
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

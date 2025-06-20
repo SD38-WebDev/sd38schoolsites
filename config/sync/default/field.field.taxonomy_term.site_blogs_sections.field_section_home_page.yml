@@ -17,7 +17,7 @@ field_name: field_section_home_page
 entity_type: taxonomy_term
 bundle: site_blogs_sections
 label: 'Section Home Page'
-description: 'Provide the name of the section home page. You can either select an existing page or provide a the name of a page you''d like created.'
+description: "Provide the name of the section home page. You can either select an existing page or provide a the name of a page you'd like created."
 required: false
 translatable: false
 default_value: {  }

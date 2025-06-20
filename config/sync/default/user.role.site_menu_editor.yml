@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - ds_switch_view_mode
+    - file
+    - file_delete
     - simple_image_rotate
     - system
 id: site_menu_editor
@@ -12,5 +14,8 @@ weight: -5
 is_admin: null
 permissions:
   - 'administer menu'
+  - 'delete files immediately'
+  - 'delete files override usage'
+  - 'delete own files'
   - 'ds switch page'
   - 'rotate images'

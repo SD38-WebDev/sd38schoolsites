@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Site Blogs/Sections'
 vid: site_blogs_sections
-description: ''
+description: null
 weight: 0
+new_revision: false

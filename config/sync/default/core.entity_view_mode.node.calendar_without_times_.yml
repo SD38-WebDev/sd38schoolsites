@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.calendar_without_times_
 label: 'Calendar (without times)'
+description: ''
 targetEntityType: node
 cache: true

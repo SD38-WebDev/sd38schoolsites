@@ -1,3 +1,4 @@
+langcode: en
 id: menu_back_link
 label: 'Menu Back Link'
 ui_limit: ''

@@ -25,7 +25,7 @@ third_party_settings:
 name: 'Calendar Event'
 type: calendar_event
 description: 'Use <em>calendar events</em> to add dates to your school or section calendar.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false

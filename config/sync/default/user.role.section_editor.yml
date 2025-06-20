@@ -14,6 +14,8 @@ dependencies:
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
+    - file
+    - file_delete
     - filter
     - media
     - node
@@ -41,11 +43,14 @@ permissions:
   - 'create page content'
   - 'create remote_video media'
   - 'create terms in tags'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete media'
   - 'delete own article content'
   - 'delete own audio media'
   - 'delete own calendar_event content'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own page content'
   - 'delete own remote_video media'
