@@ -143,7 +143,7 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title" id="accessibilityModalLabel">Accessibility Settings</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <button type="button" class="close" data-bs-dismiss="modal" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
@@ -158,7 +158,7 @@
                         </div>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-dismiss="modal">Close</button>
                         </div>
                       </div>
                     </div>
@@ -171,7 +171,7 @@
             {% if page.sidebar_second %}
               <div class="sidebar_second sidebar col-lg-3 order-3 order-sm-3" id="sidebar_second">
                 <aside class="section" role="complementary">
-                  <div id="accessibility-btn"><button class="btn btn-sm btn-primary" data-target="#accessibilityModal" data-toggle="modal" type="button"><span class="gear">⚙</span> Accessibility Settings</button></div>
+                  <div id="accessibility-btn"><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#accessibilityModal" data-target="#accessibilityModal" data-toggle="modal" type="button"><span class="gear">⚙</span> Accessibility Settings</button></div>
 
                   {{ page.sidebar_second }}
 
