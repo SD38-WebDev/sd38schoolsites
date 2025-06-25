@@ -256,6 +256,9 @@
             }
         },
         "patches": {
+            "drupal/eva": {
+                "Replace empty token to skip contextual filter": "patches/replace_an_empty_token.patch"
+            },
             "drupal/field_group": {
                 "2961885: Allow token to be used in attributes and classes for HTML elements": "https://www.drupal.org/files/issues/2025-02-04/field_group-2961885-26-mr96.diff"
             },
