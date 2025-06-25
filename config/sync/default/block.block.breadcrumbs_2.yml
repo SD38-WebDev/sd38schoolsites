@@ -1,15 +1,13 @@
-uuid: b6c19270-d967-41ec-b304-1a3d09b781ba
+uuid: 8bc9b101-1898-478f-935e-fad3a11cfd0a
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - gin
-_core:
-  default_config_hash: y9X3xgCsO59pQyzNLzY1D3SDJJxCHILLWkpPnmuTJ2E
-id: gin_breadcrumbs
-theme: gin
+    - seven
+id: breadcrumbs_2
+theme: seven
 region: breadcrumb
 weight: 0
 provider: null

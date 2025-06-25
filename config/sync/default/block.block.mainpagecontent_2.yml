@@ -1,15 +1,13 @@
-uuid: 6cd4cadc-38c5-465d-89e4-be9e18aedca2
+uuid: ab7f441e-cc81-4ad2-a8c3-d0145e5101ea
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - gin
-_core:
-  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
-id: gin_content
-theme: gin
+    - seven
+id: mainpagecontent_2
+theme: seven
 region: content
 weight: 0
 provider: null
