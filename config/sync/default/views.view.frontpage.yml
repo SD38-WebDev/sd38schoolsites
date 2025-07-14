@@ -527,248 +527,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: false
-        field_feature_image:
-          id: field_feature_image
-          table: node__field_feature_image
-          field: field_feature_image
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '<div class="col-12 col-md-4 article-img"><a href="{{ view_node_1 }}" title="{{ title_1 }}">{{ field_feature_image }}</a></div>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: media_thumbnail
-          settings:
-            image_link: ''
-            image_style: article_thumbnail
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_images:
-          id: field_images
-          table: paragraph__field_images
-          field: field_images
-          relationship: field_content_section
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: true
-            text: '<div class="col-12 col-md-4 article-img"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: media_thumbnail
-          settings:
-            image_link: ''
-            image_style: article_thumbnail
-          group_column: entity_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 1
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        views_conditional_field:
-          id: views_conditional_field
-          table: views_conditional
-          field: views_conditional_field
-          relationship: none
-          group_type: group
-          admin_label: 'Conditional One'
-          plugin_id: views_conditional_field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          if: field_feature_image
-          condition: em
-          equalto: ''
-          then: '{{ field_images }}'
-          then_translate: true
-          or: ''
-          or_translate: true
-          strip_tags: false
-        views_conditional_field_1:
-          id: views_conditional_field_1
-          table: views_conditional
-          field: views_conditional_field
-          relationship: none
-          group_type: group
-          admin_label: 'Conditional Two'
-          plugin_id: views_conditional_field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          if: field_images
-          condition: nem
-          equalto: ''
-          then: '<div class="col-12 col-md-4"><a href="{{ view_node_1 }}">{{ field_images }}</a></div>'
-          then_translate: true
-          or: ''
-          or_translate: true
-          strip_tags: false
         nothing_3:
           id: nothing_3
           table: views
@@ -781,7 +539,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col article-text\">\r\n{{ field_section_home_page }}\r\n{{ title }}\r\n{{ field_event_date }}\r\n<div class=\"small\">\r\n{{ body }}\r\n{{ view_node }}\r\n</div>\r\n</div>"
+            text: "<div class=\"col article-text\">\r\n{{ field_section_home_page }}\r\n{{ title }}\r\n{{ field_event_date }}\r\n<div class=\"small\">\r\n{{ body }}\r\n</div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -871,7 +629,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 10
       exposed_form:
         type: basic
         options:
@@ -1547,8 +1305,6 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_event_date'
-        - 'config:field.storage.node.field_feature_image'
-        - 'config:field.storage.paragraph.field_images'
         - 'config:field.storage.taxonomy_term.field_section_home_page'
   block_1:
     id: block_1
@@ -2429,6 +2185,4 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_event_date'
-        - 'config:field.storage.node.field_feature_image'
-        - 'config:field.storage.paragraph.field_images'
         - 'config:field.storage.taxonomy_term.field_section_home_page'
