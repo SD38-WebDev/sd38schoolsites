@@ -48,7 +48,7 @@ third_party_settings:
 name: 'Home Page Sidebar Notes'
 type: sidebar_note
 description: 'Home Page Sidebar Notes are used to display additional information on a website homepage. These notes can be configured to appear on either the left or right sidebar as well as an area for content to appear in the middle of the home page, above the news feed.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: false

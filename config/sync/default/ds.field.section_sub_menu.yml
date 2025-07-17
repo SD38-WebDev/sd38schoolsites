@@ -1,3 +1,4 @@
+langcode: en
 id: section_sub_menu
 label: 'Section Sub Menu'
 ui_limit: ''

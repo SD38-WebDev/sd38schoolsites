@@ -48,7 +48,7 @@ third_party_settings:
 name: 'Header Details'
 type: header_image
 description: '<em>Header Details</em> is where you add a site logo, toggle the display of your site name and add a new background image the the website header area.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

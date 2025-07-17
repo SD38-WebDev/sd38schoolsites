@@ -10,7 +10,6 @@ dependencies:
     - link
     - media_library
     - path
-    - scheduler
 id: node.home_page_button.default
 targetEntityType: node
 bundle: home_page_button
@@ -50,12 +49,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 11
@@ -88,10 +81,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 10
+  url_redirects:
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  publish_on: true
+  unpublish_on: true

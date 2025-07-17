@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.full_content_custom_home_page_
 label: 'Full content (Custom Home Page)'
+description: ''
 targetEntityType: node
 cache: true

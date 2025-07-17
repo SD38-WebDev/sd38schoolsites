@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.full_content_includes_menu_block_
 label: 'Full Content (with menu bar)'
+description: ''
 targetEntityType: node
 cache: true

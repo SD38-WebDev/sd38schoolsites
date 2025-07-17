@@ -9,12 +9,4 @@ redirect_login: user
 redirect_logout: ''
 userinfo_mappings:
   timezone: zoneinfo
-role_mappings:
-  section_editor: {  }
-  webform_editor: {  }
-  blogging_role: {  }
-  site_menu_editor: {  }
-  department_site_editor: {  }
-  site_editor: {  }
-  administrator: {  }
-  rest: {  }
+role_mappings: {  }

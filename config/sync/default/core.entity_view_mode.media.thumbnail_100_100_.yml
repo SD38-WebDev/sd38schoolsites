@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.thumbnail_100_100_
 label: 'Thumbnail (100×100)'
+description: ''
 targetEntityType: media
 cache: true

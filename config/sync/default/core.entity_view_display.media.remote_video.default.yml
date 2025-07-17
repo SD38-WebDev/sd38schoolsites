@@ -43,6 +43,8 @@ content:
     settings:
       max_width: 600
       max_height: 0
+      loading:
+        attribute: eager
     third_party_settings:
       ds:
         ft:

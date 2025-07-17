@@ -6,3 +6,4 @@ name: 'District Terms'
 vid: district_terms
 description: 'Terms for District related functions'
 weight: 0
+new_revision: false

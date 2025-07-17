@@ -12,25 +12,19 @@ third_party_settings:
   required_api:
     required_plugin: required_by_role
     required_plugin_options:
-      section_editor: section_editor
-      anonymous: 0
-      webform_editor: 0
-      blogging_role: 0
-      site_menu_editor: 0
-      site_editor: 0
-      administrator: 0
+      - section_editor
 id: node.article.field_site_section
 field_name: field_site_section
 entity_type: node
 bundle: article
 label: 'Site Section'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       site_blogs_sections: site_blogs_sections

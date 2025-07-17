@@ -1,0 +1,19 @@
+Subject: [PATCH] Replace an empty token with a ALL contextual filter value.
+---
+Index: eva.module
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/eva.module b/eva.module
+--- a/eva.module	(revision 118c17c1b4912b469b1ba934575f3c26b634405a)
++++ b/eva.module	(date 1750856863336)
+@@ -88,7 +88,7 @@
+               // We have to be careful to only replace arguments that have
+               // tokens.
+               foreach ($token_values as $key => $value) {
+-                $new_args[Html::escape($key)] = Html::escape($value);
++                $new_args[] = str_contains($value, 'paragraph:') ? 'all' : Html::escape($value);
+               }
+ 
+               $view->args = $new_args;

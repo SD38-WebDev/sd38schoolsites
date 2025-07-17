@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.staff_listing_photo_grid
 label: 'Staff Listing - Photo Grid'
+description: ''
 targetEntityType: node
 cache: true

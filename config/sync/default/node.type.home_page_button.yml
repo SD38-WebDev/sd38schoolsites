@@ -66,7 +66,7 @@ third_party_settings:
 name: 'Quick Link'
 type: home_page_button
 description: 'These appear as sidebar buttons on the site home page.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: false

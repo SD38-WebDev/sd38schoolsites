@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.full_content_w_sidebar_menu_
 label: 'Full Content (with sidebar menu)'
+description: ''
 targetEntityType: node
 cache: true
