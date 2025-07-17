@@ -1,3 +1,4 @@
+langcode: en
 id: sub_pages_menu_block
 label: 'Sub Pages Menu Block'
 ui_limit: ''

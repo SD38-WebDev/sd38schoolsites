@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.x_large_full_width_
 label: 'X-Large (Full Width)'
+description: ''
 targetEntityType: media
 cache: true

@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.article_feed_18_posts_grouped_by_date_
 label: 'Article Feed (18 Posts - Grouped by Date)'
+description: ''
 targetEntityType: paragraph
 cache: true

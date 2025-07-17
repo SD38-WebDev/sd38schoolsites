@@ -9,6 +9,8 @@ dependencies:
     - rest.resource.district_importer
     - rest.resource.district_unpublisher
   module:
+    - file
+    - file_delete
     - media
     - rest
 id: rest
@@ -17,7 +19,10 @@ weight: -1
 is_admin: null
 permissions:
   - 'delete any media'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete own file media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'restful post district_importer'

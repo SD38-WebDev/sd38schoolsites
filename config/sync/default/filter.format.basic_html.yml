@@ -2,7 +2,14 @@ uuid: 3d7073c7-d45c-45d7-bcae-48aad22e23de
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.large_480_480_
+    - core.entity_view_mode.media.medium_220_220_
+    - core.entity_view_mode.media.square_large_480x480_
+    - core.entity_view_mode.media.square_x_large_800x800_
+    - core.entity_view_mode.media.x_large_full_width_
   module:
+    - ckeditor_media_resize
     - editor
     - media
     - video_embed_wysiwyg
@@ -40,15 +47,9 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-entity-substitution data-view-mode data-align data-caption alt title>'
+      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <strong> <em> <code> <blockquote> <a href target rel title id class download hreflang type data-* aria-*> <ul> <ol start> <li> <img src alt height width data-caption data-align> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
       filter_html_help: true
       filter_html_nofollow: false
-  filter_htmlcorrector:
-    id: filter_htmlcorrector
-    provider: filter
-    status: false
-    weight: -42
-    settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
@@ -60,6 +61,24 @@ filters:
     provider: filter
     status: true
     weight: -43
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: -40
+    settings: {  }
+  filter_resize_media:
+    id: filter_resize_media
+    provider: ckeditor_media_resize
+    status: true
+    weight: 90
     settings: {  }
   filter_url:
     id: filter_url
@@ -75,8 +94,17 @@ filters:
     weight: -40
     settings:
       default_view_mode: default
-      allowed_view_modes: {  }
-      allowed_media_types: {  }
+      allowed_view_modes:
+        large_480_480_: large_480_480_
+        medium_220_220_: medium_220_220_
+        square_large_480x480_: square_large_480x480_
+        square_x_large_800x800_: square_x_large_800x800_
+        x_large_full_width_: x_large_full_width_
+      allowed_media_types:
+        audio: audio
+        file: file
+        image: image
+        remote_video: remote_video
   video_embed_wysiwyg:
     id: video_embed_wysiwyg
     provider: video_embed_wysiwyg

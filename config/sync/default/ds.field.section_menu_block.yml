@@ -1,3 +1,4 @@
+langcode: en
 id: section_menu_block
 label: 'Section Menu Block'
 ui_limit: ''

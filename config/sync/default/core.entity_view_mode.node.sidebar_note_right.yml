@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.sidebar_note_right
 label: 'Home Page Sidebar Note - Right'
+description: ''
 targetEntityType: node
 cache: true

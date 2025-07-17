@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.icon_text
 label: 'Icon & Text'
+description: ''
 targetEntityType: paragraph
 cache: true

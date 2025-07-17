@@ -96,7 +96,7 @@ third_party_settings:
         show_empty_fields: false
         id: ''
         formatter: closed
-        description: '<b>***** IMPORTANT NOTE: These legacy settings were included to help facilitate the website migration that took place during the 2021/22 school year. These settings will be removed in a future website software update. Please use the ''Content Sections'' to add attachments or images to this page. *****</b><br><br>'
+        description: "<b>***** IMPORTANT NOTE: These legacy settings were included to help facilitate the website migration that took place during the 2021/22 school year. These settings will be removed in a future website software update. Please use the 'Content Sections' to add attachments or images to this page. *****</b><br><br>"
         required_fields: true
 id: node.page.default
 targetEntityType: node
@@ -200,12 +200,12 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 7
+    weight: 52
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 5
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -243,7 +243,7 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 8
+    weight: 54
     region: content
     settings: {  }
     third_party_settings: {  }

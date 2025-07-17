@@ -131,3 +131,4 @@ bootstrap_barrio_float_label: 0
 bootstrap_barrio_region_clean_accessibility_dropdown: 0
 bootstrap_barrio_region_width_accessibility_dropdown: 0
 bootstrap_barrio_region_class_accessibility_dropdown: row
+bootstrap_barrio_messages_widget_toast_delay: '10000'

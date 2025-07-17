@@ -18,7 +18,6 @@ dependencies:
     - field_group
     - media_library
     - path
-    - scheduler
     - smart_date
     - smart_date_recur
     - text
@@ -137,7 +136,8 @@ content:
     type: address_default
     weight: 20
     region: content
-    settings: {  }
+    settings:
+      wrapper_type: details
     third_party_settings: {  }
   field_feature_image:
     type: media_library_widget
@@ -168,12 +168,6 @@ content:
   path:
     type: path
     weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  publish_on:
-    type: datetime_timestamp_no_default
-    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -209,12 +203,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  unpublish_on:
-    type: datetime_timestamp_no_default
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   url_redirects:
     weight: 8
     region: content
@@ -224,3 +212,5 @@ hidden:
   feeds_item: true
   field_import_uuid: true
   promote: true
+  publish_on: true
+  unpublish_on: true

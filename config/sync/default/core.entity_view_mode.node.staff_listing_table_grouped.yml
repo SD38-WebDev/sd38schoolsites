@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.staff_listing_table_grouped
 label: 'Staff Listing - Table Grouped'
+description: ''
 targetEntityType: node
 cache: true

@@ -5,8 +5,9 @@ core_version_requirement: ^9.4 || ^10
 base theme: bootstrap_barrio
 
 libraries:
-  - rsd_sites_barrio/bootstrap_cdn
   - rsd_sites_barrio/global-styling
+  - rsd_sites_barrio/bootstrap_cdn
+
 
 regions:
   top_header: 'Top header'

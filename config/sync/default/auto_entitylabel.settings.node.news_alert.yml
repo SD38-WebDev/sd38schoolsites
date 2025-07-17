@@ -7,3 +7,4 @@ chunk: 50
 dependencies:
   config:
     - node.type.news_alert
+new_content_behavior: 1

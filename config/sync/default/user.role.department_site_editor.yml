@@ -5,6 +5,8 @@ dependencies:
   config:
     - node.type.carousel_item
   module:
+    - file
+    - file_delete
     - menu_link_attributes
     - node
     - simple_image_rotate
@@ -16,7 +18,10 @@ permissions:
   - 'create carousel_item content'
   - 'delete any carousel_item content'
   - 'delete carousel_item revisions'
+  - 'delete files immediately'
+  - 'delete files override usage'
   - 'delete own carousel_item content'
+  - 'delete own files'
   - 'edit any carousel_item content'
   - 'edit own carousel_item content'
   - 'revert carousel_item revisions'
