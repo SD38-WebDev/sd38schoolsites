@@ -48,7 +48,6 @@ third_party_settings:
         - field_site_section
         - field_tags
         - body
-        - field_feature_image
         - field_attachments
       label: 'Basic Content'
       region: content
@@ -155,19 +154,12 @@ content:
         duplicate: '0'
     third_party_settings: {  }
   field_district_id:
-    type: text_textfield
-    weight: 26
+    type: string_textfield
+    weight: 10
     region: content
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_feature_image:
-    type: media_library_widget
-    weight: 7
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_legacy_attachments:
     type: file_generic
@@ -268,5 +260,6 @@ hidden:
   feeds_item: true
   field_article_category: true
   field_district_news_destination: true
+  field_feature_image: true
   field_import_uuid: true
   promote: true
