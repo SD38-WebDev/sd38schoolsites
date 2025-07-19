@@ -63,6 +63,8 @@ third_party_settings:
             add_region_classes: 1
             attributes: ''
     regions:
+      left:
+        - field_feature_image
       right:
         - node_title
         - body
@@ -75,7 +77,7 @@ third_party_settings:
     fields:
       node_changed_date:
         plugin_id: node_changed_date
-        weight: 7
+        weight: 8
         label: inline
         formatter: ds_post_date_full_date_only
         ft:
@@ -107,7 +109,7 @@ third_party_settings:
             suffix: ''
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
@@ -130,7 +132,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: right
   field_attachments:
     type: entity_reference_entity_view
@@ -168,7 +170,7 @@ content:
             fi-def-at: false
             prefix: ''
             suffix: ''
-    weight: 6
+    weight: 7
     region: right
   field_content_section:
     type: entity_reference_revisions_entity_view
@@ -177,8 +179,45 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: right
+  field_feature_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: large_480_480_
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: div
+            ow-cl: mb-3
+            ow-at: ''
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: true
+            fi-el: div
+            fi-cl: article-img
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 0
+    region: left
   field_legacy_attachments:
     type: file_default
     label: above
@@ -193,7 +232,7 @@ content:
             lb: Attachments
             lb-col: false
             classes: {  }
-    weight: 5
+    weight: 6
     region: right
   field_legacy_image_gallery:
     type: entity_reference_entity_view
@@ -202,19 +241,18 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: right
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: right
 hidden:
   feeds_item: true
   field_article_category: true
   field_district_id: true
   field_district_news_destination: true
-  field_feature_image: true
   field_import_uuid: true
   field_promote_to_front_page: true
   field_site_section: true

@@ -18,9 +18,11 @@ dependencies:
     - field.field.node.article.field_promote_to_front_page
     - field.field.node.article.field_site_section
     - field.field.node.article.field_tags
+    - image.style.article_grid_
     - node.type.article
   module:
     - ds
+    - media
     - smart_trim
     - user
 third_party_settings:
@@ -37,7 +39,7 @@ third_party_settings:
           classes:
             row: row
           add_layout_class: 1
-          attributes: '  class|row mb-3'
+          attributes: ''
         regions:
           top:
             wrapper: div
@@ -58,6 +60,8 @@ third_party_settings:
             add_region_classes: 1
             attributes: ''
     regions:
+      top:
+        - field_feature_image
       main:
         - node_title
         - body
@@ -65,13 +69,12 @@ third_party_settings:
     fields:
       node_title:
         plugin_id: node_title
-        weight: 0
+        weight: 1
         label: hidden
         formatter: default
         settings:
           link: true
-          'link class': ''
-          wrapper: h2
+          wrapper: h3
           class: ''
         ft:
           id: default
@@ -104,7 +107,6 @@ content:
       trim_options:
         text: true
         trim_zero: false
-        replace_tokens: false
     third_party_settings:
       ds:
         ft:
@@ -113,12 +115,28 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    weight: 1
+    weight: 2
     region: main
+  field_feature_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: article_grid_
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: top
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: main
 hidden:
   feeds_item: true
@@ -127,7 +145,6 @@ hidden:
   field_content_section: true
   field_district_id: true
   field_district_news_destination: true
-  field_feature_image: true
   field_import_uuid: true
   field_legacy_attachments: true
   field_legacy_image_gallery: true

@@ -5,6 +5,7 @@ namespace Drupal\sd38_content_sync\Plugin\QueueWorker;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\File\FileExists;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\file\FileInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
@@ -328,7 +329,7 @@ class ArticleImporterQueueWorker extends QueueWorkerBase implements ContainerFac
       $this->fileSystem->prepareDirectory($dir, FileSystemInterface::CREATE_DIRECTORY);
 
       // Save the image data using the file_system service.
-      $file_uri = $this->fileRepository->writeData($image_data, $uri, FileSystemInterface::EXISTS_REPLACE);
+      $file_uri = $this->fileRepository->writeData($image_data, $uri, FileExists::Replace);
 
       return $file_uri;
     }
