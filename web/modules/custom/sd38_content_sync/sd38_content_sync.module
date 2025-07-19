@@ -2,6 +2,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeForm;
+use \Drupal\Core\Utility\Error;
 
 /**
  * Implements hook_cron().
@@ -19,7 +20,8 @@ function sd38_content_sync_cron() {
     }
     catch (Exception $e) {
       $queue->releaseItem($item);
-      watchdog_exception('sd38_content_sync', $e);
+      $logger = \Drupal::logger('sd38_content_sync');
+      Error::logException($logger, $e);
     }
   }
 }
